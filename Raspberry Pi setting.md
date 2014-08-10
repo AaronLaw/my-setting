@@ -30,7 +30,7 @@ Raspberry for hobototes.
     * Automate the calculation.
 * Doing some automation, e.g. automate the database backup.
 * Doing some experiment, such as Rails4, node.js.
-* 
+
 ----
 Service starts after power on
 ====
@@ -68,7 +68,7 @@ htop, nmap, tree
 #### not yet:
 - [ ] sublime
 - [ ] utorrent
-- [ ] btsync
+- [x] btsync
 - [ ] Dropbox
 - [ ] python & virtualenv
 - [ ] Django
@@ -119,6 +119,7 @@ Git & python & python3 are already on the system.
 
 #### Setup SublimeText
 Considering to use Vim instead of SublimeText because of:
+
 1. Vim can be run over SSH. :D
 2. SublimeText has not release an ARM version. I can run the software without source...
 
@@ -131,15 +132,22 @@ http://www.sublimetext.com/
     ./btsync (or ./btsync --config ./sync.conf)
 
 On the local,
+
     127.0.0.1:8888
+
 However, it is more pratical to login to it over network (192.168.0.101:8888) as I can paste the sync token. :)
 
 Or, I can make it to be config to auto run after system start up:
+
     sudo nano /etc/apt/sources.list.d/btsync.list
+
 past following lines: 
+
     deb http://debian.yeasoft.net/btsync wheezy main contrib non-free
     deb-src http://debian.yeasoft.net/btsync wheezy main contrib non-free
+
 Control + x to close/save the file.
+
     sudo apt-get update
     sudo apt-get install btsync
     Config: Default Sync instance? Yes
@@ -155,18 +163,21 @@ http://reustle.io/blog/btsync-pi
 
 ### Setup Python for development (enhance it) 
 Read http://docs.python-guide.org/en/latest/ first.
+
     pip
     sudo apt-get install python-pip
 
 #### Setup virtualenv
 Google: raspberry pi virtualenv
 Virtualenv gets you some common Python tools (distribute for packaging, pip for easy installation/removal of packages & virtualenv for nice isolated environments)
+
     # sudo apt-get install python-dev
     # curl -O http://python-distribute.org/distribute_setup.py
     # python distribute_setup.py
     # curl -O https://raw.github.com/pypa/pip/master/contrib/get-pip.py
     # python get-pip.py
     sudo pip install virtualenv
+
 ref:
 http://raspberry.io/wiki/how-to-get-python-on-your-raspberrypi/
 http://flask.pocoo.org/docs/installation/#virtualenv
@@ -175,16 +186,20 @@ http://www.raspberrypi.org/forums/viewtopic.php?t=7208&p=403771
 
 #### To disable virtualenv
 Google: virtualenv disable
+
     deactivate
+
 ref: 
 https://www.hackerschool.com/blog/14-there-is-no-magic-virtualenv-edition
 http://docs.python-guide.org/en/latest/dev/virtualenvs/
 
 ### Setup virtualenvwrapper
+
 ref:
 http://docs.python-guide.org/en/latest/dev/virtualenvs/
 
 ### Setup Django
+
     pip django == 1.7
 However, the version 1.7 is still in beta and not available in pip. Therefore, I need to manually setup with source code.
 
@@ -194,6 +209,7 @@ However, the version 1.7 is still in beta and not available in pip. Therefore, I
 http://computers.tutsplus.com/tutorials/how-to-install-ruby-on-rails-on-raspberry-pi--cms-21421
 
 ### Setup Nginx
+
     sudo apt-get install nginx
 ref: 
 http://www.raspberrypi.org/documentation/remote-access/web-server/nginx.md
@@ -203,19 +219,24 @@ Tutorial in [For your Pi!] (http://raspberrypihelp.net/tutorials) provides the i
 ###Backup
 
 #### Backup disk image
+
     sudo dd bs=4M if=/dev/sdb of=raspbian.img (or dcfldd)
     dd if=/path/to/image of=/dev/sdb
 ref: Google: raspberry backup
 http://raspberrypi.stackexchange.com/questions/311/how-do-i-backup-my-raspberry-pi
 
 or combian use of bzip to compress the image!
+
     dd if=/dev/sdx | gzip > /path/to/image.gz
     gzip -dc /path/to/image.gz | dd of=/dev/sdx 
 
 or dump the SD card, and pipe it with ssh:
+
     dd bs=1M if=/dev/mmcblk0 | ssh user@host 'dd of=/remote/path/to/sdcard.img'
 with compression:
+
     dd bs=1M if=/dev/mmcblk0 | ssh user@host 'gzip -9 > /remote/path/to/sdcard.img.gz'
+
 ref: 
 http://www.raspberrypi.org/forums/viewtopic.php?p=118519
 
@@ -239,3 +260,5 @@ http://www.playpcesor.com/2014/07/google-chrome-font.html
 http://sourceforge.net/adobe/source-han-sans/
 http://github.com/adobe-fonts/source-han-sans/
 http://www.google.com/get/noto/#/family/noto-sans-hant
+
+// Last update: 2014-08
