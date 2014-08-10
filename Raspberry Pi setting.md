@@ -1,5 +1,7 @@
 2014-08-06: I learn markdown also here: https://help.github.com/articles/github-flavored-markdown
 
+Writting style ref: https://github.com/johnantoni/beaglebone-black
+
 Purpose of Pi: (2014-08)
 ========
 1. Help to maintace the daily operation of hobototes (e.g. When we travel around the world, we need a small-enough computer for operation.).
