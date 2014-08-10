@@ -13,6 +13,7 @@ Purpose of Pi: (2014-08)
 ----
 Raspberry for hobototes.
 ====
+
 ### 1st stage:
 * The official Raspbian image with SSH, git, VNC, btsync, dropbox and other system-admin-related stuffs.
 * Setup a dynamic dns. (Therefore, I can connect the web apps when I am not on the local network.)
@@ -25,10 +26,11 @@ Raspberry for hobototes.
 
 ### 3rd stage:
 * Write the apps for the business.
-** hobototes-data-centric apps.
-** Automate the calculation.
+    * hobototes-data-centric apps.
+    * Automate the calculation.
 * Doing some automation, e.g. automate the database backup.
 * Doing some experiment, such as Rails4, node.js.
+* 
 ----
 Service starts after power on
 ====
@@ -41,6 +43,7 @@ Django
 ----
 2014-08-06:
 je09
+
 In the 1st boot up:
 
 Expand the disk, set locale, turn on SSH, reboot.
@@ -54,15 +57,26 @@ Expand the disk, set locale, turn on SSH, reboot.
 2014-08-09: Initial the system with a few sys admin tools setup. Preparing to be a python web server next time. Backup as an image. Learning.
 
 ### Custom software on Pi:
-tightvncserver, vim-gtk,  git, transmission, chromium,
+tightvncserver, vim-gtk,  git, 
+
+transmission, chromium,
+
 htop, nmap, tree
 
 (No Dvorak keyboard layout setup is needed, as VNC transfer my key layout to the pi. :D)
 
 #### not yet:
-[sublime, utorrent, btsync, Dropbox
-python & virtualenv, Django, MySQL, rails, nginx, phpmyadmin
-]
+[ ]sublime
+[ ]utorrent
+[x]btsync
+[ ]Dropbox
+[ ]python & virtualenv
+[ ]Django
+[ ]MySQL
+[ ]rails
+[ ]nginx
+[ ]phpmyadmin
+
 
 ### Lookup IP
     ifconfig
@@ -94,12 +108,22 @@ On the clien side,
 ref: http://www.raspberrypi.org/documentation/remote-access/vnc/README.md
 http://computers.tutsplus.com/tutorials/take-control-of-your-raspberry-pi-using-your-mac-pc-ipad-or-phone--mac-54603
 
+### Setup git
+Git & python & python3 are already on the system.
+
 ### Setup GVim
+
     sudo apt-get install vim-gtk (or vim-gnome)
 
     gvim (vim can run over ssh)
 
-#### Setup Sublime
+#### Setup SublimeText
+Considering to use Vim instead of SublimeText because of:
+1. Vim can be run over SSH. :D
+2. SublimeText has not release an ARM version. I can run the software without source...
+
+Maybe, I can write code on my notebook, and then "sync" the code oven git, maybe.
+
 http://www.sublimetext.com/
 
 ### Setup BTSync
