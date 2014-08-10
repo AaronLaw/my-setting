@@ -66,16 +66,17 @@ htop, nmap, tree
 (No Dvorak keyboard layout setup is needed, as VNC transfer my key layout to the pi. :D)
 
 #### not yet:
-[ ]sublime
-[ ]utorrent
-[x]btsync
-[ ]Dropbox
-[ ]python & virtualenv
-[ ]Django
-[ ]MySQL
-[ ]rails
-[ ]nginx
-[ ]phpmyadmin
+- [ ]sublime
+- [ ]utorrent
+- [x]btsync
+- [ ]Dropbox
+- [ ]python & virtualenv
+- [ ]Django
+- [ ]MySQL
+- [ ]rails
+- [ ]nginx
+- [ ]phpmyadmin
+
 
 
 ### Lookup IP
