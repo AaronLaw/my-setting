@@ -5,11 +5,11 @@ Writting style ref: https://github.com/johnantoni/beaglebone-black
 Purpose of Pi: (2014-08)
 ========
 1. Help to maintace the daily operation of hobototes (e.g. When we travel around the world, we need a small-enough computer for operation.).
-2. As a device to operate all-day-long with low power consumption. (verse the power a notebook needs)
+2. As a device to operate all-day-long with **low power consumption**. (verse the power a notebook needs)
 3. Runs the hobototes-data-centric apps on it. (To free my notebook from always-turning-on. Moving django project to it.)
 4. Runs as a host to share files. (BTSync, verse Dropbox)
 5. Needs no maintance once after setup. Once it's broken, it is brain-less to be rebuilt the software. (0-day recovery.) (verse PC, which the storage, power suppile, display unit are easy to be broken, and making heat. PC needs to be setup again once a hardawre is replaced. Time consuming.)
-6. Plug and play,
+6. Plug and play, **rich community support**.
 
 
 ----
@@ -30,7 +30,7 @@ Raspberry for hobototes.
 * Write the apps for the business.
     * hobototes-data-centric apps.
     * Automate the calculation.
-* Doing some automation, e.g. automate the database backup.
+* Doing some automation, using cron job, e.g. automate the database backup.
 * Doing some experiment, such as Rails4, node.js.
 
 ----
@@ -52,6 +52,8 @@ Expand the disk, set locale, turn on SSH, reboot.
 
     sudo apt-get install update && apt-get install upgrade
     dpkg
+
+And now it's ready to be customasation. For fun! (或是被折磨)
 
 ### History
 2014-08-06: Initial the system.
@@ -78,7 +80,12 @@ htop, nmap, tree
 - [ ] rails
 - [ ] nginx
 - [ ] phpmyadmin
+- [ ] add some jobs to cron
 - [ ] todo
+
+
+How do I setup the Pi (a record)
+====
 
 ### Lookup IP
     ifconfig
@@ -125,9 +132,10 @@ Considering to use Vim instead of SublimeText because of:
 1. Vim can be run over SSH. :D
 2. SublimeText has not release an ARM version. I can run the software without source...
 
-Maybe, I can write code on my notebook, and then "sync" the code oven git, maybe.
+Maybe, I can write code on my notebook, and then "sync" the code oven git, maybe, maybe git for deployment.
 
 http://www.sublimetext.com/
+http://code.tutsplus.com/articles/from-ftp-to-git-a-deployment-story--net-25982
 
 ### Setup BTSync
     cd ~/BTSync
@@ -159,14 +167,39 @@ ref: http://raspberrypihelp.net/tutorials/46-raspberry-pi-bittorrent-sync-bitsyn
 ref  in general: 
 http://blog.bittorrent.com/2013/08/20/sync-hacks-how-to-sync-without-data-loss-using-btsync-raspberry-pi/ <-- this one useful. Place a script in /etc/init.d/ and then register it with update-rc.d.
 http://blog.bittorrent.com/2014/08/05/sync-stories-dual-backup-with-a-beaglebone-black-and-virtual-private-server/ shows using BTSync with BeagleBone in a founded business.
-	https://gist.github.com/johnantoni/8199088
+    https://gist.github.com/johnantoni/8199088
 http://blog.bittorrent.com/2013/05/23/how-i-created-my-own-personal-cloud-using-bittorrent-sync-owncloud-and-raspberry-pi/
 http://reustle.io/blog/btsync-pi
+
+### Setup Dropbox
+Dropbox doesn't provide an ARM package on Linux nor source code. Therefore, I need to find a 3rd-party solution on pi.
+Google: raspberry dropbox
+http://www.raspberrypi.org/forums/viewtopic.php?f=63&t=21617
+
+There are 2 solutions: Bash dropbox uploader or Drop2PI. I pick [Bash dropbox uploader] (http://www.andreafabrizi.it/?dropbox_uploader the uploader's author site
+) as it is the most popular (a.k.a community support).
+
+    git clone https://github.com/andreafabrizi/Dropbox-Uploader/
+    $chmod +x dropbox_uploader.sh
+    $./dropbox_uploader.sh
+
+After the apps created, paste the following url to browser to activate the apps.
+
+    https://www2.dropbox.com/1/oauth/authorize?oauth_token=dOdcCJGpKpKjHDkz
+
+Check the [security page] (https://www.dropbox.com/account#security) to revoke the secret token in future. 
+
+To automate the jobs of it, rather then typing commands again and again, use cron job. The setup refer to [the project on Github] (https://github.com/andreafabrizi/Dropbox-Uploader).
+
+ref:
+http://www.raspberrypi.org/forums/viewtopic.php?f=63&t=21617
+https://github.com/andreafabrizi/Dropbox-Uploader
+http://raspi.tv/2013/how-to-use-dropbox-with-raspberry-pi
 
 ### Setup Python for development (enhance it) 
 Read http://docs.python-guide.org/en/latest/ first.
 
-    pip
+    [pip] (https://pip.pypa.io/en/latest/)
     sudo apt-get install python-pip
 
 #### Setup virtualenv
@@ -205,6 +238,11 @@ http://docs.python-guide.org/en/latest/dev/virtualenvs/
     pip django == 1.7
 However, the version 1.7 is still in beta and not available in pip. Therefore, I need to manually setup with source code.
 
+#### Setpu Django with Python3
+Google: django with python 3
+http://askubuntu.com/questions/401132/how-can-i-install-django-for-python-3-x
+
+
 ### Setup Rails
 
 
@@ -241,6 +279,9 @@ with compression:
 
 ref: 
 http://www.raspberrypi.org/forums/viewtopic.php?p=118519
+
+### Backup files daily
+Google: linux backup to dropbox
 
 ### Set Fonts
 Do it on client side, as I seldom login to pi with keyboard and mouse but remote control it with ssh.
