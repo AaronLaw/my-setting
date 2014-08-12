@@ -48,6 +48,8 @@ je09
 
 In the 1st boot up:
 
+    sudo raspi-config
+
 Expand the disk, set locale, turn on SSH, reboot.
 
     sudo apt-get install update && apt-get install upgrade
@@ -59,6 +61,8 @@ And now it's ready to be customasation. For fun! (或是被折磨)
 2014-08-06: Initial the system.
 
 2014-08-09: Initial the system with a few sys admin tools setup. Preparing to be a python web server next time. Backup as an image. Learning.
+
+2014-08-12: Install Python3.4 from source. Setup virtualenv & wirtualenvwrapper.
 
 ### Custom software on Pi:
 tightvncserver, vim-gtk,  git, 
@@ -119,6 +123,29 @@ On the clien side,
 ref: http://www.raspberrypi.org/documentation/remote-access/vnc/README.md
 http://computers.tutsplus.com/tutorials/take-control-of-your-raspberry-pi-using-your-mac-pc-ipad-or-phone--mac-54603
 
+### Prepare hdd/USB drive
+
+Format as ext4
+
+    df -h                               # find your drive here, e.g. `sda1`
+    sudo umount /dev/sda1               # replace sda1 with your drive name !
+    sudo mkfs.ext4 /dev/sda1 -L BTSync  # replace sda1 with your drive name !
+
+
+Mount the drive
+
+    sudo mount /dev/sda1 /mnt/usbdrive
+
+Edit fstab to mount the drive on startup. Add following to beginning of /etc/fstab
+
+    sudo vim /etc/fstab
+    /dev/sda1       /mnt/usbdrive   ext4    defaults          0       0
+
+
+ref:
+https://github.com/johnantoni/beaglebone-black/blob/master/setup/format-and-mount-usb.md
+http://blog.bittorrent.com/2014/08/05/sync-stories-dual-backup-with-a-beaglebone-black-and-virtual-private-server/
+
 ### Setup git
 Git & python & python3 are already on the system.
 
@@ -149,7 +176,47 @@ On the local,
 
 However, it is more pratical to login to it over network (192.168.0.101:8888) as I can paste the sync token. :)
 
-Or, I can make it to be config to auto run after system start up:
+#### Start at boot
+
+You may want to set btsync to start when you boot your Raspberry Pi. To do that
+we will place a script in /etc/init.d/ and then register it with
+update-rc.d.
+
+    sudo nano /etc/init.d/btsync
+
+Paste the following code in the script:
+
+    #! /bin/sh
+    # /etc/init.d/btsync
+    #
+
+    # Carry out specific functions when asked to by the system
+    case "$1" in
+    start)
+        /home/pi/.btsync/btsync
+        ;;
+    stop)
+        killall btsync
+        ;;
+    *)
+        echo "Usage: /etc/init.d/btsync {start|stop}"
+        exit 1
+        ;;
+    esac
+
+    exit 0
+
+Then change the permissions, test, and register it to run at boot:
+
+    sudo chmod 755 /etc/init.d/btsync
+    sudo /etc/init.d/btsync start       # test that the script starts
+    sudo /etc/init.d/btsync stop        # test that the script stops
+    sudo update-rc.d btsync defaults
+
+
+#### Auto config
+
+Or, I can make it to be configured to auto-run after system start up:
 
     sudo nano /etc/apt/sources.list.d/btsync.list
 
@@ -166,12 +233,13 @@ Control + x to close/save the file.
 
 ref: http://raspberrypihelp.net/tutorials/46-raspberry-pi-bittorrent-sync-bitsync
 
-ref  in general: 
+ref in general: 
 http://blog.bittorrent.com/2013/08/20/sync-hacks-how-to-sync-without-data-loss-using-btsync-raspberry-pi/ <-- this one useful. Place a script in /etc/init.d/ and then register it with update-rc.d.
 http://blog.bittorrent.com/2014/08/05/sync-stories-dual-backup-with-a-beaglebone-black-and-virtual-private-server/ shows using BTSync with BeagleBone in a founded business.
     https://gist.github.com/johnantoni/8199088
 http://blog.bittorrent.com/2013/05/23/how-i-created-my-own-personal-cloud-using-bittorrent-sync-owncloud-and-raspberry-pi/
 http://reustle.io/blog/btsync-pi
+http://www.instructables.com/id/Redundant-cloud-storage-with-a-friend-and-a-Raspbe/?ALLSTEPS
 
 ### Setup Dropbox
 Dropbox doesn't provide an ARM package on Linux nor source code. Therefore, I need to find a 3rd-party solution on pi.
@@ -197,6 +265,12 @@ ref:
 http://www.raspberrypi.org/forums/viewtopic.php?f=63&t=21617
 https://github.com/andreafabrizi/Dropbox-Uploader
 http://raspi.tv/2013/how-to-use-dropbox-with-raspberry-pi
+
+#### update:
+Both of them help me interactive Dropbox in cli but not automate the sync. I shall find a better solution later.
+Google: auto sync with dropbox raspberry
+
+
 
 ### Setup Python for development (enhance it) 
 Read http://docs.python-guide.org/en/latest/ first, and [Python Packaging User Guide] (https://python-packaging-user-guide.readthedocs.org/en/latest/current.html) second. (from: [How to get Django] (https://www.djangoproject.com/download/) )
@@ -308,6 +382,7 @@ I've tested both the methods above. I prefer the 1st one. No messy in /usr/local
 Update:
 
 If I fail, how can I remove python3.4?
+
 Google: how to remove python3.4
 [Removing second python install - Stack Overflow] (http://stackoverflow.com/questions/16871795/removing-second-python-install)
 
@@ -409,7 +484,7 @@ http://docs.python-guide.org/en/latest/dev/virtualenvs/
     pip install django == 1.7
 However, the version 1.7 is still in beta and not available in pip. Therefore, I need to manually setup with source code.
 
-Use virtualenv to make a clean room first.
+Use virtualenv & virtualenvwrapper to make a clean room first.
 
 
 
@@ -421,6 +496,9 @@ http://blog.mattwoodward.com/2013/01/setting-up-django-on-raspberry-pi.html
 
 
 http://computers.tutsplus.com/tutorials/how-to-install-ruby-on-rails-on-raspberry-pi--cms-21421
+
+### Setup MySQL
+
 
 ### Setup Nginx
 
