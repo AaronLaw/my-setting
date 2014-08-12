@@ -73,7 +73,7 @@ htop, nmap, tree
 - [ ] sublime
 - [ ] utorrent
 - [x] btsync
-- [ ] Dropbox
+- [x] Dropbox
 - [ ] python & virtualenv
 - [ ] Django
 - [ ] MySQL
@@ -197,10 +197,107 @@ https://github.com/andreafabrizi/Dropbox-Uploader
 http://raspi.tv/2013/how-to-use-dropbox-with-raspberry-pi
 
 ### Setup Python for development (enhance it) 
-Read http://docs.python-guide.org/en/latest/ first.
+Read http://docs.python-guide.org/en/latest/ first, and [Python Packaging User Guide] (https://python-packaging-user-guide.readthedocs.org/en/latest/current.html) second. (from: [How to get Django] (https://www.djangoproject.com/download/) )
 
     [pip] (https://pip.pypa.io/en/latest/)
     sudo apt-get install python-pip
+
+#### My approach to Python 3.3 & Django 1.7+
+
+First at first. See the [Django 1.7's requirement] (https://docs.djangoproject.com/en/1.7/topics/install/), as I mainly develop the hobototes-data-centric apps on Django 1.7. (It works with Python 2.7, 3.2, 3.3)
+
+Since the Python3 ships with Pi is version3.2, it is better to upgrade it to version 3.3 before installing Django 1.7 (currently 1.7-rc2). I have to upgrade it from source code, and put it into a new place rather than over-write the python shipped with Pi officially (To avoid system conflict.) Once it was success, I could install Django1.7+ with virtualenv, testing. Once the test was success, I could install MySQL and Nginx too.
+
+A notes I bear in mind:
+
+    System updates break everything
+    Installing apt packages can overwrite pip-installed things
+    Version conflicts
+    Distribution upgrades are unpredictable chaos. Seriously. I've lost hair to these.
+
+
+#### Upgrading Python3 (place it in a new place)
+Google: django with python 3
+http://askubuntu.com/questions/401132/how-can-i-install-django-for-python-3-x
+http://stackoverflow.com/questions/20251562/how-to-install-django-for-python-3-3 facing the same problem of mine
+
+Seems I have to complie 3.3 (or 3.4) from source. Therefore,
+Google: how to install python 3.3
+http://askubuntu.com/questions/244544/how-do-i-install-python-3-3 shows how the others compile it from source
+
+Google: how to install python 3.4
+https://docs.python.org/3.4/using/index.html
+
+OK, head to [Python.org] (http://www.python.org) and get the latest python.
+
+    wget https://www.python.org/ftp/python/3.4.1/Python-3.4.1.tar.xz
+    xz -d Python-3.4.1.tar.xz
+    tar -xf Python-3.4.1.tar
+
+    cd Python-3.4.1
+    ./configure
+    make
+    make test
+    sudo make install
+
+The build process consists in the usual, but...
+    
+    Warning: make install can overwrite or masquerade the python3 binary. make altinstall is therefore recommended instead of make install since it only installs exec_prefix/bin/pythonversion. 
+    [#] (https://docs.python.org/3.4/using/unix.html#building-python)
+
+OK, not "make install" but "make altinstall", plus "--prefix" --prefix argument to the configure script. (run "./configure --help" to find out the options) [#] (http://hg.python.org/cpython/file/3.4/README)
+
+OK. For example, I do not have any Python installations on my system and I want to install 3 versions: 2.7, 3.3 and 3.4. I want to make 2.7 the primary installation (as python) and all the others as secondary (as python3.3 and python3.4) installations. I would install the primary with:
+
+    sudo make install
+
+and install both the other versions with:
+
+    sudo make altinstall
+
+The produced programs would be python (2.7), python3.3 (3.3) and python3.4 (3.4).
+
+OK, accroding to http://askubuntu.com/questions/244544/how-do-i-install-python-3-3,
+
+Assump different Python versions from 2.4 to 3.2 living happily in /opt.
+
+we need C compiler and other stuff to compile Python
+
+    sudo apt-get install build-essential
+
+SQLite libs need to be installed in order for Python to have SQLite support.
+
+    sudo apt-get install libsqlite3-dev
+    sudo apt-get install sqlite3 # for the command-line client
+    sudo apt-get install bzip2 libbz2-dev
+
+    cd Python-3.3.0
+    ./configure --prefix=/opt/python3.3
+    make && sudo make install
+
+Test if it worked:
+
+    /opt/python3.3/bin/python3
+
+Some nice touches to install a py command by creating a symlink:
+
+    mkdir ~/bin
+    ln -s /opt/python3.3/bin/python3.3 ~/bin/py
+
+Alternatively, you can install a bash alias named py instead:
+
+    echo 'alias py="/opt/python3.3/bin/python3.3"' >> .bashrc
+
+Or, my simple solution is the use of "altinstall", accroding to the 3.4 README:
+
+    cd Python-3.3.0
+    ./configure
+    make && sudo make altinstall
+
+Test if it worked:
+    python3.4
+
+
 
 #### Setup virtualenv
 Google: raspberry pi virtualenv
@@ -218,6 +315,14 @@ http://raspberry.io/wiki/how-to-get-python-on-your-raspberrypi/
 http://flask.pocoo.org/docs/installation/#virtualenv
 
 http://www.raspberrypi.org/forums/viewtopic.php?t=7208&p=403771
+
+#### One virtualenv is enough
+
+    -p path/to/python/version
+
+I could use a single virtualenv for both python version, just use the -p path/to/python/version or --python=path/to/version flag to specify which version to use for the creation of the virtual environment.
+
+ref: http://stackoverflow.com/questions/12566064/virtualenv-with-python2-and-python3-via-homebrew/12566853#12566853
 
 #### To disable virtualenv
 Google: virtualenv disable
@@ -238,10 +343,6 @@ http://docs.python-guide.org/en/latest/dev/virtualenvs/
     pip django == 1.7
 However, the version 1.7 is still in beta and not available in pip. Therefore, I need to manually setup with source code.
 
-#### Setpu Django with Python3
-Google: django with python 3
-http://askubuntu.com/questions/401132/how-can-i-install-django-for-python-3-x
-
 
 ### Setup Rails
 
@@ -254,7 +355,7 @@ http://computers.tutsplus.com/tutorials/how-to-install-ruby-on-rails-on-raspberr
 ref: 
 http://www.raspberrypi.org/documentation/remote-access/web-server/nginx.md
 
-Tutorial in [For your Pi!] (http://raspberrypihelp.net/tutorials) provides the instruction on setting up Nginx.
+Tutorial in [For your Pi!] (http://raspberrypihelp.net/tutorials) provides the instruction on setting up Nginx. http://raspberrypihelp.net/tutorials/24-raspberry-pi-webserver Nginx, MySQL, PHP5-fpm, PHPMyAdmin <- All-in-one, this one useful
 
 ###Backup
 
