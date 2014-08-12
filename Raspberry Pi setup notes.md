@@ -46,9 +46,9 @@ Django
 
 ### My tools
 
-python3.4 is "py", located in /opt/python3.4/bin/python3.4
+python3.4 is `py`, located in /opt/python3.4/bin/python3.4
 
-"py34-django" is the main develop environment for hobototes-data-centric apps
+`py34-django` is the main develop environment for hobototes-data-centric apps
 
 
 
@@ -298,11 +298,12 @@ Since the Python3 ships with Pi is version3.2, it is better to upgrade it to ver
 
 A notes I bear in mind:
 
+```
     System updates break everything
     Installing apt packages can overwrite pip-installed things
     Version conflicts
     Distribution upgrades are unpredictable chaos. Seriously. I've lost hair to these.
-
+```
 
 #### Upgrading Python3 (place it in a new place)
 Google: django with python 3
@@ -333,7 +334,7 @@ The build process consists in the usual, but...
     Warning: make install can overwrite or masquerade the python3 binary. make altinstall is therefore recommended instead of make install since it only installs exec_prefix/bin/pythonversion. 
     [#] (https://docs.python.org/3.4/using/unix.html#building-python)
 
-OK, not "make install" but "make altinstall", plus "--prefix" --prefix argument to the configure script. (run "./configure --help" to find out the options) [#] (http://hg.python.org/cpython/file/3.4/README)
+OK, not `make install` but `make altinstall`, plus `--prefix` --prefix argument to the configure script. (run `./configure --help` to find out the options) [#] (http://hg.python.org/cpython/file/3.4/README)
 
 OK. For example, I do not have any Python installations on my system and I want to install 3 versions: 2.7, 3.3 and 3.4. I want to make 2.7 the primary installation (as python) and all the others as secondary (as python3.3 and python3.4) installations. I would install the primary with:
 
@@ -353,7 +354,7 @@ I need C compiler and other stuff to compile Python
 
     sudo apt-get install build-essential
 
-(If errors come with "mkvirtualenv --python=/opt/python3.4/bin/python3.4 test" when creating the environment, try "sudo apt-get install build-essential python-dev" too.)
+(Update: If errors come with `mkvirtualenv --python=/opt/python3.4/bin/python3.4 test` when creating the environment, this is my fault not compiling python completely. Try `sudo apt-get install build-essential python-dev` too and build again.)
 
 SQLite libs need to be installed in order for Python to have SQLite support.
 
@@ -378,18 +379,19 @@ Alternatively, you can install a bash alias named py instead:
 
     echo 'alias py="/opt/python3.3/bin/python3.3"' >> .bashrc
 
-Or, my simple solution is the use of "altinstall", accroding to the 3.4 README:
+Or, my simple solution is the use of `altinstall`, accroding to the 3.4 README:
 
     cd Python-3.3.0
     ./configure
     make && sudo make altinstall
 
-(It takes about 30 mins. Hogging 100% CUP.)
+(It takes about 15 mins. Hogging 100% CUP.)
 
 Test if it worked:
+
     python3.4
 
-I've tested both the methods above. I prefer the 1st one. No messy in /usr/local.
+I've tested both the methods above. I prefer the 1st one. No messy in `/usr/local`.
 
 #### Escape
 Update:
@@ -443,11 +445,12 @@ https://virtualenv.pypa.io/en/latest/
 
     -p path/to/python/version
 
-I could use a single virtualenv for both python version, just use the -p path/to/python/version or --python=path/to/version flag to specify which version to use for the creation of the virtual environment.
+I could use a single virtualenv for both python version, just use the `-p path/to/python/version` or `--python=path/to/version` flag to specify which version to use for the creation of the virtual environment.
 
 ref: http://stackoverflow.com/questions/12566064/virtualenv-with-python2-and-python3-via-homebrew/12566853#12566853
 
 #### To disable virtualenv
+
 Google: virtualenv disable
 
     deactivate
@@ -495,6 +498,7 @@ http://docs.python-guide.org/en/latest/dev/virtualenvs/
 ### Setup Django (with virtualenv & virtualenvwrapper)
 
     pip install django == 1.7
+
 However, the version 1.7 is still in beta and not available in pip. Therefore, I need to manually setup with source code.
 
 Use virtualenv & virtualenvwrapper to make a clean room first.
@@ -529,6 +533,7 @@ Tutorial in [For your Pi!] (http://raspberrypihelp.net/tutorials) provides the i
 
     sudo dd bs=4M if=/dev/sdb of=raspbian.img (or dcfldd)
     dd if=/path/to/image of=/dev/sdb
+    
 ref: Google: raspberry backup
 http://raspberrypi.stackexchange.com/questions/311/how-do-i-backup-my-raspberry-pi
 
