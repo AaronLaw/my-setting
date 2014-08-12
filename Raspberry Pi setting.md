@@ -297,7 +297,10 @@ Or, my simple solution is the use of "altinstall", accroding to the 3.4 README:
 Test if it worked:
     python3.4
 
-
+Update:
+If I fail, how can I remove python3.4?
+Google: how to remove python3.4
+[Removing second python install - Stack Overflow] (http://stackoverflow.com/questions/16871795/removing-second-python-install)
 
 #### Setup virtualenv
 Google: raspberry pi virtualenv
