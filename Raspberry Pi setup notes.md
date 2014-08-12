@@ -297,7 +297,7 @@ Or, my simple solution is the use of "altinstall", accroding to the 3.4 README:
     ./configure
     make && sudo make altinstall
 
-(It takes about 45 mins. Hogging 100% CUP.)
+(It takes about 30 mins. Hogging 100% CUP.)
 
 Test if it worked:
     python3.4
@@ -336,6 +336,14 @@ Google: raspberry pi virtualenv
     # python get-pip.py
     sudo pip install virtualenv
 
+Then, we can create an isolate environment:
+(assume I wanna the environment "ENV" to be placed at home)
+
+    cd ~
+    virtualenv ENV
+    cd ENV
+    source bin/activate
+
 ref:
 http://raspberry.io/wiki/how-to-get-python-on-your-raspberrypi/
 http://flask.pocoo.org/docs/installation/#virtualenv
@@ -363,9 +371,37 @@ https://virtualenv.pypa.io/en/latest/
 
 ### Setup virtualenvwrapper
 
-    pip install xxx
+[virtualenvwrapper] (https://bitbucket.org/dhellmann/virtualenvwrapper) is a set of extensions to Ian Bicking's [virtualenv] (https://pypi.python.org/pypi/virtualenv) tool. The extensions include wrappers for creating and deleting virtual environments and otherwise managing your development workflow, making it easier to work on more than one project at a time without introducing conflicts in their dependencies.
+
+    pip install virtualenvwrapper
+
+    export WORKON_HOME=~/Envs
+    mkdir -p $WORKON_HOME
+    source /usr/local/bin/virtualenvwrapper.sh
+
+    mkvirtualenv env1
+
+Some useful commands:
+
+    lsvirtualenv
+    lssitepackages
+    cdvirtualenv
+    cdsitepackages
+
+Switch between environments:
+
+    workon env2
+
+To deactivate is still the same:
+    
+    deactivate
+
+To delete:
+
+    rmvirtualenv env1
 
 ref:
+http://virtualenvwrapper.readthedocs.org/en/latest/
 http://docs.python-guide.org/en/latest/dev/virtualenvs/
 
 ### Setup Django (with virtualenv & virtualenvwrapper)
@@ -378,7 +414,8 @@ Use virtualenv to make a clean room first.
 
 
 
-
+ref:
+http://blog.mattwoodward.com/2013/01/setting-up-django-on-raspberry-pi.html
 
 ### Setup Rails
 
