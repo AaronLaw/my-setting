@@ -13,7 +13,7 @@ Purpose of Pi: (2014-08)
 
 
 ----
-Raspberry for hobototes.
+Raspberry Pi for hobototes.
 ====
 
 ### 1st stage:
@@ -34,13 +34,23 @@ Raspberry for hobototes.
 * Doing some experiment, such as Rails4, node.js.
 
 ----
-Service starts after power on
+Shortcut
 ====
+###Service starts after power on
+
 VNC
 
 BTSync
 
 Django
+
+### My tools
+
+python3.4 is "py", located in /opt/python3.4/bin/python3.4
+
+"py34-django" is the main develop environment for hobototes-data-centric apps
+
+
 
 ----
 2014-08-06:
@@ -74,13 +84,13 @@ htop, nmap, tree, p7zip
 (No Dvorak keyboard layout setup is needed, as VNC transfer my key layout to the pi. :D)
 (7z on linux is 7za, where the package is called p7zip [#] (http://www.thegeekstuff.com/2010/04/7z-7zip-7za-file-compression/) )
 
-#### not yet:
+#### TODO:
 - [ ] sublime
 - [ ] utorrent
 - [x] btsync
 - [x] Dropbox
 - [x] python3.4
-- [ ] virtualenv
+- [x] virtualenv
 - [ ] Django
 - [ ] MySQL
 - [ ] rails
@@ -90,7 +100,7 @@ htop, nmap, tree, p7zip
 - [ ] todo
 
 
-How do I setup the Pi (a record)
+How do I setup the Pi (a step by step record)
 ====
 
 ### Lookup IP
@@ -276,7 +286,8 @@ Google: auto sync with dropbox raspberry
 Read http://docs.python-guide.org/en/latest/ first, and [Python Packaging User Guide] (https://python-packaging-user-guide.readthedocs.org/en/latest/current.html) second. (from: [How to get Django] (https://www.djangoproject.com/download/) )
 [Learn Python the Hard Way] (http://learnpythonthehardway.org/book/ex46.html) (Google: virtualenv project structure) provides a rich set of reading materials too.
 
-    [pip] (https://pip.pypa.io/en/latest/)
+[pip] (https://pip.pypa.io/en/latest/)
+
     sudo apt-get install python-pip
 
 #### My approach to Python 3.3 & Django 1.7+
@@ -341,6 +352,8 @@ Assump different Python versions from 2.4 to 3.2 living happily in /opt.
 I need C compiler and other stuff to compile Python
 
     sudo apt-get install build-essential
+
+(If errors come with "mkvirtualenv --python=/opt/python3.4/bin/python3.4 test" when creating the environment, try "sudo apt-get install build-essential python-dev" too.)
 
 SQLite libs need to be installed in order for Python to have SQLite support.
 
@@ -496,6 +509,8 @@ http://blog.mattwoodward.com/2013/01/setting-up-django-on-raspberry-pi.html
 
 
 http://computers.tutsplus.com/tutorials/how-to-install-ruby-on-rails-on-raspberry-pi--cms-21421
+
+## Setup the backend supporting for Django
 
 ### Setup MySQL
 
