@@ -65,16 +65,18 @@ tightvncserver, vim-gtk,  git,
 
 transmission, chromium,
 
-htop, nmap, tree
+htop, nmap, tree, p7zip
 
 (No Dvorak keyboard layout setup is needed, as VNC transfer my key layout to the pi. :D)
+(7z on linux is 7za, where the package is called p7zip [#] (http://www.thegeekstuff.com/2010/04/7z-7zip-7za-file-compression/) )
 
 #### not yet:
 - [ ] sublime
 - [ ] utorrent
 - [x] btsync
 - [x] Dropbox
-- [ ] python & virtualenv
+- [x] python3.4
+- [ ] virtualenv
 - [ ] Django
 - [ ] MySQL
 - [ ] rails
@@ -261,7 +263,7 @@ OK, accroding to http://askubuntu.com/questions/244544/how-do-i-install-python-3
 
 Assump different Python versions from 2.4 to 3.2 living happily in /opt.
 
-we need C compiler and other stuff to compile Python
+I need C compiler and other stuff to compile Python
 
     sudo apt-get install build-essential
 
@@ -294,10 +296,16 @@ Or, my simple solution is the use of "altinstall", accroding to the 3.4 README:
     ./configure
     make && sudo make altinstall
 
+(It takes about 45 mins. Hogging 100% CUP.)
+
 Test if it worked:
     python3.4
 
+I've tested both the methods above. I prefer the 1st one. No messy in /usr/local.
+
+#### Escape
 Update:
+
 If I fail, how can I remove python3.4?
 Google: how to remove python3.4
 [Removing second python install - Stack Overflow] (http://stackoverflow.com/questions/16871795/removing-second-python-install)
@@ -308,7 +316,7 @@ The easiest way (as most makefiles don't have an uninstall target) is to run
 
     make install 
 
-again in your 3.3 source directory and capture what it sticks where and then remove them.
+again in my 3.3 source directory and capture what it sticks where and then remove them. ("make uninstall" usually don't work.)
 
 The cheaper way would be to 
 
@@ -375,7 +383,6 @@ http://www.raspberrypi.org/documentation/remote-access/web-server/nginx.md
 Tutorial in [For your Pi!] (http://raspberrypihelp.net/tutorials) provides the instruction on setting up Nginx. http://raspberrypihelp.net/tutorials/24-raspberry-pi-webserver Nginx, MySQL, PHP5-fpm, PHPMyAdmin <- All-in-one, this one useful
 
 ###Backup
-
 
 #### Backup disk image
 
