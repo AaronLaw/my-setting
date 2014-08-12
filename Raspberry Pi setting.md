@@ -200,15 +200,16 @@ http://raspi.tv/2013/how-to-use-dropbox-with-raspberry-pi
 
 ### Setup Python for development (enhance it) 
 Read http://docs.python-guide.org/en/latest/ first, and [Python Packaging User Guide] (https://python-packaging-user-guide.readthedocs.org/en/latest/current.html) second. (from: [How to get Django] (https://www.djangoproject.com/download/) )
+[Learn Python the Hard Way] (http://learnpythonthehardway.org/book/ex46.html) (Google: virtualenv project structure) provides a rich set of reading materials too.
 
     [pip] (https://pip.pypa.io/en/latest/)
     sudo apt-get install python-pip
 
 #### My approach to Python 3.3 & Django 1.7+
 
-First at first. See the [Django 1.7's requirement] (https://docs.djangoproject.com/en/1.7/topics/install/), as I mainly develop the hobototes-data-centric apps on Django 1.7. (It works with Python 2.7, 3.2, 3.3)
+First at all. See the [Django 1.7's requirement] (https://docs.djangoproject.com/en/1.7/topics/install/), as I mainly develop the hobototes-data-centric apps on Django 1.7. (It works with Python 2.7, 3.2, 3.3)
 
-Since the Python3 ships with Pi is version3.2, it is better to upgrade it to version 3.3 before installing Django 1.7 (currently 1.7-rc2). I have to upgrade it from source code, and put it into a new place rather than over-write the python shipped with Pi officially (To avoid system conflict.) Once it was success, I could install Django1.7+ with virtualenv, testing. Once the test was success, I could install MySQL and Nginx too.
+Since the Python3 ships with Pi is version3.2, it is better to upgrade it to version 3.3 before installing Django 1.7 (currently 1.7-rc2). I have to upgrade it from source code, and put it into a new place rather than over-write the python shipped with Pi officially (To avoid system conflict.) Once it was successed, I could install Django1.7+ with virtualenv, doing test. Once the test was success, I could install MySQL and Nginx too.
 
 A notes I bear in mind:
 
@@ -326,7 +327,7 @@ and probably anything else in /usr/local/bin/py* including symlinks to various p
 
 #### Setup virtualenv
 Google: raspberry pi virtualenv
-Virtualenv gets you some common Python tools (distribute for packaging, pip for easy installation/removal of packages & virtualenv for nice isolated environments)
+[Virtualenv] (https://pypi.python.org/pypi/virtualenv) gets you some common Python tools (distribute for packaging, pip for easy installation/removal of packages & virtualenv for nice isolated environments)
 
     # sudo apt-get install python-dev
     # curl -O http://python-distribute.org/distribute_setup.py
@@ -340,6 +341,7 @@ http://raspberry.io/wiki/how-to-get-python-on-your-raspberrypi/
 http://flask.pocoo.org/docs/installation/#virtualenv
 
 http://www.raspberrypi.org/forums/viewtopic.php?t=7208&p=403771
+https://virtualenv.pypa.io/en/latest/
 
 #### One virtualenv is enough
 
@@ -357,16 +359,25 @@ Google: virtualenv disable
 ref: 
 https://www.hackerschool.com/blog/14-there-is-no-magic-virtualenv-edition
 http://docs.python-guide.org/en/latest/dev/virtualenvs/
+https://virtualenv.pypa.io/en/latest/
 
 ### Setup virtualenvwrapper
+
+    pip install xxx
 
 ref:
 http://docs.python-guide.org/en/latest/dev/virtualenvs/
 
-### Setup Django
+### Setup Django (with virtualenv & virtualenvwrapper)
 
-    pip django == 1.7
+    pip install django == 1.7
 However, the version 1.7 is still in beta and not available in pip. Therefore, I need to manually setup with source code.
+
+Use virtualenv to make a clean room first.
+
+
+
+
 
 
 ### Setup Rails
