@@ -302,6 +302,20 @@ If I fail, how can I remove python3.4?
 Google: how to remove python3.4
 [Removing second python install - Stack Overflow] (http://stackoverflow.com/questions/16871795/removing-second-python-install)
 
+Since I install it from source, apt-install has no idea that it exists.
+
+The easiest way (as most makefiles don't have an uninstall target) is to run 
+
+    make install 
+
+again in your 3.3 source directory and capture what it sticks where and then remove them.
+
+The cheaper way would be to 
+
+    rm /usr/local/bin/python3 
+
+and probably anything else in /usr/local/bin/py* including symlinks to various parts of the suite.
+
 #### Setup virtualenv
 Google: raspberry pi virtualenv
 Virtualenv gets you some common Python tools (distribute for packaging, pip for easy installation/removal of packages & virtualenv for nice isolated environments)
@@ -361,6 +375,7 @@ http://www.raspberrypi.org/documentation/remote-access/web-server/nginx.md
 Tutorial in [For your Pi!] (http://raspberrypihelp.net/tutorials) provides the instruction on setting up Nginx. http://raspberrypihelp.net/tutorials/24-raspberry-pi-webserver Nginx, MySQL, PHP5-fpm, PHPMyAdmin <- All-in-one, this one useful
 
 ###Backup
+
 
 #### Backup disk image
 
