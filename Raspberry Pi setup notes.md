@@ -87,17 +87,27 @@ htop, nmap, tree, p7zip
 #### TODO:
 - [ ] sublime
 - [ ] utorrent
-- [x] btsync
-- [x] Dropbox
-- [x] python3.4
-- [x] virtualenv
-- [ ] Django
-- [ ] MySQL
+- [ ] file sync between
+    - [x] btsync
+    - [x] Dropbox
+- [ ] development environment
+    - [x] upgrade to python3.4
+    - [x] virtualenv
+    - [x] virtualenvwrapper
+    - [ ] Django
+    - [ ] MySQL
+    - [ ] phpmyadmin
 - [ ] rails
-- [ ] nginx
-- [ ] phpmyadmin
-- [ ] add some jobs to cron
+    - [ ] ruby 2.1.0+
+    - [ ] rbenv / rvm
+    - [ ] rails 4.1+
+- [ ] internal hosting
+    - [ ] nginx
+    - [ ] wordpress 3.9
+- [ ] automation / add some jobs to cron
 - [ ] todo
+
+
 
 
 How do I setup the Pi (a step by step record)
