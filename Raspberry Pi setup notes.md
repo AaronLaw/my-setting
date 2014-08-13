@@ -86,7 +86,7 @@ transmission, chromium,
 
 htop, nmap, tree, p7zip
 
-(No Dvorak keyboard layout setup is needed, as VNC transfer my key layout to the pi. :D)
+(No Dvorak keyboard layout setup is needed, as VNC transfer my key layout to the pi. :smiley:)
 (7z on linux is 7za, where the package is called p7zip [#] (http://www.thegeekstuff.com/2010/04/7z-7zip-7za-file-compression/) )
 
 #### TODO:
@@ -188,7 +188,7 @@ Git & python & python3 are already on the system.
 #### Setup SublimeText
 Considering to use Vim instead of SublimeText because of:
 
-1. Vim can be run over SSH. :D
+1. Vim can be run over SSH. :smiley:
 2. SublimeText has not release an ARM version. I can run the software without source...
 
 Maybe, I can write code on my notebook, and then "sync" the code oven git, maybe, maybe git for deployment.
@@ -577,7 +577,7 @@ Test it:
     cd hobototes-data-centric
     python manage.py runserver
 
-Now, go to itstall MySQL. :D
+Now, go to itstall MySQL. :smiley:
 
 (Update: `django.core.exceptions.ImproperlyConfigured: Error loading MySQLdb module: No module named 'MySQLdb'`
 
@@ -593,11 +593,13 @@ need to install `mysql-python` if use mysql as backend, either 1 of the 5, sugge
     pip install mysql-python    # but `no module named 'Configparser'`, and the `ConfigParser` does not support python3
     easy_install mysql-python
 
-None of them works because I use Python3, not python 2.
+:broken_heart: None of them works because I use Python3, not python 2.
 
+:rage4:
 Then, I Google: pip install mysql-python  no module named 'Configparser'
 
-'''
+:pray:
+''' 
     pip install mysqlclient
 
 in my python3.4 virtualenv after
@@ -608,7 +610,7 @@ which is obviously specific to ubuntu/debian, but I just wanted to share my succ
 '''
 [#] (http://stackoverflow.com/questions/14087598/python-3-3-importerror-no-module-named-configparser)
 
-
+:pray:
 Last resort: simply, create a new virtualenv wyth system site-packages included by using the `--system-site-package` switch [#] (http://stackoverflow.com/questions/13288013/have-mysqldb-installed-works-outside-of-virtualenv-but-inside-it-doesnt-exist)
 
 Update2:
@@ -711,10 +713,8 @@ I put the code into the `http` section, and head to `http://192.168.0.101:81`...
 
 
 additional ref:
+@see the supplymentory
 
-* http://wiki.nginx.org/Pitfalls
-* http://wiki.nginx.org/QuickStart
-* http://wiki.nginx.org/Configuration
 
 ### Setup MySQL
 
@@ -733,6 +733,8 @@ http://www.howtoforge.com/installing-nginx-with-php5-and-php-fpm-and-mysql-suppo
 
 #### Setup Wordpress
 http://www.raspberrypi.org/documentation/usage/wordpress/README.md
+
+Since Nginx can be configured to read web apps in any directory (e.g. It communite with PHP via port 9000, with PHP5-fpm), I consider to place Wordpress in xxx (directory...home? /opt? or...?)
 
 ###Backup
 
@@ -782,5 +784,30 @@ http://www.playpcesor.com/2014/07/google-chrome-font.html
 http://sourceforge.net/adobe/source-han-sans/
 http://github.com/adobe-fonts/source-han-sans/
 http://www.google.com/get/noto/#/family/noto-sans-hant
+
+### Supplymentory
+
+#### Reading .gz doc on the fly
+
+Google: how to read .gz doc in linux on the fly
+
+As I facing a problem reading the .gz doc in `/usr/share/doc/nginx`, when I config ngnix today.
+
+* http://www.cyberciti.biz/tips/decompress-and-expand-text-files.html
+
+#### Learn to configure nginx better
+
+* http://www.cyberciti.biz/tips/linux-unix-bsd-nginx-webserver-security.html
+* http://wiki.nginx.org/Pitfalls
+* http://wiki.nginx.org/QuickStart
+* http://wiki.nginx.org/Configuration
+
+#### Better system design with Django
+
+Workflow in Django
+
+* https://github.com/kmmbvnr/django-viewflow
+* https://gist.github.com/Nagyman/9502133 says workflow is a IFM
+
 
 // Last update: 2014-08
