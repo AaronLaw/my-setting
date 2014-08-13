@@ -30,6 +30,7 @@ Raspberry Pi for hobototes.
 * Write the apps for the business.
     * hobototes-data-centric apps.
     * Automate the calculation.
+* Wordpress for article storage.
 * Doing some automation, using cron job, e.g. automate the database backup.
 * Doing some experiment, such as Rails4, node.js.
 
@@ -50,7 +51,11 @@ python3.4 is `py`, located in /opt/python3.4/bin/python3.4
 
 `py34-django` is the main develop environment for hobototes-data-centric apps
 
+nginx is started by `sudo service nginx start`
 
+The default nginx document root is `/usr/share/nginx/www`.
+
+mysql -uroot -ppassword
 
 ----
 2014-08-06:
@@ -65,7 +70,7 @@ Expand the disk, set locale, turn on SSH, reboot.
     sudo apt-get install update && apt-get install upgrade
     dpkg
 
-And now it's ready to be customasation. For fun! (或是被折磨)
+And now it's ready to be customisation. For fun! (或是被折磨)
 
 ### History
 2014-08-06: Initial the system.
@@ -75,7 +80,7 @@ And now it's ready to be customasation. For fun! (或是被折磨)
 2014-08-12: Install Python3.4 from source. Setup virtualenv & wirtualenvwrapper.
 
 ### Custom software on Pi:
-tightvncserver, vim-gtk,  git, 
+tightvncserver, vim-gtk, git, 
 
 transmission, chromium,
 
@@ -85,30 +90,35 @@ htop, nmap, tree, p7zip
 (7z on linux is 7za, where the package is called p7zip [#] (http://www.thegeekstuff.com/2010/04/7z-7zip-7za-file-compression/) )
 
 #### TODO:
-- [ ] sublime
-- [ ] utorrent
+- [f] sublime -> use Vim, or code locally commit over Git
+- [ ] utorrent -> TBC
 - [ ] file sync between
     - [x] btsync
-    - [x] Dropbox
+    - [f] Dropbox (no auto sync)-> TBC
 - [ ] development environment
     - [x] upgrade to python3.4
     - [x] virtualenv
     - [x] virtualenvwrapper
-    - [ ] Django
+    - [x] Django
+        - [x] test: Django runs with python3.3+
+        - [ ] test: MySQL as backend
     - [ ] MySQL
+    - [ ] PHP5-fpm
+        - [x] let php knows mysql
     - [ ] phpmyadmin
+        - [ ] bind phpmyadmin to mysql
+    - [ ] upgrade git
+    - [ ] import existing data
 - [ ] rails
     - [ ] ruby 2.1.0+
     - [ ] rbenv / rvm
     - [ ] rails 4.1+
 - [ ] internal hosting
-    - [ ] nginx
+    - [x] nginx
+        - [x] let nginx serves PHP (capture comm in port 9000)
     - [ ] wordpress 3.9
 - [ ] automation / add some jobs to cron
 - [ ] todo
-
-
-
 
 How do I setup the Pi (a step by step record)
 ====
@@ -509,14 +519,99 @@ http://docs.python-guide.org/en/latest/dev/virtualenvs/
 
     pip install django == 1.7
 
-However, the version 1.7 is still in beta and not available in pip. Therefore, I need to manually setup with source code.
+However, the version 1.7 is still in beta and not available in pip as a released package. Therefore, I need to manually setup with source code.
 
 Use virtualenv & virtualenvwrapper to make a clean room first.
 
+    which python3.4
+
+No package be shown? coz my python3.4 is called `py`
+
+    mkvirtualenv --python=/usr/bin/python3 py3-django
+
+**Prefer**
+
+    mkvirtualenv --python=/opt/python3.4/bin/python3.4 py34-django
+
+(or virtualenv only:
+    cd ~
+    virtualenv py3_django
+    cd py3_django
+    source bin/activate
+
+    pip install django  # change it to the version you want
+
+    cd ~/site
+)
+
+There are 3 ways to install Django, according to [How to install Django] (https://docs.djangoproject.com/en/1.7/topics/install/).
+
+    cd Downloads
+    wget https://github.com/django/django/zipball/master    # get the latest development version
+    tar xzvf Django-1.7.tar.gz
+    cd Django1.7
+    sudo python setup.py install
+
+(or
+
+    pip install https://www.djangoproject.com/download/1.7c2/tarball/
+    
+**Prefer**
+If I installed Django using pip or easy_install previously, installing with `pip` or `easy_install` again will automatically take care of the old version, so you don’t need to do it myself.
+)
+
+(or
+
+    git clone git://github.com/django/django.git django-trunk
+    sudo pip install -e django-trunk/
+)
+
+Test it:
+
+    cd ~ && mkdir sites
+    django-admin.py --version
+    django-admin.py startproject hobototes-data-centric
+    cd hobototes-data-centric
+    python manage.py runserver
+
+Now, go to itstall MySQL. :D
+
+(Update: `django.core.exceptions.ImproperlyConfigured: Error loading MySQLdb module: No module named 'MySQLdb'`
+
+This is caused by no mysql to python driver in my virtual environment.
+
+Google: django virtualenv no module named mysqldb
+
+need to install `mysql-python` if use mysql as backend, either 1 of the 5, suggested by the Stack Overflow community:
+
+    sudo apt-get install python-mysqldb
+    sudo apt-get install libmysqlclient-dev
+    sudo apt-get install python-dev
+    pip install mysql-python    # but `no module named 'Configparser'`, and the `ConfigParser` does not support python3
+    easy_install mysql-python
+
+None of them works because I use Python3, not python 2.
+
+Then, I Google: pip install mysql-python  no module named 'Configparser'
+
+'''
+    pip install mysqlclient
+
+in my python3.4 virtualenv after
+
+    sudo apt-get install python-dev libmysqlclient-dev
+
+which is obviously specific to ubuntu/debian, but I just wanted to share my success :) 
+'''
+[#] (http://stackoverflow.com/questions/14087598/python-3-3-importerror-no-module-named-configparser)
 
 
+Last resort: simply, create a new virtualenv wyth system site-packages included by using the `--system-site-package` switch [#] (http://stackoverflow.com/questions/13288013/have-mysqldb-installed-works-outside-of-virtualenv-but-inside-it-doesnt-exist)
 
-ref:
+)
+
+
+ref too:
 http://blog.mattwoodward.com/2013/01/setting-up-django-on-raspberry-pi.html
 
 ### Setup Rails
@@ -526,16 +621,54 @@ http://computers.tutsplus.com/tutorials/how-to-install-ruby-on-rails-on-raspberr
 
 ## Setup the backend supporting for Django
 
-### Setup MySQL
+** Need Nginx to serve PhpMyAdmin and Django and Wordpress. All of them need MySQL-server too.**
 
+Tutorial in [For your Pi!] (http://raspberrypihelp.net/tutorials) provides the instruction on setting up Nginx. http://raspberrypihelp.net/tutorials/24-raspberry-pi-webserver Nginx, MySQL, PHP5-fpm, PHPMyAdmin <- All-in-one, this one useful
+** I only follow this tutorial to install Nginx, MySQL, PHP5-fpm, PHPMyAdmin **
+
+[Installing Nginx With PHP5 (And PHP-FPM) And MySQL Support (LEMP) On Ubuntu 12.04 LTS] (http://www.howtoforge.com/installing-nginx-with-php5-and-php-fpm-and-mysql-support-lemp-on-ubuntu-12.04-lts) generally speak how to install nginx with PHP4 (PHP-FPM) and MySQL on Ubuntu 12.04, from Google: php5-fpm, when I wanna know what is that, after reading [pi's official document] (http://www.raspberrypi.org/documentation/remote-access/web-server/README.md).
+
+[Running (almost) anything on Nginx with uWSGI - metz.log] (http://metz.gehn.net/2013/02/running-anything-on-nginx-with-uwsgi/) tells me what is uWSGI, a technology in python equivalent to PHP-FPM in php. From Google: php-fpm in python
 
 ### Setup Nginx
 
     sudo apt-get install nginx
-ref: 
-http://www.raspberrypi.org/documentation/remote-access/web-server/nginx.md
 
-Tutorial in [For your Pi!] (http://raspberrypihelp.net/tutorials) provides the instruction on setting up Nginx. http://raspberrypihelp.net/tutorials/24-raspberry-pi-webserver Nginx, MySQL, PHP5-fpm, PHPMyAdmin <- All-in-one, this one useful
+Test it:
+
+    sudo service nginx start
+
+The nginx configuration is in /etc/nginx/nginx.conf which we open now:
+
+    vi /etc/nginx/nginx.conf
+
+The configuration is easy to understand (you can learn more about it here: http://wiki.nginx.org/NginxFullExample and here: http://wiki.nginx.org/NginxFullExample2)
+
+ref:
+http://www.raspberrypi.org/documentation/remote-access/web-server/README.md
+http://www.raspberrypi.org/documentation/remote-access/web-server/nginx.md
+http://www.howtoforge.com/installing-nginx-with-php5-and-php-fpm-and-mysql-support-lemp-on-ubuntu-12.04-lts
+
+http://blog.mattwoodward.com/2013/01/setting-up-django-on-raspberry-pi.html
+
+
+### Setup MySQL
+
+#### Setup PHP5
+We can make PHP5 work in nginx through PHP-FPM (PHP-FPM (FastCGI Process Manager) is an alternative PHP FastCGI implementation with some additional features useful for sites of any size, especially busier sites) which we install as follows:
+
+    apt-get install php5-fpm
+
+PHP-FPM is a daemon process (with the init script /etc/init.d/php5-fpm) that runs a FastCGI server on port 9000. 
+
+ref:
+http://www.howtoforge.com/installing-nginx-with-php5-and-php-fpm-and-mysql-support-lemp-on-ubuntu-12.04-lts
+
+#### Setup PhpMyAdmin
+
+
+#### Setup Wordpress
+http://www.raspberrypi.org/documentation/usage/wordpress/README.md
 
 ###Backup
 
@@ -543,7 +676,7 @@ Tutorial in [For your Pi!] (http://raspberrypihelp.net/tutorials) provides the i
 
     sudo dd bs=4M if=/dev/sdb of=raspbian.img (or dcfldd)
     dd if=/path/to/image of=/dev/sdb
-    
+
 ref: Google: raspberry backup
 http://raspberrypi.stackexchange.com/questions/311/how-do-i-backup-my-raspberry-pi
 
