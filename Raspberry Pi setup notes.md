@@ -329,6 +329,8 @@ A notes I bear in mind:
 Google: django with python 3
 http://askubuntu.com/questions/401132/how-can-i-install-django-for-python-3-x
 http://stackoverflow.com/questions/20251562/how-to-install-django-for-python-3-3 facing the same problem of mine
+https://docs.djangoproject.com/en/dev/topics/python3/
+
 
 Seems I have to complie 3.3 (or 3.4) from source. Therefore,
 Google: how to install python 3.3
@@ -411,6 +413,7 @@ Test if it worked:
 
     python3.4
 
+`** prefer **`
 I've tested both the methods above. I prefer the 1st one. No messy in `/usr/local`.
 
 #### Escape
@@ -529,7 +532,7 @@ No package be shown? coz my python3.4 is called `py`
 
     mkvirtualenv --python=/usr/bin/python3 py3-django
 
-**Prefer**
+`**Prefer**`
 
     mkvirtualenv --python=/opt/python3.4/bin/python3.4 py34-django
 
@@ -556,7 +559,7 @@ There are 3 ways to install Django, according to [How to install Django] (https:
 
     pip install https://www.djangoproject.com/download/1.7c2/tarball/
     
-**Prefer**
+`**Prefer**`
 If I installed Django using pip or easy_install previously, installing with `pip` or `easy_install` again will automatically take care of the old version, so you don’t need to do it myself.
 )
 
@@ -608,6 +611,21 @@ which is obviously specific to ubuntu/debian, but I just wanted to share my succ
 
 Last resort: simply, create a new virtualenv wyth system site-packages included by using the `--system-site-package` switch [#] (http://stackoverflow.com/questions/13288013/have-mysqldb-installed-works-outside-of-virtualenv-but-inside-it-doesnt-exist)
 
+Update2:
+
+If all about fails, I might try [PythonAnywhere] (https://www.pythonanywhere.com/wiki/UsingMySQL) :
+
+    pip install --user https://dev.mysql.com/get/Downloads/Connector-Python/mysql-connector-python-1.1.6.tar.gz
+
+Then, update your settings.py to use the oracle django backend, "mysql.connector.django":
+
+    DATABASES = {
+        'default': {
+            'ENGINE': 'mysql.connector.django',
+             ...
+
+ref:
+http://stackoverflow.com/questions/15140855/python3-2-installing-mysql-python-fails-with-error-no-module-named-configparse
 )
 
 
@@ -638,11 +656,22 @@ Test it:
 
     sudo service nginx start
 
+or
+
+    /etc/init.d/nginx start
+
 The nginx configuration is in /etc/nginx/nginx.conf which we open now:
 
     vi /etc/nginx/nginx.conf
 
 The configuration is easy to understand (you can learn more about it here: http://wiki.nginx.org/NginxFullExample and here: http://wiki.nginx.org/NginxFullExample2)
+
+
+Test:
+http://127.0.0.1
+
+(Add a line of `<? echo phpinfo();` in  `/usr/share/nginx/www/index.php`, to see if it serves php, later in the server setup.)
+
 
 ref:
 http://www.raspberrypi.org/documentation/remote-access/web-server/README.md
@@ -651,6 +680,41 @@ http://www.howtoforge.com/installing-nginx-with-php5-and-php-fpm-and-mysql-suppo
 
 http://blog.mattwoodward.com/2013/01/setting-up-django-on-raspberry-pi.html
 
+#### How to bind PhpMyAdmin to Nginx / Configure nginx to serve phpMyAdmin
+Google: raspberry nginx phpmyadmin
+
+1. http://magnatecha.com/set-up-phpmyadmin-with-nginx/. make nginx listens to port 81 and where phpmyadmin is localed in `/usr/share/phpmyadmin`
+2. http://raspberrypihelp.net/tutorials/24-raspberry-pi-webserver again.
+3. http://xmodulo.com/2014/04/lightweight-web-server-raspberry-pi.html demos on nginx and lighttpd: make a link `sudo ln -s /usr/share/phpmyadmin /var/www/phpmyadmin` to the document root and make no change on the server config
+
+From #1:
+
+    server {
+        listen          81;
+        server_name     localhost;
+        root        /usr/share/phpmyadmin;
+        index       index.php index.html index.htm;
+        if (!-e $request_filename) {
+            rewrite ^/(.+)$ /index.php?url=$1 last;
+            break;
+        }
+        location ~ .php$ {
+            try_files $uri =404;
+            fastcgi_pass unix:/var/run/php5-fpm.sock;
+            fastcgi_index index.php;
+            include /etc/nginx/fastcgi_params;
+        }
+    }
+
+I put the code into the `http` section, and head to `http://192.168.0.101:81`... it works!
+
+
+
+additional ref:
+
+* http://wiki.nginx.org/Pitfalls
+* http://wiki.nginx.org/QuickStart
+* http://wiki.nginx.org/Configuration
 
 ### Setup MySQL
 
