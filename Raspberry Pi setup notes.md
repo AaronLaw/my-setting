@@ -639,6 +639,13 @@ http://stackoverflow.com/questions/15140855/python3-2-installing-mysql-python-fa
 )
 
 
+Update3:
+```
+To install mysqldb under virtualenv, you need to be able to compile the mysql module, which means you need all the general compliation tools, the python header libraries and the mysql client ones (Under ubuntu/debian these are packages build-essential, python-dev & libmysqlclient16-dev ), at this point pip install MySQL-python should work, and from there you should be able to use mysql within django.
+```
+[#] (http://stackoverflow.com/questions/8610961/problems-with-djangomysqlvirtualenv?rq=1)
+
+
 ref too:
 http://blog.mattwoodward.com/2013/01/setting-up-django-on-raspberry-pi.html
 
@@ -729,6 +736,14 @@ additional ref:
 
 ### Setup MySQL
 
+
+sudo apt-get install mysql-server
+
+set a root password.
+
+Test:
+mysql -uroot -ppassword
+
 #### Setup PHP5
 We can make PHP5 work in nginx through PHP-FPM (PHP-FPM (FastCGI Process Manager) is an alternative PHP FastCGI implementation with some additional features useful for sites of any size, especially busier sites) which we install as follows:
 
@@ -740,6 +755,15 @@ ref:
 http://www.howtoforge.com/installing-nginx-with-php5-and-php-fpm-and-mysql-support-lemp-on-ubuntu-12.04-lts
 
 #### Setup PhpMyAdmin
+
+    sudo apt-get install phpmyadmin
+
+in the config screen, skin both apache and lighttpd, as I use Ngnix myself.
+
+    dbconfig-common
+
+info about config phpmyadmin: `/usr/share/doc/phpmyadmin`, 
+`dbconfig-common: writing config to /etc/dbconfig-common/phpmyadmin.conf`
 
 
 #### Setup Wordpress
