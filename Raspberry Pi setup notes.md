@@ -5,11 +5,11 @@ Writting style ref: https://github.com/johnantoni/beaglebone-black
 Purpose of Pi: (2014-08)
 ========
 1. Help to maintace the daily operation of hobototes (e.g. When we travel around the world, we need a small-enough computer for operation.).
-2. As a device to operate all-day-long with **low power consumption**. (verse the power a notebook needs)
+2. As a device to operate all-day-long with **low power consumption**. :heart_eyes: (verse the power a notebook needs)
 3. Runs the hobototes-data-centric apps on it. (To free my notebook from always-turning-on. Moving django project to it.)
 4. Runs as a host to share files. (BTSync, verse Dropbox)
 5. Needs no maintance once after setup. Once it's broken, it is brain-less to be rebuilt the software. (0-day recovery.) (verse PC, which the storage, power suppile, display unit are easy to be broken, and making heat. PC needs to be setup again once a hardawre is replaced. Time consuming.)
-6. Plug and play, **rich community support**.
+6. Plug and play, **rich community support**. :heart_eyes:
 
 
 ----
@@ -47,6 +47,8 @@ Django
 
 ### My tools
 
+login: je09
+
 python3.4 is `py`, located in /opt/python3.4/bin/python3.4
 
 `py34-django` is the main develop environment for hobototes-data-centric apps
@@ -55,11 +57,10 @@ nginx is started by `sudo service nginx start`
 
 The default nginx document root is `/usr/share/nginx/www`.
 
-mysql -uroot -ppassword
+`mysql -uroot -ppassword`
 
 ----
 2014-08-06:
-je09
 
 In the 1st boot up:
 
@@ -270,6 +271,7 @@ http://blog.bittorrent.com/2014/08/05/sync-stories-dual-backup-with-a-beaglebone
 http://blog.bittorrent.com/2013/05/23/how-i-created-my-own-personal-cloud-using-bittorrent-sync-owncloud-and-raspberry-pi/
 http://reustle.io/blog/btsync-pi
 http://www.instructables.com/id/Redundant-cloud-storage-with-a-friend-and-a-Raspbe/?ALLSTEPS
+http://www.cyberciti.biz/open-source/30-cool-best-open-source-softwares-of-2013/
 
 ### Setup Dropbox
 Dropbox doesn't provide an ARM package on Linux nor source code. Therefore, I need to find a 3rd-party solution on pi.
@@ -413,7 +415,7 @@ Test if it worked:
 
     python3.4
 
-`** prefer **`
+`** prefer ** :heart: `
 I've tested both the methods above. I prefer the 1st one. No messy in `/usr/local`.
 
 #### Escape
@@ -494,6 +496,8 @@ https://virtualenv.pypa.io/en/latest/
     source /usr/local/bin/virtualenvwrapper.sh
 
     mkvirtualenv env1
+
+In order to make the virtualenvwrapper's environment available afterward, I should write the `export` and `source` exactly showning above in my `~/.bashrc`.
 
 Some useful commands:
 
@@ -599,7 +603,8 @@ need to install `mysql-python` if use mysql as backend, either 1 of the 5, sugge
 Then, I Google: pip install mysql-python  no module named 'Configparser'
 
 :pray:
-''' 
+```
+
     pip install mysqlclient
 
 in my python3.4 virtualenv after
@@ -607,7 +612,8 @@ in my python3.4 virtualenv after
     sudo apt-get install python-dev libmysqlclient-dev
 
 which is obviously specific to ubuntu/debian, but I just wanted to share my success :) 
-'''
+```
+
 [#] (http://stackoverflow.com/questions/14087598/python-3-3-importerror-no-module-named-configparser)
 
 :pray:
@@ -621,10 +627,12 @@ If all about fails, I might try [PythonAnywhere] (https://www.pythonanywhere.com
 
 Then, update your settings.py to use the oracle django backend, "mysql.connector.django":
 
+```python
     DATABASES = {
         'default': {
             'ENGINE': 'mysql.connector.django',
              ...
+```
 
 ref:
 http://stackoverflow.com/questions/15140855/python3-2-installing-mysql-python-fails-with-error-no-module-named-configparse
@@ -684,10 +692,13 @@ http://blog.mattwoodward.com/2013/01/setting-up-django-on-raspberry-pi.html
 
 #### How to bind PhpMyAdmin to Nginx / Configure nginx to serve phpMyAdmin
 Google: raspberry nginx phpmyadmin
+Google: raspberry nginx
 
 1. http://magnatecha.com/set-up-phpmyadmin-with-nginx/. make nginx listens to port 81 and where phpmyadmin is localed in `/usr/share/phpmyadmin`
 2. http://raspberrypihelp.net/tutorials/24-raspberry-pi-webserver again.
 3. http://xmodulo.com/2014/04/lightweight-web-server-raspberry-pi.html demos on nginx and lighttpd: make a link `sudo ln -s /usr/share/phpmyadmin /var/www/phpmyadmin` to the document root and make no change on the server config
+
+n. http://www.raspipress.com/2014/06/tutorial-install-wordpress-on-a-raspberry-pi-using-nginx/ has a 3 part series on installing PHP & nginx on raspberry
 
 From #1:
 
@@ -710,7 +721,7 @@ From #1:
 
 I put the code into the `http` section, and head to `http://192.168.0.101:81`... it works!
 
-
+Test the config before reload the server: [Make Sure Unix / Linux Configuration Files Are Free From Syntax Errors] (http://www.cyberciti.biz/tips/check-unix-linux-configuration-file-for-syntax-errors.html)
 
 additional ref:
 @see the supplymentory
@@ -734,7 +745,7 @@ http://www.howtoforge.com/installing-nginx-with-php5-and-php-fpm-and-mysql-suppo
 #### Setup Wordpress
 http://www.raspberrypi.org/documentation/usage/wordpress/README.md
 
-Since Nginx can be configured to read web apps in any directory (e.g. It communite with PHP via port 9000, with PHP5-fpm), I consider to place Wordpress in xxx (directory...home? /opt? or...?)
+Since Nginx can be configured to read web apps in any directory (e.g. It communite with PHP via port 9000, with PHP5-fpm), I consider to place Wordpress in /var/www/ , following the convention made by Apache.
 
 ###Backup
 
@@ -764,6 +775,8 @@ http://www.raspberrypi.org/forums/viewtopic.php?p=118519
 ### Backup files daily
 Google: linux backup to dropbox
 
+http://www.cyberciti.biz/open-source/30-cool-best-open-source-softwares-of-2013/
+
 ### Set Fonts
 Do it on client side, as I seldom login to pi with keyboard and mouse but remote control it with ssh.
 
@@ -787,6 +800,9 @@ http://www.google.com/get/noto/#/family/noto-sans-hant
 
 ### Supplymentory
 
+#### Linux system monitoring / Admin
+* http://www.cyberciti.biz/tips/top-linux-monitoring-tools.html
+
 #### Reading .gz doc on the fly
 
 Google: how to read .gz doc in linux on the fly
@@ -808,6 +824,9 @@ Workflow in Django
 
 * https://github.com/kmmbvnr/django-viewflow
 * https://gist.github.com/Nagyman/9502133 says workflow is a IFM
+
+Plotting Graph
+* http://www.playpcesor.com/2014/08/excel-google-sheets-patterns.html
 
 
 // Last update: 2014-08
