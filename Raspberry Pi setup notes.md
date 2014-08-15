@@ -2,6 +2,9 @@
 
 Writting style ref: https://github.com/johnantoni/beaglebone-black
 
+Thanks all the clever people make the tools help me work remotely! High quality software, which is opensource, with well organized documentation, and supportive community!
+Thanks all, I love you. I've learnt much from you.
+
 http://3.bp.blogspot.com/--paedIFRIqw/UxonE86mncI/AAAAAAAAVuk/NZC--txBtQY/s1600/raspberry_pi_education.jpg
 
 Purpose of Pi: (2014-08)
@@ -122,8 +125,9 @@ htop, nmap, tree, p7zip
 - [ ] internal hosting
     - [x] nginx
         - [x] let nginx serves PHP (capture comm in port 9000)
-        - [ ] test phpmyadmin
+        - [x] test phpmyadmin
     - [ ] wordpress 3.9
+        -[ ] url rewritten in nginx
 - [ ] automation / add some jobs to cron
 - [ ] todo
 
