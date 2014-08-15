@@ -895,14 +895,85 @@ http://www.raspberrypi.org/documentation/usage/wordpress/README.md
 
 Since Nginx can be configured to read web apps in any directory (e.g. It communite with PHP via port 9000, with PHP5-fpm), I consider to place Wordpress in /var/www/ , following the convention made by Apache.
 
-Update:
+Update 1:
 
 I've try to visit the wordpress site outside my local network. It works! However, the style & image are broken.
 
-I should fire up the database, and edit `home_url` to the domain which the outsider see, from `192.168.0.101:8008`, since I setup it on `192.168.0.101`.
+I should fire up the database, and edit `home_url` to the domain which the outsider see, from `192.168.0.101:8008` to the DDNS I own. It works now! (Wordpress marks my ip as `192.168.0.101` since I setup it on `192.168.0.101`.)
 
-I've try to upload an image in a post, it error occurs: `no permission`. It's permission problem on linux folder permission. What should I set it to?
+Update 2:
+
+I've try to upload an image in a post, an error occurs: `permission error`. This's a problem on linux folder permission. `777` is the last resort coz it make the folder "open to all people"; `755` seems NOT OK unluckily in this situation.
+
+Best practice is to keep permissions as tight as possible. Using 777 for testing is legitimate IMO, but there should be no need to leave permissions that loose in production. Hmm, what should I set it to?
+
+
 Google: how to set chmod with wordpress on linux
+
+Google: wordpress cannot upload iage folder permission
+
+```
+This error happens when PHP (WordPress) can't write to the file. This is caused by not having write permissions (the username or group that PHP (WordPress) is running under doesn't have permission to write to the file)
+
+Some server environments require you to use 777 permissions for PHP to have write access. This is not secure in a shared hosting environment. 
+```
+[#] (http://wordpress.stackexchange.com/questions/1430/cant-upload-images-due-to-permissions-error)
+
+Hmm, then it is better to find out ** who ** need the permission to write the file. :smile:
+
+```
+Assign 766 recursive permissions to wp-contents folder which will resolve the case...
+```
+[#] (http://wordpress.org/support/topic/image-upload-results-in-insufficient-permissions?replies=8)
+
+I know, but giving `read & write` permisson is not secure, though.
+
+```
+IMO it would be better to keep the permissions as 755 and give ownership to the webserver account (www-data). It probably doesn't make significant difference in the grand scheme of things but best practice is to keep permissions as tight as possible. Using 777 for testing is legitimate IMO, but there should be no need to leave permissions that loose in production. Root owned directories with 777 should have the same impact on WordPress as those dirs having 755 and owned by www-data. (FYI the 3 numbers refer to owner, group, others - 7 means read/write/execute; 5 means read/execute).
+
+So personally I would do this:
+
+    chown -R www-data:www-data /var/www/wordpress/wp-content/uploads 
+    chmod -R 755 /var/www/wordpress/wp-content/uploads 
+```
+[#] (http://www.turnkeylinux.org/forum/support/20130531/cannot-upload-wordpress-media-library-wordpress-appliance#comment-16821)
+
+I like that! But I've never heard `www-data`. Who is that?
+
+#### My Setting
+
+OK, so...I've to a test myself. This is a problem combine of "who is the owner" of the uploaded image & what is "the least permission", so I've to check it out...
+
+    cd /var/www && ls -l
+
+The owner:group is `pi:pi`, with `777` (p.s.I've set to `777` 4hr before.). Then I try to change them to `755`:
+
+    chmod -R 777 wordpress
+
+Oops...
+
+    chmod: 正在更改 ‘wordpress/wp-content/uploads’ 的權限: 此項操作並不被允許
+    chmod: 正在更改 ‘wordpress/wp-content/uploads/2014’ 的權限: 此項操作並不被允許
+    chmod: 正在更改 ‘wordpress/wp-content/uploads/2014/08’ 的權限: 此項操作並不被允許
+    chmod: 正在更改 ‘wordpress/wp-content/uploads/2014/08/cover1-500x270.jpg’ 的權限: 此項操作並不被允許
+
+I cannot make a change, coz I am not the owner of them! (Remember that I've upload an image 4hr before successfully, **afterward** I'd change the whole `wordpress/` to 777 with `sudo chmod +R 777 wordpress`. That is, I open the  `wp-content/` folder to all the public, and then ** someone ** put the image into it.) Now, I am going to see who is he!
+
+    cd wordpress/wp-content && ls -l
+
+    -rwxrwxrwx 1 pi       pi         28  1月  9  2012 index.php
+    drwxrwxrwx 3 pi       pi       4096  8月 16 01:55 plugins
+    drwxrwxrwx 5 pi       pi       4096  8月 15 12:05 themes
+    drwxrwxrwx 3 www-data www-data 4096  8月 15 19:09 uploads
+
+Aha! The folder & image in `uploads` is created by Wordpress. It is owned by `www-data:www-data`. This is what [Jeremy claimed] (http://www.turnkeylinux.org/forum/support/20130531/cannot-upload-wordpress-media-library-wordpress-appliance#comment-16821).
+
+連安裝個 wordpress 也很長知識。原來有種 owner 叫 www-data。開 777 就沒安全保護；設成 755就無法上傳圖片，因為 owner 不是我本人。所以我要先找出誰會是 owner，再把 folder 設定成屬於他的，才設成 他的 755。
+
+    chown -R www-data:www-data /var/www/wordpress/wp-content/uploads 
+    chmod -R 755 /var/www/wordpress/wp-content/uploads 
+
+I fix it!
 
 ###Backup
 
