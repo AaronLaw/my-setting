@@ -111,7 +111,7 @@ htop, nmap, tree, p7zip
     - [x] Django
         - [x] test: Django runs with python3.3+
         - [x] test: MySQL as backend
-    - [ ] MySQL
+    - [x] MySQL
     - [x] PHP5-fpm
         - [x] let php knows mysql
     - [x] phpmyadmin
@@ -126,7 +126,7 @@ htop, nmap, tree, p7zip
     - [x] nginx
         - [x] let nginx serves PHP (capture comm in port 9000)
         - [x] test phpmyadmin
-    - [ ] wordpress 3.9
+    - [x] wordpress 3.9
         -[ ] url rewritten in nginx
 - [ ] automation / add some jobs to cron
 - [ ] todo
@@ -894,6 +894,15 @@ http://www.howtoforge.com/installing-nginx-with-php5-and-php-fpm-and-mysql-suppo
 http://www.raspberrypi.org/documentation/usage/wordpress/README.md
 
 Since Nginx can be configured to read web apps in any directory (e.g. It communite with PHP via port 9000, with PHP5-fpm), I consider to place Wordpress in /var/www/ , following the convention made by Apache.
+
+Update:
+
+I've try to visit the wordpress site outside my local network. It works! However, the style & image are broken.
+
+I should fire up the database, and edit `home_url` to the domain which the outsider see, from `192.168.0.101:8008`, since I setup it on `192.168.0.101`.
+
+I've try to upload an image in a post, it error occurs: `no permission`. It's permission problem on linux folder permission. What should I set it to?
+Google: how to set chmod with wordpress on linux
 
 ###Backup
 
