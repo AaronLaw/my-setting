@@ -5,7 +5,7 @@ Writting style ref: https://github.com/johnantoni/beaglebone-black
 Thanks all the clever people make the tools help me work remotely! High quality software, which is opensource, with well organized documentation, and supportive community!
 Thanks all, I love you. I've learnt much from you.
 
-http://3.bp.blogspot.com/--paedIFRIqw/UxonE86mncI/AAAAAAAAVuk/NZC--txBtQY/s1600/raspberry_pi_education.jpg
+![] (http://3.bp.blogspot.com/--paedIFRIqw/UxonE86mncI/AAAAAAAAVuk/NZC--txBtQY/s1600/raspberry_pi_education.jpg)
 
 Purpose of Pi: (2014-08)
 ========
@@ -16,7 +16,7 @@ Purpose of Pi: (2014-08)
 5. Needs no maintance once after setup. Once it's broken, it is brain-less to be rebuilt the software. (0-day recovery.) (verse PC, which the storage, power suppile, display unit are easy to be broken, and making heat. PC needs to be setup again once a hardawre is replaced. Time consuming.)
 6. Plug and play, **rich community support**. :heart_eyes:
 
-http://3.bp.blogspot.com/--paedIFRIqw/UxonE86mncI/AAAAAAAAVuk/NZC--txBtQY/s1600/raspberry_pi_education.jpg
+[] (http://3.bp.blogspot.com/--paedIFRIqw/UxonE86mncI/AAAAAAAAVuk/NZC--txBtQY/s1600/raspberry_pi_education.jpg)
 
 ----
 Raspberry Pi for hobototes.
@@ -31,14 +31,15 @@ Raspberry Pi for hobototes.
 * Preparation for running [Django] (http://djangoproject.com). Upgrade [python] to version 3.4 when need.
 * pip, virtualenv & virtualenvwrapper (I need to learn both of them.)
 * Setup a web server (nginx), database (MySQL), Django, phpmyadmin
+* Make a backup of the SD card before going to the 3rd stage.
 
 ### 3rd stage:
 * Write the apps for the business.
     * hobototes-data-centric apps.
-    * Automate the calculation.
+    * Automate business calculation.
 * Wordpress for article storage.
-* Doing some automation, using cron job, e.g. automate the database backup.
-* Doing some experiment, such as Rails4, node.js.
+* Doing some automation, using crontab, e.g. automate the database backup.
+* Doing some experiment, such as Rails4, node.js, in spare time. :cry:
 
 ----
 Shortcut
@@ -55,13 +56,13 @@ Django
 
 login: je09
 
-python3.4 is `py`, located in /opt/python3.4/bin/python3.4
+python3.4 alias to`py`, located in /opt/python3.4/bin/python3.4
 
 `py34-django` is the main develop environment for hobototes-data-centric apps
 
-nginx is started by `sudo service nginx start`
+nginx is started when boot up, or by `sudo service nginx start`
 
-The default nginx document root is `/usr/share/nginx/www`.
+The default nginx document root is `/usr/share/nginx/www`. I've changed it to `/www/var`.
 
 `mysql -uroot -ppassword`
 
@@ -332,12 +333,12 @@ Since the Python3 ships with Pi is version3.2, it is better to upgrade it to ver
 
 A notes I bear in mind:
 
-```
-    System updates break everything
-    Installing apt packages can overwrite pip-installed things
-    Version conflicts
-    Distribution upgrades are unpredictable chaos. Seriously. I've lost hair to these.
-```
+
+>    System updates break everything
+>    Installing apt packages can overwrite pip-installed things
+>    Version conflicts
+>    Distribution upgrades are unpredictable chaos. Seriously. I've lost hair to these.
+
 
 #### Upgrading Python3 (place it in a new place)
 Google: django with python 3
@@ -616,7 +617,6 @@ Then, I Google: pip install mysql-python  no module named 'Configparser'
 
 :pray:
 
-
 >     pip install mysqlclient
 
 > in my python3.4 virtualenv after
@@ -624,8 +624,6 @@ Then, I Google: pip install mysql-python  no module named 'Configparser'
 >    sudo apt-get install python-dev libmysqlclient-dev
 
 > which is obviously specific to ubuntu/debian, but I just wanted to share my success :) 
-```
-
 [#] (http://stackoverflow.com/questions/14087598/python-3-3-importerror-no-module-named-configparser)
 
 :pray:
@@ -640,10 +638,10 @@ If all about fails, I might try [PythonAnywhere] (https://www.pythonanywhere.com
 Then, update your settings.py to use the oracle django backend, "mysql.connector.django":
 
 ```python
-    DATABASES = {
-        'default': {
-            'ENGINE': 'mysql.connector.django',
-             ...
+DATABASES = {
+    'default': {
+        'ENGINE': 'mysql.connector.django',
+         ...
 ```
 
 ref:
@@ -653,9 +651,9 @@ http://stackoverflow.com/questions/15140855/python3-2-installing-mysql-python-fa
 
 Update3:
 
-```
-To install mysqldb under virtualenv, you need to be able to compile the mysql module, which means you need all the general compliation tools, the python header libraries and the mysql client ones (Under ubuntu/debian these are packages build-essential, python-dev & libmysqlclient16-dev ), at this point pip install MySQL-python should work, and from there you should be able to use mysql within django.
-```
+
+> To install mysqldb under virtualenv, you need to be able to compile the mysql module, which means you need all the general compliation tools, the python header libraries and the mysql client ones (Under ubuntu/debian these are packages build-essential, python-dev & libmysqlclient16-dev ), at this point pip install MySQL-python should work, and from there you should be able to use mysql within django.
+
 [#] (http://stackoverflow.com/questions/8610961/problems-with-djangomysqlvirtualenv?rq=1)
 
 
@@ -912,30 +910,29 @@ Google: how to set chmod with wordpress on linux
 
 Google: wordpress cannot upload iage folder permission
 
-```
-This error happens when PHP (WordPress) can't write to the file. This is caused by not having write permissions (the username or group that PHP (WordPress) is running under doesn't have permission to write to the file)
 
-Some server environments require you to use 777 permissions for PHP to have write access. This is not secure in a shared hosting environment. 
-```
+> This error happens when PHP (WordPress) can't write to the file. This is caused by not having write permissions (the username or group that PHP (WordPress) is running under doesn't have permission to write to the file)
+
+> Some server environments require you to use 777 permissions for PHP to have write access. This is not secure in a shared hosting environment. 
+
 [#] (http://wordpress.stackexchange.com/questions/1430/cant-upload-images-due-to-permissions-error)
 
 Hmm, then it is better to find out ** who ** need the permission to write the file. :smile:
 
-```
-Assign 766 recursive permissions to wp-contents folder which will resolve the case...
-```
+
+> Assign 766 recursive permissions to wp-contents folder which will resolve the case...
 [#] (http://wordpress.org/support/topic/image-upload-results-in-insufficient-permissions?replies=8)
 
 I know, but giving `read & write` permisson is not secure, though.
 
-```
-IMO it would be better to keep the permissions as 755 and give ownership to the webserver account (www-data). It probably doesn't make significant difference in the grand scheme of things but best practice is to keep permissions as tight as possible. Using 777 for testing is legitimate IMO, but there should be no need to leave permissions that loose in production. Root owned directories with 777 should have the same impact on WordPress as those dirs having 755 and owned by www-data. (FYI the 3 numbers refer to owner, group, others - 7 means read/write/execute; 5 means read/execute).
 
-So personally I would do this:
+> IMO it would be better to keep the permissions as 755 and give ownership to the webserver account (www-data). It probably doesn't make significant difference in the grand scheme of things but best practice is to keep permissions as tight as possible. Using 777 for testing is legitimate IMO, but there should be no need to leave permissions that loose in production. Root owned directories with 777 should have the same impact on WordPress as those dirs having 755 and owned by www-data. (FYI the 3 numbers refer to owner, group, others - 7 means read/write/execute; 5 means read/execute).
 
-    chown -R www-data:www-data /var/www/wordpress/wp-content/uploads 
-    chmod -R 755 /var/www/wordpress/wp-content/uploads 
-```
+> So personally I would do this:
+
+>    chown -R www-data:www-data /var/www/wordpress/wp-content/uploads 
+>    chmod -R 755 /var/www/wordpress/wp-content/uploads 
+
 [#] (http://www.turnkeylinux.org/forum/support/20130531/cannot-upload-wordpress-media-library-wordpress-appliance#comment-16821)
 
 I like that! But I've never heard `www-data`. Who is that?
