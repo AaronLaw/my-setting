@@ -2,6 +2,8 @@
 
 Writting style ref: https://github.com/johnantoni/beaglebone-black
 
+http://3.bp.blogspot.com/--paedIFRIqw/UxonE86mncI/AAAAAAAAVuk/NZC--txBtQY/s1600/raspberry_pi_education.jpg
+
 Purpose of Pi: (2014-08)
 ========
 1. Help to maintace the daily operation of hobototes (e.g. When we travel around the world, we need a small-enough computer for operation.).
@@ -11,6 +13,7 @@ Purpose of Pi: (2014-08)
 5. Needs no maintance once after setup. Once it's broken, it is brain-less to be rebuilt the software. (0-day recovery.) (verse PC, which the storage, power suppile, display unit are easy to be broken, and making heat. PC needs to be setup again once a hardawre is replaced. Time consuming.)
 6. Plug and play, **rich community support**. :heart_eyes:
 
+http://3.bp.blogspot.com/--paedIFRIqw/UxonE86mncI/AAAAAAAAVuk/NZC--txBtQY/s1600/raspberry_pi_education.jpg
 
 ----
 Raspberry Pi for hobototes.
@@ -37,7 +40,7 @@ Raspberry Pi for hobototes.
 ----
 Shortcut
 ====
-###Service starts after power on
+###Service need manually start after power on
 
 VNC
 
@@ -58,6 +61,8 @@ nginx is started by `sudo service nginx start`
 The default nginx document root is `/usr/share/nginx/www`.
 
 `mysql -uroot -ppassword`
+
+`pip freeze` exports a list of package in my environment
 
 ----
 2014-08-06:
@@ -102,12 +107,12 @@ htop, nmap, tree, p7zip
     - [x] virtualenvwrapper
     - [x] Django
         - [x] test: Django runs with python3.3+
-        - [ ] test: MySQL as backend
+        - [x] test: MySQL as backend
     - [ ] MySQL
-    - [ ] PHP5-fpm
+    - [x] PHP5-fpm
         - [x] let php knows mysql
-    - [ ] phpmyadmin
-        - [ ] bind phpmyadmin to mysql
+    - [x] phpmyadmin
+        - [x] bind phpmyadmin to mysql
     - [ ] upgrade git
     - [ ] import existing data
 - [ ] rails
@@ -117,6 +122,7 @@ htop, nmap, tree, p7zip
 - [ ] internal hosting
     - [x] nginx
         - [x] let nginx serves PHP (capture comm in port 9000)
+        - [ ] test phpmyadmin
     - [ ] wordpress 3.9
 - [ ] automation / add some jobs to cron
 - [ ] todo
@@ -127,6 +133,7 @@ How do I setup the Pi (a step by step record)
 ### Lookup IP
     ifconfig
     hostname -I
+    curl ifconfig.me (from: http://www.commandlinefu.com/commands/browse/sort-by-votes)
 
 ref: http://www.raspberrypi.org/documentation/troubleshooting/hardware/networking/ip-address.md
 
@@ -176,6 +183,7 @@ Edit fstab to mount the drive on startup. Add following to beginning of /etc/fst
 ref:
 https://github.com/johnantoni/beaglebone-black/blob/master/setup/format-and-mount-usb.md
 http://blog.bittorrent.com/2014/08/05/sync-stories-dual-backup-with-a-beaglebone-black-and-virtual-private-server/
+http://magnatecha.com/automatically-mount-a-drive-when-linux-boots/
 
 ### Setup git
 Git & python & python3 are already on the system.
@@ -563,7 +571,7 @@ There are 3 ways to install Django, according to [How to install Django] (https:
 
     pip install https://www.djangoproject.com/download/1.7c2/tarball/
     
-`**Prefer**`
+`**Prefer**` :heart:
 If I installed Django using pip or easy_install previously, installing with `pip` or `easy_install` again will automatically take care of the old version, so you don’t need to do it myself.
 )
 
@@ -603,15 +611,15 @@ need to install `mysql-python` if use mysql as backend, either 1 of the 5, sugge
 Then, I Google: pip install mysql-python  no module named 'Configparser'
 
 :pray:
-```
 
-    pip install mysqlclient
 
-in my python3.4 virtualenv after
+>     pip install mysqlclient
 
-    sudo apt-get install python-dev libmysqlclient-dev
+> in my python3.4 virtualenv after
 
-which is obviously specific to ubuntu/debian, but I just wanted to share my success :) 
+>    sudo apt-get install python-dev libmysqlclient-dev
+
+> which is obviously specific to ubuntu/debian, but I just wanted to share my success :) 
 ```
 
 [#] (http://stackoverflow.com/questions/14087598/python-3-3-importerror-no-module-named-configparser)
@@ -640,6 +648,7 @@ http://stackoverflow.com/questions/15140855/python3-2-installing-mysql-python-fa
 
 
 Update3:
+
 ```
 To install mysqldb under virtualenv, you need to be able to compile the mysql module, which means you need all the general compliation tools, the python header libraries and the mysql client ones (Under ubuntu/debian these are packages build-essential, python-dev & libmysqlclient16-dev ), at this point pip install MySQL-python should work, and from there you should be able to use mysql within django.
 ```
@@ -659,11 +668,21 @@ http://computers.tutsplus.com/tutorials/how-to-install-ruby-on-rails-on-raspberr
 ** Need Nginx to serve PhpMyAdmin and Django and Wordpress. All of them need MySQL-server too.**
 
 Tutorial in [For your Pi!] (http://raspberrypihelp.net/tutorials) provides the instruction on setting up Nginx. http://raspberrypihelp.net/tutorials/24-raspberry-pi-webserver Nginx, MySQL, PHP5-fpm, PHPMyAdmin <- All-in-one, this one useful
-** I only follow this tutorial to install Nginx, MySQL, PHP5-fpm, PHPMyAdmin **
+** I only follow this tutorial to install Nginx, MySQL, PHP5-fpm, PHPMyAdmin ** till the middle of it.
 
 [Installing Nginx With PHP5 (And PHP-FPM) And MySQL Support (LEMP) On Ubuntu 12.04 LTS] (http://www.howtoforge.com/installing-nginx-with-php5-and-php-fpm-and-mysql-support-lemp-on-ubuntu-12.04-lts) generally speak how to install nginx with PHP4 (PHP-FPM) and MySQL on Ubuntu 12.04, from Google: php5-fpm, when I wanna know what is that, after reading [pi's official document] (http://www.raspberrypi.org/documentation/remote-access/web-server/README.md).
 
 [Running (almost) anything on Nginx with uWSGI - metz.log] (http://metz.gehn.net/2013/02/running-anything-on-nginx-with-uwsgi/) tells me what is uWSGI, a technology in python equivalent to PHP-FPM in php. From Google: php-fpm in python
+
+#### Dynamic DNS
+
+Do port forwarding to route the incoming traffic to Pi.
+
+Google: 啟用DDNS D-link
+
+* http://changyang319.com/archives/624
+* http://changyang319.pixnet.net/blog/post/32287773
+* http://pitown.blogspot.hk/2013/11/routing-web-traffic-to-raspberry-pi.html (from: http://magnatecha.com/things-i-do-with-my-raspberry-pi/)
 
 ### Setup Nginx
 
@@ -677,18 +696,29 @@ or
 
     /etc/init.d/nginx start
 
-The nginx configuration is in /etc/nginx/nginx.conf which we open now:
+~~The nginx configuration is in `/etc/nginx/nginx.conf` which we open now:~~
 
-    vi /etc/nginx/nginx.conf
+Nginx use a modular configuration files. `/etc/nginx/nginx.conf` is the main configuration of Nginx, I've never touch it. Instead, I edit:
+
+    sudo vi /etc/nginx/sites-available/default
+
+Therefore, my custom setting will not be over-written when upgrade the nginx. :smile:
 
 The configuration is easy to understand (you can learn more about it here: http://wiki.nginx.org/NginxFullExample and here: http://wiki.nginx.org/NginxFullExample2)
 
 
-Test:
-http://127.0.0.1
+Test it:
+
+    http://127.0.0.1
 
 (Add a line of `<? echo phpinfo();` in  `/usr/share/nginx/www/index.php`, to see if it serves php, later in the server setup.)
 
+Plus, prepare folders to hold the web documents:
+
+    sudo chown -R pi:pi /var/www
+    sudo chmod -R 755 /var/www
+    mkdir /var/www/example.com
+ [#] (http://raspberrypihelp.net/tutorials/24-raspberry-pi-webserver)
 
 ref:
 http://www.raspberrypi.org/documentation/remote-access/web-server/README.md
@@ -697,15 +727,30 @@ http://www.howtoforge.com/installing-nginx-with-php5-and-php-fpm-and-mysql-suppo
 
 http://blog.mattwoodward.com/2013/01/setting-up-django-on-raspberry-pi.html
 
+#### Setup PhpMyAdmin
+
+    sudo apt-get install phpmyadmin
+
+in the config screen, skin both apache and lighttpd, as I use Ngnix myself.
+
+    dbconfig-common
+
+info about config phpmyadmin: `/usr/share/doc/phpmyadmin`, 
+`dbconfig-common: writing config to /etc/dbconfig-common/phpmyadmin.conf`
+
 #### How to bind PhpMyAdmin to Nginx / Configure nginx to serve phpMyAdmin
+
 Google: raspberry nginx phpmyadmin
-Google: raspberry nginx
+
+(also: Google: raspberry nginx)
+
+I put them below as the ranking:
 
 1. http://magnatecha.com/set-up-phpmyadmin-with-nginx/. make nginx listens to port 81 and where phpmyadmin is localed in `/usr/share/phpmyadmin`
 2. http://raspberrypihelp.net/tutorials/24-raspberry-pi-webserver again.
-3. http://xmodulo.com/2014/04/lightweight-web-server-raspberry-pi.html demos on nginx and lighttpd: make a link `sudo ln -s /usr/share/phpmyadmin /var/www/phpmyadmin` to the document root and make no change on the server config
-
-n. http://www.raspipress.com/2014/06/tutorial-install-wordpress-on-a-raspberry-pi-using-nginx/ has a 3 part series on installing PHP & nginx on raspberry
+3. http://xmodulo.com/2014/04/lightweight-web-server-raspberry-pi.html demos on nginx and lighttpd: create a sybolmic link `sudo ln -s /usr/share/phpmyadmin /var/www/phpmyadmin` to the document root and make no change on the server config
+4. http://www.howtoforge.com/running-phpmyadmin-on-nginx-lemp-on-debian-squeeze-ubuntu-11.04
+5. http://www.raspipress.com/2014/06/tutorial-install-wordpress-on-a-raspberry-pi-using-nginx/ has a 3 part series on installing PHP & nginx on raspberry
 
 From #1:
 
@@ -728,11 +773,93 @@ From #1:
 
 I put the code into the `http` section, and head to `http://192.168.0.101:81`... it works!
 
+From #2:
+
+    sudo chown -R pi:pi /var/www
+    sudo chmod -R 755 /var/www
+    mkdir /var/www/example.com
+
+This is the most useful part, and the configure is a bit complicated, which I skip.
+
+From #3:
+
+After Nginx up:
+
+    server {
+            listen 80;
+            server_name $domain_name;
+            root /var/www;
+            index index.html index.htm;
+            access_log /var/log/nginx/access.log;
+            error_log /var/log/nginx/error.log;
+    }
+
+After installing `php5-fpm` and `php-apc`:
+
+    server {
+            listen 80;
+            server_name $domain_name;
+            root /var/www;
+            index index.html index.htm;
+            access_log /var/log/nginx/access.log;
+            error_log /var/log/nginx/error.log;
+     
+            location ~\.php$ {
+                    fastcgi_pass unix:/var/run/php5-fpm.sock;
+                    fastcgi_split_path_info ^(.+\.php)(/.*)$;
+                    fastcgi_index index.php;
+                    fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+                    fastcgi_param HTTPS off;
+                    try_files $uri =404;
+                    include fastcgi_params;
+            }
+    }
+
+##### My setting
+
+Therefore, I decide to put PHPMyAdmin on port 81, and other pages in `/var/www` on port 8001. 
+
+    server {
+        listen          81;
+        server_name     localhost;
+        root        /usr/share/phpmyadmin;
+        index       index.php index.html index.htm;
+        if (!-e $request_filename) {
+            rewrite ^/(.+)$ /index.php?url=$1 last;
+            break;
+        }
+        location ~ .php$ {
+            try_files $uri =404;
+            fastcgi_pass unix:/var/run/php5-fpm.sock;
+            fastcgi_index index.php;
+            include /etc/nginx/fastcgi_params;
+        }
+    }
+    server {
+        listen         8001;
+        server_name     localhost;
+        root        /var/www/;
+        index       index.php index.html index.htm;
+        if (!-e $request_filename) {
+            rewrite ^/(.+)$ /index.php?url=$1 last;
+            break;
+        }
+        location ~ .php$ {
+            autoindex on;
+            try_files $uri =404;
+            fastcgi_pass unix:/var/run/php5-fpm.sock;
+            fastcgi_index index.php;
+            include /etc/nginx/fastcgi_params;
+        }
+    }
+
+
 Test the config before reload the server: [Make Sure Unix / Linux Configuration Files Are Free From Syntax Errors] (http://www.cyberciti.biz/tips/check-unix-linux-configuration-file-for-syntax-errors.html)
+
+    sudo service nginx configtest
 
 additional ref:
 @see the supplymentory
-
 
 ### Setup MySQL
 
@@ -742,9 +869,12 @@ sudo apt-get install mysql-server
 set a root password.
 
 Test:
-mysql -uroot -ppassword
+    mysql -uroot -ppassword
+
+    /usr/libexec/mysqld --verbose --help 1>/dev/null
 
 #### Setup PHP5
+
 We can make PHP5 work in nginx through PHP-FPM (PHP-FPM (FastCGI Process Manager) is an alternative PHP FastCGI implementation with some additional features useful for sites of any size, especially busier sites) which we install as follows:
 
     apt-get install php5-fpm
@@ -754,16 +884,6 @@ PHP-FPM is a daemon process (with the init script /etc/init.d/php5-fpm) that run
 ref:
 http://www.howtoforge.com/installing-nginx-with-php5-and-php-fpm-and-mysql-support-lemp-on-ubuntu-12.04-lts
 
-#### Setup PhpMyAdmin
-
-    sudo apt-get install phpmyadmin
-
-in the config screen, skin both apache and lighttpd, as I use Ngnix myself.
-
-    dbconfig-common
-
-info about config phpmyadmin: `/usr/share/doc/phpmyadmin`, 
-`dbconfig-common: writing config to /etc/dbconfig-common/phpmyadmin.conf`
 
 
 #### Setup Wordpress
@@ -773,7 +893,11 @@ Since Nginx can be configured to read web apps in any directory (e.g. It communi
 
 ###Backup
 
+Backup: Just like you can load saving data while playing RPG game.
+
 #### Backup disk image
+
+http://3.bp.blogspot.com/-s0MifSBzgnE/UxoneY_GbJI/AAAAAAAAVu0/2qCetZ7GteM/s1600/backup-raspberry-pi-os.png
 
     sudo dd bs=4M if=/dev/sdb of=raspbian.img (or dcfldd)
     dd if=/path/to/image of=/dev/sdb
@@ -793,13 +917,40 @@ with compression:
 
     dd bs=1M if=/dev/mmcblk0 | ssh user@host 'gzip -9 > /remote/path/to/sdcard.img.gz'
 
+** Prefer **
+My actual command:
+
+    df -h
+    umount /dev/sdc1
+    umount /dev/sdc2
+    sudo dcfldd bs=4M if=/dev/sdc | bzip2 -8 > '/media/Windows7_OS/Raspberry Pi System Backup (2014-08-xx)/Raspberry Pi - system.img-201408xx.bz2'
+
+
 ref: 
 http://www.raspberrypi.org/forums/viewtopic.php?p=118519
+http://pitown.blogspot.hk/2013/11/backing-up-raspberry-pis-operating.html (from: http://magnatecha.com/things-i-do-with-my-raspberry-pi/)
 
 ### Backup files daily
 Google: linux backup to dropbox
 
 http://www.cyberciti.biz/open-source/30-cool-best-open-source-softwares-of-2013/
+
+#### Back the code I write
+
+As I've decided to write code on my nb (not write over ssh) and then deploy it to pi, I decide to use Git & Github to deploy and backup my code. (Consider once my nb is dead, I still have 2 copies of my code.)
+
+#### Backup MySQL database
+
+http://www.commandlinefu.com/commands/tagged/749/mysqldump
+https://github.com/johnantoni/AutoMySQLBackup
+
+Then BTSync to the `@backup` directory of my project folder.
+
+#### Restore a MySQL backup
+Google: how to restore mysqldump
+
+http://www.thegeekstuff.com/2008/09/backup-and-restore-mysql-database-using-mysqldump/ 
+http://xmodulo.com/2012/10/how-to-backup-mysql-server.html
 
 ### Set Fonts
 Do it on client side, as I seldom login to pi with keyboard and mouse but remote control it with ssh.
@@ -835,6 +986,19 @@ As I facing a problem reading the .gz doc in `/usr/share/doc/nginx`, when I conf
 
 * http://www.cyberciti.biz/tips/decompress-and-expand-text-files.html
 
+#### Use a RAM disk
+
+    mount -t tmpfs tmpfs /mnt -o size=1024m
+
+Mount a temporary ram partition
+
+Makes a partition in ram which is useful if you need a temporary working space as read/write access is fast.
+
+Be aware that anything saved in this partition will be gone after your computer is turned off.
+
+
+* http://www.commandlinefu.com/commands/view/224/mount-a-temporary-ram-partition (http://www.commandlinefu.com/commands/browse/sort-by-votes)
+
 #### Learn to configure nginx better
 
 * http://www.cyberciti.biz/tips/linux-unix-bsd-nginx-webserver-security.html
@@ -842,15 +1006,61 @@ As I facing a problem reading the .gz doc in `/usr/share/doc/nginx`, when I conf
 * http://wiki.nginx.org/QuickStart
 * http://wiki.nginx.org/Configuration
 
+#### Turn off display
+
+To turn off the display using the Linux command line, open a terminal and enter:
+
+    xset dpms force standby
+
+I also like to lock my screen before hand (in GNOME):
+
+    gnome-screensaver-command -l && xset dpms force standby
+
+ref: 
+http://magnatecha.com/turn-off-display-from-linux-command-line/
+
+#### Backup email with Getmail
+* http://magnatecha.com/back-up-email-with-getmail/
+
 #### Better system design with Django
 
 Workflow in Django
 
+> Managing state and transitions, aka workflow.
+
 * https://github.com/kmmbvnr/django-viewflow
-* https://gist.github.com/Nagyman/9502133 says workflow is a IFM
+* https://gist.github.com/Nagyman/9502133 says workflow is a FSM (aka Finite State Machine).
+
+Restful
+
+* http://code.tutsplus.com/tutorials/beginners-guide-to-the-django-rest-framework--cms-19786
+  * https://github.com/commadelimited/beginners-guide-to-django-rest-framework/blob/master/article.md
+
+Deploy Django with uWSGI & Nginx
+* [使用vps部署django:uwsgi+nginx] (https://github.com/imelucifer/MyNote/blob/master/django/django%2Buwsgi%2Bnginx%2Bcentos%E9%83%A8%E7%BD%B2.md)
 
 Plotting Graph
 * http://www.playpcesor.com/2014/08/excel-google-sheets-patterns.html
 
+### Git
+* http://ihower.tw/git/
+* http://blog.eddie.com.tw/slides/
+  * https://speakerdeck.com/eddie/git-and-github
+* https://github.com/johnantoni/git-notes
+* https://github.com/mhagger/git-imerge
+* http://www.ui.cn/project.php?id=20957
+* http://it-ebooks.info/tag/git/
+* http://computers.tutsplus.com/articles/chris-coyier-on-life-work-and-eighteen-years-as-a-mac-user--mac-3566
+* http://code.tutsplus.com/articles/what-are-you-using--net-32373?utm_source=Tuts+&utm_medium=website&utm_campaign=relatedtutorials&utm_content=sidebar&WT.mc_id=Tuts+_website_relatedtutorials_sidebar
+* http://computers.tutsplus.com/articles/piers-ridyard-on-the-development-and-success-of-the-nifty-minidrive--mac-54952
+
+#### Possible other IDE / Text editor
+* Sublime Text
+* PyCharm
+* Intellij IDEA
+
+#### Play music
+
+    oxmplayer fx.mp3
 
 // Last update: 2014-08
