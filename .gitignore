@@ -1,0 +1,35 @@
+#指定你想讓git忽略的文件模板。
+
+#舉例
+#忽略windows生成的預覽圖文件
+Thumbs.db
+#忽略Visual Studio產生的文件
+*.obj
+*.exe
+*.pdb
+*.use
+*.aps
+*.pch
+*.vspscc
+*_i.c
+*_p.c
+*.ncb
+*.suo
+*.tlb
+*.tlh
+*.bak
+*.cache
+*.ilk
+*.log
+[Bb]in
+[Dd]ebug*/
+*.lib
+*.sbr
+obj/
+[Rr]elease*/
+_ReSharper*/
+#忽略Vim產生的文件
+*.swp
+*.*~
+# Python
+*.pyc
