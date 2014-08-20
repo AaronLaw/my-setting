@@ -16,7 +16,7 @@ Purpose of Pi: (2014-08)
 5. Needs no maintance once after setup. Once it's broken, it is brain-less to be rebuilt the software. (0-day recovery.) (verse PC, which the storage, power suppile, display unit are easy to be broken, and making heat. PC needs to be setup again once a hardawre is replaced. Time consuming.)
 6. Plug and play, **rich community support**. :heart_eyes:
 
-[] (http://3.bp.blogspot.com/--paedIFRIqw/UxonE86mncI/AAAAAAAAVuk/NZC--txBtQY/s1600/raspberry_pi_education.jpg)
+![] (http://3.bp.blogspot.com/--paedIFRIqw/UxonE86mncI/AAAAAAAAVuk/NZC--txBtQY/s1600/raspberry_pi_education.jpg)
 
 ----
 Raspberry Pi for hobototes.
@@ -94,15 +94,17 @@ tightvncserver, vim-gtk, git,
 
 transmission, chromium,
 
-htop, nmap, tree, p7zip
+htop, nmap, tree, p7zip, mtr, [nmon] (http://blog.jobbole.com/15430/)
 
 (No Dvorak keyboard layout setup is needed, as VNC transfer my key layout to the pi. :smiley:)
 (7z on linux is 7za, where the package is called p7zip [#] (http://www.thegeekstuff.com/2010/04/7z-7zip-7za-file-compression/) )
 
 #### TODO:
+*Reality is no prefect.* I intend to get everything up, then make it better.
+
 - [f] sublime -> use Vim, or code locally commit over Git
 - [ ] utorrent -> TBC
-- [ ] file sync between
+- [x] file sync between
     - [x] btsync
     - [f] Dropbox (no auto sync)-> TBC
 - [ ] development environment
@@ -118,7 +120,7 @@ htop, nmap, tree, p7zip
     - [x] phpmyadmin
         - [x] bind phpmyadmin to mysql
     - [ ] upgrade git
-    - [ ] import existing data
+    - [ ] import existing data (Word -> wordpress)
 - [ ] rails
     - [ ] ruby 2.1.0+
     - [ ] rbenv / rvm
@@ -130,7 +132,10 @@ htop, nmap, tree, p7zip
     - [x] wordpress 3.9
         -[ ] url rewritten in nginx
 - [ ] automation / add some jobs to cron
-- [ ] todo
+- [ ] TBC: hardening security
+    - [ ] on wordpress
+    - [ ] on nginx
+    - [ ] ARP protect
 
 How do I setup the Pi (a step by step record)
 ====
@@ -407,6 +412,8 @@ Test if it worked:
 
     /opt/python3.3/bin/python3
 
+    import sqlite3  # if sqlite3 package is installed on system
+
 Some nice touches to install a py command by creating a symlink:
 
     mkdir ~/bin
@@ -474,7 +481,7 @@ Then, we can create an isolate environment:
 
 ref:
 http://raspberry.io/wiki/how-to-get-python-on-your-raspberrypi/
-http://flask.pocoo.org/docs/installation/#virtualenv
+http://flask.pocoo.org/docs/installation/#virtualenv tell me why use virtualenv to isolate the development enviornment from system
 
 http://www.raspberrypi.org/forums/viewtopic.php?t=7208&p=403771
 https://virtualenv.pypa.io/en/latest/
@@ -629,7 +636,7 @@ Then, I Google: pip install mysql-python  no module named 'Configparser'
 :pray:
 Last resort: simply, create a new virtualenv wyth system site-packages included by using the `--system-site-package` switch [#] (http://stackoverflow.com/questions/13288013/have-mysqldb-installed-works-outside-of-virtualenv-but-inside-it-doesnt-exist)
 
-Update2:
+Update 2:
 
 If all about fails, I might try [PythonAnywhere] (https://www.pythonanywhere.com/wiki/UsingMySQL) :
 
@@ -685,6 +692,8 @@ Google: 啟用DDNS D-link
 * http://changyang319.com/archives/624
 * http://changyang319.pixnet.net/blog/post/32287773
 * http://pitown.blogspot.hk/2013/11/routing-web-traffic-to-raspberry-pi.html (from: http://magnatecha.com/things-i-do-with-my-raspberry-pi/)
+* http://portforward.com/ (from: http://www.tightvnc.com/faq.php)
+
 
 ### Setup Nginx
 
@@ -891,7 +900,7 @@ http://www.howtoforge.com/installing-nginx-with-php5-and-php-fpm-and-mysql-suppo
 #### Setup Wordpress
 http://www.raspberrypi.org/documentation/usage/wordpress/README.md
 
-Since Nginx can be configured to read web apps in any directory (e.g. It communite with PHP via port 9000, with PHP5-fpm), I consider to place Wordpress in /var/www/ , following the convention made by Apache.
+Since Nginx can be configured to read web apps in any directory (e.g. It communites with PHP via port 9000, with PHP5-fpm), I consider to place Wordpress in /var/www/ , following the convention made by Apache.
 
 Update 1:
 
@@ -901,14 +910,19 @@ I should fire up the database, and edit `home_url` to the domain which the outsi
 
 Update 2:
 
-I've try to upload an image in a post, an error occurs: `permission error`. This's a problem on linux folder permission. `777` is the last resort coz it make the folder "open to all people"; `755` seems NOT OK unluckily in this situation.
+I've try to upload an image in a post, an error occurs: `permission error`. This's a problem on linux folder permission. `777` is the last resort coz it make the folder "open to all people"; `755` seems DOES NOT WORK unluckily in this situation.
 
 Best practice is to keep permissions as tight as possible. Using 777 for testing is legitimate IMO, but there should be no need to leave permissions that loose in production. Hmm, what should I set it to?
 
 
-Google: how to set chmod with wordpress on linux
+Google: correct chmod setting for wordpress on linux
 
-Google: wordpress cannot upload iage folder permission
+* http://premium.wpmudev.org/forums/topic/correct-chmod-settings-for-install-and-run-of-wordpress
+* http://stackoverflow.com/questions/18352682/correct-file-permissions-for-wordpress
+* http://codex.wordpress.org/Changing_File_Permissions
+
+
+Google: wordpress cannot upload image folder permission
 
 
 > This error happens when PHP (WordPress) can't write to the file. This is caused by not having write permissions (the username or group that PHP (WordPress) is running under doesn't have permission to write to the file)
@@ -936,6 +950,9 @@ I know, but giving `read & write` permisson is not secure, though.
 [#] (http://www.turnkeylinux.org/forum/support/20130531/cannot-upload-wordpress-media-library-wordpress-appliance#comment-16821)
 
 I like that! But I've never heard `www-data`. Who is that?
+
+> The "user" running your webserver (sometimes _www, sometimes www-data, sometimes "nobody") lacks the permissions to edit these files. You can either change them to be owned by that user or change them to 777. To find out what your web server user is, assuming you're running apache, run ps aux | grep httpd in the command line and in the leftmost column, see what user it's showing!
+[#] (http://wordpress.stackexchange.com/questions/40478/permission-of-775-not-enough?answertab=votes#tab-top)
 
 #### My Setting
 
@@ -976,9 +993,13 @@ I fix it!
 
 Backup: Just like you can load saving data while playing RPG game.
 
+#### Clean up
+* [给 Linux 系统“减肥”] (http://www.ibm.com/developerworks/cn/linux/1310_caoyq_linuxdelete/index.html)
+* [给 Linux 系统“减肥”] (http://blog.jobbole.com/49497/)
+
 #### Backup disk image
 
-http://3.bp.blogspot.com/-s0MifSBzgnE/UxoneY_GbJI/AAAAAAAAVu0/2qCetZ7GteM/s1600/backup-raspberry-pi-os.png
+![] (http://3.bp.blogspot.com/-s0MifSBzgnE/UxoneY_GbJI/AAAAAAAAVu0/2qCetZ7GteM/s1600/backup-raspberry-pi-os.png)
 
     sudo dd bs=4M if=/dev/sdb of=raspbian.img (or dcfldd)
     dd if=/path/to/image of=/dev/sdb
@@ -1033,26 +1054,10 @@ Google: how to restore mysqldump
 http://www.thegeekstuff.com/2008/09/backup-and-restore-mysql-database-using-mysqldump/ 
 http://xmodulo.com/2012/10/how-to-backup-mysql-server.html
 
-### Set Fonts
-Do it on client side, as I seldom login to pi with keyboard and mouse but remote control it with ssh.
+#### Hardening Security
+* http://codex.wordpress.org/Hardening_WordPress#File_permissions (Google: how to set chmod with wordpress on linux ->  http://premium.wpmudev.org/forums/topic/correct-chmod-settings-for-install-and-run-of-wordpress) is a good direction on web apps security.
+* [如何保证Linux服务器的安全] (http://blog.jobbole.com/48195/)
 
-Google: linux install font
-
-#### Source Code Pro
-Google: Source code pro
-http://blog.typekit.com/2012/09/24/source-code-pro/
-https://github.com/adobe-fonts/source-code-pro
-http://sourceforge.net/projects/sourcecodepro.adobe/
-
-
-http://www.playpcesor.com/2014/07/source-han-sans-cht-adobe-google.html
-http://blog.typekit.com/alternate/source-han-sans-cht/
-http://www.playpcesor.com/2014/07/google-chrome-font.html
-
-#### Fonts:
-http://sourceforge.net/adobe/source-han-sans/
-http://github.com/adobe-fonts/source-han-sans/
-http://www.google.com/get/noto/#/family/noto-sans-hant
 
 ### Supplymentory
 
@@ -1105,6 +1110,14 @@ http://magnatecha.com/turn-off-display-from-linux-command-line/
 
 #### Better system design with Django
 
+Project layout
+* http://woodpecker.org.cn/
+* Two Scoops of Django
+* http://lightbird.net/dbe/
+
+Database
+* http://postgresql.wisdomfish.org/er-model-tips/db-design-principle
+
 Workflow in Django
 
 > Managing state and transitions, aka workflow.
@@ -1124,24 +1137,74 @@ Plotting Graph
 * http://www.playpcesor.com/2014/08/excel-google-sheets-patterns.html
 
 ### Git
+* [软件版本控制介绍] (http://blog.jobbole.com/55304/)
+* [15分钟学会使用Git和远程代码库] (http://blog.jobbole.com/53573/)
+* [让你的Git水平更上一层楼的10个小贴士] (http://blog.jobbole.com/75348/)
 * http://ihower.tw/git/
 * http://blog.eddie.com.tw/slides/
   * https://speakerdeck.com/eddie/git-and-github
+* http://blog.gogojimmy.net/2012/02/29/git-scenario/
+* http://gogojimmy.net/2012/01/17/how-to-use-git-1-git-basic/
 * https://github.com/johnantoni/git-notes
 * https://github.com/mhagger/git-imerge
-* http://www.ui.cn/project.php?id=20957
+* [专为设计师而写的GitHub快速入门教程] (http://www.ui.cn/project.php?id=20957)
+* [Git教程 - 廖雪峰的官方网站] (http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)
 * http://it-ebooks.info/tag/git/
 * http://computers.tutsplus.com/articles/chris-coyier-on-life-work-and-eighteen-years-as-a-mac-user--mac-3566
 * http://code.tutsplus.com/articles/what-are-you-using--net-32373?utm_source=Tuts+&utm_medium=website&utm_campaign=relatedtutorials&utm_content=sidebar&WT.mc_id=Tuts+_website_relatedtutorials_sidebar
 * http://computers.tutsplus.com/articles/piers-ridyard-on-the-development-and-success-of-the-nifty-minidrive--mac-54952
+* http://demo.tc/Post/702
+* http://blog.jobbole.com/25808/
+* [Git & Excel] (http://blog.jobbole.com/67393/)
+
+#### Linux admin tips & networking
+* http://blog.jobbole.com/50643/ 如何利用多核CPU来加速你的Linux命令
+* http://blog.jobbole.com/75142/ 怎么制定一套合适的服务器命名方案
+
+#### Javascript
+* http://blog.jobbole.com/74818/ 
+    * http://www.codecademy.com/en/tracks/javascript
 
 #### Possible other IDE / Text editor
 * Sublime Text
 * PyCharm
 * Intellij IDEA
 
+#### Possible CRM / CMS
+Google: opensource crm award (idea from: http://www.sugarcrm.com/about/awards-recognition)
+Google: opensource cms award
+
 #### Play music
 
     oxmplayer fx.mp3
+
+see also: http://www.geekfan.net/10419/
+
+### Set Fonts
+Do it on client side, as I seldom login to pi with keyboard and mouse but remote control it with ssh.
+
+Google: linux install font
+
+一般在 Debian 系列的 Linux 中，如果要安裝字型，可將字型檔放在 /usr/share/fonts 或 ~/.fonts 目錄中，然後執行：
+
+    fc-cache -fv
+
+這樣就可以使用新安裝的字型了。[#] (http://www.gtwang.org/2014/02/monospaced-font-for-programmers.html)
+
+#### Source Code Pro
+Google: Source code pro
+http://blog.typekit.com/2012/09/24/source-code-pro/
+https://github.com/adobe-fonts/source-code-pro
+http://sourceforge.net/projects/sourcecodepro.adobe/
+
+
+http://www.playpcesor.com/2014/07/source-han-sans-cht-adobe-google.html
+http://blog.typekit.com/alternate/source-han-sans-cht/
+http://www.playpcesor.com/2014/07/google-chrome-font.html
+
+#### Fonts:
+http://sourceforge.net/adobe/source-han-sans/
+http://github.com/adobe-fonts/source-han-sans/
+http://www.google.com/get/noto/#/family/noto-sans-hant
 
 // Last update: 2014-08
