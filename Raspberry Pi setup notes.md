@@ -94,7 +94,7 @@ tightvncserver, vim-gtk, git,
 
 transmission, chromium,
 
-htop, nmap, tree, p7zip, mtr, [nmon] (http://blog.jobbole.com/15430/)
+[htop] (https://linuxtoy.org/archives/cool-linux-tools.html), nmap, tree, p7zip, mtr, [nmon] (http://blog.jobbole.com/15430/), screen
 
 (No Dvorak keyboard layout setup is needed, as VNC transfer my key layout to the pi. :smiley:)
 (7z on linux is 7za, where the package is called p7zip [#] (http://www.thegeekstuff.com/2010/04/7z-7zip-7za-file-compression/) )
@@ -131,6 +131,7 @@ htop, nmap, tree, p7zip, mtr, [nmon] (http://blog.jobbole.com/15430/)
         - [x] test phpmyadmin
     - [x] wordpress 3.9
         -[ ] url rewritten in nginx
+    - [ ] TBC: mail server
 - [ ] automation / add some jobs to cron
 - [ ] TBC: hardening security
     - [ ] on wordpress
@@ -153,6 +154,24 @@ ref: http://www.raspberrypi.org/documentation/troubleshooting/hardware/networkin
     ssh pi@192.168.0.101
 
 ref: http://www.raspberrypi.org/documentation/remote-access/ssh/unix.md
+
+### Screen
+
+    sudo apt-get install screen
+
+Here are some shortcut of screen:
+
+
+    ctrl-a c：创建一个新的 Shell
+    ctrl-a ctrl-a：在 Shell 间切换
+    ctrl-a n：切换到下一个 Shell
+    ctrl-a p：切换到上一个 Shell
+    ctrl-a 0...9：同样是切换各个 Shell
+    ctrl-a d：退出 Screen 会话
+
+
+* [Screen：Shell 孵化器] (https://linuxtoy.org/archives/screen.html)
+* [从 screen 切换到 tmux] (https://linuxtoy.org/archives/from-screen-to-tmux.html)
 
 ### Setup VNC
     sudo apt-get install tightvncserver
@@ -1032,12 +1051,12 @@ ref:
 http://www.raspberrypi.org/forums/viewtopic.php?p=118519
 http://pitown.blogspot.hk/2013/11/backing-up-raspberry-pis-operating.html (from: http://magnatecha.com/things-i-do-with-my-raspberry-pi/)
 
-### Backup files daily
+#### Backup files daily
 Google: linux backup to dropbox
 
 http://www.cyberciti.biz/open-source/30-cool-best-open-source-softwares-of-2013/
 
-#### Back the code I write
+#### Backup the code I write
 
 As I've decided to write code on my nb (not write over ssh) and then deploy it to pi, I decide to use Git & Github to deploy and backup my code. (Consider once my nb is dead, I still have 2 copies of my code.)
 
@@ -1054,10 +1073,21 @@ Google: how to restore mysqldump
 http://www.thegeekstuff.com/2008/09/backup-and-restore-mysql-database-using-mysqldump/ 
 http://xmodulo.com/2012/10/how-to-backup-mysql-server.html
 
-#### Hardening Security
+#### Backup MySQL Database
+
+http://sourceforge.net/projects/automysqlbackup/
+
+ref: 
+https://linuxtoy.org/archives/automysqlbackup.html
+
+### Hardening Security
 * http://codex.wordpress.org/Hardening_WordPress#File_permissions (Google: how to set chmod with wordpress on linux ->  http://premium.wpmudev.org/forums/topic/correct-chmod-settings-for-install-and-run-of-wordpress) is a good direction on web apps security.
 * [如何保证Linux服务器的安全] (http://blog.jobbole.com/48195/)
 
+### Mail server
+Google: raspberry mail server
+
+* http://www.raspberrypi.org/forums/viewtopic.php?f=36&t=12156
 
 ### Supplymentory
 
@@ -1140,6 +1170,8 @@ Plotting Graph
 * [软件版本控制介绍] (http://blog.jobbole.com/55304/)
 * [15分钟学会使用Git和远程代码库] (http://blog.jobbole.com/53573/)
 * [让你的Git水平更上一层楼的10个小贴士] (http://blog.jobbole.com/75348/)
+* [沉浸式学 Git] (http://igit.linuxtoy.org/)
+    * https://github.com/xuxiaodong/gitimmersion
 * http://ihower.tw/git/
 * http://blog.eddie.com.tw/slides/
   * https://speakerdeck.com/eddie/git-and-github
@@ -1156,6 +1188,22 @@ Plotting Graph
 * http://demo.tc/Post/702
 * http://blog.jobbole.com/25808/
 * [Git & Excel] (http://blog.jobbole.com/67393/)
+
+The [alias] (http://blog.jobbole.com/53573/) I use:
+
+    git config --global alias.c 'commit -m'
+    git config --global alias.co 'checkout'
+    git config --global alias.cob 'checkout -b'
+    git config --global alias.br 'branch'
+    git config --global alias.m 'merge'
+    git config --global alias.a 'add .'
+    git config --global alias.s 'status'
+    git config --global alias.dbr 'branch -d'
+    git config --global alias.l 'log'
+    git config --global alias.lol 'log --oneline'
+    git config --global alias.lg 'log --graph'
+    git config --global alias.lago 'log --all --graph --oneline'
+
 
 #### Linux admin tips & networking
 * http://blog.jobbole.com/50643/ 如何利用多核CPU来加速你的Linux命令
