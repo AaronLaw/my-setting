@@ -1008,6 +1008,48 @@ Aha! The folder & image in `uploads` is created by Wordpress. It is owned by `ww
 
 I fix it!
 
+
+### FTP Server
+
+I need a FTP server on Pi too, because I want to install Wordpress plugins in an easy way.
+
+Google: raspberry pi ftp server
+Google: ubuntu ftp server
+
+    sudo apt-get install vsftpd
+
+Then change the ownership of `/var/www` (I've already this when setting up Nginx.):
+
+    sudo chown -R pi /var/www
+
+Configure the server:
+
+    sudo nano /etc/vsftpd.conf
+
+Search through the file and change the following lines:
+
+    anonymous_enable=YES Change To anonymous_enable=NO
+    #local_enable=YES Change To local_enable=YES
+    #write_enable=YES Change To write_enable=YES
+
+Also, add a line to the bottom of the file:
+
+    force_dot_files=YES
+
+after edit the configuration, restart the service:
+
+    sudo /etc/init.d/vsftpd restart
+
+The host is `127.0.0.1`, where the anonymous FTP user name and password are `ftp:ftp` [#] (http://vsftpd.beasts.org/vsftpd_conf.html). The user  name and password is the existing user, such as `pi`:
+
+    127.0.0.1
+    pi
+    je09
+
+https://help.ubuntu.com/10.04/serverguide/ftp-server.html
+http://computers.tutsplus.com/tutorials/how-to-use-a-raspberry-pi-as-a-local-web-server--cms-19943
+http://www.instructables.com/id/Raspberry-Pi-Web-Server/step9/Install-an-FTP-server/
+
 ###Backup
 
 Backup: Just like you can load saving data while playing RPG game.
