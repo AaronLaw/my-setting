@@ -1008,9 +1008,17 @@ Aha! The folder & image in `uploads` is created by Wordpress. It is owned by `ww
 
 I fix it!
 
+#### Wordpress and Nginx
+
+Google: enable permalink in wordpress nginx
+
+http://codex.wordpress.org/Nginx
+http://nginxlibrary.com/wordpress-permalinks/
+
 
 ### FTP Server
 
+2014-08-30:
 I need a FTP server on Pi too, because I want to install Wordpress plugins in an easy way.
 
 Google: raspberry pi ftp server
@@ -1144,6 +1152,10 @@ As I facing a problem reading the .gz doc in `/usr/share/doc/nginx`, when I conf
 
 * http://www.cyberciti.biz/tips/decompress-and-expand-text-files.html
 
+#### 編譯 Raspberry Pi 的核心
+
+[[進階] 編譯 Raspberry Pi 的核心] (http://www.raspberrypi.com.tw/tutorial/advanced/)
+
 #### Use a RAM disk
 
     mount -t tmpfs tmpfs /mnt -o size=1024m
@@ -1182,6 +1194,20 @@ http://magnatecha.com/turn-off-display-from-linux-command-line/
 
 #### Better system design with Django
 
+https://django-book.readthedocs.org/en/latest/# (from: http://www.meetup.com/Taipei-py/messages/boards/thread/34933702)
+
+South & Migration in Django 1.7
+Google: should I use south in django 1.7
+https://realpython.com/blog/python/django-migrations-a-primer/
+http://treyhunner.com/2014/03/migrating-to-django-1-dot-7/
+
+Pre-popular database
+Google: django fixture | django initial database
+* https://docs.djangoproject.com/en/dev/howto/initial-data/
+
+inner function
+* https://realpython.com/blog/python/inner-functions-what-are-they-good-for/
+
 Project layout
 * http://woodpecker.org.cn/
 * Two Scoops of Django
@@ -1196,6 +1222,11 @@ Workflow in Django
 
 * https://github.com/kmmbvnr/django-viewflow
 * https://gist.github.com/Nagyman/9502133 says workflow is a FSM (aka Finite State Machine).
+* https://www.ruby-toolbox.com/categories/state_machines
+
+Frontend
+Django Template
+* http://www.slideshare.net/cosecant/best-practices-for-frontend-django-developers?related=1
 
 Restful
 
@@ -1212,6 +1243,7 @@ Plotting Graph
 * [软件版本控制介绍] (http://blog.jobbole.com/55304/)
 * [15分钟学会使用Git和远程代码库] (http://blog.jobbole.com/53573/)
 * [让你的Git水平更上一层楼的10个小贴士] (http://blog.jobbole.com/75348/)
+* https://www.atlassian.com/git/
 * [沉浸式学 Git] (http://igit.linuxtoy.org/)
     * https://github.com/xuxiaodong/gitimmersion
 * http://ihower.tw/git/
