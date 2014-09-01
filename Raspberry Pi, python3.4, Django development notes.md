@@ -28,7 +28,12 @@ Google suggests me to search with "raspberry pi django nginx"
 Google: raspberry pi django nginx
 
 The 2nd link [ Setting Up Django On a Raspberry Pi ] (http://blog.mattwoodward.com/2013/01/setting-up-django-on-raspberry-pi.html)
+----
+### Django Tutorials
 
+https://code.djangoproject.com/wiki/Tutorials
+
+https://django-book.readthedocs.org/en/latest/# (from: http://www.meetup.com/Taipei-py/messages/boards/thread/34933702)
 ----
 ####  how to set up a good project "skeleton" directory
 What is the suggested project structure with virtualenv? (Should I place my django projects inside the virtualenv created folder? Or should I keep my projects away from the virtualenv folder? Does virtualenv affects how I structure my folders comparing to not using it?)
@@ -85,6 +90,38 @@ But not shown in the admin interface.
 Google: django comment in admin
 http://stackoverflow.com/questions/4125022/how-to-display-comments-in-django-admin
 http://stackoverflow.com/questions/15165009/form-in-django-admin-for-notes-or-comments-on-models
+----
+### South & Migration in Django 1.7
+Google: should I use south in django 1.7
+https://realpython.com/blog/python/django-migrations-a-primer/
+http://treyhunner.com/2014/03/migrating-to-django-1-dot-7/
+
+to reset the migration, run `zero`with migrate
+
+	./manage.py migrate product zero
+	
+----
+Pre-popular database
+Google: django fixture | django initial database
+* https://docs.djangoproject.com/en/dev/howto/initial-data/
+
+----
+### Django Admin interface
+Google: django admin 2
+
+
+Google: django admin demo
+----
+Django bulid a blog
+* [Building a Blog with Django 1.7 in 16 mins] (https://www.youtube.com/watch?v=7rgph8en0Jc)
+* [Building a Blog in 30 minutes with Django] (https://www.youtube.com/watch?v=srHZoj3ASmk)
+
+----
+### Markdown
+Google: django markdown
+django_markdown
+https://github.com/klen/django_markdown
+[Building a blog with Django1.7 in 16 mins] (https://www.youtube.com/watch?v=7rgph8en0Jc)
 
 ----
 Django deployment
