@@ -1,5 +1,7 @@
 #指定你想讓git忽略的文件模板。
 
+gitignore 大集合: https://github.com/github/gitignore (from: http://ihower.tw/git/basic.html)
+
 #舉例
 #忽略windows生成的預覽圖文件
 Thumbs.db
