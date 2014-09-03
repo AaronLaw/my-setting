@@ -6,3 +6,6 @@ https://www.atlassian.com/git/tutorial/git-basics#!init (from: http://www.instru
 
 ### Setup a private Git server
 http://www.instructables.com/id/GitPi-A-Private-Git-Server-on-Raspberry-Pi/?ALLSTEPS
+
+
+### Reference (general)
