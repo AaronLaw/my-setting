@@ -1270,6 +1270,8 @@ Plotting Graph
 * https://www.atlassian.com/git/
 * [沉浸式学 Git] (http://igit.linuxtoy.org/)
     * https://github.com/xuxiaodong/gitimmersion
+    * http://gitimmersion.com/
+* http://githowto.com/tagging_versions
 * https://help.github.com/articles/github-flow-in-the-browser
 * http://ihower.tw/git/
     * http://git-scm.com
@@ -1309,7 +1311,8 @@ The [alias] (http://blog.jobbole.com/53573/) I use:
     git config --global alias.lol 'log --oneline'
     git config --global alias.lg 'log --graph'
     git config --global alias.lago 'log --all --graph --oneline'
-    git config --global alias.hist  'log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short'
+    git config --global alias.hist  'git log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short'
+
 
 I put the [hist] (http://githowto.com/aliases) alias too.
 
