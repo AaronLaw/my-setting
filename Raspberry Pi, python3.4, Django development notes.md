@@ -28,12 +28,24 @@ Google suggests me to search with "raspberry pi django nginx"
 Google: raspberry pi django nginx
 
 The 2nd link [ Setting Up Django On a Raspberry Pi ] (http://blog.mattwoodward.com/2013/01/setting-up-django-on-raspberry-pi.html)
+
 ----
 ### Django Tutorials
 
 https://code.djangoproject.com/wiki/Tutorials
 
 https://django-book.readthedocs.org/en/latest/# (from: http://www.meetup.com/Taipei-py/messages/boards/thread/34933702)
+----
+
+Django bulid a blog
+* [Building a Blog with Django 1.7 in 16 mins] (https://www.youtube.com/watch?v=7rgph8en0Jc)
+* [Building a Blog in 30 minutes with Django] (https://www.youtube.com/watch?v=srHZoj3ASmk)
+
+Blog example
+
+http://arunrocks.com/recreating-the-building-a-blog-in-django-screencast/
+https://www.youtube.com/watch?v=7rgph8en0Jc
+https://github.com/django/djangoproject.com/tree/master/blog
 ----
 ####  how to set up a good project "skeleton" directory
 What is the suggested project structure with virtualenv? (Should I place my django projects inside the virtualenv created folder? Or should I keep my projects away from the virtualenv folder? Does virtualenv affects how I structure my folders comparing to not using it?)
@@ -91,6 +103,12 @@ Google: django comment in admin
 http://stackoverflow.com/questions/4125022/how-to-display-comments-in-django-admin
 http://stackoverflow.com/questions/15165009/form-in-django-admin-for-notes-or-comments-on-models
 ----
+Image management
+image, gallery, media
+https://readthedocs.org/projects/tags/image/
+
+----
+
 ### South & Migration in Django 1.7
 Google: should I use south in django 1.7
 https://realpython.com/blog/python/django-migrations-a-primer/
@@ -98,12 +116,13 @@ http://treyhunner.com/2014/03/migrating-to-django-1-dot-7/
 
 to reset the migration, run `zero`with migrate
 
-	./manage.py migrate product zero
-	
+	./manage.py migrate <app name> zero
+
 ----
 Pre-popular database
 Google: django fixture | django initial database
 * https://docs.djangoproject.com/en/dev/howto/initial-data/
+* https://github.com/alex/django-fixture-generator
 
 ----
 ### Django Admin interface
@@ -128,6 +147,11 @@ Django deployment
 * http://django-china.cn/topic/360/ 基于 nginx + uwsgi + virtualenv 简单的部署 Django 应用
 * https://github.com/imelucifer/MyNote/blob/master/django/django%2Buwsgi%2Bnginx%2Bcentos%E9%83%A8%E7%BD%B2.md 使用vps部署django:uwsgi+nginx
 * http://lightbird.net/dbe/
+----
+Price in Python
+https://github.com/mirumee/prices (from: https://www.djangopackages.com/packages/p/django-images/)
+https://github.com/mirumee/django-prices (from: https://www.djangopackages.com/packages/p/django-images/)
+
 ----
 Frontend
 * [跟(不)上網頁前端技術（資源大雜燴）] (http://huan-lin.blogspot.com/2013/08/front-end-technologies.html)
