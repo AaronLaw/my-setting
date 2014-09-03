@@ -1309,7 +1309,50 @@ The [alias] (http://blog.jobbole.com/53573/) I use:
     git config --global alias.lol 'log --oneline'
     git config --global alias.lg 'log --graph'
     git config --global alias.lago 'log --all --graph --oneline'
+    git config --global alias.hist  'log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short'
 
+I put the [hist] (http://githowto.com/aliases) alias too.
+
+#### Update: 2014-09-03
+
+Now, I have a local branch `product` on my notebook, and I have push it to github. I get only the `master` branch on my Pi whatever I `git pull` or I delete the whole project folder and then `git clone` it from github again.
+
+Now, how can I get the latest updated branch `product` on my Pi?
+from: [Git How to: Remote Branch] (http://githowto.com/remote_branches) , Google: git get all the branch from remote
+
+[Git branch - How to clone remote branch with Git?] (http://stackoverflow.com/questions/67699/how-to-clone-all-remote-branches-with-git) shows some hints:
+
+First, clone a remote Git repository and cd into it:
+
+    $ git clone git://example.com/myproject
+    $ cd myproject
+
+Next, look at the local branches in your repository:
+
+    $ git branch
+    * master
+
+But there are other branches hiding in your repository! You can see these using the -a flag:
+
+    $ git branch -a
+    * master
+      remotes/origin/HEAD
+      remotes/origin/master
+      remotes/origin/v1.0-stable
+      remotes/origin/experimental
+
+If you just want to take a quick peek at an upstream branch, you can check it out directly:
+
+    $ git checkout origin/experimental
+
+But if you want to work on that branch, you'll need to create a local tracking branch:
+
+    $ git checkout -b experimental origin/experimental
+
+and you will see
+
+    Branch experimental set up to track remote branch experimental from origin.
+    Switched to a new branch 'experimental'
 
 #### Linux admin tips & networking
 * http://blog.jobbole.com/50643/ 如何利用多核CPU来加速你的Linux命令
