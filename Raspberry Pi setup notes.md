@@ -342,8 +342,10 @@ Google: auto sync with dropbox raspberry
 
 
 ### Setup Python for development (enhance it) 
-Read http://docs.python-guide.org/en/latest/ first, and [Python Packaging User Guide] (https://python-packaging-user-guide.readthedocs.org/en/latest/current.html) second. (from: [How to get Django] (https://www.djangoproject.com/download/) )
+* Read [The Hitchhiker’s Guide to Python!] (http://docs.python-guide.org/en/latest/) first, and [Python Packaging User Guide] (https://python-packaging-user-guide.readthedocs.org/en/latest/current.html) second. (from: [How to get Django] (https://www.djangoproject.com/download/) )
 [Learn Python the Hard Way] (http://learnpythonthehardway.org/book/ex46.html) (Google: virtualenv project structure) provides a rich set of reading materials too.
+* [The Hitchhiker’s Guide to Python!] (http://docs.python-guide.org/en/latest/)  is also from https://github.com/kennethreitz/python-guide
+* [Python Packaging User Guide] (https://python-packaging-user-guide.readthedocs.org/en/latest/current.html) is also from https://github.com/pypa/sampleproject
 
 [pip] (https://pip.pypa.io/en/latest/)
 
@@ -1196,14 +1198,35 @@ http://magnatecha.com/turn-off-display-from-linux-command-line/
 
 https://django-book.readthedocs.org/en/latest/# (from: http://www.meetup.com/Taipei-py/messages/boards/thread/34933702)
 
+Django bulid a blog
+* [Building a Blog with Django 1.7 in 16 mins] (https://www.youtube.com/watch?v=7rgph8en0Jc)
+* [Building a Blog in 30 minutes with Django] (https://www.youtube.com/watch?v=srHZoj3ASmk)
+
+Blog example
+http://arunrocks.com/recreating-the-building-a-blog-in-django-screencast/
+https://www.youtube.com/watch?v=7rgph8en0Jc
+https://github.com/django/djangoproject.com/tree/master/blog
+
 South & Migration in Django 1.7
 Google: should I use south in django 1.7
 https://realpython.com/blog/python/django-migrations-a-primer/
 http://treyhunner.com/2014/03/migrating-to-django-1-dot-7/
 
+to reset the migration, run `zero`with migrate
+
+    ./manage.py migrate <app name> zero
+
 Pre-popular database
 Google: django fixture | django initial database
 * https://docs.djangoproject.com/en/dev/howto/initial-data/
+
+Data can be dumpped or loaded as XML, JSON or YAML (PyYaml is need):
+
+    pip install pyyaml
+
+    ./manage.py dumpdata --format=yaml
+
+See also: https://github.com/alex/django-fixture-generator
 
 inner function
 * https://realpython.com/blog/python/inner-functions-what-are-they-good-for/
@@ -1246,7 +1269,15 @@ Plotting Graph
 * https://www.atlassian.com/git/
 * [沉浸式学 Git] (http://igit.linuxtoy.org/)
     * https://github.com/xuxiaodong/gitimmersion
+* https://help.github.com/articles/github-flow-in-the-browser
 * http://ihower.tw/git/
+    * http://git-scm.com
+    * http://gitref.org
+    * http://gitimmersion.com
+    * http://www.gitready.com/
+    * http://gitcasts.com/
+    * http://progit.org/
+    * http://help.github.com
 * http://blog.eddie.com.tw/slides/
   * https://speakerdeck.com/eddie/git-and-github
 * http://blog.gogojimmy.net/2012/02/29/git-scenario/
