@@ -22,18 +22,18 @@ Purpose of Pi: (2014-08)
 Raspberry Pi for hobototes.
 ====
 
-### 1st stage:
+### 1st stage: (2014-08-12~2014-08-14)
 * The official Raspbian image with SSH, git, VNC, btsync, dropbox and other system-admin-related stuffs.
 * Setup a dynamic dns. (Therefore, I can connect the web apps when I am not on the local network.)
 * Make a backup of the SD card before going to the 2nd stage.
 
-### 2nd stage:
+### 2nd stage: (2014-08-14~2014-08-22)
 * Preparation for running [Django] (http://djangoproject.com). Upgrade [python] to version 3.4 when need.
 * pip, virtualenv & virtualenvwrapper (I need to learn both of them.)
 * Setup a web server (nginx), database (MySQL), Django, phpmyadmin
 * Make a backup of the SD card before going to the 3rd stage.
 
-### 3rd stage:
+### 3rd stage: (2014-08-22~ )
 * Write the apps for the business.
     * hobototes-data-centric apps.
     * Automate business calculation.
@@ -121,7 +121,7 @@ transmission, chromium,
         - [x] bind phpmyadmin to mysql
     - [ ] upgrade git
     - [ ] import existing data (Word -> wordpress)
-- [ ] rails
+- [ ] TBC: rails
     - [ ] ruby 2.1.0+
     - [ ] rbenv / rvm
     - [ ] rails 4.1+
@@ -132,9 +132,10 @@ transmission, chromium,
     - [x] wordpress 3.9
         -[ ] url rewritten in nginx
     - [ ] TBC: mail server
+    - [x] FTP server: vsftpd
 - [ ] automation / add some jobs to cron
 - [ ] TBC: hardening security
-    - [ ] on wordpress
+    - [x] on wordpress
     - [ ] on nginx
     - [ ] ARP protect
 
