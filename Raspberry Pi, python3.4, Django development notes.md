@@ -179,3 +179,16 @@ http://xmodulo.com/2013/04/how-to-fix-apt-get-update-error-on-ubuntu.html
 [实例详解Django的 select_related 和 prefetch_related 函数对 QuerySet 查询的优化（三）] (http://blog.jobbole.com/75435/)
 
 [Starting a Django 1.6 Project the Right Way] (http://www.jeffknupp.com/blog/2013/12/18/starting-a-django-16-project-the-right-way/) (from: http://blog.jobbole.com/53346/)
+
+
+Google:productive infographic
+http://blog.visual.ly/10-infographics-to-help-your-productivity/
+
+Google: rails cms
+http://designzum.com/2014/05/24/12-best-free-premium-wordpress-theme-frameworks-2014/
+(from: http://designzum.com/2014/02/10/best-ruby-on-rails-content-management-systems-cms/, from Google: rails cms)
+
+
+Google: django orm vs activerecord
+https://bernardopires.com/2014/03/rails-vs-django-an-in-depth-technical-comparison/
+http://scottmoonen.com/2009/01/09/my-experience-with-django-and-rails/
