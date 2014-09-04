@@ -1311,10 +1311,24 @@ The [alias] (http://blog.jobbole.com/53573/) I use:
     git config --global alias.lol 'log --oneline'
     git config --global alias.lg 'log --graph'
     git config --global alias.lago 'log --all --graph --oneline'
-    git config --global alias.hist  'git log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short'
 
+http://igit.linuxtoy.org/aliases.html shows more.
 
-I put the [hist] (http://githowto.com/aliases) alias too.
+    git log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+    git config --global alias.hist  'log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short'
+
+I put the [hist] (http://githowto.com/aliases) alias too. The correct version is in [Git immerse] (http://igit.linuxtoy.org/history.html)
+
+Or, I write them into the `.gitconfig` in `$HOME`:
+
+    [alias]
+      co = checkout
+      ci = commit
+      st = status
+      br = branch
+      hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+      type = cat-file -t
+      dump = cat-file -p
 
 #### Update: 2014-09-03
 
