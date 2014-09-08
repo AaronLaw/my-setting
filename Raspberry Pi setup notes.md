@@ -347,6 +347,7 @@ Google: auto sync with dropbox raspberry
 [Learn Python the Hard Way] (http://learnpythonthehardway.org/book/ex46.html) (Google: virtualenv project structure) provides a rich set of reading materials too.
 * [The Hitchhiker’s Guide to Python!] (http://docs.python-guide.org/en/latest/)  is also from https://github.com/kennethreitz/python-guide
 * [Python Packaging User Guide] (https://python-packaging-user-guide.readthedocs.org/en/latest/current.html) is also from https://github.com/pypa/sampleproject
+* http://pydanny.com/experiences-with-django-python3.html
 
 [pip] (https://pip.pypa.io/en/latest/)
 
@@ -1208,6 +1209,11 @@ http://arunrocks.com/recreating-the-building-a-blog-in-django-screencast/
 https://www.youtube.com/watch?v=7rgph8en0Jc
 https://github.com/django/djangoproject.com/tree/master/blog
 
+* http://www.tangowithdjango.com/book/index.html
+* https://django-book.readthedocs.org/en/latest/# (from: http://www.meetup.com/Taipei-py/messages/boards/thread/34933702)
+* http://www.barrymorrison.com/2012/10/zero-to-django-in-4-months-what-ive-learned-part-1/
+
+
 South & Migration in Django 1.7
 Google: should I use south in django 1.7
 https://realpython.com/blog/python/django-migrations-a-primer/
@@ -1220,6 +1226,7 @@ to reset the migration, run `zero`with migrate
 Pre-popular database
 Google: django fixture | django initial database
 * https://docs.djangoproject.com/en/dev/howto/initial-data/
+* https://code.djangoproject.com/wiki/Fixtures
 
 Data can be dumpped or loaded as XML, JSON or YAML (PyYaml is need):
 
@@ -1251,6 +1258,26 @@ Workflow in Django
 Frontend
 Django Template
 * http://www.slideshare.net/cosecant/best-practices-for-frontend-django-developers?related=1
+
+### Django Admin interface
+Google: django admin 2
+https://github.com/pydanny/django-admin2 (from: https://code.djangoproject.com/wiki/AdminNext)
+
+
+Google: django admin demo
+django-suit
+http://djangosuit.com/
+
+Google: django admin theme
+https://www.djangopackages.com/grids/g/admin-styling/
+http://grappelliproject.com/
+https://github.com/sehmaschine/django-grappelli
+
+### Django frontend
+Google: django bootstrap
+https://riccardo.forina.me/bootstrap-your-django-admin-in-3-minutes/
+
+Google: django Boilerplate 
 
 Restful
 
