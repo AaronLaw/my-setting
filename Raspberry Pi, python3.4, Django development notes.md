@@ -22,6 +22,7 @@ Google: Raspberry python3.3 django
 
 [Django 1.5, Python 3.3, and Virtual Environments] (http://www.micahcarrick.com/django-1-5-python-3-3-virtual-environments.html) runs Fedora 17 which ships with Python 3.2, Python 3.3 had to be installed from source. The author installed it into his home .local directory. Then, he used a virtual envirnment to install Django 1.5.
 
+http://pydanny.com/experiences-with-django-python3.html
 ----
 Google suggests me to search with "raspberry pi django nginx"
 
@@ -107,6 +108,14 @@ Image management
 image, gallery, media
 https://readthedocs.org/projects/tags/image/
 
+### Image / Gallery / Media Management
+
+https://www.djangopackages.com/search/?q=image
+https://www.djangopackages.com/grids/g/gallery/
+https://github.com/stefanfoulis/django-filer (from: http://djangosuit.com)
+
+### Extend models
+https://github.com/bconstantin/django_polymorphic
 ----
 
 ### South & Migration in Django 1.7
@@ -119,10 +128,21 @@ to reset the migration, run `zero`with migrate
 	./manage.py migrate <app name> zero
 
 ----
-Pre-popular database
+Pre-populate database
 Google: django fixture | django initial database
 * https://docs.djangoproject.com/en/dev/howto/initial-data/
 * https://github.com/alex/django-fixture-generator
+----
+### Auto complete
+django-autocomplete-light
+https://www.youtube.com/watch?v=fJIHiqWKUXI
+http://django-autocomplete-light.readthedocs.org/en/latest/
+https://github.com/yourlabs/django-autocomplete-light/tree/master
+https://github.com/yourlabs/django-autocomplete-light/tree/master/test_project/non_admin
+----
+### Address Book
+### Address book
+https://www.djangopackages.com/packages/p/django-cities-light/
 
 ----
 ### Django Admin interface
@@ -136,12 +156,23 @@ Django bulid a blog
 * [Building a Blog in 30 minutes with Django] (https://www.youtube.com/watch?v=srHZoj3ASmk)
 
 ----
+Django jquery
+Google: django jquery
+http://www.tangowithdjango.com/book/chapters/ajax.html
+
+
+----
 ### Markdown
 Google: django markdown
 django_markdown
 https://github.com/klen/django_markdown
 [Building a blog with Django1.7 in 16 mins] (https://www.youtube.com/watch?v=7rgph8en0Jc)
-
+----
+### Static files
+* http://django-autocomplete-light.readthedocs.org/en/v2/install.html
+    * http://blog.yourlabs.org/post/30382323418/surviving-django-contrib-staticfiles-or-how-to-manage
+    * https://docs.djangoproject.com/en/dev/howto/static-files/
+    * https://docs.djangoproject.com/en/dev/ref/contrib/staticfiles/
 ----
 Django deployment
 * http://django-china.cn/topic/360/ 基于 nginx + uwsgi + virtualenv 简单的部署 Django 应用
