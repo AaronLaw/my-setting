@@ -138,6 +138,7 @@ transmission, chromium,
     - [x] on wordpress
     - [ ] on nginx
     - [ ] ARP protect
+- [ ] setup as a home theater
 
 How do I setup the Pi (a step by step record)
 ====
@@ -340,7 +341,11 @@ http://raspi.tv/2013/how-to-use-dropbox-with-raspberry-pi
 Both of them help me interactive Dropbox in cli but not automate the sync. I shall find a better solution later.
 Google: auto sync with dropbox raspberry
 
+### Setup as a home theater PC
+http://en.wikipedia.org/wiki/Home_theater_PC
 
+XBMC
+http://xbmc.org/
 
 ### Setup Python for development (enhance it) 
 * Read [The Hitchhiker’s Guide to Python!] (http://docs.python-guide.org/en/latest/) first, and [Python Packaging User Guide] (https://python-packaging-user-guide.readthedocs.org/en/latest/current.html) second. (from: [How to get Django] (https://www.djangoproject.com/download/) )
