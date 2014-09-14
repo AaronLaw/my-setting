@@ -341,11 +341,68 @@ http://raspi.tv/2013/how-to-use-dropbox-with-raspberry-pi
 Both of them help me interactive Dropbox in cli but not automate the sync. I shall find a better solution later.
 Google: auto sync with dropbox raspberry
 
-### Setup as a home theater PC
+### Setup as a home theater PC (2014-09-09)
 http://en.wikipedia.org/wiki/Home_theater_PC
 
 XBMC
 http://xbmc.org/
+* [How to Install XBMC onto the Raspberry Pi ] (https://www.youtube.com/watch?v=5XuSlsJppOo)
+
+
+### Play music
+
+    oxmplayer fx.mp3
+
+ref: http://omxplayer.sconde.net/
+
+see also: [将树莓派打造成音乐播放服务器] (http://www.geekfan.net/10419/)
+
+### Raspberry Pi as CAS (audio, music) (2014-09-10)
+
+Turn Raspberry Pi into an audiophile audio source. Audiophile-quality music playback.
+
+Power supply -> Raspberry -> DAC -> Speaker
+
+Need to use [線性電源  liner power supply] (http://www.post76.com/x2/forum.php?mod=viewthread&tid=184045&highlight=raspberry) (otherwise, 聲硬、音場窄、非常數碼欠自然): 高低伸延有良好改善、音場沒有之前咁平面同窄、增強了三維空間感、動態低頻既表現亦提升了不少
+
+Google: Raspberry music player 
+Google: Raspberry CAS source -> headfi.org
+Google: cubox CAS source
+
+* [Make your Raspberry Pi a Hi-Fi player] (https://www.youtube.com/watch?v=JHmcwZs3ufM) (from Google: Raspberry music player )
+* http://www.runeaudio.com/download/
+
+http://www.runeaudio.com/about has a good depict on whan an linux distro on Pi does as a CAS
+
+[] http://www.runeaudio.com/assets/img/how-it-works.png
+
+Something new: MPD (music player daemon)? (Google: post76 mpd, Google: post76 mpd 集中營
+)
+
+OS:
+* RuneAudio
+* volumio ([is a porting of RaspyFi] (http://www.raspyfi.com/volumio-your-new-favourite-audiophile-music-player-is-out/))
+    * [RaspyFi] (http://www.raspyfi.com/), which is aimed to notorious Voyage-mpd distro. See the post on headfi.org for comments. (from Google: Raspberry CAS source)
+* [Voyage-linux] (http://linux.voyage.hk)
+
+futher:
+Baidu: runeaudio -> 
+Baidu: audiophile linux -> [Audiophile Linux] (http://www.ap-linux.com)
+Baidu: audiophile raspberry
+
+Player:
+* https://amarok.kde.org/
+
+
+Steam over network
+
+Power supply -> Raspberry (-> steaming ) -> the device on hand -> Speaker
+
+* http://andrewkelley.me/post/quest-build-ultimate-music-player.html, from:  [将树莓派打造成音乐播放服务器] (http://www.geekfan.net/10419/)
+
+music player server :
+* http://groovebasin.com/
+* [MPD (music player daemon) ] (http://www.musicpd.org)
 
 ### Setup Python for development (enhance it) 
 * Read [The Hitchhiker’s Guide to Python!] (http://docs.python-guide.org/en/latest/) first, and [Python Packaging User Guide] (https://python-packaging-user-guide.readthedocs.org/en/latest/current.html) second. (from: [How to get Django] (https://www.djangoproject.com/download/) )
@@ -1142,6 +1199,7 @@ https://linuxtoy.org/archives/automysqlbackup.html
 ### Hardening Security
 * http://codex.wordpress.org/Hardening_WordPress#File_permissions (Google: how to set chmod with wordpress on linux ->  http://premium.wpmudev.org/forums/topic/correct-chmod-settings-for-install-and-run-of-wordpress) is a good direction on web apps security.
 * [如何保证Linux服务器的安全] (http://blog.jobbole.com/48195/)
+* [通过Backtrack Linux 来加强你的安全防御] (http://www.geekfan.net/1512/)
 
 ### Mail server
 Google: raspberry mail server
@@ -1149,6 +1207,9 @@ Google: raspberry mail server
 * http://www.raspberrypi.org/forums/viewtopic.php?f=36&t=12156
 
 ### Supplymentory
+
+See how Debian says about Raspberry Pi: https://wiki.debian.org/RaspberryPi
+
 
 #### Linux system monitoring / Admin
 * http://www.cyberciti.biz/tips/top-linux-monitoring-tools.html
@@ -1184,6 +1245,9 @@ Be aware that anything saved in this partition will be gone after your computer 
 * http://wiki.nginx.org/Pitfalls
 * http://wiki.nginx.org/QuickStart
 * http://wiki.nginx.org/Configuration
+
+#### Text browser
+http://www.geekfan.net/9045/
 
 #### Turn off display
 
@@ -1420,11 +1484,6 @@ and you will see
 Google: opensource crm award (idea from: http://www.sugarcrm.com/about/awards-recognition)
 Google: opensource cms award
 
-#### Play music
-
-    oxmplayer fx.mp3
-
-see also: http://www.geekfan.net/10419/
 
 ### Set Fonts
 Do it on client side, as I seldom login to pi with keyboard and mouse but remote control it with ssh.
@@ -1453,4 +1512,4 @@ http://sourceforge.net/adobe/source-han-sans/
 http://github.com/adobe-fonts/source-han-sans/
 http://www.google.com/get/noto/#/family/noto-sans-hant
 
-// Last update: 2014-08
+// Last update: 2014-09
