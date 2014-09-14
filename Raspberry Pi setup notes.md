@@ -355,6 +355,8 @@ http://xbmc.org/
 
 ref: http://omxplayer.sconde.net/
 
+As simple as possible, I ssh into Pi and then play music with oxmplayer.
+
 see also: [将树莓派打造成音乐播放服务器] (http://www.geekfan.net/10419/)
 
 ### Raspberry Pi as CAS (audio, music) (2014-09-10)
@@ -365,8 +367,8 @@ Power supply -> Raspberry -> DAC -> Speaker
 
 Need to use [線性電源  liner power supply] (http://www.post76.com/x2/forum.php?mod=viewthread&tid=184045&highlight=raspberry) (otherwise, 聲硬、音場窄、非常數碼欠自然): 高低伸延有良好改善、音場沒有之前咁平面同窄、增強了三維空間感、動態低頻既表現亦提升了不少
 
-Google: Raspberry music player 
-Google: Raspberry CAS source -> headfi.org
+Google: Raspberry music player -> http://www.pimusicbox.com/ is a  Headless audio player based on Mopidy (no need for a monitor), streaming music from Spotify, SoundCloud, Google Music, Podcasts (with iTunes, gPodder directories), MP3/OGG/FLAC/AAC, Webradio (with TuneIn, Dirble directories), Subsonic, Soma FM. - See more at: http://www.pimusicbox.com/#sthash.3z0vOWIV.dpuf
+Google: Raspberry CAS source -> [headfi.org] (http://www.head-fi.org/t/681593/cas-source-raspberry-pi-picoreplayer-raspyfi)
 Google: cubox CAS source
 
 * [Make your Raspberry Pi a Hi-Fi player] (https://www.youtube.com/watch?v=JHmcwZs3ufM) (from Google: Raspberry music player )
@@ -376,25 +378,47 @@ http://www.runeaudio.com/about has a good depict on whan an linux distro on Pi d
 
 [] http://www.runeaudio.com/assets/img/how-it-works.png
 
-Something new: MPD (music player daemon)? (Google: post76 mpd, Google: post76 mpd 集中營
-)
+Something new: 
+
+* MPD (music player daemon)? (Google: post76 mpd, Google: post76 mpd 集中營)
+* i2s (firstly seen in [Raspberry Pi i2s DAC: why this sounds so good - Volumio] (http://volumio.org/raspberry-pi-i2s-dac-sounds-so-good/))
 
 OS:
 * RuneAudio
 * volumio ([is a porting of RaspyFi] (http://www.raspyfi.com/volumio-your-new-favourite-audiophile-music-player-is-out/))
     * [RaspyFi] (http://www.raspyfi.com/), which is aimed to notorious Voyage-mpd distro. See the post on headfi.org for comments. (from Google: Raspberry CAS source)
-* [Voyage-linux] (http://linux.voyage.hk)
+* [Voyage-linux] (http://linux.voyage.hk) is made by a HKer
 
-futher:
-Baidu: runeaudio -> 
+All of them turn Raspberry Pi into a headless music player.
+
+RuneAudio and Volumio is soso similar. So, what's the difference?
+Google: runeaudio and volumio
+Google: runeaudio vs volumio
+
+Futher:
+Baidu: runeaudio  -> [树莓派组建无线播放器 — 树莓派也玩hifi] (http://jy.smzdm.com/detail/30739)
+
 Baidu: audiophile linux -> [Audiophile Linux] (http://www.ap-linux.com)
+
 Baidu: audiophile raspberry
+
+Google: raspberry music player 
+-> The image is around 227MB in (compressed) size; 950MB uncompressed
+[Web Client for Mopidy Music Server and the Pi MusicBox] (https://github.com/woutervanwijk/Mopidy-MusicBox-Webclient)
+
+Google: raspberry music server -> http://lifehacker.com/how-to-turn-a-raspberry-pi-into-a-private-streaming-mus-1583221462
+
+Google: raspberry audio image -> [Model B+ Audio Experiences] (http://www.raspberrypi.org/forums/viewtopic.php?f=35&t=81942)
+
+
+
+
 
 Player:
 * https://amarok.kde.org/
 
 
-Steam over network
+#### Steam over network
 
 Power supply -> Raspberry (-> steaming ) -> the device on hand -> Speaker
 
@@ -403,6 +427,7 @@ Power supply -> Raspberry (-> steaming ) -> the device on hand -> Speaker
 music player server :
 * http://groovebasin.com/
 * [MPD (music player daemon) ] (http://www.musicpd.org)
+
 
 ### Setup Python for development (enhance it) 
 * Read [The Hitchhiker’s Guide to Python!] (http://docs.python-guide.org/en/latest/) first, and [Python Packaging User Guide] (https://python-packaging-user-guide.readthedocs.org/en/latest/current.html) second. (from: [How to get Django] (https://www.djangoproject.com/download/) )
