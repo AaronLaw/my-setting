@@ -46,11 +46,13 @@ Shortcut
 ====
 ###Service need manually start after power on
 
-VNC
+VNC server
 
 BTSync
 
-Django
+Django within py34
+
+Mopidy
 
 ### My tools
 
@@ -66,7 +68,7 @@ The default nginx document root is `/usr/share/nginx/www`. I've changed it to `/
 
 `mysql -uroot -ppassword`
 
-`pip freeze` exports a list of package in my environment
+`pip freeze` exports a list of package in my environment. `pip -r requirement.txt` to recreate the package in a new environment.
 
 ----
 2014-08-06:
@@ -88,6 +90,8 @@ And now it's ready to be customisation. For fun! (或是被折磨)
 2014-08-09: Initial the system with a few sys admin tools setup. Preparing to be a python web server next time. Backup as an image. Learning.
 
 2014-08-12: Install Python3.4 from source. Setup virtualenv & wirtualenvwrapper.
+
+2014-09-13: Install Mopidy.  (One of my friends asked me about CuBox, and it's my first time to heard it on 2014-09-10.)
 
 ### Custom software on Pi:
 tightvncserver, vim-gtk, git, 
@@ -120,7 +124,7 @@ transmission, chromium,
     - [x] phpmyadmin
         - [x] bind phpmyadmin to mysql
     - [ ] upgrade git
-    - [ ] import existing data (Word -> wordpress)
+    - [x] import existing data (Word -> wordpress)
 - [ ] TBC: rails
     - [ ] ruby 2.1.0+
     - [ ] rbenv / rvm
@@ -130,7 +134,8 @@ transmission, chromium,
         - [x] let nginx serves PHP (capture comm in port 9000)
         - [x] test phpmyadmin
     - [x] wordpress 3.9
-        -[ ] url rewritten in nginx
+        - [ ] url rewritten in nginx
+        - [ ] cache wordpress
     - [ ] TBC: mail server
     - [x] FTP server: vsftpd
 - [ ] automation / add some jobs to cron
@@ -139,6 +144,8 @@ transmission, chromium,
     - [ ] on nginx
     - [ ] ARP protect
 - [ ] setup as a home theater
+    - [ ] playing movie
+    - [x] playing music over network
 
 How do I setup the Pi (a step by step record)
 ====
