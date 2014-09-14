@@ -367,16 +367,16 @@ Power supply -> Raspberry -> DAC -> Speaker
 
 Need to use [線性電源  liner power supply] (http://www.post76.com/x2/forum.php?mod=viewthread&tid=184045&highlight=raspberry) (otherwise, 聲硬、音場窄、非常數碼欠自然): 高低伸延有良好改善、音場沒有之前咁平面同窄、增強了三維空間感、動態低頻既表現亦提升了不少
 
-Google: Raspberry music player -> http://www.pimusicbox.com/ is a  Headless audio player based on Mopidy (no need for a monitor), streaming music from Spotify, SoundCloud, Google Music, Podcasts (with iTunes, gPodder directories), MP3/OGG/FLAC/AAC, Webradio (with TuneIn, Dirble directories), Subsonic, Soma FM. - See more at: http://www.pimusicbox.com/#sthash.3z0vOWIV.dpuf
-Google: Raspberry CAS source -> [headfi.org] (http://www.head-fi.org/t/681593/cas-source-raspberry-pi-picoreplayer-raspyfi)
-Google: cubox CAS source
+* Google: Raspberry music player -> http://www.pimusicbox.com/ is a  Headless audio player based on Mopidy (no need for a monitor), streaming music from Spotify, SoundCloud, Google Music, Podcasts (with iTunes, gPodder directories), MP3/OGG/FLAC/AAC, Webradio (with TuneIn, Dirble directories), Subsonic, Soma FM. - See more at: http://www.pimusicbox.com/#sthash.3z0vOWIV.dpuf
+* Google: Raspberry CAS source -> [headfi.org] (http://www.head-fi.org/t/681593/cas-source-raspberry-pi-picoreplayer-raspyfi)
+* Google: cubox CAS source
 
 * [Make your Raspberry Pi a Hi-Fi player] (https://www.youtube.com/watch?v=JHmcwZs3ufM) (from Google: Raspberry music player )
 * http://www.runeaudio.com/download/
 
 http://www.runeaudio.com/about has a good depict on whan an linux distro on Pi does as a CAS
 
-[] http://www.runeaudio.com/assets/img/how-it-works.png
+![] (http://www.runeaudio.com/assets/img/how-it-works.png)
 
 Something new: 
 
@@ -384,35 +384,30 @@ Something new:
 * i2s (firstly seen in [Raspberry Pi i2s DAC: why this sounds so good - Volumio] (http://volumio.org/raspberry-pi-i2s-dac-sounds-so-good/))
 
 OS:
-* RuneAudio
-* volumio ([is a porting of RaspyFi] (http://www.raspyfi.com/volumio-your-new-favourite-audiophile-music-player-is-out/))
+* [RuneAudio] (http://www.runeaudio.com/)
+* [volumio] (http://volumio.org/) ([is a porting of RaspyFi] (http://www.raspyfi.com/volumio-your-new-favourite-audiophile-music-player-is-out/))
     * [RaspyFi] (http://www.raspyfi.com/), which is aimed to notorious Voyage-mpd distro. See the post on headfi.org for comments. (from Google: Raspberry CAS source)
-* [Voyage-linux] (http://linux.voyage.hk) is made by a HKer
+* [Voyage-linux] (http://linux.voyage.hk) is made by a HKer. Runs an ordinary desktop linux.
 
-All of them turn Raspberry Pi into a headless music player.
+All of them turn Raspberry Pi into a headless music player, plus turning CuBox, UDOO, Beaglebone Black too.
 
-RuneAudio and Volumio is soso similar. So, what's the difference?
-Google: runeaudio and volumio
-Google: runeaudio vs volumio
+RuneAudio and Volumio is soso similar, sharing a similar UI. So, what's the difference and the relationship between them?
+* Google: runeaudio and volumio
+* Google: runeaudio vs volumio
 
-Futher:
-Baidu: runeaudio  -> [树莓派组建无线播放器 — 树莓派也玩hifi] (http://jy.smzdm.com/detail/30739)
+#### Futher:
 
-Baidu: audiophile linux -> [Audiophile Linux] (http://www.ap-linux.com)
-
-Baidu: audiophile raspberry
-
-Google: raspberry music player 
+* Baidu: runeaudio  -> [树莓派组建无线播放器 — 树莓派也玩hifi] (http://jy.smzdm.com/detail/30739)
+* Baidu: audiophile linux -> [Audiophile Linux] (http://www.ap-linux.com)
+* Baidu: audiophile raspberry
+* Google: raspberry music player 
 -> The image is around 227MB in (compressed) size; 950MB uncompressed
 [Web Client for Mopidy Music Server and the Pi MusicBox] (https://github.com/woutervanwijk/Mopidy-MusicBox-Webclient)
+ * Google: raspberry music server -> http://lifehacker.com/how-to-turn-a-raspberry-pi-into-a-private-streaming-mus-1583221462
+ * Google: raspberry audio image -> [Model B+ Audio Experiences] (http://www.raspberrypi.org/forums/viewtopic.php?f=35&t=81942)
+ * Google: raspberry audio image ->  [Raspberry Pi: Mopidy on a credit card] (http://docs.mopidy.com/en/latest/installation/raspberrypi/)
 
-Google: raspberry music server -> http://lifehacker.com/how-to-turn-a-raspberry-pi-into-a-private-streaming-mus-1583221462
-
-Google: raspberry audio image -> [Model B+ Audio Experiences] (http://www.raspberrypi.org/forums/viewtopic.php?f=35&t=81942)
-
-Google: raspberry audio image ->  [Raspberry Pi: Mopidy on a credit card] (http://docs.mopidy.com/en/latest/installation/raspberrypi/)
-
-Player:
+Music Player:
 * https://amarok.kde.org/
 
 
@@ -430,7 +425,7 @@ music player server :
 
 Google: raspberry audio image ->  [Raspberry Pi: Mopidy on a credit card] (http://docs.mopidy.com/en/latest/installation/raspberrypi/)
 
-[Mopidy] (http://www.mopidy.com/) is an extensible music server written in Python.  It can be installed on Pi, Ubuntu, Debian.
+[Mopidy] (http://www.mopidy.com/) is an extensible music server written in Python.  It can be installed on Pi, Debian, Ubuntu, Arch Linux, Mac OS.
 
 Mopidy plays music from local disk, Spotify, SoundCloud, Google Play Music, and more. You edit the playlist from any phone, tablet, or computer using a range of MPD and web clients.
 
@@ -470,9 +465,9 @@ When a new release of Mopidy is out, and you can’t wait for you system to figu
     
 #### Configure Mopidy
 
-Need to config Mopidy.
+Need to config Mopidy. Some modules should be turn on, such as `http`, `local` in order to use it over network.
  
-A config file is created automatically when the 1st run of Mopidy. Therefore, I run it my issue a `mopidy` command, then I edit the generated configure file:
+A config file is created automatically when the 1st run of Mopidy. Therefore, I run it by issue a `mopidy` command, then I edit the generated configure file:
 
     vi ~/.config/mopidy/mopidy.conf
     
@@ -480,7 +475,7 @@ Change the hostname to the location of the pi (Mine is `192.168.0.101`), and as 
     
     [http]
     enabled = true
-    hostname = 192.168.0.101 # or ::
+    hostname = 192.168.0.101 # or :: for listen to all
     port = 6680
     static_dir =
     zeroconf = Mopidy HTTP server on $hostname
@@ -505,7 +500,7 @@ Change the hostname to the location of the pi (Mine is `192.168.0.101`), and as 
 
 Each time I change the music files in the `~/Music` folder (add, delete, etc), I need to let Mopidy know it:
 
-    mopidy local scan # see mopidy --help
+    mopidy local scan # see `mopidy --help`
     
 ####    Running Mopidy
 
@@ -525,7 +520,8 @@ Mopidy will also shut down properly if you send it the TERM signal, e.g. by usin
 
     pkill mopidy
 
-#### 
+#### Clients for Mopidy
+
 [HTTP clients] (http://docs.mopidy.com/en/latest/clients/http/)
 [Web Client for Mopidy Music Server and the Pi MusicBox] (https://github.com/woutervanwijk/Mopidy-MusicBox-Webclient)
 [Moped - Web Client for Mopidy] (https://github.com/martijnboland/moped) (from: http://docs.mopidy.com/en/latest/ext/web/)
