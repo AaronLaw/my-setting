@@ -410,9 +410,7 @@ Google: raspberry music server -> http://lifehacker.com/how-to-turn-a-raspberry-
 
 Google: raspberry audio image -> [Model B+ Audio Experiences] (http://www.raspberrypi.org/forums/viewtopic.php?f=35&t=81942)
 
-
-
-
+Google: raspberry audio image ->  [Raspberry Pi: Mopidy on a credit card] (http://docs.mopidy.com/en/latest/installation/raspberrypi/)
 
 Player:
 * https://amarok.kde.org/
@@ -428,6 +426,111 @@ music player server :
 * http://groovebasin.com/
 * [MPD (music player daemon) ] (http://www.musicpd.org)
 
+### Setup Mopidy on Pi (2014-09-14)
+
+Google: raspberry audio image ->  [Raspberry Pi: Mopidy on a credit card] (http://docs.mopidy.com/en/latest/installation/raspberrypi/)
+
+[Mopidy] (http://www.mopidy.com/) is an extensible music server written in Python.  It can be installed on Pi, Ubuntu, Debian.
+
+Mopidy plays music from local disk, Spotify, SoundCloud, Google Play Music, and more. You edit the playlist from any phone, tablet, or computer using a range of MPD and web clients.
+
+Load the IPv6 kernel module now:
+
+     sudo modprobe ipv6
+
+Add ipv6 to /etc/modules to ensure the IPv6 kernel module is loaded on boot:
+
+    echo ipv6 | sudo tee -a /etc/modules
+
+Since I have a HDMI cable connected, but want the sound on the analog sound connector, I have to run:
+
+    sudo amixer cset numid=3 1
+
+to force it to use analog output. 1 means analog, 0 means auto, and is the default, while 2 means HDMI. You can test sound output independent of Mopidy by running:
+
+    aplay /usr/share/sounds/alsa/Front_Center.wav
+
+If you hear a voice saying “Front Center”, then your sound is working.
+
+Add the archive’s GPG key:
+
+    sudo wget -q -O /etc/apt/sources.list.d/mopidy.list https://apt.mopidy.com/mopidy.list
+    
+Install Mopidy and all dependencies:
+
+    sudo apt-get update
+    sudo apt-get install mopidy
+
+Finally, you need to set a couple of [config values] (http://docs.mopidy.com/en/latest/config/), and then you’re ready to run Mopidy.
+
+When a new release of Mopidy is out, and you can’t wait for you system to figure it out for itself, run the following to upgrade right away:
+
+    sudo apt-get update
+    sudo apt-get dist-upgrade
+    
+#### Configure Mopidy
+
+Need to config Mopidy.
+ 
+A config file is created automatically when the 1st run of Mopidy. Therefore, I run it my issue a `mopidy` command, then I edit the generated configure file:
+
+    vi ~/.config/mopidy/mopidy.conf
+    
+Change the hostname to the location of the pi (Mine is `192.168.0.101`), and as I put music in `~/Music`:   
+    
+    [http]
+    enabled = true
+    hostname = 192.168.0.101 # or ::
+    port = 6680
+    static_dir =
+    zeroconf = Mopidy HTTP server on $hostname
+
+    [local]
+    enabled = true
+    library = json
+    media_dir = ~/Music
+    data_dir = ~/Music/mopidy/local
+    playlists_dir = ~/Music/mopidy/local/playlists
+    scan_timeout = 1000
+    scan_flush_threshold = 1000
+    excluded_file_extensions =
+      .directory
+      .html
+      .jpeg
+      .jpg
+      .log
+      .nfo
+      .png
+      .txt
+
+Each time I change the music files in the `~/Music` folder (add, delete, etc), I need to let Mopidy know it:
+
+    mopidy local scan # see mopidy --help
+    
+####    Running Mopidy
+
+To start Mopidy, simply open a terminal and run:
+
+    mopidy
+
+For a complete reference to the Mopidy commands and their command line options, see mopidy command.
+
+When Mopidy says MPD server running at 127.0.0.1:6600 it’s ready to accept connections by any MPD client. Check out our non-exhaustive MPD clients list to find recommended clients.
+
+#### Stopping Mopidy
+
+To stop Mopidy, press `CTRL+C` in the terminal where you started Mopidy.
+
+Mopidy will also shut down properly if you send it the TERM signal, e.g. by using `pkill`:
+
+    pkill mopidy
+
+#### 
+[HTTP clients] (http://docs.mopidy.com/en/latest/clients/http/)
+[Web Client for Mopidy Music Server and the Pi MusicBox] (https://github.com/woutervanwijk/Mopidy-MusicBox-Webclient)
+[Moped - Web Client for Mopidy] (https://github.com/martijnboland/moped) (from: http://docs.mopidy.com/en/latest/ext/web/)
+[Mopify] (https://github.com/dirkgroenen/Mopify)
+[MPD] (http://en.wikipedia.org/wiki/Music_Player_Daemon)
 
 ### Setup Python for development (enhance it) 
 * Read [The Hitchhiker’s Guide to Python!] (http://docs.python-guide.org/en/latest/) first, and [Python Packaging User Guide] (https://python-packaging-user-guide.readthedocs.org/en/latest/current.html) second. (from: [How to get Django] (https://www.djangoproject.com/download/) )
