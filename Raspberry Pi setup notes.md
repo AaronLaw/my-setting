@@ -41,6 +41,12 @@ Raspberry Pi for hobototes.
 * Doing some automation, using crontab, e.g. automate the database backup.
 * Doing some experiment, such as Rails4, node.js, in spare time. :cry:
 
+### 4th stage: (2014-09-10~)
+* Speed things up
+    * Overclock from 800Mhz to 900Mhz
+    * Wordpress: install & test caching plugins
+    * Django: caching, optimize queries, profiling with Firefox F12
+
 ----
 Shortcut
 ====
@@ -93,10 +99,14 @@ And now it's ready to be customisation. For fun! (或是被折磨)
 
 2014-09-13: Install Mopidy.  (One of my friends asked me about CuBox, and it's my first time to heard it on 2014-09-10.)
 
+2014-09-10: Thinking of speed things up. (Mainly caching on Wordpress & Django.)
+
+2014-09-16: Doing of speed things up. (Overclock to 900Mhz, cache on Django.)
+
 ### Custom software on Pi:
 tightvncserver, vim-gtk, git, 
 
-transmission, chromium,
+transmission, chromium, Mopidy
 
 [htop] (https://linuxtoy.org/archives/cool-linux-tools.html), nmap, tree, p7zip, mtr, [nmon] (http://blog.jobbole.com/15430/), screen
 
@@ -111,7 +121,7 @@ transmission, chromium,
 - [x] file sync between
     - [x] btsync
     - [f] Dropbox (no auto sync)-> TBC
-- [ ] development environment
+- [x] development environment
     - [x] upgrade to python3.4
     - [x] virtualenv
     - [x] virtualenvwrapper
@@ -136,6 +146,8 @@ transmission, chromium,
     - [x] wordpress 3.9
         - [ ] url rewritten in nginx
         - [ ] cache wordpress
+    - [ ] django
+        - [ ] cache django
     - [ ] TBC: mail server
     - [x] FTP server: vsftpd
 - [ ] automation / add some jobs to cron
