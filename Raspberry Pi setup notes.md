@@ -1527,6 +1527,8 @@ Plotting Graph
 2014-09-17: 
 My django apps respond slowly. The user experence is [bad] (http://ihower.tw/rails4/performance.html).
 
+I use Firefox 34 `F12` to test the page loading time. On my development notebook , `/admin/product/topic/28`, which relates to 19 product sources (and the 1600+ related sources), consumes 5.2s~5.6s to render. The most expensive part is the html files. It takes 1535.22KB, and the files totally are 1676.17KB (1 html, 8 js, 3 css, 6 images). Comparing to the other pages, which the most expensive part is the js files.
+
 There are ways to speed it up:
 
 # overclock the Pi
@@ -1544,7 +1546,8 @@ For 1:
 
 For 2:
 
-Reduce the times of queries, or group many queries into one.
+Reduce the times of queries, or group many queries into one. ([Queries in Django is lazy] (https://docs.djangoproject.com/en/dev/topics/db/queries/#querysets-are-lazy) (from: [Database access optimization] (https://docs.djangoproject.com/en/dev/topics/db/optimization/) ) )
+
 Redesign the relation between models help a lot. But the labourhood is not worthy.
 
 For 3:
@@ -1559,6 +1562,8 @@ Google: django cache -> [Django Documentation - Django’s cache framework] (htt
 The workflow is firstly setup the cache, and then use caching to cache the entire site:
 
 > setup memcache |  LocMemCache ->  change MiddelWare setting -> testing (profiling)
+
+#### Using Memcache as cache
 
 I wanna use memcache for Django, as once I set it up, I can use it with WordPress too. :)
 
@@ -1583,9 +1588,80 @@ After installing Memcached itself, you'll need to install a memcached binding (a
 
     pip install python-memcached  # or  sudo apt-get install python-memcache
 
-Since `python-memcached` does not support python3, I have to install `python3-memcached`. (Google: memcached python3)
+I've got an error message in browser. Since `python-memcached` does not support python3, I have to install `python3-memcached`. (Google: memcached python3)
 
     pip install python3-memcached
+
+Memcache works now.
+However, niether Django's built-in Local-memory caching nor memcached caches the query objects in the admin section, I am going to find another way to solve my problem.
+
+After memcache runs successfully, the page loading time of `/admin/product/topic/28/` does not change much: from 5.5s to 5.0+s
+-> Google: does django cache admin
+
+#### Using Redis as cache
+
+As the memcached does not cache admin query (e.g. `admin/product/topic/28/`, which takes 5.52s to render. After turn memcache on, it still take 5.4s to load that page in the 2nd+ load), I have to find another solution. (As well as johnny-cache does not support python3.)
+
+[DjangoPackages: caching] (https://www.djangopackages.com/grids/g/caching/)
+
+
+[django-cacheops] (https://www.djangopackages.com/packages/p/cacheops/) seems good. It support Python 3, Django 1.7, and It uses redis as backend for ORM cache and redis or filesystem for simple time-invalidated one. I am going to install [redis] (http://redis.io/) server on my machine:
+
+    sudo apt-get install redis-server # as apt-get itstall redis returns no package...
+
+(The redis-server installed is v2.6.3, not the latest v2.8.3. Therefore, I am going to install it from source....later:)
+
+Then, I turn the 3 caching middleware off, and the `CACHES = {}` block off too, in the  `setting.py`:
+
+    # 'django.middleware.cache.UpdateCacheMiddleware',
+    # 'django.middleware.common.CommonMiddleware',
+    # 'django.middleware.cache.FetchFromCacheMiddleware',
+
+    pip install django-cacheops
+
+Add `cacheops` to your `INSTALLED_APPS` before any apps that use it.
+
+Setup redis connection and enable caching for desired models:
+
+    CACHEOPS_REDIS = {
+        'host': 'localhost', # redis-server is on same machine
+        'port': 6379,        # default redis port
+        'db': 1,             # SELECT non-default redis database
+                             # using separate redis db or redis instance
+                             # is highly recommended
+        'socket_timeout': 3,
+    }
+
+    CACHEOPS = {
+        # Automatically cache any User.objects.get() calls for 15 minutes
+        # This includes request.user or post.author access,
+        # where Post.author is a foreign key to auth.User
+        'auth.user': ('get', 60*15),
+
+        # Automatically cache all gets, queryset fetches and counts
+        # to other django.contrib.auth models for an hour
+        'auth.*': ('all', 60*60),
+
+        # Enable manual caching on all news models with default timeout of an hour
+        # Use News.objects.cache().get(...)
+        #  or Tags.objects.filter(...).order_by(...).cache()
+        # to cache particular ORM request.
+        # Invalidation is still automatic
+        'news.*': ('just_enable', 60*60),
+
+        # Automatically cache count requests for all other models for 15 min
+        '*.*': ('count', 60*15),
+    }
+
+Additionally, you can tell cacheops to degrade gracefully on redis fail with:
+
+    CACHEOPS_DEGRADE_ON_FAILURE = True
+
+There is also a possibility to make all cacheops methods and decorators no-op, e.g. for testing:
+
+    CACHEOPS_FAKE = True
+
+[#] (https://github.com/Suor/django-cacheops#readme)
 
 Ref:
 
