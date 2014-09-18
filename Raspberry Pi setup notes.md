@@ -1502,6 +1502,7 @@ Plotting Graph
 * http://www.playpcesor.com/2014/08/excel-google-sheets-patterns.html
 
 ### Speed up Django
+2014-09-17: 
 My django apps respond slowly.
 
 There are ways to speed it up:
@@ -1566,6 +1567,22 @@ Google: Rails cache, django cache
 * [Django Documentation - Django’s cache framework] (https://docs.djangoproject.com/en/dev/topics/cache/)
 * [The Django Book - Chapter 15: Caching] (http://www.djangobook.com/en/2.0/chapter15.html)
 
+### Replace MySQL with MariaDB
+
+2014-09-10:
+My django apps respond slowly. I turn on htop & nmon to see what's happen then. There are 6 or more mysqld processes running at the same time! OMG! That's the reason why the Pi respond slowly as it has 1 core. Now, I am thinking of replacing MySQL. (2014-09-17 update: I should use profiling tools to check the performance of it, rather than 'feel' it. :P)
+
+Google: raspberry mariadb
+* http://haydenjames.io/download-lemp-raspberry-pi-nginx-mariadb-mysql-php/
+    * http://haydenjames.io/mysql-query-cache-size-performance/
+* http://www.homecomputerlab.com/nginx-php-mariadb-wordpress-on-archlinux-on-a-raspberry-pi
+* http://raspbian-france.fr/installer-mariadb-raspbian/
+* http://blog.pi3g.com/2014/07/easy-mariadb-installation/
+
+There is no MariaDB package on Pi's repositiory. I have to [compile by myself] (http://raspbian-france.fr/installer-mariadb-raspbian/). Luckily, pi3g makes one: [Easy MariaDB installation | pi3g Blog] (http://blog.pi3g.com/2014/07/easy-mariadb-installation/)
+
+However, I am not eazy to go with new MariaDB before try to tune the performance of the existing MySQL firstly.
+HayDen james writes an interesting article [MySQL Query Cache Size and Performance] (http://haydenjames.io/mysql-query-cache-size-performance/) and I am trying to figure it out now.
 
 ### Git
 * [软件版本控制介绍] (http://blog.jobbole.com/55304/)
