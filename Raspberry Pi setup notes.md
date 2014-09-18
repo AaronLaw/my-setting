@@ -1609,6 +1609,8 @@ As the memcached does not cache admin query (e.g. `admin/product/topic/28/`, whi
 
     sudo apt-get install redis-server # as apt-get itstall redis returns no package...
 
+    sudo service redis-service
+
 (The redis-server installed is v2.6.3, not the latest v2.8.3. Therefore, I am going to install it from source....later:)
 
 Then, I turn the 3 caching middleware off, and the `CACHES = {}` block off too, in the  `setting.py`:
