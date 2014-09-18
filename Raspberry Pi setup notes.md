@@ -50,7 +50,7 @@ VNC server
 
 BTSync
 
-Django within py34
+Django within py34-django
 
 Mopidy
 
@@ -368,7 +368,9 @@ see also: [将树莓派打造成音乐播放服务器] (http://www.geekfan.net/1
 
 ### Raspberry Pi as CAS (audio, music) (2014-09-10)
 
-Turn Raspberry Pi into an audiophile audio source. Audiophile-quality music playback.
+Turn Raspberry Pi into an audiophile audio source. Audiophile-quality music playback. Firstly this idea is Kin's question: cubox CAS source
+-> * Google: cubox CAS source
+
 
 Power supply -> Raspberry -> DAC -> Speaker
 
@@ -376,7 +378,7 @@ Need to use [線性電源  liner power supply] (http://www.post76.com/x2/forum.p
 
 * Google: Raspberry music player -> http://www.pimusicbox.com/ is a  Headless audio player based on Mopidy (no need for a monitor), streaming music from Spotify, SoundCloud, Google Music, Podcasts (with iTunes, gPodder directories), MP3/OGG/FLAC/AAC, Webradio (with TuneIn, Dirble directories), Subsonic, Soma FM. - See more at: http://www.pimusicbox.com/#sthash.3z0vOWIV.dpuf
 * Google: Raspberry CAS source -> [headfi.org] (http://www.head-fi.org/t/681593/cas-source-raspberry-pi-picoreplayer-raspyfi)
-* Google: cubox CAS source
+* Google: cubox CAS source -> http://obeediy.blogspot.hk/search/label/CAS
 
 * [Make your Raspberry Pi a Hi-Fi player] (https://www.youtube.com/watch?v=JHmcwZs3ufM) (from Google: Raspberry music player )
 * http://www.runeaudio.com/download/
@@ -385,7 +387,7 @@ http://www.runeaudio.com/about has a good depict on whan an linux distro on Pi d
 
 ![] (http://www.runeaudio.com/assets/img/how-it-works.png)
 
-Something new: 
+Coming some new idea: 
 
 * MPD (music player daemon)? (Google: post76 mpd, Google: post76 mpd 集中營)
 * i2s (firstly seen in [Raspberry Pi i2s DAC: why this sounds so good - Volumio] (http://volumio.org/raspberry-pi-i2s-dac-sounds-so-good/))
@@ -404,6 +406,7 @@ RuneAudio and Volumio is soso similar, sharing a similar UI. So, what's the diff
 
 #### Futher:
 
+* http://www.hydrogenaud.io/forums/
 * Baidu: runeaudio  -> [树莓派组建无线播放器 — 树莓派也玩hifi] (http://jy.smzdm.com/detail/30739)
 * Baidu: audiophile linux -> [Audiophile Linux] (http://www.ap-linux.com)
 * Baidu: audiophile raspberry
@@ -413,6 +416,12 @@ RuneAudio and Volumio is soso similar, sharing a similar UI. So, what's the diff
  * Google: raspberry music server -> http://lifehacker.com/how-to-turn-a-raspberry-pi-into-a-private-streaming-mus-1583221462
  * Google: raspberry audio image -> [Model B+ Audio Experiences] (http://www.raspberrypi.org/forums/viewtopic.php?f=35&t=81942)
  * Google: raspberry audio image ->  [Raspberry Pi: Mopidy on a credit card] (http://docs.mopidy.com/en/latest/installation/raspberrypi/)
+ * http://www.raspberrypi.org/tag/music/
+* Baidu: raspyfi
+* Google: audiophile Windows -> [Fidelizer] (http://www.windowsxlive.net/fidelizer/)
+* http://www.head-fi.org/f/ -> search
+* http://www.diyaudio.com/forums/ -> search
+* Google: audiophile sound card linux
 
 Music Player:
 * https://amarok.kde.org/
@@ -424,12 +433,13 @@ Power supply -> Raspberry (-> steaming ) -> the device on hand -> Speaker
 
 * http://andrewkelley.me/post/quest-build-ultimate-music-player.html, from:  [将树莓派打造成音乐播放服务器] (http://www.geekfan.net/10419/)
 
-music player server :
+music server :
 * http://groovebasin.com/
 * [MPD (music player daemon) ] (http://www.musicpd.org)
 
 ### Setup Mopidy on Pi (2014-09-14)
 
+Google: raspberry music server -> [Mopidy] (http://www.mopidy.com/)  is the 1st link,  [Pi MusicBox] (www.woutervanwijk.nl/pimusicbox/) second.
 Google: raspberry audio image ->  [Raspberry Pi: Mopidy on a credit card] (http://docs.mopidy.com/en/latest/installation/raspberrypi/)
 
 [Mopidy] (http://www.mopidy.com/) is an extensible music server written in Python.  It can be installed on Pi, Debian, Ubuntu, Arch Linux, Mac OS.
@@ -1254,6 +1264,7 @@ The host is `127.0.0.1`, where the anonymous FTP user name and password are `ftp
 https://help.ubuntu.com/10.04/serverguide/ftp-server.html
 http://computers.tutsplus.com/tutorials/how-to-use-a-raspberry-pi-as-a-local-web-server--cms-19943
 http://www.instructables.com/id/Raspberry-Pi-Web-Server/step9/Install-an-FTP-server/
+http://b.nj007.com/post/403.html
 
 ###Backup
 
