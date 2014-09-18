@@ -1504,6 +1504,15 @@ Plotting Graph
 ### Speed up Django
 My django apps respond slowly.
 
+There are ways to speed it up:
+
+# overclock the Pi
+# optimize the code
+# optimize the database
+# use cache (cache the view/page, or cache the ORM/database)
+
+Tools for benchmark website performance: http://webwait.com/ED
+
 ### Git
 * [软件版本控制介绍] (http://blog.jobbole.com/55304/)
 * [15分钟学会使用Git和远程代码库] (http://blog.jobbole.com/53573/)
