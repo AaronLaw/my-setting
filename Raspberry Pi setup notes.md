@@ -1670,6 +1670,16 @@ Finally, I let cacheops to cache all the things, including admin, queries:
 
 Now, the page loading of `/admin/product/topic/28/` is 3.73s, decreased from 5.5s. The improvement is great!
 
+#### Some tricks on performance
+
+Persistent connection helps! (aka connection pool)
+
+    CONN_MAX_AGE = None
+
+ [Django Documentation: Database] (https://docs.djangoproject.com/en/dev/ref/databases/) -> [setting: CONN_MAX_AGE] (https://docs.djangoproject.com/en/dev/ref/settings/#std:setting-CONN_MAX_AGE)
+
+Turn on persistent connection helps to save 0.5s (with no caching on). Page load is from 5.5s to 5.08s.
+
 
 Ref:
 
