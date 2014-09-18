@@ -937,10 +937,6 @@ Google: 啟用DDNS D-link
 
 ### Setup Nginx
 
-Install Nginx on raspbian and replace Apache
-[Raspbian France: 
-Installer Nginx Raspbian, et accélérez votre serveur web Raspberry](http://raspbian-france.fr/installer-nginx-raspbian-accelerez-serveur-web-raspberry/)
-
     sudo apt-get install nginx
 
 Test it:
@@ -981,6 +977,10 @@ http://www.raspberrypi.org/documentation/remote-access/web-server/nginx.md
 http://www.howtoforge.com/installing-nginx-with-php5-and-php-fpm-and-mysql-support-lemp-on-ubuntu-12.04-lts
 
 http://blog.mattwoodward.com/2013/01/setting-up-django-on-raspberry-pi.html
+
+Install Nginx on raspbian and replace Apache
+[Raspbian France: 
+Installer Nginx Raspbian, et accélérez votre serveur web Raspberry](http://raspbian-france.fr/installer-nginx-raspbian-accelerez-serveur-web-raspberry/)
 
 #### Setup PhpMyAdmin
 
