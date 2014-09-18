@@ -937,6 +937,10 @@ Google: 啟用DDNS D-link
 
 ### Setup Nginx
 
+Install Nginx on raspbian and replace Apache
+[Raspbian France: 
+Installer Nginx Raspbian, et accélérez votre serveur web Raspberry](http://raspbian-france.fr/installer-nginx-raspbian-accelerez-serveur-web-raspberry/)
+
     sudo apt-get install nginx
 
 Test it:
