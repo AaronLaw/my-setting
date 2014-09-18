@@ -1501,6 +1501,9 @@ Deploy Django with uWSGI & Nginx
 Plotting Graph
 * http://www.playpcesor.com/2014/08/excel-google-sheets-patterns.html
 
+### Speed up Django
+My django apps respond slowly.
+
 ### Git
 * [软件版本控制介绍] (http://blog.jobbole.com/55304/)
 * [15分钟学会使用Git和远程代码库] (http://blog.jobbole.com/53573/)
