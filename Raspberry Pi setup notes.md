@@ -1429,6 +1429,10 @@ http://magnatecha.com/turn-off-display-from-linux-command-line/
 
 https://django-book.readthedocs.org/en/latest/# (from: http://www.meetup.com/Taipei-py/messages/boards/thread/34933702)
 
+Everday Django Resources:
+* RealPython
+* https://code.djangoproject.com/wiki/DjangoResources (from: Google: django ui framework)
+
 Django bulid a blog
 * [Building a Blog with Django 1.7 in 16 mins] (https://www.youtube.com/watch?v=7rgph8en0Jc)
 * [Building a Blog in 30 minutes with Django] (https://www.youtube.com/watch?v=srHZoj3ASmk)

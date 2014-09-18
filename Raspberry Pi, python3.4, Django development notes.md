@@ -1,5 +1,10 @@
 Upgrading Python3 & running Django on Raspberry
 
+### Everday Django Resources:
+
+* RealPython
+* https://code.djangoproject.com/wiki/DjangoResources (from: Google: django ui framework)
+
 ### How do I explore & setup a sandbox environment for python development
 
 Google: virtualenvwapper
