@@ -1525,24 +1525,31 @@ Plotting Graph
 
 ### Speed up Django
 2014-09-17: 
-My django apps respond slowly.
+My django apps respond slowly. The user experence is [bad] (http://ihower.tw/rails4/performance.html).
 
 There are ways to speed it up:
 
 # overclock the Pi
 # optimize the code
 # optimize the database
-# use cache (cache the view/page, or cache the ORM/database)
+# caching (cache the view/page, or cache the ORM/database object)
 
 Tools for benchmark website performance: http://webwait.com/ED
+
+Tools for profiling django see Django Documentation: profiling | performance |optimization
 
 For 1:
 
     sudo raspi-config
 
+For 2:
+
+Reduce the times of queries, or group many queries into one.
+Redesign the relation between models help a lot. But the labourhood is not worthy.
+
 For 3:
 
-@see Replace MySQL with MariaDB. Or to reduce the SQL queries. Or to ensure there is index on table.
+@see Replace MySQL with MariaDB. Or to reduce the SQL queries. Or to ensure there is index on table. Compicated relations do hurt.
 
 For 4:  
 
@@ -1551,7 +1558,7 @@ Google: django cache -> [Django Documentation - Django’s cache framework] (htt
 
 The workflow is firstly setup the cache, and then use caching to cache the entire site:
 
-setup memcache |  LocMemCache ->  change MiddelWare setting.
+> setup memcache |  LocMemCache ->  change MiddelWare setting -> testing (profiling)
 
 I wanna use memcache for Django, as once I set it up, I can use it with WordPress too. :)
 
