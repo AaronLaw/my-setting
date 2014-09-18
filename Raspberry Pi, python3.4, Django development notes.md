@@ -94,6 +94,7 @@ http://stackoverflow.com/questions/25351550/should-i-use-generic-foreign-key-wit
 ### Tagging
 Google: Django tagging
 https://www.djangopackages.com/packages/p/django-taggit/
+[keyword cloud] (http://djangosteps.wordpress.com/2011/10/21/a-keyword-cloud-in-django/) (from: Google: ubuntu memcached django)
 
 ----
 Comments
@@ -174,6 +175,9 @@ https://github.com/klen/django_markdown
     * https://docs.djangoproject.com/en/dev/howto/static-files/
     * https://docs.djangoproject.com/en/dev/ref/contrib/staticfiles/
 ----
+
+
+----
 Django deployment
 * http://django-china.cn/topic/360/ 基于 nginx + uwsgi + virtualenv 简单的部署 Django 应用
 * https://github.com/imelucifer/MyNote/blob/master/django/django%2Buwsgi%2Bnginx%2Bcentos%E9%83%A8%E7%BD%B2.md 使用vps部署django:uwsgi+nginx
@@ -191,6 +195,8 @@ Frontend
   * https://angularjs.org/
       * http://campus.codeschool.com/courses/shaping-up-with-angular-js/intro
 
+
+Google: bootstrap django / bootstrap rails
 ----
 Maybe useful
 
