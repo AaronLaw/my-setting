@@ -1526,6 +1526,45 @@ For 4:
 Github: [django cache] (https://github.com/search?utf8=%E2%9C%93&q=django+cache) -> [johnny-cache] (https://github.com/jmoiron/johnny-cache) -> http://memcached.org/
 Google: django cache -> [Django Documentation - Django’s cache framework] (https://docs.djangoproject.com/en/dev/topics/cache/)
 
+The workflow is firstly setup the cache, and then use caching to cache the entire site:
+
+setup memcache |  LocMemCache ->  change MiddelWare setting.
+
+I wanna use memcache for Django, as once I set it up, I can use it with WordPress too. :)
+
+Firstly, I've to install memcache on Pi: 
+
+* Google: ubuntu memcached
+    * [How To Install and Use Memcache on Ubuntu 14.04] (https://www.digitalocean.com/community/tutorials/how-to-install-and-use-memcache-on-ubuntu-14-04) (2014-05-01 published)
+* Google: memcached django
+    * [Django Memcached: Optimizing Django Through Caching] (http://www.jeffknupp.com/blog/2012/02/24/django-memcached-optimizing-django-through-caching/)
+
+    sudo apt-get install memcached
+
+    sudo service memcached status
+
+After installing Memcached itself, you'll need to install a memcached binding (aka [memcache clients] (https://code.google.com/p/memcached/wiki/Clients). There are several python memcached bindings available; the two most common are [python-memcached] (ftp://ftp.tummy.com/pub/python-memcached/) and [pylibmc] (http://sendapatch.se/projects/pylibmc/). [#] (http://stackoverflow.com/questions/7636108/installing-memcached-for-a-django-project) [#] (https://docs.djangoproject.com/en/dev/topics/cache/)
+
+* Google: ubuntu mancaced python
+    * [Installing memcached for a django project] (http://stackoverflow.com/questions/7636108/installing-memcached-for-a-django-project)
+        * http://ilian.i-n-i.org/caching-websites-with-django-and-memcached/
+    * [how to install libmemcached for django framework in ubuntu 10.04] (http://stackoverflow.com/questions/14332451/how-to-install-libmemcached-for-django-framework-in-ubuntu-10-04)
+
+
+    pip install python-memcached  # or  sudo apt-get install python-memcache
+
+Since `python-memcached` does not support python3, I have to install `python3-memcached`. (Google: memcached python3)
+
+    pip install python3-memcached
+
+Ref:
+
+Google: Rails cache, django cache
+* [Caching with Rails: An overview] (http://guides.rubyonrails.org/caching_with_rails.html)
+* [Ruby on Rails 實戰聖經使用 Rails 4.1 及 Ruby 2.1 - 快取] (http://ihower.tw/rails4/caching.html)
+    * [如何使用 memcached 做快取] (http://ihower.tw/blog/archives/1768)
+* [Django Documentation - Django’s cache framework] (https://docs.djangoproject.com/en/dev/topics/cache/)
+* [The Django Book - Chapter 15: Caching] (http://www.djangobook.com/en/2.0/chapter15.html)
 
 
 ### Git
