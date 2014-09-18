@@ -1513,6 +1513,21 @@ There are ways to speed it up:
 
 Tools for benchmark website performance: http://webwait.com/ED
 
+For 1:
+
+    sudo raspi-config
+
+For 3:
+
+@see Replace MySQL with MariaDB. Or to reduce the SQL queries. Or to ensure there is index on table.
+
+For 4:  
+
+Github: [django cache] (https://github.com/search?utf8=%E2%9C%93&q=django+cache) -> [johnny-cache] (https://github.com/jmoiron/johnny-cache) -> http://memcached.org/
+Google: django cache -> [Django Documentation - Django’s cache framework] (https://docs.djangoproject.com/en/dev/topics/cache/)
+
+
+
 ### Git
 * [软件版本控制介绍] (http://blog.jobbole.com/55304/)
 * [15分钟学会使用Git和远程代码库] (http://blog.jobbole.com/53573/)
