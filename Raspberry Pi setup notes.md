@@ -925,6 +925,8 @@ Tutorial in [For your Pi!] (http://raspberrypihelp.net/tutorials) provides the i
 
 Do port forwarding to route the incoming traffic to Pi.
 
+* http://raspbian-france.fr/mettre-en-ligne-serveur-web-raspbian-dydns-port-forwarding/
+
 Google: 啟用DDNS D-link
 
 * http://changyang319.com/archives/624
