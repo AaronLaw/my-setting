@@ -720,6 +720,7 @@ Then, we can create an isolate environment:
 ref:
 http://raspberry.io/wiki/how-to-get-python-on-your-raspberrypi/
 http://flask.pocoo.org/docs/installation/#virtualenv tell me why use virtualenv to isolate the development enviornment from system
+http://dormousehole.readthedocs.org/en/latest 这是 Flask 0.10 版文档的中文翻译 (from: Baidu: flask)
 
 http://www.raspberrypi.org/forums/viewtopic.php?t=7208&p=403771
 https://virtualenv.pypa.io/en/latest/
