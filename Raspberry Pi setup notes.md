@@ -1696,6 +1696,13 @@ Google: Rails cache, django cache
 * [The Django Book - Chapter 15: Caching] (http://www.djangobook.com/en/2.0/chapter15.html)
 * Django Documentation: cache | profiling | performance | optimization
 
+
+### Wordpress cache
+
+http://haydenjames.io/best-wordpress-cache-plugin-wp-ffpc/ (Google: raspberry mariadb -> http://haydenjames.io/download-lemp-raspberry-pi-nginx-mariadb-mysql-php/)
+
+If memcache is supporting PHP, there should be a `memcache` section in `<? echo phpinfo();`.
+
 ### Replace MySQL with MariaDB
 
 2014-09-10:
