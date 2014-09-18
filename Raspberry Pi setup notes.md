@@ -1680,6 +1680,8 @@ Persistent connection helps! (aka connection pool)
 
 Turn on persistent connection helps to save 0.5s (with no caching on). Page load is from 5.5s to 5.08s.
 
+(see also the connection pools in django-redis: http://niwibe.github.io/django-redis/)
+
 N+1 queries hurts.
 
 When I turn off the related field `related` in the Source model, the page load time of `/admin/product/topic/28/` drops much! The page loading drops from 5.5s to 0.69s!
