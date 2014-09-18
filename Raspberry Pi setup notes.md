@@ -1565,7 +1565,7 @@ The workflow is firstly setup the cache, and then use caching to cache the entir
 
 #### Using Memcache as cache
 
-I wanna use memcache for Django, as once I set it up, I can use it with WordPress too. :)
+I wanna use memcache for Django, as once I set it up, I can use it with WordPress too. :smile:
 
 Firstly, I've to install memcache on Pi: 
 
@@ -1663,6 +1663,14 @@ There is also a possibility to make all cacheops methods and decorators no-op, e
 
 [#] (https://github.com/Suor/django-cacheops#readme)
 
+
+Finally, I let cacheops to cache all the things, including admin, queries:
+
+    '*.*': ('all', 60*15),
+
+Now, the page loading of `/admin/product/topic/28/` is 3.73s, decreased from 5.5s. The improvement is great!
+
+
 Ref:
 
 Google: Rails cache, django cache
@@ -1671,6 +1679,7 @@ Google: Rails cache, django cache
     * [如何使用 memcached 做快取] (http://ihower.tw/blog/archives/1768)
 * [Django Documentation - Django’s cache framework] (https://docs.djangoproject.com/en/dev/topics/cache/)
 * [The Django Book - Chapter 15: Caching] (http://www.djangobook.com/en/2.0/chapter15.html)
+* Django Documentation: cache | profiling | performance | optimization
 
 ### Replace MySQL with MariaDB
 
