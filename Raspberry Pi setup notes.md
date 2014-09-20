@@ -363,8 +363,8 @@ Google: auto sync with dropbox raspberry
 ### Setup as a home theater PC (2014-09-09)
 http://en.wikipedia.org/wiki/Home_theater_PC
 
-XBMC
-http://xbmc.org/
+[XBMC] (http://xbmc.org/)
+
 * [How to Install XBMC onto the Raspberry Pi ] (https://www.youtube.com/watch?v=5XuSlsJppOo)
 
 
@@ -381,7 +381,7 @@ see also: [将树莓派打造成音乐播放服务器] (http://www.geekfan.net/1
 ### Raspberry Pi as CAS (audio, music) (2014-09-10)
 
 Turn Raspberry Pi into an audiophile audio source. Audiophile-quality music playback. Firstly this idea is Kin's question: cubox CAS source
--> * Google: cubox CAS source
+-> Google: cubox CAS source
 
 
 Power supply -> Raspberry -> DAC -> Speaker
@@ -408,7 +408,12 @@ OS:
 * [RuneAudio] (http://www.runeaudio.com/)
 * [volumio] (http://volumio.org/) ([is a porting of RaspyFi] (http://www.raspyfi.com/volumio-your-new-favourite-audiophile-music-player-is-out/))
     * [RaspyFi] (http://www.raspyfi.com/), which is aimed to notorious Voyage-mpd distro. See the post on headfi.org for comments. (from Google: Raspberry CAS source)
-* [Voyage-linux] (http://linux.voyage.hk) is made by a HKer. Runs an ordinary desktop linux.
+* [Pi MusicBox] (http://www.woutervanwijk.nl/pimusicbox/)
+
+OS for 64bit x86 PC:
+* [Audiophile Linux] (http://www.ap-linux.com) v3, Arch Linux based, need to be installed on hdd
+* [Daphile] (http://www.daphile.com/) , Debian based, run from USB flash drive as an image
+* [Voyage-linux] (http://linux.voyage.hk) is made by a HKer. Runs an ordinary desktop linux. The sound is not as good as Audiophile Linux nor Daphile
 
 All of them turn Raspberry Pi into a headless music player, plus turning CuBox, UDOO, Beaglebone Black too.
 
@@ -434,6 +439,8 @@ RuneAudio and Volumio is soso similar, sharing a similar UI. So, what's the diff
 * http://www.head-fi.org/f/ -> search
 * http://www.diyaudio.com/forums/ -> search
 * Google: audiophile sound card linux
+* Google: intel-based audiophile
+* Google: 64bit x86 audiophile
 
 Music Player:
 * https://amarok.kde.org/
@@ -1369,8 +1376,9 @@ Google: raspberry mail server
 
 ### Supplymentory
 
-See how Debian says about Raspberry Pi: https://wiki.debian.org/RaspberryPi
+See [how Debian says about Raspberry Pi] (https://wiki.debian.org/RaspberryPi)
 
+[Internet of Things Remote Sensing] (http://www.udoo.org/ProjectsAndTutorials/internet-of-things-remote-sensing/)
 
 #### Linux system monitoring / Admin
 * http://www.cyberciti.biz/tips/top-linux-monitoring-tools.html
