@@ -409,6 +409,7 @@ OS:
 * [volumio] (http://volumio.org/) ([is a porting of RaspyFi] (http://www.raspyfi.com/volumio-your-new-favourite-audiophile-music-player-is-out/))
     * [RaspyFi] (http://www.raspyfi.com/), which is aimed to notorious Voyage-mpd distro. See the post on headfi.org for comments. (from Google: Raspberry CAS source)
 * [Pi MusicBox] (http://www.woutervanwijk.nl/pimusicbox/)
+    * https://discuss.mopidy.com/t/how-to-pi-musicbox-with-a-raspberry-pi-b/25
 
 OS for 64bit x86 PC:
 * [Audiophile Linux] (http://www.ap-linux.com) v3, Arch Linux based, need to be installed on hdd
@@ -430,10 +431,10 @@ RuneAudio and Volumio is soso similar, sharing a similar UI. So, what's the diff
 * Google: raspberry music player 
 -> The image is around 227MB in (compressed) size; 950MB uncompressed
 [Web Client for Mopidy Music Server and the Pi MusicBox] (https://github.com/woutervanwijk/Mopidy-MusicBox-Webclient)
- * Google: raspberry music server -> http://lifehacker.com/how-to-turn-a-raspberry-pi-into-a-private-streaming-mus-1583221462
- * Google: raspberry audio image -> [Model B+ Audio Experiences] (http://www.raspberrypi.org/forums/viewtopic.php?f=35&t=81942)
- * Google: raspberry audio image ->  [Raspberry Pi: Mopidy on a credit card] (http://docs.mopidy.com/en/latest/installation/raspberrypi/)
- * http://www.raspberrypi.org/tag/music/
+* Google: raspberry music server -> http://lifehacker.com/how-to-turn-a-raspberry-pi-into-a-private-streaming-mus-1583221462
+* Google: raspberry audio image -> [Model B+ Audio Experiences] (http://www.raspberrypi.org/forums/viewtopic.php?f=35&t=81942)
+* Google: raspberry audio image ->  [Raspberry Pi: Mopidy on a credit card] (http://docs.mopidy.com/en/latest/installation/raspberrypi/)
+* http://www.raspberrypi.org/tag/music/
 * Baidu: raspyfi
 * Google: audiophile Windows -> [Fidelizer] (http://www.windowsxlive.net/fidelizer/)
 * http://www.head-fi.org/f/ -> search
@@ -441,6 +442,9 @@ RuneAudio and Volumio is soso similar, sharing a similar UI. So, what's the diff
 * Google: audiophile sound card linux
 * Google: intel-based audiophile
 * Google: 64bit x86 audiophile
+* [HiFiBerry] (http://www.hifiberry.com/) is a DAC for Raspberry Pi
+    * [Crazy Audio - Sound quality of the Raspberry Pi B+] (http://www.crazy-audio.com/2014/07/sound-quality-of-the-raspberry-pi-b/)
+    * http://www.hifiberry.com/guides/setting-up-volumio-to-get-great-audio/
 
 Music Player:
 * https://amarok.kde.org/
@@ -451,6 +455,7 @@ Music Player:
 Power supply -> Raspberry (-> steaming ) -> the device on hand -> Speaker
 
 * http://andrewkelley.me/post/quest-build-ultimate-music-player.html, from:  [将树莓派打造成音乐播放服务器] (http://www.geekfan.net/10419/)
+* http://www.crazy-audio.com/projects/raspberry-pi-for-audio-distribution/
 
 music server :
 * http://groovebasin.com/
@@ -558,11 +563,13 @@ Mopidy will also shut down properly if you send it the TERM signal, e.g. by usin
 
 #### Clients for Mopidy
 
-[HTTP clients] (http://docs.mopidy.com/en/latest/clients/http/)
-[Web Client for Mopidy Music Server and the Pi MusicBox] (https://github.com/woutervanwijk/Mopidy-MusicBox-Webclient)
-[Moped - Web Client for Mopidy] (https://github.com/martijnboland/moped) (from: http://docs.mopidy.com/en/latest/ext/web/)
-[Mopify] (https://github.com/dirkgroenen/Mopify)
-[MPD] (http://en.wikipedia.org/wiki/Music_Player_Daemon)
+* [HTTP clients] (http://docs.mopidy.com/en/latest/clients/http/)
+* [Web Client for Mopidy Music Server and the Pi MusicBox] (https://github.com/woutervanwijk/Mopidy-MusicBox-Webclient)
+* [Moped - Web Client for Mopidy] (https://github.com/martijnboland/moped) (from: http://docs.mopidy.com/en/latest/ext/web/)
+* [Mopify] (https://github.com/dirkgroenen/Mopify)
+* [MPD] (http://en.wikipedia.org/wiki/Music_Player_Daemon)
+
+See also https://www.kickstarter.com/projects/fon/gramofon-modern-cloud-jukebox, which is shown on the homepage of http://www.mopidy.com/
 
 ### Setup Python for development (enhance it) 
 * Read [The Hitchhiker’s Guide to Python!] (http://docs.python-guide.org/en/latest/) first, and [Python Packaging User Guide] (https://python-packaging-user-guide.readthedocs.org/en/latest/current.html) second. (from: [How to get Django] (https://www.djangoproject.com/download/) )
@@ -1376,7 +1383,7 @@ Google: raspberry mail server
 
 ### Supplymentory
 
-See [how Debian says about Raspberry Pi] (https://wiki.debian.org/RaspberryPi)
+See [how Debian says about Raspberry Pi] (https://wiki.debian.org/RaspberryPi) (from: http://www.geekfan.net/10419/)
 
 [Internet of Things Remote Sensing] (http://www.udoo.org/ProjectsAndTutorials/internet-of-things-remote-sensing/)
 
@@ -1540,10 +1547,10 @@ I use Firefox 34 `F12` to test the page loading time. On my development notebook
 
 There are ways to speed it up:
 
-# overclock the Pi
-# optimize the code
-# optimize the database
-# caching (cache the view/page, or cache the ORM/database object)
+1. overclock the Pi
+2. optimize the code
+3. optimize the database
+4. caching (cache the view/page, or cache the ORM/database object)
 
 Tools for benchmark website performance: http://webwait.com/ED
 
@@ -1856,6 +1863,10 @@ and you will see
 Google: opensource crm award (idea from: http://www.sugarcrm.com/about/awards-recognition)
 Google: opensource cms award
 
+### Raspberry Pi as NAS
+* http://www.howtogeek.com/139433/how-to-turn-a-raspberry-pi-into-a-low-power-network-storage-device/
+* http://www.geekfan.net/2767/
+* http://www.geekfan.net/5003/
 
 ### Set Fonts
 Do it on client side, as I seldom login to pi with keyboard and mouse but remote control it with ssh.
