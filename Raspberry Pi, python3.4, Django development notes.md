@@ -80,6 +80,12 @@ Creation of dynamic model fields (dynamic attributes)
 Django self-referential foreign key 
 
 ----
+Access from the shell:
+    from django.db import models
+    
+    from product.models import *
+    help(Topic)
+----
 Reuse "Material" info in pickup table
 
 "Material" is a table column in the pickup table. The value of it maybe "cow skin", or "cow skin, plastic".
