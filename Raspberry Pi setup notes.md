@@ -410,10 +410,13 @@ OS:
     * [RaspyFi] (http://www.raspyfi.com/), which is aimed to notorious Voyage-mpd distro. See the post on headfi.org for comments. (from Google: Raspberry CAS source)
 * [Pi MusicBox] (http://www.woutervanwijk.nl/pimusicbox/)
     * https://discuss.mopidy.com/t/how-to-pi-musicbox-with-a-raspberry-pi-b/25
+* [Archphile] (http://archphile.org/faq) (from: Google: volumio root)
+    * http://www.ympd.org/
+* [piCorePlayer] (https://sites.google.com/site/picoreplayer/home) (from: [Raspberry Pi + RuneAudioで音楽を鳴らしてみる ] (http://cygx.mydns.jp/blog/?arti=515) )
 
 OS for 64bit x86 PC:
 * [Audiophile Linux] (http://www.ap-linux.com) v3, Arch Linux based, need to be installed on hdd
-* [Daphile] (http://www.daphile.com/) , Debian based, run from USB flash drive as an image
+* [Daphile] (http://www.daphile.com/) , Debian based, run from USB flash drive as an image. The sound is the best amoung the 3.
 * [Voyage-linux] (http://linux.voyage.hk) is made by a HKer. Runs an ordinary desktop linux. The sound is not as good as Audiophile Linux nor Daphile
 
 All of them turn Raspberry Pi into a headless music player, plus turning CuBox, UDOO, Beaglebone Black too.
@@ -445,6 +448,18 @@ RuneAudio and Volumio is soso similar, sharing a similar UI. So, what's the diff
 * [HiFiBerry] (http://www.hifiberry.com/) is a DAC for Raspberry Pi
     * [Crazy Audio - Sound quality of the Raspberry Pi B+] (http://www.crazy-audio.com/2014/07/sound-quality-of-the-raspberry-pi-b/)
     * http://www.hifiberry.com/guides/setting-up-volumio-to-get-great-audio/
+* Google: runeaudio root -> I wanna find a way to ssh to it. Google tell me more about this project in someones' mind.
+* Google: volumio root -> runeaudio root? again, in volumio
+* [Hydrogenaudio Forums - Audio Hardware > Audio quality on SBCs like RPi, Built-in analog out on single-board computers any good?] (http://www.hydrogenaud.io/forums/index.php?showtopic=106223)
+* Google: runeaudio root
+    * [Computer Audiophile - Geek Speak: How To Build A BeagleBone Black MPD Music Server] (http://www.computeraudiophile.com/content/533-geek-speak-how-build-beaglebone-black-mpd-music-server/comments11.html)
+    * [Adafruit - Raspberry Pi] (https://learn.adafruit.com/category/raspberry-pi)
+    * [FSA Pi 音樂應用平台 - [轉貼]樹莓派是什麼的東西?小小的簡單介紹，以及應用資源。] (http://fsapi.wordpress.com/2014/08/25/轉貼樹莓派是什麼的東西?小小的簡單介紹，以及/)
+        * -> [[投影片] COSCUP2014：Raspberry Pi 應用展示與遊戲機演進篇] (http://www.raspberrypi.com.tw/1678/coscup2014-introduction-to-raspberry-pi-and-game-console-evolution/)
+            * -> PiFi Mini (on: http://www.raspberrypi.com.tw/1678/coscup2014-introduction-to-raspberry-pi-and-game-console-evolution/)
+        * -> [樹莓派在01上面應用於音樂撥放的參考文章] (http://www.mobile01.com/topicdetail.php?f=180&t=3495250&p=1)
+* Google: cubox os
+    * http://www.solid-run.com/archive/mw/Media_player
 
 Music Player:
 * https://amarok.kde.org/
@@ -568,6 +583,7 @@ Mopidy will also shut down properly if you send it the TERM signal, e.g. by usin
 * [Moped - Web Client for Mopidy] (https://github.com/martijnboland/moped) (from: http://docs.mopidy.com/en/latest/ext/web/)
 * [Mopify] (https://github.com/dirkgroenen/Mopify)
 * [MPD] (http://en.wikipedia.org/wiki/Music_Player_Daemon)
+* http://www.ympd.org/
 
 See also https://www.kickstarter.com/projects/fon/gramofon-modern-cloud-jukebox, which is shown on the homepage of http://www.mopidy.com/
 
@@ -1620,16 +1636,33 @@ As the memcached does not cache admin query (e.g. `admin/product/topic/28/`, whi
 
 [DjangoPackages: caching] (https://www.djangopackages.com/grids/g/caching/)
 
-
 [django-cacheops] (https://www.djangopackages.com/packages/p/cacheops/) seems good. It support Python 3, Django 1.7, and It uses redis as backend for ORM cache and redis or filesystem for simple time-invalidated one. I am going to install [redis] (http://redis.io/) server on my machine:
 
     sudo apt-get install redis-server # as apt-get itstall redis returns no package...
 
     sudo service redis-service
 
-(The redis-server installed is v2.6.3, not the latest v2.8.3. Therefore, I am going to install it from source....later:)
+(The redis-server installed is v2.4, not the latest v2.8.3. The requirement of django-cacheops is v2.6+. Therefore, I am going to install it from source. :smile:
 
-Then, I turn the 3 caching middleware off, and the `CACHES = {}` block off too, in the  `setting.py`:
+Ref to http://redis.io/topics/quickstart, 
+
+    wget http://download.redis.io/redis-stable.tar.gz
+    tar xvzf redis-stable.tar.gz
+    cd redis-stable
+    make
+
+At this point you can try if your build works correctly by typing `make test`, but this is an optional step. Then `make install` if everything ok.
+
+    make install
+
+This takes about 15 mins on Pi.
+
+Or, if `make install` does not work, go to `./utils` and the run the  `install_server.sh` (ref: the `README` of the downloaded `redis-stable` directory):
+
+    cd utils
+    ./install_service.sh
+
+Let's use redis in Django. Firstly, I turn the 3 caching middleware off, and the `CACHES = {}` block off too, in the  `setting.py`:
 
     # 'django.middleware.cache.UpdateCacheMiddleware',
     # 'django.middleware.common.CommonMiddleware',
@@ -1720,6 +1753,8 @@ Google: Rails cache, django cache
 http://haydenjames.io/best-wordpress-cache-plugin-wp-ffpc/ (Google: raspberry mariadb -> http://haydenjames.io/download-lemp-raspberry-pi-nginx-mariadb-mysql-php/)
 
 If memcache is supporting PHP, there should be a `memcache` section in `<? echo phpinfo();`.
+
+
 
 ### Replace MySQL with MariaDB
 
