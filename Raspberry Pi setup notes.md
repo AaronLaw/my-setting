@@ -1754,7 +1754,9 @@ http://haydenjames.io/best-wordpress-cache-plugin-wp-ffpc/ (Google: raspberry ma
 
 If memcache is supporting PHP, there should be a `memcache` section in `<? echo phpinfo();`.
 
+#### Cache Wordpress with redis
 
+Google: redis install wordpress
 
 ### Replace MySQL with MariaDB
 
