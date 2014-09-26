@@ -1664,6 +1664,28 @@ Or, if `make install` does not work, go to `./utils` and the run the  `install_s
     cd utils
     ./install_service.sh
 
+(2014-09-26 update: I've found a way to install the latest redis automaticlly.
+
+How to install the latest version of redis on Ubuntu?
+
+Google: redis install wordpress  -> [Toby's Rambling - How to install the latest version of redis on Ubuntu] (http://tosbourn.com/install-latest-version-redis-ubuntu/): 
+
+    $ sudo apt-get install -y python-software-properties
+    $ sudo add-apt-repository -y ppa:rwky/redis
+    $ sudo apt-get update
+    $ sudo apt-get install -y redis-server
+
+Line 1 – So we want to add a new repository that contains the latest version of Redis, the easiest way to do this requires add-apt-repository, which most likely isn’t installed on your machine, so the first thing we want to do is install python-software-properties, this gives us access to add-apt-repository.
+
+Line 2- Next we want to set up this new repository.
+
+Line 3 – Now we want to update apt so it sees any changes we have made.
+
+Line 4 – Finally we want to install redis-server, now the latest version will be installed.
+
+If you are wondering the -y flag just saves me having to manually OK things I was going to OK anyways, this is really handy if you are running these steps as part of a provisioning step (which I was)
+)
+
 Let's use redis in Django. Firstly, I turn the 3 caching middleware off, and the `CACHES = {}` block off too, in the  `setting.py`:
 
     # 'django.middleware.cache.UpdateCacheMiddleware',
