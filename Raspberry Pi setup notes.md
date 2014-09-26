@@ -1561,6 +1561,8 @@ My django apps respond slowly. The user experence is [bad] (http://ihower.tw/rai
 
 I use Firefox 34 `F12` to test the page loading time. On my development notebook , `/admin/product/topic/28`, which relates to 19 product sources (and the 1600+ related sources), consumes 5.2s~5.6s to render. The most expensive part is the html files. It takes 1535.22KB, and the files totally are 1676.17KB (1 html, 8 js, 3 css, 6 images). Comparing to the other pages, which the most expensive part is the js files.
 
+![] (./without-cache.png)
+
 There are ways to speed it up:
 
 1. overclock the Pi
