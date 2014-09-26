@@ -81,6 +81,8 @@ Django self-referential foreign key
 
 ----
 Access from the shell:
+# https://docs.djangoproject.com/en/dev/ref/models/instances/#django.db.models.Model
+
     from django.db import models
     
     from product.models import *
