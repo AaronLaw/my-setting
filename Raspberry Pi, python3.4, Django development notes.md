@@ -3,7 +3,22 @@ Upgrading Python3 & running Django on Raspberry
 ### Everday Django Resources:
 
 * RealPython
+* [Open Sourcing a Python Project the Right Way - Jeff Knupp] (http://www.jeffknupp.com/blog/2013/08/16/open-sourcing-a-python-project-the-right-way/)
 * https://code.djangoproject.com/wiki/DjangoResources (from: Google: django ui framework)
+* http://www.fullstackpython.com/
+﻿* http://en.wikipedia.org/wiki/Django_%28web_framework%29
+* http://twoscoopspress.com/pages/django-tutorials
+* http://www.tangowithdjango.com/
+* http://www.tangowithdjango.com/book/index.html
+* https://django-book.readthedocs.org/en/latest/# (from: http://www.meetup.com/Taipei-py/messages/boards/thread/34933702)
+* http://www.barrymorrison.com/2012/10/zero-to-django-in-4-months-what-ive-learned-part-1/
+* http://djangobook.py3k.cn/2.0/
+* http://codecondo.com/web-scraping-python/
+
+Some useful concepts / topic:
+* Google: query django | rails | cakephp | codeigniter | laravel
+* Google: debug django | rails | cakephp | codeigniter | laravel
+* http://code.tutsplus.com/tutorials/why-laravel-is-taking-the-php-community-by-storm--pre-52639
 
 ### How do I explore & setup a sandbox environment for python development
 
@@ -199,18 +214,8 @@ Django deployment
 Price in Python
 https://github.com/mirumee/prices (from: https://www.djangopackages.com/packages/p/django-images/)
 https://github.com/mirumee/django-prices (from: https://www.djangopackages.com/packages/p/django-images/)
-
 ----
-Frontend
-* [跟(不)上網頁前端技術（資源大雜燴）] (http://huan-lin.blogspot.com/2013/08/front-end-technologies.html)
 
-  * http://kkbruce.tw/ bootstrapv2
-  * https://angularjs.org/
-      * http://campus.codeschool.com/courses/shaping-up-with-angular-js/intro
-
-
-Google: bootstrap django / bootstrap rails
-----
 Maybe useful
 
 
