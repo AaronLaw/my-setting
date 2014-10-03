@@ -14,6 +14,8 @@ Upgrading Python3 & running Django on Raspberry
 * http://www.barrymorrison.com/2012/10/zero-to-django-in-4-months-what-ive-learned-part-1/
 * http://djangobook.py3k.cn/2.0/
 * http://codecondo.com/web-scraping-python/
+* Reddit: django
+    * http://www.reddit.com/r/django/comments/1nm5n8/moving_from_php_to_django_setup_host_advice/
 
 Some useful concepts / topic:
 * Google: query django | rails | cakephp | codeigniter | laravel
