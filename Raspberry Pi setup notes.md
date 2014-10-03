@@ -408,9 +408,10 @@ OS:
 * [RuneAudio] (http://www.runeaudio.com/)
 * [volumio] (http://volumio.org/) ([is a porting of RaspyFi] (http://www.raspyfi.com/volumio-your-new-favourite-audiophile-music-player-is-out/))
     * [RaspyFi] (http://www.raspyfi.com/), which is aimed to notorious Voyage-mpd distro. See the post on headfi.org for comments. (from Google: Raspberry CAS source)
+    * http://www.head-fi.org/t/699130/volumio-the-free-hi-fi-linux-distribution
 * [Pi MusicBox] (http://www.woutervanwijk.nl/pimusicbox/)
     * https://discuss.mopidy.com/t/how-to-pi-musicbox-with-a-raspberry-pi-b/25
-* [Archphile] (http://archphile.org/faq) (from: Google: volumio root)
+* [Archphile] (http://archphile.org/faq) (from: Google: volumio root) (or from: Google: audiophile linux)
     * http://www.ympd.org/
 * [piCorePlayer] (https://sites.google.com/site/picoreplayer/home) (from: [Raspberry Pi + RuneAudioで音楽を鳴らしてみる ] (http://cygx.mydns.jp/blog/?arti=515) )
 
@@ -445,6 +446,8 @@ RuneAudio and Volumio is soso similar, sharing a similar UI. So, what's the diff
 * Google: audiophile sound card linux
 * Google: intel-based audiophile
 * Google: 64bit x86 audiophile
+* Google: Audiophile Windows 7
+    * [Archimago's Musings: MEASUREMENTS: Part I: Bit-Perfect Audiophile Music Players (Windows). ] (http://archimago.blogspot.hk/2013/06/measurements-part-i-bit-perfect.html)
 * [HiFiBerry] (http://www.hifiberry.com/) is a DAC for Raspberry Pi
     * [Crazy Audio - Sound quality of the Raspberry Pi B+] (http://www.crazy-audio.com/2014/07/sound-quality-of-the-raspberry-pi-b/)
     * http://www.hifiberry.com/guides/setting-up-volumio-to-get-great-audio/
@@ -1464,6 +1467,11 @@ https://django-book.readthedocs.org/en/latest/# (from: http://www.meetup.com/Tai
 Everday Django Resources:
 * RealPython
 * https://code.djangoproject.com/wiki/DjangoResources (from: Google: django ui framework)
+* http://www.fullstackpython.com/
+* http://www.fullstackpython.com/best-python-resources.html
+* [Open Sourcing a Python Project the Right Way - Jeff Knupp] (http://www.jeffknupp.com/blog/2013/08/16/open-sourcing-a-python-project-the-right-way/)
+* http://codecondo.com/web-scraping-python/
+
 
 Django bulid a blog
 * [Building a Blog with Django 1.7 in 16 mins] (https://www.youtube.com/watch?v=7rgph8en0Jc)
@@ -1477,6 +1485,7 @@ https://github.com/django/djangoproject.com/tree/master/blog
 * http://www.tangowithdjango.com/book/index.html
 * https://django-book.readthedocs.org/en/latest/# (from: http://www.meetup.com/Taipei-py/messages/boards/thread/34933702)
 * http://www.barrymorrison.com/2012/10/zero-to-django-in-4-months-what-ive-learned-part-1/
+* http://djangobook.py3k.cn/2.0/
 
 
 South & Migration in Django 1.7
@@ -1517,6 +1526,7 @@ Workflow in Django
 > Managing state and transitions, aka workflow.
 
 * https://github.com/kmmbvnr/django-viewflow
+* https://www.djangopackages.com/packages/p/django-viewflow/
 * https://gist.github.com/Nagyman/9502133 says workflow is a FSM (aka Finite State Machine).
 * https://www.ruby-toolbox.com/categories/state_machines
 
@@ -1781,6 +1791,7 @@ If memcache is supporting PHP, there should be a `memcache` section in `<? echo 
 #### Cache Wordpress with redis
 
 Google: redis install wordpress
+* https://eamann.com/tech/ludicrous-speed-wordpress-caching-with-redis/
 
 ### Replace MySQL with MariaDB
 
@@ -1800,6 +1811,8 @@ However, I am not eazy to go with new MariaDB before try to tune the performance
 HayDen james writes an interesting article [MySQL Query Cache Size and Performance] (http://haydenjames.io/mysql-query-cache-size-performance/) and I am trying to figure it out now.
 
 ### Git
+* [How To Use Source Control Effectively] (http://grokcode.com/717/how-to-use-source-control-effectively/)
+    * from: http://www.fullstackpython.com/web-frameworks.html -> http://grokcode.com/864/snakefooding-python-code-for-complexity-visualization/
 * [软件版本控制介绍] (http://blog.jobbole.com/55304/)
 * [15分钟学会使用Git和远程代码库] (http://blog.jobbole.com/53573/)
 * [让你的Git水平更上一层楼的10个小贴士] (http://blog.jobbole.com/75348/)
@@ -1907,13 +1920,17 @@ and you will see
     Branch experimental set up to track remote branch experimental from origin.
     Switched to a new branch 'experimental'
 
+#### Home Automation
+* [Lifehacker - Build an Entire Home Automation System with a Raspberry Pi and Arduino] (http://lifehacker.com/build-an-entire-home-automation-system-with-a-raspberry-1640844965)
+* Try RQ: [Redis Queue] (https://github.com/nvie/rq)
+    * from:  http://www.fullstackpython.com/web-frameworks.html -> http://grokcode.com/864/snakefooding-python-code-for-complexity-visualization/
+* Try http://www.celeryproject.org
+    * from:  [Redis Queue] (https://github.com/nvie/rq)
+
 #### Linux admin tips & networking
 * http://blog.jobbole.com/50643/ 如何利用多核CPU来加速你的Linux命令
 * http://blog.jobbole.com/75142/ 怎么制定一套合适的服务器命名方案
 
-#### Javascript
-* http://blog.jobbole.com/74818/ 
-    * http://www.codecademy.com/en/tracks/javascript
 
 #### Possible other IDE / Text editor
 * Sublime Text
