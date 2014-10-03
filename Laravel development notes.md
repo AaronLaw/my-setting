@@ -46,5 +46,41 @@ Typically, you may use a web server such as Apache or Nginx to serve your Larave
 
     php artisan server
 
+It returns an error:
+
+    mcrypt php extension required
+
+Google: php artisan server mcrypt php extension required
+* [Laravel.io - Difficulty installing Laravel: Getting error "Mcrypt PHP extension required"] (http://laravel.io/forum/02-08-2014-difficulty-installing-laravel-getting-error-mcrypt-php-extension-required)
+
+Check 
+
+    which php
+    php --ini
+    php -v
+
+use `grep mcrypt` to see if there was `mcrypt` there. Since I have `php5-fpm` install, I go to check it too.
+
+    php -i | grep mcrypt
+
+I see no  `mcrypt` there. I have to install it now. 
+Installing php5-mcrypt doesn't automatically enable the module, so I had to enable it manually:
+
+First install php5-mcrypt
+
+    apt-get install php5-mcrypt
+
+Create an auxiliary symlink and enable the module:
+
+    cd /etc/php5/mods-available
+    ln -sf ../conf.d/mcrypt.ini . # make a symlink to ini files in mods-available
+    php5enmod mcrypt # enable it
+
+Reload the web server
+
+    service apache2 reload
+    sudo service php5-fpm restart
+
+
 
 And, if you need an isolated development environment, you should try [Laravel Homestead] (http://laravel.com/docs/4.2/homestead)
