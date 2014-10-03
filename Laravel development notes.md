@@ -1,4 +1,13 @@
-Laravel development notes.md
+# Introduction to Laravel
+
+Google: php framework -> laravel
+Google: php framework laravel
+* http://code.tutsplus.com/tutorials/why-laravel-is-taking-the-php-community-by-storm--pre-52639
+* http://brianretterer.com/why-laravel-is-the-best-php-framework/
+* http://codecondo.com/5-books-learning-laravel-4/
+* http://kejyun.github.io/Laravel-4-Documentation-Traditional-Chinese/docs/quick/ (from: Google: php framework laravel chinese)
+* http://laravel.com/docs/4.2/installation
+
 
 # Getting Laravel up
 
