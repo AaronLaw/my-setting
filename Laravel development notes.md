@@ -26,3 +26,25 @@ You can run these commands to easily access composer from anywhere on your syste
 ref:
 * http://kejyun.github.io/Laravel-4-Documentation-Traditional-Chinese/docs/quick/
 * http://laravel.com/docs/4.2/installation
+
+Now, we can go to install Lavavel.
+
+First, download the Laravel installer using Composer.
+
+    composer global require "laravel/installer=~1.1"
+
+Make sure to place the ~/.composer/vendor/bin directory in your PATH so the laravel executable is found when you run the laravel command in your terminal.
+
+Once installed, the simple laravel new command will create a fresh Laravel installation in the directory you specify. For instance, laravel new blog would create a directory named blog containing a fresh Laravel installation with all dependencies installed. This method of installation is much faster than installing via Composer.
+
+ref:
+http://laravel.com/docs/4.2/quick
+
+## Serving Laravel
+
+Typically, you may use a web server such as Apache or Nginx to serve your Laravel applications. If you are on PHP 5.4+ and would like to use PHP's built-in development server, you may use the serve Artisan command:
+
+    php artisan server
+
+
+And, if you need an isolated development environment, you should try [Laravel Homestead] (http://laravel.com/docs/4.2/homestead)
