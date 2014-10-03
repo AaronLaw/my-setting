@@ -615,6 +615,12 @@ A notes I bear in mind:
 >    Version conflicts
 >    Distribution upgrades are unpredictable chaos. Seriously. I've lost hair to these.
 
+Update 2014-10-03:
+
+I've just joined Reddit, and searched "Django" and found it:
+http://www.reddit.com/r/django/comments/exfwh/django_devs_whats_your_development_environment/
+http://www.reddit.com/r/django/comments/vhy4d/what_are_your_favorite_django_apps/
+http://www.reddit.com/r/django/comments/1rfgse/what_django_extensions_do_you_use_most_often/
 
 #### Upgrading Python3 (place it in a new place)
 Google: django with python 3
@@ -1471,6 +1477,8 @@ Everday Django Resources:
 * http://www.fullstackpython.com/best-python-resources.html
 * [Open Sourcing a Python Project the Right Way - Jeff Knupp] (http://www.jeffknupp.com/blog/2013/08/16/open-sourcing-a-python-project-the-right-way/)
 * http://codecondo.com/web-scraping-python/
+* Reddit: django
+    * http://www.reddit.com/r/django/comments/1nm5n8/moving_from_php_to_django_setup_host_advice/
 
 
 Django bulid a blog
