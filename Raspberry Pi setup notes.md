@@ -1479,7 +1479,8 @@ Everday Django Resources:
 * http://codecondo.com/web-scraping-python/
 * Reddit: django
     * http://www.reddit.com/r/django/comments/1nm5n8/moving_from_php_to_django_setup_host_advice/
-
+* [Medium - Laravel 4 Tutorials] (http://medium.com/laravel4)
+    * from: Google: laravel tutorials. See also "wordpress", "django" in medium.com
 
 Django bulid a blog
 * [Building a Blog with Django 1.7 in 16 mins] (https://www.youtube.com/watch?v=7rgph8en0Jc)
@@ -1654,6 +1655,7 @@ After memcache runs successfully, the page loading time of `/admin/product/topic
 
 As the memcached does not cache admin query (e.g. `admin/product/topic/28/`, which takes 5.52s to render. After turn memcache on, it still take 5.4s to load that page in the 2nd+ load), I have to find another solution. (As well as johnny-cache does not support python3.)
 
+http://www.tutorialspoint.com/redis/index.htm
 [DjangoPackages: caching] (https://www.djangopackages.com/grids/g/caching/)
 
 [django-cacheops] (https://www.djangopackages.com/packages/p/cacheops/) seems good. It support Python 3, Django 1.7, and It uses redis as backend for ORM cache and redis or filesystem for simple time-invalidated one. I am going to install [redis] (http://redis.io/) server on my machine:

@@ -7,6 +7,8 @@ Google: php framework laravel
 * http://codecondo.com/5-books-learning-laravel-4/
 * http://kejyun.github.io/Laravel-4-Documentation-Traditional-Chinese/docs/quick/ (from: Google: php framework laravel chinese)
 * http://laravel.com/docs/4.2/installation
+* [Medium - Laravel 4 Tutorials] (http://medium.com/laravel4)
+    * from: Google: laravel tutorials. See also "wordpress", "django" in medium.com
 
 
 # Getting Laravel up
