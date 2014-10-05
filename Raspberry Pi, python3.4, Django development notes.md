@@ -1,5 +1,7 @@
 Upgrading Python3 & running Django on Raspberry
 
+http://www.quora.com/Lean-Startups
+
 ### Everday Django Resources:
 
 * RealPython

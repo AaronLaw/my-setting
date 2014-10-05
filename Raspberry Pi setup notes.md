@@ -1,3 +1,15 @@
+2014-10-05: 
+* http://www.quora.com/Lean-Startups
+* http://www.quora.com/Startups
+* http://simplestartup.quora.com/Startup-Cheat-Codes-7-awesome-cloud-based-tools-that-destroy-unnecessary-business-expenses-wasted-time-and-frustrat
+
+Ask Questions
+
+* Stack exchange: 
+* Quora:  [Ruby vs Python] (http://www.quora.com/Ruby-vs-Python) | django | laravel | bootstrap | [Web Development] (http://www.quora.com/Web-Development) | [Web Design] (http://www.quora.com/Web-Design) | [Web Applications] (http://www.quora.com/Web-Applications)
+* Reddit
+* Medium: laravel | django | bootstrap | design | ui | rails
+
 2014-08-06: I learn markdown also here: https://help.github.com/articles/github-flavored-markdown
 
 Writting style ref: https://github.com/johnantoni/beaglebone-black
@@ -1479,7 +1491,7 @@ Everday Django Resources:
 * http://codecondo.com/web-scraping-python/
 * Reddit: django
     * http://www.reddit.com/r/django/comments/1nm5n8/moving_from_php_to_django_setup_host_advice/
-* [Medium - Laravel 4 Tutorials] (http://medium.com/laravel4)
+* [Medium - Laravel 4 Tutorials] (https://medium.com/laravel-4)
     * from: Google: laravel tutorials. See also "wordpress", "django" in medium.com
 
 Django bulid a blog
