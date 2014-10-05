@@ -93,3 +93,5 @@ Reload the web server
 
 
 And, if you need an isolated development environment, you should try [Laravel Homestead] (http://laravel.com/docs/4.2/homestead)
+
+## Automated Test

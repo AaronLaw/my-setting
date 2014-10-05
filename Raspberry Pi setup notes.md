@@ -1494,6 +1494,10 @@ Everday Django Resources:
 * [Medium - Laravel 4 Tutorials] (https://medium.com/laravel-4)
     * from: Google: laravel tutorials. See also "wordpress", "django" in medium.com
 
+Automated Test
+* Google: django testing | TDD
+* https://docs.djangoproject.com/en/dev/topics/testing/
+
 Django bulid a blog
 * [Building a Blog with Django 1.7 in 16 mins] (https://www.youtube.com/watch?v=7rgph8en0Jc)
 * [Building a Blog in 30 minutes with Django] (https://www.youtube.com/watch?v=srHZoj3ASmk)

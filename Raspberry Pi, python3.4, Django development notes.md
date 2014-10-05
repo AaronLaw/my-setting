@@ -23,6 +23,7 @@ Some useful concepts / topic:
 * Google: query django | rails | cakephp | codeigniter | laravel
 * Google: debug django | rails | cakephp | codeigniter | laravel
 * http://code.tutsplus.com/tutorials/why-laravel-is-taking-the-php-community-by-storm--pre-52639
+* Google: django testing
 
 ### How do I explore & setup a sandbox environment for python development
 
