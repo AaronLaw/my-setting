@@ -7,9 +7,16 @@ Google: php framework laravel
 * http://codecondo.com/5-books-learning-laravel-4/
 * http://kejyun.github.io/Laravel-4-Documentation-Traditional-Chinese/docs/quick/ (from: Google: php framework laravel chinese)
 * http://laravel.com/docs/4.2/installation
-* [Medium - Laravel 4 Tutorials] (http://medium.com/laravel4)
+* [Medium - Laravel 4 Tutorials] (https://medium.com/laravel-4)
     * from: Google: laravel tutorials. See also "wordpress", "django" in medium.com
+* http://laravel.tw/
+    * from: Youtube: laravel -> [PHP也有Day#4 - 實戰驚豔 Laravel 給你的 5 個驚嘆號 by Bobo] (https://www.youtube.com/watch?v=Lj6sK3pfyO8) -> Google: laravel tw -> this
 
+* Stack exchange: 
+* Quora:  [Ruby vs Python] (http://www.quora.com/Ruby-vs-Python) | django | laravel | bootstrap | [Web Development] (http://www.quora.com/Web-Development) | [Web Design] (http://www.quora.com/Web-Design) | [Web Applications] (http://www.quora.com/Web-Applications)
+* Reddit
+* Medium: laravel | django | bootstrap | design | ui | rails
+* http://laravel.io/forum
 
 # Getting Laravel up
 
