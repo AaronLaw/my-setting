@@ -2,12 +2,13 @@ Upgrading Python3 & running Django on Raspberry
 
 http://www.quora.com/Lean-Startups
 
-### Everday Django Resources:
+### Everyday Django Resources:
 
 * RealPython
 * [Open Sourcing a Python Project the Right Way - Jeff Knupp] (http://www.jeffknupp.com/blog/2013/08/16/open-sourcing-a-python-project-the-right-way/)
 * https://code.djangoproject.com/wiki/DjangoResources (from: Google: django ui framework)
 * http://www.fullstackpython.com/
+* https://github.com/makaimc/awesome-django
 ﻿* http://en.wikipedia.org/wiki/Django_%28web_framework%29
 * http://twoscoopspress.com/pages/django-tutorials
 * http://www.tangowithdjango.com/
@@ -24,6 +25,26 @@ Some useful concepts / topic:
 * Google: debug django | rails | cakephp | codeigniter | laravel
 * http://code.tutsplus.com/tutorials/why-laravel-is-taking-the-php-community-by-storm--pre-52639
 * Google: django testing
+* Google: django restful
+
+----
+### Django Tutorials
+
+https://code.djangoproject.com/wiki/Tutorials
+
+https://django-book.readthedocs.org/en/latest/# (from: http://www.meetup.com/Taipei-py/messages/boards/thread/34933702)
+----
+
+Django bulid a blog
+* [Building a Blog with Django 1.7 in 16 mins] (https://www.youtube.com/watch?v=7rgph8en0Jc)
+* [Building a Blog in 30 minutes with Django] (https://www.youtube.com/watch?v=srHZoj3ASmk)
+
+Blog example
+
+http://arunrocks.com/recreating-the-building-a-blog-in-django-screencast/
+https://www.youtube.com/watch?v=7rgph8en0Jc
+https://github.com/django/djangoproject.com/tree/master/blog
+
 
 ### How do I explore & setup a sandbox environment for python development
 
@@ -56,23 +77,6 @@ Google: raspberry pi django nginx
 The 2nd link [ Setting Up Django On a Raspberry Pi ] (http://blog.mattwoodward.com/2013/01/setting-up-django-on-raspberry-pi.html)
 
 ----
-### Django Tutorials
-
-https://code.djangoproject.com/wiki/Tutorials
-
-https://django-book.readthedocs.org/en/latest/# (from: http://www.meetup.com/Taipei-py/messages/boards/thread/34933702)
-----
-
-Django bulid a blog
-* [Building a Blog with Django 1.7 in 16 mins] (https://www.youtube.com/watch?v=7rgph8en0Jc)
-* [Building a Blog in 30 minutes with Django] (https://www.youtube.com/watch?v=srHZoj3ASmk)
-
-Blog example
-
-http://arunrocks.com/recreating-the-building-a-blog-in-django-screencast/
-https://www.youtube.com/watch?v=7rgph8en0Jc
-https://github.com/django/djangoproject.com/tree/master/blog
-----
 ####  how to set up a good project "skeleton" directory
 What is the suggested project structure with virtualenv? (Should I place my django projects inside the virtualenv created folder? Or should I keep my projects away from the virtualenv folder? Does virtualenv affects how I structure my folders comparing to not using it?)
 
@@ -100,13 +104,30 @@ Creation of dynamic model fields (dynamic attributes)
 Django self-referential foreign key 
 
 ----
-Access from the shell:
-# https://docs.djangoproject.com/en/dev/ref/models/instances/#django.db.models.Model
+## Code snippet
 
-    from django.db import models
-    
-    from product.models import *
-    help(Topic)
+access from the shell:
+https://docs.djangoproject.com/en/dev/topics/db/models/
+https://docs.djangoproject.com/en/dev/topics/db/queries/
+from django.db import models
+
+from product.models import *
+help(Topic)
+
+# get Queryset
+t = Topic.objects.all()
+type(t)
+
+# get the 1st record
+t1 = Topic.objects.get(pk=1)
+type(t1)
+
+t1.source_set.count() # -> 16
+
+t1.tags
+help(t1.tags)
+t1.tags.get_queryset()
+t1.tags.all()
 ----
 Reuse "Material" info in pickup table
 
@@ -252,3 +273,4 @@ http://designzum.com/2014/05/24/12-best-free-premium-wordpress-theme-frameworks-
 Google: django orm vs activerecord
 https://bernardopires.com/2014/03/rails-vs-django-an-in-depth-technical-comparison/
 http://scottmoonen.com/2009/01/09/my-experience-with-django-and-rails/
+----

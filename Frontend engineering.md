@@ -74,6 +74,8 @@ http://www.distortionofsound.com/ (from: http://www.hydrogenaud.io/forums/index.
 Django & Template
 http://www.slideshare.net/cosecant/best-practices-for-frontend-django-developers?related=1
 
+Restful
+
  Website to learn code
  * http://tech.yipit.com/2012/08/21/how-i-taught-myself-to-code-in-8-weeks/
  * http://www.codecademy.com/en/tracks/python

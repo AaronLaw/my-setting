@@ -1,7 +1,10 @@
-2014-10-05: 
+Startups:
+
+Since 2014-10-05: 
 * http://www.quora.com/Lean-Startups
 * http://www.quora.com/Startups
 * http://simplestartup.quora.com/Startup-Cheat-Codes-7-awesome-cloud-based-tools-that-destroy-unnecessary-business-expenses-wasted-time-and-frustrat
+* https://github.com/makaimc/howdoistartup.github.io (from: http://www.fullstackpython.com/ -> [follow Matt] (http://www.fullstackpython.com/))
 
 Ask Questions
 
@@ -1482,7 +1485,7 @@ http://magnatecha.com/turn-off-display-from-linux-command-line/
 
 https://django-book.readthedocs.org/en/latest/# (from: http://www.meetup.com/Taipei-py/messages/boards/thread/34933702)
 
-Everday Django Resources:
+Everyday Django Resources:
 * RealPython
 * https://code.djangoproject.com/wiki/DjangoResources (from: Google: django ui framework)
 * http://www.fullstackpython.com/
@@ -1493,10 +1496,12 @@ Everday Django Resources:
     * http://www.reddit.com/r/django/comments/1nm5n8/moving_from_php_to_django_setup_host_advice/
 * [Medium - Laravel 4 Tutorials] (https://medium.com/laravel-4)
     * from: Google: laravel tutorials. See also "wordpress", "django" in medium.com
+* https://github.com/makaimc/awesome-django
 
 Automated Test
 * Google: django testing | TDD
 * https://docs.djangoproject.com/en/dev/topics/testing/
+* https://github.com/makaimc/awesome-django
 
 Django bulid a blog
 * [Building a Blog with Django 1.7 in 16 mins] (https://www.youtube.com/watch?v=7rgph8en0Jc)
@@ -1580,9 +1585,14 @@ https://riccardo.forina.me/bootstrap-your-django-admin-in-3-minutes/
 Google: django Boilerplate 
 
 Restful
-
 * http://code.tutsplus.com/tutorials/beginners-guide-to-the-django-rest-framework--cms-19786
   * https://github.com/commadelimited/beginners-guide-to-django-rest-framework/blob/master/article.md
+
+ Class based view 
+* Google: django class based view
+    * https://docs.djangoproject.com/en/dev/topics/class-based-views/
+    * http://www.django-rest-framework.org/tutorial/3-class-based-views
+    * http://effectivedjango.com/classbasedviews.html
 
 Deploy Django with uWSGI & Nginx
 * [使用vps部署django:uwsgi+nginx] (https://github.com/imelucifer/MyNote/blob/master/django/django%2Buwsgi%2Bnginx%2Bcentos%E9%83%A8%E7%BD%B2.md)
@@ -1949,7 +1959,7 @@ and you will see
 #### Home Automation
 * [Lifehacker - Build an Entire Home Automation System with a Raspberry Pi and Arduino] (http://lifehacker.com/build-an-entire-home-automation-system-with-a-raspberry-1640844965)
 * Try RQ: [Redis Queue] (https://github.com/nvie/rq)
-    * from:  http://www.fullstackpython.com/web-frameworks.html -> http://grokcode.com/864/snakefooding-python-code-for-complexity-visualization/
+    * from:  [Full Stack Python - Web frameworks] (http://www.fullstackpython.com/web-frameworks.html) -> http://grokcode.com/864/snakefooding-python-code-for-complexity-visualization/
 * Try http://www.celeryproject.org
     * from:  [Redis Queue] (https://github.com/nvie/rq)
 

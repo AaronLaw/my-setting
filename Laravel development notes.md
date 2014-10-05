@@ -1,9 +1,11 @@
 # Introduction to Laravel
 
+http://www.reddit.com/r/learnprogramming/comments/1h3zr0/my_boyfriends_learn_to_program_manifesto_on/
 Google: php framework -> laravel
 Google: php framework laravel
 * http://code.tutsplus.com/tutorials/why-laravel-is-taking-the-php-community-by-storm--pre-52639
 * http://brianretterer.com/why-laravel-is-the-best-php-framework/
+* [Full Stack Python - Web frameworks] (http://www.fullstackpython.com/web-frameworks.html) 
 * http://codecondo.com/5-books-learning-laravel-4/
 * http://kejyun.github.io/Laravel-4-Documentation-Traditional-Chinese/docs/quick/ (from: Google: php framework laravel chinese)
 * http://laravel.com/docs/4.2/installation
@@ -94,4 +96,9 @@ Reload the web server
 
 And, if you need an isolated development environment, you should try [Laravel Homestead] (http://laravel.com/docs/4.2/homestead)
 
+## Restful
+
+## Class based view
+
 ## Automated Test
+
