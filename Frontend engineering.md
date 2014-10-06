@@ -4,21 +4,34 @@ Blog
 https://flipboard.com/section/ossian-的網頁設計三兩事-bzoKY2
 
 Community
-http://f2e.im/
-http://ued.taobao.com/javascript/
-http://www.ui.cn
+* http://www.quora.com/What-is-the-best-way-to-learn-HTML-CSS-and-JavaScript
+    * http://alistapart.com
+    * http://smashingmagazine.com
+    * http://net.tutsplus.com
+    * http://www.quora.com/What-is-the-best-way-to-educate-yourself-on-HTML-CSS-JavaScript-and-AJAX
+    * http://html5boilerplate.com is a solid starting point, and reading the docs and faqs (and learning about why it includes what it does) is educational.
+    * http://www.alistapart.com is excellent for best practices and advanced topics.
+    * http://jsfiddle.net is a great tool to try things out.
+    * https://developer.mozilla.org/en-US is excellent.
+    * http://movethewebforward.org has a fantastic, long list of tons of additional resources.
+* http://f2e.im/
+* http://ued.taobao.com/javascript/
+* http://www.ui.cn
 
-Stack exchange
-Quora
-Reddit
-Google: automated test | TDD
+* Stack exchange
+* Quora
+* Reddit
+* Google: automated test | TDD
+
+Tools
+FontAwesome
 
 Frontend
 * [跟(不)上網頁前端技術（資源大雜燴）] (http://huan-lin.blogspot.com/2013/08/front-end-technologies.html)
-  * http://kkbruce.tw/ bootstrapv2
-  * https://angularjs.org/
+    * http://kkbruce.tw/ bootstrapv2
+    * https://angularjs.org/
       * http://campus.codeschool.com/courses/shaping-up-with-angular-js/intro
-  * https://github.com/doggy8088/frontend-tools
+    * https://github.com/doggy8088/frontend-tools
 
 * http://codecondo.com/5-workflow-tools-for-front-end-developers/
 * http://www.fullstackpython.com/javascript.html
@@ -38,6 +51,8 @@ HTML5
 * http://www.8164.org/html5-resources/
 * http://diveintohtml5.info/
 * http://www.html5rocks.com/en/tutorials/internals/howbrowserswork/
+* html5 doctor
+* html5
 * http://www.tutorialspoint.com/html5/index.htm
     * Google: python for loop -> http://www.tutorialspoint.com/python/python_for_loop.htm -> this
 
@@ -76,8 +91,8 @@ http://www.slideshare.net/cosecant/best-practices-for-frontend-django-developers
 
 Restful
 
- Website to learn code
- * http://tech.yipit.com/2012/08/21/how-i-taught-myself-to-code-in-8-weeks/
+*Website to learn code
+* http://tech.yipit.com/2012/08/21/how-i-taught-myself-to-code-in-8-weeks/
  * http://www.codecademy.com/en/tracks/python
  * http://campus.codeschool.com/courses/shaping-up-with-angular-js/intro
  * Treehouse
