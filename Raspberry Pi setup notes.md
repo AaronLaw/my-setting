@@ -429,6 +429,8 @@ OS:
 * [Archphile] (http://archphile.org/faq) (from: Google: volumio root) (or from: Google: audiophile linux)
     * http://www.ympd.org/
 * [piCorePlayer] (https://sites.google.com/site/picoreplayer/home) (from: [Raspberry Pi + RuneAudioで音楽を鳴らしてみる ] (http://cygx.mydns.jp/blog/?arti=515) )
+* [MuBox] (http://mubox.voyage.hk/)
+    * http://www.libelium.com/ -> Meshlium
 
 OS for 64bit x86 PC:
 * [Audiophile Linux] (http://www.ap-linux.com) v3, Arch Linux based, need to be installed on hdd
@@ -604,6 +606,35 @@ Mopidy will also shut down properly if you send it the TERM signal, e.g. by usin
 * http://www.ympd.org/
 
 See also https://www.kickstarter.com/projects/fon/gramofon-modern-cloud-jukebox, which is shown on the homepage of http://www.mopidy.com/
+
+### No sound or the music output is muted
+
+Run the following commands to check if you music device is set to mute:
+    
+    amixer
+
+(Note: you may use command `amixer -c 1` if you have USB DAC, where `-c 1` specifies 2nd sound device. Use command `cat /proc/asound/cards` or `aplay -l` to list all sound devices detected)
+
+If you see the Playback is set to [off], the music output is muted. You can use `alsamixer` tools to unmute (by press ‘M’ key to toggle mute/unmute for each control). Or you can simply run the following commands:
+(Note: may need to pass `-c 1` after amixer command to specify 2nd sound device, e.g. USB DAC):
+
+    # amixer scontrols|sed -e 's/^Simple mixer control//'|while read line;do amixer sset "$line" unmute;done                             
+
+    Simple mixer control 'XMOS Clock Selector',0
+      Capabilities: pvolume pswitch penum
+      Playback channels: Front Left - Front Right
+      Limits: Playback 0 - 127
+      Mono:
+      Front Left: Playback 127 [100%] [0.00dB] [on]
+      Front Right: Playback 127 [100%] [0.00dB] [on]
+    Simple mixer control 'XMOS Clock Selector',1
+      Capabilities: pvolume pvolume-joined pswitch pswitch-joined penum
+      Playback channels: Mono
+      Limits: Playback 0 - 127
+      Mono: Playback 127 [100%] [0.00dB] [on]
+
+ref:
+[Mubox - Troubleshooting] (http://mubox.voyage.hk/node/13)
 
 ### Setup Python for development (enhance it) 
 * Read [The Hitchhiker’s Guide to Python!] (http://docs.python-guide.org/en/latest/) first, and [Python Packaging User Guide] (https://python-packaging-user-guide.readthedocs.org/en/latest/current.html) second. (from: [How to get Django] (https://www.djangoproject.com/download/) )
