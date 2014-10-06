@@ -1502,6 +1502,7 @@ Automated Test
 * Google: django testing | TDD
 * https://docs.djangoproject.com/en/dev/topics/testing/
 * https://github.com/makaimc/awesome-django
+* http://effectivedjango.com/testing.html
 
 Django bulid a blog
 * [Building a Blog with Django 1.7 in 16 mins] (https://www.youtube.com/watch?v=7rgph8en0Jc)
@@ -1583,16 +1584,6 @@ Google: django bootstrap
 https://riccardo.forina.me/bootstrap-your-django-admin-in-3-minutes/
 
 Google: django Boilerplate 
-
-Restful
-* http://code.tutsplus.com/tutorials/beginners-guide-to-the-django-rest-framework--cms-19786
-  * https://github.com/commadelimited/beginners-guide-to-django-rest-framework/blob/master/article.md
-
- Class based view 
-* Google: django class based view
-    * https://docs.djangoproject.com/en/dev/topics/class-based-views/
-    * http://www.django-rest-framework.org/tutorial/3-class-based-views
-    * http://effectivedjango.com/classbasedviews.html
 
 Deploy Django with uWSGI & Nginx
 * [使用vps部署django:uwsgi+nginx] (https://github.com/imelucifer/MyNote/blob/master/django/django%2Buwsgi%2Bnginx%2Bcentos%E9%83%A8%E7%BD%B2.md)

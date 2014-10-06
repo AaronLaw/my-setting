@@ -45,6 +45,15 @@ http://arunrocks.com/recreating-the-building-a-blog-in-django-screencast/
 https://www.youtube.com/watch?v=7rgph8en0Jc
 https://github.com/django/djangoproject.com/tree/master/blog
 
+Restful
+* http://code.tutsplus.com/tutorials/beginners-guide-to-the-django-rest-framework--cms-19786
+  * https://github.com/commadelimited/beginners-guide-to-django-rest-framework/blob/master/article.md
+
+ Class based view 
+* Google: django class based view
+    * https://docs.djangoproject.com/en/dev/topics/class-based-views/
+    * http://www.django-rest-framework.org/tutorial/3-class-based-views
+    * http://effectivedjango.com/classbasedviews.html
 
 ### How do I explore & setup a sandbox environment for python development
 
