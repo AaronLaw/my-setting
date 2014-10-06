@@ -25,6 +25,7 @@ Community
 
 Tools
 FontAwesome
+Animate.css
 
 Frontend
 * [跟(不)上網頁前端技術（資源大雜燴）] (http://huan-lin.blogspot.com/2013/08/front-end-technologies.html)
