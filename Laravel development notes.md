@@ -1,6 +1,9 @@
 # Introduction to Laravel
 
 http://www.reddit.com/r/learnprogramming/comments/1h3zr0/my_boyfriends_learn_to_program_manifesto_on/
+[What  is the best way to learn PHP?] (http://www.quora.com/What-is-the-best-way-to-learn-PHP-1)
+[Ruby on Rails (web framework): What is the best way to learn Ruby on Rails? Bloc.io? theFirehoseProject?] (http://www.quora.com/Ruby-on-Rails-web-framework/What-is-the-best-way-to-learn-Ruby-on-Rails-Bloc-io-theFirehoseProject)
+[Ruby on Rails (web framework): As of the 27th of January 2013, what's the best way for someone who knows a lot about HTML and CSS to learn Ruby on Rails?] (http://www.quora.com/Ruby-on-Rails-web-framework/As-of-the-27th-of-January-2013-whats-the-best-way-for-someone-who-knows-a-lot-about-HTML-and-CSS-to-learn-Ruby-on-Rails)
 Google: php framework -> laravel
 Google: php framework laravel
 * http://code.tutsplus.com/tutorials/why-laravel-is-taking-the-php-community-by-storm--pre-52639
@@ -19,6 +22,27 @@ Google: php framework laravel
 * Reddit
 * Medium: laravel | django | bootstrap | design | ui | rails
 * http://laravel.io/forum
+
+
+----
+## On how to learn
+
+http://www.quora.com/What-is-the-best-way-to-learn-PHP-1
+
+Read things that you need to read and don't worry too much. :)
+
+What is your background? I used to be a CS student, and working in a different field rather than IT-related. However, I love to code.
+
+PHP is ugly, and I taught myself codnig in Python using Django for making web. I don't like PHP's syntax. However, recently, I've got a project using PHP. That is PHP5.4+ and I choose to use a MVC framework called "Laravel".
+
+My approach to learn PHP is learn by doing (with a project that is live and you are using it, such as the Django project, which is on my private network, I am doing.)
+
+Firstly I (and you) should have some basic background about a language, then go to make something real and useful (by the approach, I and you are facing some real problem. For example: how can I increment 21...29 to 30? round() is helpful but it doesn't give me the exact result I want. And I have to do some basic math with it...)
+
+That is, go to read the basic part of doc (on Hypertext Preprocessor), pick up a MVC framework with give you good structure, set a goal to make a real project (weblog system / CMS is a good starting point). When you make the project, you are facing some real problem that you have to solve. Then, go to read the doc of the language and the framework.
+
+Read things that you need to read and don't worry too much. :)
+----
 
 # Getting Laravel up
 
