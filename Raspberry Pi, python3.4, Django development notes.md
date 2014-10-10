@@ -8,7 +8,9 @@ http://www.quora.com/Lean-Startups
 * [Open Sourcing a Python Project the Right Way - Jeff Knupp] (http://www.jeffknupp.com/blog/2013/08/16/open-sourcing-a-python-project-the-right-way/)
 * https://code.djangoproject.com/wiki/DjangoResources (from: Google: django ui framework)
 * http://www.fullstackpython.com/
+* [djangoGirls on GitBook] (https://www.gitbook.io/@djangogirls)
 * https://github.com/makaimc/awesome-django
+* https://github.com/vinta/awesome-python
 ﻿* http://en.wikipedia.org/wiki/Django_%28web_framework%29
 * http://twoscoopspress.com/pages/django-tutorials
 * http://www.tangowithdjango.com/
@@ -19,6 +21,8 @@ http://www.quora.com/Lean-Startups
 * http://codecondo.com/web-scraping-python/
 * Reddit: django
     * http://www.reddit.com/r/django/comments/1nm5n8/moving_from_php_to_django_setup_host_advice/
+* http://www.quora.com/I-really-really-want-to-learn-to-code-However-upon-taking-classes-and-practicing-in-C-I-realized-that-I-hate-the-whole-process-of-programming-debugging-constant-unclear-ambiguous-errors-confusing-logic-What-can-I-do-to-get-over-this
+    * [Computer Science Unplugged] (http://csunplugged.org/)
 
 Some useful concepts / topic:
 * Google: query django | rails | cakephp | codeigniter | laravel
@@ -26,6 +30,7 @@ Some useful concepts / topic:
 * http://code.tutsplus.com/tutorials/why-laravel-is-taking-the-php-community-by-storm--pre-52639
 * Google: django testing
 * Google: django restful
+* http://www.databaseanswers.org/data_models/index.htm (from: http://www.quora.com/What-is-the-fastest-way-to-learn-Django)
 
 ----
 ### Django Tutorials
@@ -48,6 +53,7 @@ https://github.com/django/djangoproject.com/tree/master/blog
 Restful
 * http://code.tutsplus.com/tutorials/beginners-guide-to-the-django-rest-framework--cms-19786
   * https://github.com/commadelimited/beginners-guide-to-django-rest-framework/blob/master/article.md
+* https://realpython.com/blog/python/django-rest-framework-quick-start/
 
  Class based view 
 * Google: django class based view
@@ -223,8 +229,9 @@ Django bulid a blog
 Django jquery
 Google: django jquery
 http://www.tangowithdjango.com/book/chapters/ajax.html
-
-
+----
+Chart
+https://github.com/supritashankar/django-chartitf
 ----
 ### Markdown
 Google: django markdown
@@ -238,8 +245,22 @@ https://github.com/klen/django_markdown
     * https://docs.djangoproject.com/en/dev/howto/static-files/
     * https://docs.djangoproject.com/en/dev/ref/contrib/staticfiles/
 ----
+Render
 
+Template
 
+I have a queryset of Product Topic. Topics can be group by its status.
+
+How can I display a group one after one in Django template?
+
+Google: how to render queryset group by category in django template?
+
+*  -> [django template view queryset group by] (http://stackoverflow.com/search?q=django+template+view+queryset+group+by)
+    * http://stackoverflow.com/questions/8678336/django-grouping-querysets-by-a-certain-field-in-template
+    * {regroup} tag in https://docs.djangoproject.com/en/1.7/ref/templates/builtins/
+
+ Futher:
+ Google: send many queryset to template django
 ----
 Django deployment
 * http://django-china.cn/topic/360/ 基于 nginx + uwsgi + virtualenv 简单的部署 Django 应用
