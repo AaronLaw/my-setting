@@ -1,5 +1,12 @@
 Frontend engineering
 
+* Ruby on Rails (web framework): What is the best way to learn Ruby on Rails? Bloc.io? theFirehoseProject?] (http://www.quora.com/Ruby-on-Rails-web-framework/What-is-the-best-way-to-learn-Ruby-on-Rails-Bloc-io-theFirehoseProject)
+* [Ruby on Rails (web framework): As of the 27th of January 2013, what's the best way for someone who knows a lot about HTML and CSS to learn Ruby on Rails?] (http://www.quora.com/Ruby-on-Rails-web-framework/As-of-the-27th-of-January-2013-whats-the-best-way-for-someone-who-knows-a-lot-about-HTML-and-CSS-to-learn-Ruby-on-Rails)
+* http://www.quora.com/What-is-the-fastest-way-to-learn-Django
+* http://www.quora.com/Ruby-on-Rails-web-framework/What-is-the-best-way-to-learn-Ruby-on-Rails-Bloc-io-theFirehoseProject
+* http://www.databaseanswers.org/data_models/index.htm (from: http://www.quora.com/What-is-the-fastest-way-to-learn-Django)
+
+
 Blog
 https://flipboard.com/section/ossian-的網頁設計三兩事-bzoKY2
 
@@ -8,7 +15,7 @@ Community
     * http://alistapart.com
     * http://smashingmagazine.com
     * http://net.tutsplus.com
-    * http://www.quora.com/What-is-the-best-way-to-educate-yourself-on-HTML-CSS-JavaScript-and-AJAX
+* http://www.quora.com/What-is-the-best-way-to-educate-yourself-on-HTML-CSS-JavaScript-and-AJAX
     * http://html5boilerplate.com is a solid starting point, and reading the docs and faqs (and learning about why it includes what it does) is educational.
     * http://www.alistapart.com is excellent for best practices and advanced topics.
     * http://jsfiddle.net is a great tool to try things out.
@@ -23,9 +30,10 @@ Community
 * Reddit
 * Google: automated test | TDD
 
-Tools
-FontAwesome
-Animate.css
+Pratical Tools
+* FontAwesome
+* Animate.css
+* https://gomockingbird.com/
 
 Frontend
 * [跟(不)上網頁前端技術（資源大雜燴）] (http://huan-lin.blogspot.com/2013/08/front-end-technologies.html)
@@ -34,9 +42,12 @@ Frontend
       * http://campus.codeschool.com/courses/shaping-up-with-angular-js/intro
     * https://github.com/doggy8088/frontend-tools
 
+* http://www.w3cplus.com/css/bem-definitions.html
+
 * http://codecondo.com/5-workflow-tools-for-front-end-developers/
 * http://www.fullstackpython.com/javascript.html
     * http://www.html5rocks.com/en/tutorials/internals/howbrowserswork/
+* http://www.tangowithdjango.com/book/index.html
 
 * https://leanpub.com/frontend/read
     * 2014-10-01 from: Google: php framework market share 2014 -> http://maxoffsky.com/code-blog/top-5-trends-laravels-rise-2014/ -> http://maxoffsky.com/frontend/
@@ -53,7 +64,7 @@ HTML5
 * http://diveintohtml5.info/
 * http://www.html5rocks.com/en/tutorials/internals/howbrowserswork/
 * html5 doctor
-* html5
+* https://github.com/diegocard/awesome-html5
 * http://www.tutorialspoint.com/html5/index.htm
     * Google: python for loop -> http://www.tutorialspoint.com/python/python_for_loop.htm -> this
 
@@ -69,11 +80,13 @@ jQuery
 
 Bootstrap
 * http://www.w3schools.com/bootstrap/
+* https://realpython.com/blog/python/getting-started-with-bootstrap-3/
+* https://realpython.com/blog/python/an-effective-sales-page-with-bootstrap-3/
 * http://www.bootcss.com/ (from: Google: bootstrap chinese)
     * http://www.bootcss.com/p/flat-ui/
 * http://www.tutorialspoint.com/bootstrap/index.htm
     * Google: python for loop -> http://www.tutorialspoint.com/python/python_for_loop.htm -> this
-
+* http://www.w3cplus.com/blog/tags/126.html
 
 Some free Bootstrap themes as good examples
 
@@ -89,6 +102,9 @@ http://www.distortionofsound.com/ (from: http://www.hydrogenaud.io/forums/index.
 
 Django & Template
 http://www.slideshare.net/cosecant/best-practices-for-frontend-django-developers?related=1
+
+SEO
+http://www.quora.com/What-is-the-path-for-learning-understanding-and-creating-your-own-search-engine
 
 Restful
 
