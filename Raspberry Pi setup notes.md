@@ -488,6 +488,33 @@ RuneAudio and Volumio is soso similar, sharing a similar UI. So, what's the diff
 * Google: cubox os
     * http://www.solid-run.com/archive/mw/
     * from: Google: mubox mopidy
+* Google: cubox mpd
+    * [[CAS] 又平又正的 CAS (MPD on Linux) - 2013-05-02] (http://www.hiendy.com/hififorum/forum.php?mod=viewthread&tid=50089&extra=page%3D1)
+
+##### Some sound related commands
+
+`lsmod`
+show the status of modules in the Linux Kernel. From: Google: cubox mubox -> http://testing.post76.com:7180/x2/forum.php?mod=viewthread&tid=164254
+
+`lsusb`
+list USB devices. From: [RuneAudio Forum - No output on SPDIF with external USB card] (http://www.runeaudio.com/forum/no-output-on-spdif-with-external-usb-card-t248.html)
+
+`aplay -l`
+to list the device
+
+`aplay -L`
+to list the device, and combine use with `speaker-test`
+
+`amixer`
+a console sound mixer
+
+`speaker-test`
+
+* `speaker-test`
+    * from: Google: xmos x20 usb audio linux driver -> [RuneAudio Forum - No output on SPDIF with external USB card] (http://www.runeaudio.com/forum/no-output-on-spdif-with-external-usb-card-t248.html)
+
+    aplay-L
+    speaker-test -Ddefault:ALSA -c 2
 
 Music Player:
 * https://amarok.kde.org/
