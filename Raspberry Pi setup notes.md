@@ -4,7 +4,14 @@ Since 2014-10-05:
 * http://www.quora.com/Lean-Startups
 * http://www.quora.com/Startups
 * http://simplestartup.quora.com/Startup-Cheat-Codes-7-awesome-cloud-based-tools-that-destroy-unnecessary-business-expenses-wasted-time-and-frustrat
+* http://academicearth.org/business/
+    * from: http://www.quora.com/How-do-I-optimize-the-use-of-internet
 * https://github.com/makaimc/howdoistartup.github.io (from: http://www.fullstackpython.com/ -> [follow Matt] (http://www.fullstackpython.com/))
+* http://www.tangowithdjango.com/book/index.html
+* [Ruby on Rails (web framework): What is the best way to learn Ruby on Rails? Bloc.io? theFirehoseProject?] (http://www.quora.com/Ruby-on-Rails-web-framework/What-is-the-best-way-to-learn-Ruby-on-Rails-Bloc-io-theFirehoseProject)
+* [What  is the best way to learn PHP?] (http://www.quora.com/What-is-the-best-way-to-learn-PHP-1)
+* https://github.com/makaimc/easy-python
+
 
 Ask Questions
 
@@ -479,7 +486,8 @@ RuneAudio and Volumio is soso similar, sharing a similar UI. So, what's the diff
             * -> PiFi Mini (on: http://www.raspberrypi.com.tw/1678/coscup2014-introduction-to-raspberry-pi-and-game-console-evolution/)
         * -> [樹莓派在01上面應用於音樂撥放的參考文章] (http://www.mobile01.com/topicdetail.php?f=180&t=3495250&p=1)
 * Google: cubox os
-    * http://www.solid-run.com/archive/mw/Media_player
+    * http://www.solid-run.com/archive/mw/
+    * from: Google: mubox mopidy
 
 Music Player:
 * https://amarok.kde.org/
@@ -495,6 +503,7 @@ Power supply -> Raspberry (-> steaming ) -> the device on hand -> Speaker
 music server :
 * http://groovebasin.com/
 * [MPD (music player daemon) ] (http://www.musicpd.org)
+    * [The ultimate MPD guide] (http://crunchbang.org/forums/viewtopic.php?id=17386&p=1) (from: Google: mpd decode error)
 
 ### Setup Mopidy on Pi (2014-09-14)
 
@@ -635,6 +644,7 @@ If you see the Playback is set to [off], the music output is muted. You can use 
 
 ref:
 [Mubox - Troubleshooting] (http://mubox.voyage.hk/node/13)
+
 
 ### Setup Python for development (enhance it) 
 * Read [The Hitchhiker’s Guide to Python!] (http://docs.python-guide.org/en/latest/) first, and [Python Packaging User Guide] (https://python-packaging-user-guide.readthedocs.org/en/latest/current.html) second. (from: [How to get Django] (https://www.djangoproject.com/download/) )
@@ -1514,26 +1524,41 @@ http://magnatecha.com/turn-off-display-from-linux-command-line/
 
 #### Better system design with Django
 
-https://django-book.readthedocs.org/en/latest/# (from: http://www.meetup.com/Taipei-py/messages/boards/thread/34933702)
+* https://django-book.readthedocs.org/en/latest/# (from: http://www.meetup.com/Taipei-py/messages/boards/thread/34933702)
+* https://github.com/makaimc/awesome-django
+* https://github.com/vinta/awesome-python
+﻿
 
 Everyday Django Resources:
 * RealPython
 * https://code.djangoproject.com/wiki/DjangoResources (from: Google: django ui framework)
+* http://learnpythonthehardway.org/
+* https://developers.google.com/edu/python/
+* https://www.coursera.org/course/interactivepython
 * http://www.fullstackpython.com/
 * http://www.fullstackpython.com/best-python-resources.html
 * [Open Sourcing a Python Project the Right Way - Jeff Knupp] (http://www.jeffknupp.com/blog/2013/08/16/open-sourcing-a-python-project-the-right-way/)
+* [djangoGirls on GitBook] (https://www.gitbook.io/@djangogirls)
 * http://codecondo.com/web-scraping-python/
 * Reddit: django
     * http://www.reddit.com/r/django/comments/1nm5n8/moving_from_php_to_django_setup_host_advice/
 * [Medium - Laravel 4 Tutorials] (https://medium.com/laravel-4)
     * from: Google: laravel tutorials. See also "wordpress", "django" in medium.com
 * https://github.com/makaimc/awesome-django
+* http://www.databaseanswers.org/data_models/index.htm (from: http://www.quora.com/What-is-the-fastest-way-to-learn-Django)
+* http://www.quora.com/I-really-really-want-to-learn-to-code-However-upon-taking-classes-and-practicing-in-C-I-realized-that-I-hate-the-whole-process-of-programming-debugging-constant-unclear-ambiguous-errors-confusing-logic-What-can-I-do-to-get-over-this
+    * [Computer Science Unplugged] (http://csunplugged.org/)
+
 
 Automated Test
 * Google: django testing | TDD
 * https://docs.djangoproject.com/en/dev/topics/testing/
 * https://github.com/makaimc/awesome-django
 * http://effectivedjango.com/testing.html
+* http://www.tdd-django-tutorial.com/
+* http://learnpythonthehardway.org/book/ex47.html
+* https://realpython.com/blog/python/testing-in-django-part-1-best-practices-and-examples/
+* https://realpython.com/blog/python/testing-in-django-part-2-model-mommy-vs-django-testing-fixtures/
 
 Django bulid a blog
 * [Building a Blog with Django 1.7 in 16 mins] (https://www.youtube.com/watch?v=7rgph8en0Jc)
