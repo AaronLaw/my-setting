@@ -5,6 +5,7 @@ Frontend engineering
 * http://www.quora.com/What-is-the-fastest-way-to-learn-Django
 * http://www.quora.com/Ruby-on-Rails-web-framework/What-is-the-best-way-to-learn-Ruby-on-Rails-Bloc-io-theFirehoseProject
 * http://www.databaseanswers.org/data_models/index.htm (from: http://www.quora.com/What-is-the-fastest-way-to-learn-Django)
+*[I am 15 and want to learn web development. I have a basic understanding of html, CSS, JavaScript, and I'm learning Rails. How long should it take before I am a working developer, and what should I learn?] (http://www.quora.com/I-am-15-and-want-to-learn-web-development-I-have-a-basic-understanding-of-html-CSS-JavaScript-and-Im-learning-Rails-How-long-should-it-take-before-I-am-a-working-developer-and-what-should-I-learn)
 
 
 Blog
@@ -15,12 +16,22 @@ Community
     * http://alistapart.com
     * http://smashingmagazine.com
     * http://net.tutsplus.com
+    * http://www.creativebloq.com/tag/web-design
 * http://www.quora.com/What-is-the-best-way-to-educate-yourself-on-HTML-CSS-JavaScript-and-AJAX
     * http://html5boilerplate.com is a solid starting point, and reading the docs and faqs (and learning about why it includes what it does) is educational.
     * http://www.alistapart.com is excellent for best practices and advanced topics.
     * http://jsfiddle.net is a great tool to try things out.
     * https://developer.mozilla.org/en-US is excellent.
     * http://movethewebforward.org has a fantastic, long list of tons of additional resources.
+* http://www.quora.com/What-are-the-best-sources-to-learn-web-coding-in-a-short-time
+    * StackOverflow when you have a specific programming query
+    Quora when you have architectural design like doubts
+    * SmashingMagazine when you want to get inspiration from other awesome sites and see good design tutorials + free resources
+    * Mozilla Developer Network when you are looking for documentation and tough tutorials on coding
+    * WebPlatform is like MDN but cleaner and better and younger. It may be too young at the moment and may lack some information but it will grow and become one of the best platforms for documentation and tutorials.
+    * Hacker News when you just want to see great people talk and not disturb them. Oh and this is one place where you also get the best start up information with detailed reviews and what not. Quality of discussion is so frigging awesome that you just don't want to ruin it by adding mediocre thoughts to it.
+    * Dochub.io when you need to know what parameters that function takes or other similar documentation. MDN is slower for these queries.
+    * Google / DuckDuckGo - Google, you know is great. DDG is awesome for programming related queries. It gives answers right then and there.
 * http://f2e.im/
 * http://ued.taobao.com/javascript/
 * http://www.ui.cn
@@ -29,11 +40,14 @@ Community
 * Quora
 * Reddit
 * Google: automated test | TDD
+* Medium
+* Medium: jQuery
 
 Pratical Tools
 * FontAwesome
 * Animate.css
 * https://gomockingbird.com/
+* Github: awesome-xxx
 
 Frontend
 * [跟(不)上網頁前端技術（資源大雜燴）] (http://huan-lin.blogspot.com/2013/08/front-end-technologies.html)
@@ -41,6 +55,7 @@ Frontend
     * https://angularjs.org/
       * http://campus.codeschool.com/courses/shaping-up-with-angular-js/intro
     * https://github.com/doggy8088/frontend-tools
+* http://www.quora.com/Is-it-reasonable-to-learn-AngularJS-for-a-six-month-school-project-How-could-it-impact-the-overall-productivity
 
 * http://www.w3cplus.com/css/bem-definitions.html
 
@@ -71,6 +86,9 @@ HTML5
 javascript
 * http://blog.jobbole.com/74818/ 
     * http://www.codecademy.com/en/tracks/javascript
+* Quora: How to learn javascript
+    * -> http://www.quora.com/How-can-I-learn-JavaScript
+        * -> http://eloquentjavascript.net/
 
 jQuery
 * [学习jQuery的免费资源：电子书、视频、教程和博客] (http://blog.jobbole.com/53544/)
