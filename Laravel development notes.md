@@ -19,12 +19,43 @@ Google: php framework laravel
 * https://github.com/ziadoz/awesome-php
 * https://github.com/ludo237/awesome-laravel4
 * https://github.com/chiraggude/awesome-laravel
+* http://daylerees.com/codebright
 
 * Stack exchange: 
 * Quora:  [Ruby vs Python] (http://www.quora.com/Ruby-vs-Python) | django | laravel | bootstrap | [Web Development] (http://www.quora.com/Web-Development) | [Web Design] (http://www.quora.com/Web-Design) | [Web Applications] (http://www.quora.com/Web-Applications)
 * Reddit
 * Medium: laravel | django | bootstrap | design | ui | rails
 * http://laravel.io/forum
+* Quora: how to learn laravel
+
+## Tutorial materials
+
+Laravel official doc provides no tutorials (not like what django doc does nor rails guide does), I have to find it "outsite". -> Google: laravel tutorial | laravel guide | laravel cast
+
+* Quora: how to learn laravel
+    * -> http://www.quora.com/What-is-the-best-way-to-learn-Laravel
+    * -> http://www.quora.com/What-are-the-best-resources-for-learning-Laravel-4
+* https://laracasts.com/
+* Baidu: laravel tutorial
+    * http://learninglaravel.net/ giveaway an ebook, and lots of tutorials (cast) (including Todo List and Blog tutorial on Youtube)
+
+### Laravel Blog example
+* Medium: laravel
+    * https://medium.com/laravel-4
+* Google: laravel blog example
+    * http://www.codeheaps.com/php-programming/creating-blog-using-laravel-4-part-1/
+    * https://laracasts.com/series/laravel-from-scratch
+    * http://laravel.io/forum/02-27-2014-simple-application-built-with-laravel
+* Google: laravel tutorial for beginners
+    *  http://stackoverflow.com/questions/23319192/a-good-start-to-laravel-beginner
+    *  http://code.tutsplus.com/tutorials/building-web-applications-from-scratch-with-laravel--net-25517
+    * http://code.tutsplus.com/categories/laravel
+    * https://www.youtube.com/watch?v=20gXsB7EVM8
+
+### Rails4 Blog example
+* Youtube: rails4 blog
+    *  [How To Build A Todo App In Rails 4] (https://www.youtube.com/watch?v=fd1Vn-Wvy2w)
+        *  http://mackenziechild.me/how-to-build-a-todo-app-in-rails-4/
 
 
 ----
