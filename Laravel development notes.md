@@ -164,3 +164,17 @@ And, if you need an isolated development environment, you should try [Laravel Ho
 ## Class based view
 
 ## Automated Test
+
+----
+
+## Create a Blog with Laravel
+
+I mainly learn it from: [] (), with the supplementory of [] ()
+
+(Laravel follows Rails's convention.)
+
+First, create a `blog` project:
+
+    laravel new blog # ~/.composer/vendor/bin/laravel
+
+This will install/copy a set of laravel to a `blog` folder, which is located in the pwd.
