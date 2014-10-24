@@ -27,6 +27,7 @@ Google: php framework laravel
 * Medium: laravel | django | bootstrap | design | ui | rails
 * http://laravel.io/forum
 * Quora: how to learn laravel
+* Youtube: laravel blog example/tutorial | TODO example/tutorial
 
 ## Tutorial materials
 
@@ -51,11 +52,13 @@ Laravel official doc provides no tutorials (not like what django doc does nor ra
     *  http://code.tutsplus.com/tutorials/building-web-applications-from-scratch-with-laravel--net-25517
     * http://code.tutsplus.com/categories/laravel
     * https://www.youtube.com/watch?v=20gXsB7EVM8
+* Youtube: laravel blog example | laravel TODO example
 
 ### Rails4 Blog example
 * Youtube: rails4 blog
     *  [How To Build A Todo App In Rails 4] (https://www.youtube.com/watch?v=fd1Vn-Wvy2w)
         *  http://mackenziechild.me/how-to-build-a-todo-app-in-rails-4/
+        * [Youtube: ackenzie Child] (https://www.youtube.com/user/mackenziechild?feature=em-subconf-s3-chl)
 
 
 ----
@@ -105,6 +108,8 @@ First, download the Laravel installer using Composer.
 Make sure to place the ~/.composer/vendor/bin directory in your PATH so the laravel executable is found when you run the laravel command in your terminal.
 
 Once installed, the simple laravel new command will create a fresh Laravel installation in the directory you specify. For instance, laravel new blog would create a directory named blog containing a fresh Laravel installation with all dependencies installed. This method of installation is much faster than installing via Composer.
+
+    laravel new blog # ~/.composer/vender/bin/laravel
 
 ref:
 http://laravel.com/docs/4.2/quick
@@ -159,4 +164,3 @@ And, if you need an isolated development environment, you should try [Laravel Ho
 ## Class based view
 
 ## Automated Test
-
