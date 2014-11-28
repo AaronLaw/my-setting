@@ -267,3 +267,24 @@ Then migrate it:
 
 Now, I've created a Posts table, and connect to db.
 (part1 is finished.)
+
+## Clone and run my project from Github
+
+To clone my project on local envrionment,
+
+    git clone https://github.com/AaronLaw/Apple-Care-Connect.git
+
+Then `php artisan serve` doesn't work.
+Laravel framework generates 3000+ files but `git push` only pushes 60+ files to Github, why? It is because the `vendor` directory is listed in `.gitignore` when the framework generates files.
+
+The cloned framework is broken, some files are missing. We need to fix it:
+
+    composer install
+
+Then the internal server works now. [Which files/directories to ignore in a Laravel 4 project when using version control?] (http://stackoverflow.com/questions/17003253/which-files-directories-to-ignore-in-a-laravel-4-project-when-using-version-cont) (from Google: why git init ignore laravel vendor).
+
+( So you don't add it unnecessarily into version control. Composer can install dependencies onto your production server for you. (`composer install`). Note that composer update will update to latest dependencies and download them while `composer install` will install based on items in `composer.lock`. You should keep `composer.lock` in version control and use `$ composer install` in production to ensure you get the version of software you expect. (Running `composer update` also updates `composer.lock`). –  fideloper Feb 12 at 0:41 )
+
+(As noted in the below comment, you probably want to commit composer.lock in your project. Laravel ignores it by default so the authors of the laravel/laravel package don't accidently impose packages on you.
+
+Your project should include the composer.lock file so you can install packages of stable versions (via composer install instead of composer update) properly in your production environments.) [#] (http://stackoverflow.com/questions/17003253/which-files-directories-to-ignore-in-a-laravel-4-project-when-using-version-cont#comment32838601_17499192)
