@@ -20,6 +20,9 @@ Google: php framework laravel
 * https://github.com/ludo237/awesome-laravel4
 * https://github.com/chiraggude/awesome-laravel
 * http://daylerees.com/codebright
+* http://laravelbook.com/
+* Google: laravel Asia/Taipei
+    * [Laravel PHP Framework 快速上手指南] (http://it.nekounya.com/laravel-php-framework-quick-install-and-config-guide.html)
 
 * Stack exchange: 
 * Quora:  [Ruby vs Python] (http://www.quora.com/Ruby-vs-Python) | django | laravel | bootstrap | [Web Development] (http://www.quora.com/Web-Development) | [Web Design] (http://www.quora.com/Web-Design) | [Web Applications] (http://www.quora.com/Web-Applications)
@@ -28,6 +31,16 @@ Google: php framework laravel
 * http://laravel.io/forum
 * Quora: how to learn laravel
 * Youtube: laravel blog example/tutorial | TODO example/tutorial
+* Google: youtube laravel blog
+* Laravel 學習筆記
+
+## Some useful package
+* Google: laraval markdown
+    * https://github.com/GrahamCampbell/Laravel-Markdown
+    * https://github.com/GrahamCampbell/Bootstrap-CMS
+    * https://github.com/GrahamCampbell/Laravel-Core
+* [laravel下有哪些包值得推荐？] (http://www.zhihu.com/question/24136962)
+    * http://packalyst.com/packages/package/way/generators
 
 ## Tutorial materials
 
@@ -39,12 +52,18 @@ Laravel official doc provides no tutorials (not like what django doc does nor ra
 * https://laracasts.com/
 * Baidu: laravel tutorial
     * http://learninglaravel.net/ giveaway an ebook, and lots of tutorials (cast) (including Todo List and Blog tutorial on Youtube)
+* Google: laravel taiwan
+    * [Laravel Taiwan's Github] (https://github.com/laravel-taiwan)
+    * [KeJyun學習日誌: Laravel 4] (http://blog.kejyun.com/p/laravel-learning-footprints.html)  a collection of Laravel resources
+    * [Laravel 學習筆記 Lesson 2] (http://blog.fukuball.com/laravel-xue-xi-bi-ji-lesson-2/)
+
+* Google: Laravel 學習筆記
 
 ### Laravel Blog example
 * Medium: laravel
     * https://medium.com/laravel-4
 * Google: laravel blog example
-    * http://www.codeheaps.com/php-programming/creating-blog-using-laravel-4-part-1/
+    * http://www.codeheaps.com/php-programming/creating-blog-using-laravel-4-part-1/ , with example code
     * https://laracasts.com/series/laravel-from-scratch
     * http://laravel.io/forum/02-27-2014-simple-application-built-with-laravel
 * Google: laravel tutorial for beginners
@@ -59,6 +78,8 @@ Laravel official doc provides no tutorials (not like what django doc does nor ra
     *  [How To Build A Todo App In Rails 4] (https://www.youtube.com/watch?v=fd1Vn-Wvy2w)
         *  http://mackenziechild.me/how-to-build-a-todo-app-in-rails-4/
         * [Youtube: ackenzie Child] (https://www.youtube.com/user/mackenziechild?feature=em-subconf-s3-chl)
+* Google: rails 學習筆記 
+    * http://adz.visionbundles.com/posts/171568--activerecord-rails-notes-transaction-transaction-measurement
 
 
 ----
@@ -109,7 +130,7 @@ Make sure to place the ~/.composer/vendor/bin directory in your PATH so the lara
 
 Once installed, the simple laravel new command will create a fresh Laravel installation in the directory you specify. For instance, laravel new blog would create a directory named blog containing a fresh Laravel installation with all dependencies installed. This method of installation is much faster than installing via Composer.
 
-    laravel new blog # ~/.composer/vender/bin/laravel
+    laravel new blog # ~/.composer/vendor/bin/laravel
 
 ref:
 http://laravel.com/docs/4.2/quick
@@ -165,11 +186,18 @@ And, if you need an isolated development environment, you should try [Laravel Ho
 
 ## Automated Test
 
+## Frontend with Bootstrap
+* Google: laravel taiwan
+    * [Laravel 學習筆記 Lesson 2] (http://blog.fukuball.com/laravel-xue-xi-bi-ji-lesson-2/)
+
+## Cheatsheet
+* http://chets.jesse-obrien.ca
+    * from: github: laravel -> [JesseObrien/laravel-cheatsheet] (https://github.com/JesseObrien/laravel-cheatsheet)
 ----
 
-## Create a Blog with Laravel
+## Create a Blog with Laravel, 2014-10
 
-I mainly learn it from: [] (), with the supplementory of [] ()
+I mainly learn it from: [Learning Laravel: Simple Laravel Blog: Setting Up & Migrations Part 1] (http://learninglaravel.net/simple-laravel-blog-setting-up-migrations-part-1), with the supplementory of [] (),  and lookup command and meaning in [the doc of Laravel 4.2] (http://laravel.com/docs/4.2/)
 
 (Laravel follows Rails's convention.)
 
@@ -178,3 +206,64 @@ First, create a `blog` project:
     laravel new blog # ~/.composer/vendor/bin/laravel
 
 This will install/copy a set of laravel to a `blog` folder, which is located in the pwd.
+
+(for using github,
+    cd blog
+    git init
+    git add .
+    git commit -m 'init commit'
+    git remote add origin https://github.com/AaronLaw/blog
+    git push -u origin master
+
+ref: creating a new project on github
+)
+
+Then change the db setting, and `debug=>true` in `blog/app/config/database.php' and `blog/app/config/app.php'. Set `time-zone` to `Asia/Taipei` too.
+
+(ref: 
+
+* Google: laravel Asia/Taipei
+    * [Laravel 學習筆記 Lesson 2] (http://blog.fukuball.com/laravel-xue-xi-bi-ji-lesson-2/)
+    * [Laravel PHP Framework 快速上手指南] (http://it.nekounya.com/laravel-php-framework-quick-install-and-config-guide.html)
+)
+
+
+Create post table:
+
+    php artisan migrate:make create_posts_table
+
+Complete the `up()` and `down()` functions in the newly created migration file, which is located at `blog/app/database/migrations/`
+
+    #php
+    public function up()
+    {
+        //
+        Schema::create('posts', function($t) {
+            $t->increments('id');
+            $t->string('title', 200);
+            $t->string('slug', 400);
+            $t->boolean('draft');
+            $t->text('body');
+            $t->timestamps();
+        }) ;
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        //
+        Schema::drop('posts');
+    }
+
+Then migrate it:
+
+    php artisan migrate
+
+[#] (http://laravel.com/docs/4.2/migrations)
+
+Now, I've created a Posts table, and connect to db.
+(part1 is finished.)
