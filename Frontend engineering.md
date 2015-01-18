@@ -25,6 +25,7 @@ Community
 * http://ued.taobao.com/javascript/
 * http://www.ui.cn
 * http://article.yeeyan.org/tags/网页
+   * [HTML5 应用程序初级教程] (http://article.yeeyan.org/view/105279/134398)
 * Stack exchange
 * Quora
 * Reddit
