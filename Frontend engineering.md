@@ -74,6 +74,7 @@ javascript
     * http://www.codecademy.com/en/tracks/javascript
 * [JavaScript: The Definitive Guide, 6th Edition 中文版] (http://ued.taobao.org/javascript/)
 * [Eloquent Javascript] (http://eloquentjavascript.net/), by Google: Javascript ebook
+* [JSbooks - Free javascript books] http://jsbooks.revolunet.com/ , by Google: Javascript ebook
 
 jQuery
 * [学习jQuery的免费资源：电子书、视频、教程和博客] (http://blog.jobbole.com/53544/)
