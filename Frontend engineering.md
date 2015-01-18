@@ -24,7 +24,7 @@ Community
 * http://f2e.im/
 * http://ued.taobao.com/javascript/
 * http://www.ui.cn
-
+* http://article.yeeyan.org/tags/网页
 * Stack exchange
 * Quora
 * Reddit
@@ -41,6 +41,7 @@ Frontend
     * https://angularjs.org/
       * http://campus.codeschool.com/courses/shaping-up-with-angular-js/intro
     * https://github.com/doggy8088/frontend-tools
+    * [前端開發: jQuery & ASP.net] (http://kevintsengtw.blogspot.tw/p/blog-page_16.html)
 
 * http://www.w3cplus.com/css/bem-definitions.html
 
@@ -71,6 +72,7 @@ HTML5
 javascript
 * http://blog.jobbole.com/74818/ 
     * http://www.codecademy.com/en/tracks/javascript
+* [JavaScript: The Definitive Guide, 6th Edition 中文版] (http://ued.taobao.org/javascript/)
 
 jQuery
 * [学习jQuery的免费资源：电子书、视频、教程和博客] (http://blog.jobbole.com/53544/)
