@@ -1,5 +1,6 @@
 Frontend engineering
 
+* http://article.yeeyan.org/tags/编程
 * Ruby on Rails (web framework): What is the best way to learn Ruby on Rails? Bloc.io? theFirehoseProject?] (http://www.quora.com/Ruby-on-Rails-web-framework/What-is-the-best-way-to-learn-Ruby-on-Rails-Bloc-io-theFirehoseProject)
 * [Ruby on Rails (web framework): As of the 27th of January 2013, what's the best way for someone who knows a lot about HTML and CSS to learn Ruby on Rails?] (http://www.quora.com/Ruby-on-Rails-web-framework/As-of-the-27th-of-January-2013-whats-the-best-way-for-someone-who-knows-a-lot-about-HTML-and-CSS-to-learn-Ruby-on-Rails)
 * http://www.quora.com/What-is-the-fastest-way-to-learn-Django
@@ -79,6 +80,7 @@ javascript
 
 jQuery
 * [学习jQuery的免费资源：电子书、视频、教程和博客] (http://blog.jobbole.com/53544/)
+* http://jqfundamentals.com/ , from Google: jquery guide
 * http://www.w3schools.com/jquery/default.asp
 * http://www.tutorialspoint.com/jquery/index.htm
     * Google: python for loop -> http://www.tutorialspoint.com/python/python_for_loop.htm -> this
