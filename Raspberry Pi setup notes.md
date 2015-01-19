@@ -1921,6 +1921,8 @@ However, I am not eazy to go with new MariaDB before try to tune the performance
 HayDen james writes an interesting article [MySQL Query Cache Size and Performance] (http://haydenjames.io/mysql-query-cache-size-performance/) and I am trying to figure it out now.
 
 ### Git
+* [Git 版本控制系統] (https://ihower.tw/git/)
+* [好麻煩部落格: Git 教學] (http://gogojimmy.net/2012/01/17/how-to-use-git-1-git-basic/}
 * [How To Use Source Control Effectively] (http://grokcode.com/717/how-to-use-source-control-effectively/)
     * from: http://www.fullstackpython.com/web-frameworks.html -> http://grokcode.com/864/snakefooding-python-code-for-complexity-visualization/
 * [软件版本控制介绍] (http://blog.jobbole.com/55304/)
