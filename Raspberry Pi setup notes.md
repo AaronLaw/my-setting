@@ -2032,6 +2032,9 @@ and you will see
     Branch experimental set up to track remote branch experimental from origin.
     Switched to a new branch 'experimental'
 
+#### Git Merge
+* https://www.atlassian.com/git/tutorials/using-branches
+
 #### Home Automation
 * [Lifehacker - Build an Entire Home Automation System with a Raspberry Pi and Arduino] (http://lifehacker.com/build-an-entire-home-automation-system-with-a-raspberry-1640844965)
 * Try RQ: [Redis Queue] (https://github.com/nvie/rq)
