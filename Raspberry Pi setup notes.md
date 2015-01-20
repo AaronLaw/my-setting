@@ -714,7 +714,7 @@ https://docs.djangoproject.com/en/dev/topics/python3/
 
 Seems I have to complie 3.3 (or 3.4) from source. Therefore,
 Google: how to install python 3.3
-http://askubuntu.com/questions/244544/how-do-i-install-python-3-3 shows how the others compile it from source
+http://askubuntu.com/questions/244544/how-do-i-install-python-3-3 shows how the others compile it from source (Google: install python3 on linux)
 
 Google: how to install python 3.4
 https://docs.python.org/3.4/using/index.html
