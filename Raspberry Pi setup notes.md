@@ -1558,6 +1558,12 @@ http://magnatecha.com/turn-off-display-from-linux-command-line/
 ﻿
 
 Everyday Django Resources:
+* [Codecademy] (http://www.codecademy.com/learn) -- 透過闖關遊戲方式學習 Python, HTML/CSS, JavaScript ( [from Django Girls TW] (http://djangogirlstaipei.gitbooks.io/django-girls-taipei-tutorial/content/django/next.html) )
+* [Writing your first Django app] (https://docs.djangoproject.com/en/1.7/intro/tutorial01/) -- Django 1.7 官方學習指南
+* [Getting Started With Django] (http://gettingstartedwithdjango.com/) -- 影片課程
+* [The Django Book] (https://django-book.readthedocs.org/en/latest/) -- 雖然 Django 版本不是最新，但相當適合初學者的一本書
+* [Two Scoops of Django: Best Practices for Django] (http://twoscoopspress.org/products/two-scoops-of-django-1-6) -- 非常推薦，Taipei.py 隔週二聚會指定書籍
+* [Django Packages] (https://www.djangopackages.com/) -- Django 相關套件彙整平台，提供搜尋和評比
 * RealPython
 * https://code.djangoproject.com/wiki/DjangoResources (from: Google: django ui framework)
 * http://learnpythonthehardway.org/
