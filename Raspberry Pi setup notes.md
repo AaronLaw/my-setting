@@ -1552,6 +1552,7 @@ http://magnatecha.com/turn-off-display-from-linux-command-line/
 #### Better system design with Django
 
 * https://django-book.readthedocs.org/en/latest/# (from: http://www.meetup.com/Taipei-py/messages/boards/thread/34933702)
+* https://github.com/rosarior/awesome-django
 * https://github.com/makaimc/awesome-django
 * https://github.com/vinta/awesome-python
 ﻿
