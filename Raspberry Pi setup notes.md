@@ -1564,6 +1564,7 @@ Everyday Django Resources:
 * [The Django Book] (https://django-book.readthedocs.org/en/latest/) -- 雖然 Django 版本不是最新，但相當適合初學者的一本書
 * [Two Scoops of Django: Best Practices for Django] (http://twoscoopspress.org/products/two-scoops-of-django-1-6) -- 非常推薦，Taipei.py 隔週二聚會指定書籍
 * [Django Packages] (https://www.djangopackages.com/) -- Django 相關套件彙整平台，提供搜尋和評比
+* [Python Snippets [ (https://djangosnippets.org/snippets/261/), from Google: django email contact
 * RealPython
 * https://code.djangoproject.com/wiki/DjangoResources (from: Google: django ui framework)
 * http://learnpythonthehardway.org/
