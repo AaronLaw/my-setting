@@ -5,6 +5,7 @@ http://www.quora.com/Lean-Startups
 ### Everyday Django Resources:
 
 * RealPython
+* [Python Snippets [ (https://djangosnippets.org/snippets/261/), from Google: django email contact
 * [Open Sourcing a Python Project the Right Way - Jeff Knupp] (http://www.jeffknupp.com/blog/2013/08/16/open-sourcing-a-python-project-the-right-way/)
 * https://code.djangoproject.com/wiki/DjangoResources (from: Google: django ui framework)
 * http://www.fullstackpython.com/
