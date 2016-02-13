@@ -1,5 +1,6 @@
 Packages I need for my development virtual machines.
 ----
+
 2016-02-10
 LinuxMint 17.3 Cinnamon 64-bit (from VMWare)
 Boot in: EFI
@@ -9,9 +10,12 @@ Boot in: EFI
 
 
 aaron, stephanieh1010
+
 --
 2016-02-11:
 Install: python-dev, pyhton 3.5.1
 
 2016-02-12:
-Install: git, django, htop, nmon, syncthing, curl
+Install: git, django, htop, nmon, syncthing, curl, tree
+
+To be Install: Gvim, Sublime, PyCharm, Docker, ansible, virtualenv, virtualenvwrapper
