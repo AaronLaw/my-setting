@@ -151,6 +151,7 @@ transmission, chromium, Mopidy
         - [x] test: Django runs with python3.3+
         - [x] test: MySQL as backend
     - [x] MySQL
+    - [ ] MariaDB (MariaDB.org)
     - [x] PHP5-fpm
         - [x] let php knows mysql
     - [x] phpmyadmin
@@ -680,6 +681,7 @@ ref:
 * [Python Packaging User Guide] (https://python-packaging-user-guide.readthedocs.org/en/latest/current.html) is also from https://github.com/pypa/sampleproject
 * http://pydanny.com/experiences-with-django-python3.html
 
+#### Setup pip
 [pip] (https://pip.pypa.io/en/latest/)
 
     sudo apt-get install python-pip
@@ -828,7 +830,7 @@ Google: raspberry pi virtualenv
     # curl -O http://python-distribute.org/distribute_setup.py
     # python distribute_setup.py
     # curl -O https://raw.github.com/pypa/pip/master/contrib/get-pip.py
-    # python get-pip.py
+    # python get-pip.py # @see Setup pip: sudo apt-get install python-pip
     sudo pip install virtualenv
 
 Then, we can create an isolate environment:
