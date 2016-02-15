@@ -1036,32 +1036,76 @@ http://blog.mattwoodward.com/2013/01/setting-up-django-on-raspberry-pi.html
 2016-02-15 update: 
 Firstly, the community edition is [MariaDB.org] (https://mariadb.org/about/), not [MariaDB.com] (https://mariadb.com/) (for enterprise).
 
-As of the version of repository is MariaDB 5.5.47, not the 10, I have to install it myself rather than issue:
+As of the version of repository is MariaDB 5.5.47, not the 10, I have to install it myself rather than issue simply:
 
     sudo apt-get install mariadb-server
 
-https://mariadb.org/mariadb-10-1-11-now-available/ -> [MariaDB APT and YUM Repository Configuration Generator] (https://downloads.mariadb.org/mariadb/repositories/#mirror=nethub)
+[MariaDB APT and YUM Repository Configuration Generator] (https://downloads.mariadb.org/mariadb/repositories/#mirror=nethub)
+
+1) Add MariaDB Repositories 
 
 Here are the commands to run to install MariaDB on your Mint system:
 
-    sudo apt-get install software-properties-common
-    sudo apt-key adv --recv-keys --keyserver hkp://keyserver.ubuntu.com:80 0xcbcb082a1bb943db
-    sudo add-apt-repository 'deb http://mariadb.nethub.com.hk/repo/10.1/ubuntu trusty main'
+   sudo apt-get install software-properties-common
+   sudo apt-key adv --recv-keys --keyserver hkp://keyserver.ubuntu.com:80 0xcbcb082a1bb943db
+   sudo add-apt-repository 'deb http://nyc2.mirrors.digitalocean.com/mariadb/repo/10.1/ubuntu trusty main'
+
+2) Update System Repository Index
 
 Once the key is imported and the repository added you can install MariaDB with:
 
     sudo apt-get update
+
+3) Install MariaDB 
+
     sudo apt-get install mariadb-server
 
 See Installing MariaDB .deb Files for more information and for instructions on installing MariaDB Galera Cluster.
 
 You can also create a custom MariaDB sources.list file. To do so, after importing the signing key as outlined above, copy and paste the following into a file under /etc/apt/sources.list.d/(we suggest naming the file MariaDB.list or something similar), or add it to the bottom of your /etc/apt/sources.list file.
 
-    # MariaDB 10.1 repository list - created 2016-02-15 08:24 UTC
-    # http://mariadb.org/mariadb/repositories/
-    deb http://mariadb.nethub.com.hk/repo/10.1/ubuntu trusty main
-    deb-src http://mariadb.nethub.com.hk/repo/10.1/ubuntu trusty main
+   # MariaDB 10.1 repository list - created 2016-02-15 09:03 UTC
+   # http://mariadb.org/mariadb/repositories/
+   deb http://nyc2.mirrors.digitalocean.com/mariadb/repo/10.1/ubuntu trusty main
+   deb-src http://nyc2.mirrors.digitalocean.com/mariadb/repo/10.1/ubuntu trusty main
 
+If the above does not work, (`sudo apt-get install mariadb-server --dry-run` shows that the version will be installed is 5.5.47) it should be the host does not update. So, I retry it with an USA host (e.g. "DigitalOcean - New York, US".) And then it is going to install a version 10.1 now.
+
+4) Start MariaDB Service
+
+   # For SysVinit Systems #
+   $ sudo service mysql start
+
+   # For systemd Systems #
+   $ sudo systemctl start mysql.service
+
+5) How to access MariaDB
+
+   # mysql -u root -p
+
+   Welcome to the MariaDB monitor.  Commands end with ; or \g.
+   Your MariaDB connection id is 2
+   Server version: 10.1.11-MariaDB-1~jessie mariadb.org binary distribution
+
+   Copyright (c) 2000, 2015, Oracle, MariaDB Corporation Ab and others.
+
+   Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+   MariaDB [(none)]> 
+
+6) How to Upgrade MariaDB
+
+Use the below command to Upgrade MariaDB service for new release
+
+   $ sudo apt-get install --only-upgrade mariadb-server
+
+Also read about [phpMyAdmin] (http://www.2daygeek.com/install-phpmyadmin-on-debian-ubuntu-mint/) Installation and configuration which will help you to manage the MariaDB database on Web without headache.
+
+Some more reference:
+https://mariadb.org/mariadb-10-1-11-now-available/ -> [MariaDB APT and YUM Repository Configuration Generator] (https://downloads.mariadb.org/mariadb/repositories/#mirror=nethub)
+
+Google: how to install mariadb 10.1 on linuxmint 17.3
+-> [Install MariaDB 10.1.11 & Upgrade on Ubuntu, Debian & Mint] (http://www.2daygeek.com/install-upgrade-mariadb-10-on-ubuntu-debian-mint/)
 
 ### Setup Rails
 
