@@ -989,11 +989,11 @@ Then, I Google: pip install mysql-python  no module named 'Configparser'
 
 >     pip install mysqlclient
 
-> in my python3.4 virtualenv after
+in my python3.4 virtualenv after
 
 >    sudo apt-get install python-dev libmysqlclient-dev
 
-> which is obviously specific to ubuntu/debian, but I just wanted to share my success :) 
+which is obviously specific to ubuntu/debian, but I just wanted to share my success :) 
 [#] (http://stackoverflow.com/questions/14087598/python-3-3-importerror-no-module-named-configparser)
 
 :pray:
@@ -1029,6 +1029,39 @@ Update3:
 
 ref too:
 http://blog.mattwoodward.com/2013/01/setting-up-django-on-raspberry-pi.html
+
+
+### Setup MariaDB (mariadb-server, which is an enhanced, drop-in replacement for MySQL) 
+
+2016-02-15 update: 
+Firstly, the community edition is [MariaDB.org] (https://mariadb.org/about/), not [MariaDB.com] (https://mariadb.com/) (for enterprise).
+
+As of the version of repository is MariaDB 5.5.47, not the 10, I have to install it myself rather than issue:
+
+    sudo apt-get install mariadb-server
+
+https://mariadb.org/mariadb-10-1-11-now-available/ -> [MariaDB APT and YUM Repository Configuration Generator] (https://downloads.mariadb.org/mariadb/repositories/#mirror=nethub)
+
+Here are the commands to run to install MariaDB on your Mint system:
+
+    sudo apt-get install software-properties-common
+    sudo apt-key adv --recv-keys --keyserver hkp://keyserver.ubuntu.com:80 0xcbcb082a1bb943db
+    sudo add-apt-repository 'deb http://mariadb.nethub.com.hk/repo/10.1/ubuntu trusty main'
+
+Once the key is imported and the repository added you can install MariaDB with:
+
+    sudo apt-get update
+    sudo apt-get install mariadb-server
+
+See Installing MariaDB .deb Files for more information and for instructions on installing MariaDB Galera Cluster.
+
+You can also create a custom MariaDB sources.list file. To do so, after importing the signing key as outlined above, copy and paste the following into a file under /etc/apt/sources.list.d/(we suggest naming the file MariaDB.list or something similar), or add it to the bottom of your /etc/apt/sources.list file.
+
+    # MariaDB 10.1 repository list - created 2016-02-15 08:24 UTC
+    # http://mariadb.org/mariadb/repositories/
+    deb http://mariadb.nethub.com.hk/repo/10.1/ubuntu trusty main
+    deb-src http://mariadb.nethub.com.hk/repo/10.1/ubuntu trusty main
+
 
 ### Setup Rails
 
