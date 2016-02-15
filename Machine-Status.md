@@ -18,4 +18,7 @@ Install: python-dev, pyhton 3.5.1
 2016-02-12:
 Install: git, django, htop, nmon, syncthing, curl, tree
 
-To be Install: Gvim, Sublime, PyCharm, Docker, ansible, virtualenv, virtualenvwrapper
+2016-02-15:
+Install: awesome, screen, Gvim, build-essential
+
+To be Install: Sublime, PyCharm, Docker, ansible, virtualenv, virtualenvwrapper
