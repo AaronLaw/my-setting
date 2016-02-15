@@ -1064,40 +1064,40 @@ See Installing MariaDB .deb Files for more information and for instructions on i
 
 You can also create a custom MariaDB sources.list file. To do so, after importing the signing key as outlined above, copy and paste the following into a file under /etc/apt/sources.list.d/(we suggest naming the file MariaDB.list or something similar), or add it to the bottom of your /etc/apt/sources.list file.
 
-   # MariaDB 10.1 repository list - created 2016-02-15 09:03 UTC
-   # http://mariadb.org/mariadb/repositories/
-   deb http://nyc2.mirrors.digitalocean.com/mariadb/repo/10.1/ubuntu trusty main
-   deb-src http://nyc2.mirrors.digitalocean.com/mariadb/repo/10.1/ubuntu trusty main
+    # MariaDB 10.1 repository list - created 2016-02-15 09:03 UTC
+    # http://mariadb.org/mariadb/repositories/
+    deb http://nyc2.mirrors.digitalocean.com/mariadb/repo/10.1/ubuntu trusty main
+    deb-src http://nyc2.mirrors.digitalocean.com/mariadb/repo/10.1/ubuntu trusty main
 
 If the above does not work, (`sudo apt-get install mariadb-server --dry-run` shows that the version will be installed is 5.5.47) it should be the host does not update. So, I retry it with an USA host (e.g. "DigitalOcean - New York, US".) And then it is going to install a version 10.1 now.
 
 4) Start MariaDB Service
 
-   # For SysVinit Systems #
-   $ sudo service mysql start
+    # For SysVinit Systems #
+    $ sudo service mysql start
 
-   # For systemd Systems #
-   $ sudo systemctl start mysql.service
+    # For systemd Systems #
+    $ sudo systemctl start mysql.service
 
 5) How to access MariaDB
 
-   # mysql -u root -p
+    # mysql -u root -p
 
-   Welcome to the MariaDB monitor.  Commands end with ; or \g.
-   Your MariaDB connection id is 2
-   Server version: 10.1.11-MariaDB-1~jessie mariadb.org binary distribution
-
-   Copyright (c) 2000, 2015, Oracle, MariaDB Corporation Ab and others.
-
-   Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
-
-   MariaDB [(none)]> 
+    Welcome to the MariaDB monitor.  Commands end with ; or \g.
+    Your MariaDB connection id is 2
+    Server version: 10.1.11-MariaDB-1~jessie mariadb.org binary distribution
+    
+    Copyright (c) 2000, 2015, Oracle, MariaDB Corporation Ab and others.
+    
+    Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+    
+    MariaDB [(none)]> 
 
 6) How to Upgrade MariaDB
 
 Use the below command to Upgrade MariaDB service for new release
 
-   $ sudo apt-get install --only-upgrade mariadb-server
+    $ sudo apt-get install --only-upgrade mariadb-server
 
 Also read about [phpMyAdmin] (http://www.2daygeek.com/install-phpmyadmin-on-debian-ubuntu-mint/) Installation and configuration which will help you to manage the MariaDB database on Web without headache.
 
