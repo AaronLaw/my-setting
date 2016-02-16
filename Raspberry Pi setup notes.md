@@ -685,6 +685,10 @@ ref:
 [pip] (https://pip.pypa.io/en/latest/)
 
     sudo apt-get install python-pip
+    
+pip3
+
+    sudo apt-get install python3-pip
 
 #### My approach to Python 3.3 & Django 1.7+
 
