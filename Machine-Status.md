@@ -35,3 +35,5 @@ Install: Docker-engine 1.10
 --
 To be Install:  PyCharm, ansible,
 after build-essental, before system-wide update
+
+Ref: https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-14-04
