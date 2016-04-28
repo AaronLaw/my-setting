@@ -10,15 +10,28 @@ Boot in: EFI
 
 
 aaron, stephanieh1010
-
 --
 2016-02-11:
-Install: python-dev, pyhton 3.5.1
+Install: python-dev, pyhton 3.5.1, virtualenv, virtualenvwrapper
 
 2016-02-12:
 Install: git, django, htop, nmon, syncthing, curl, tree
 
 2016-02-15:
-Install: awesome, screen, Gvim, build-essential
+Install: awesome, GVim, build-essential
 
-To be Install: Sublime, PyCharm, Docker, ansible, virtualenv, virtualenvwrapper
+2016-02-18:
+Install: Sublime
+
+2016-02-22:
+Install: Docker-engine 1.10 (Ref: https://docs.docker.com/engine/installation/linux/ubuntulinux/)
+Install: Mariadb-server 10.1 (Ref: Google: how to install mariadb on mintlinux 17 -> https://downloads.mariadb.org/mariadb/repositories/ ->  `/etc/apt/sources.list.d/`)
+
+2016-04-27:
+Docker-engine doesn't work, due to an `sudo apt-get update` error caused by an invalid adderss in `/etc/apt/sources.list.d/`, when I install Mariadb.
+Fix: The adderss list in `/etc/apt/sources.list.d/`
+Install: Docker-engine 1.10
+
+--
+To be Install:  PyCharm, ansible,
+after build-essental, before system-wide update
