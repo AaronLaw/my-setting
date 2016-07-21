@@ -33,7 +33,7 @@ Fix: The adderss list in `/etc/apt/sources.list.d/`
 Install: Docker-engine 1.10
 
 --
-To be Install:  PyCharm, ansible, traceroute, mtr
+To be Install:  PyCharm, ansible, traceroute, mtr, rcconfig / chkconfig
 
 after build-essental, before system-wide update
 
