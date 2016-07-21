@@ -36,7 +36,7 @@ Install: Docker-engine 1.10
 Upgrade to Linuxmint 18 "Sarah" (http://blog.linuxmint.com/?p=3068) , as it is released on 2016-06-30
 
 --
-To be Install:  PyCharm, ansible, traceroute, mtr, rcconfig / chkconfig
+To be Install:  PyCharm, ansible, traceroute, mtr, nmon, rcconfig / chkconfig
 
 after build-essental, before system-wide update
 
