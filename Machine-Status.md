@@ -32,6 +32,9 @@ Docker-engine doesn't work, due to an `sudo apt-get update` error caused by an i
 Fix: The adderss list in `/etc/apt/sources.list.d/`
 Install: Docker-engine 1.10
 
+2016-07: update 2
+Upgrade to Linuxmint 18 "Sarah" (http://blog.linuxmint.com/?p=3068) , as it is released on 2016-06-30
+
 --
 To be Install:  PyCharm, ansible, traceroute, mtr, rcconfig / chkconfig
 
