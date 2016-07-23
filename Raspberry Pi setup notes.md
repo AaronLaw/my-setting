@@ -494,6 +494,8 @@ RuneAudio and Volumio is soso similar, sharing a similar UI. So, what's the diff
 
 ##### Some sound related commands
 
+2014-10-08: I learnt these when I set up MuBox, then later Mopidy, on CuBox of my friend.
+
 `lsmod`
 show the status of modules in the Linux Kernel. From: Google: cubox mubox -> http://testing.post76.com:7180/x2/forum.php?mod=viewthread&tid=164254
 
@@ -1655,6 +1657,7 @@ Everyday Django Resources:
 * https://www.coursera.org/course/interactivepython
 * http://www.fullstackpython.com/
 * http://www.fullstackpython.com/best-python-resources.html
+* [語言技術：Python Gossip] (http://openhome.cc/Gossip/Python/)
 * [Open Sourcing a Python Project the Right Way - Jeff Knupp] (http://www.jeffknupp.com/blog/2013/08/16/open-sourcing-a-python-project-the-right-way/)
 * [djangoGirls on GitBook] (https://www.gitbook.io/@djangogirls)
 * http://codecondo.com/web-scraping-python/
@@ -1666,6 +1669,7 @@ Everyday Django Resources:
 * http://www.databaseanswers.org/data_models/index.htm (from: http://www.quora.com/What-is-the-fastest-way-to-learn-Django)
 * http://www.quora.com/I-really-really-want-to-learn-to-code-However-upon-taking-classes-and-practicing-in-C-I-realized-that-I-hate-the-whole-process-of-programming-debugging-constant-unclear-ambiguous-errors-confusing-logic-What-can-I-do-to-get-over-this
     * [Computer Science Unplugged] (http://csunplugged.org/)
+* http://www.quora.com/Are-there-any-good-Django-video-tutorials
 
 
 Automated Test
@@ -1677,6 +1681,12 @@ Automated Test
 * http://learnpythonthehardway.org/book/ex47.html
 * https://realpython.com/blog/python/testing-in-django-part-1-best-practices-and-examples/
 * https://realpython.com/blog/python/testing-in-django-part-2-model-mommy-vs-django-testing-fixtures/
+
+Tutorail materials
+* Google: django tutorial | django guide | django cast | django girls | django girls tutorial
+* Quora: how to learn django
+* Medium: django
+* Tut+
 
 Django bulid a blog
 * [Building a Blog with Django 1.7 in 16 mins] (https://www.youtube.com/watch?v=7rgph8en0Jc)

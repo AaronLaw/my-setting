@@ -63,6 +63,9 @@ Frontend
     * [前端開發: jQuery & ASP.net] (http://kevintsengtw.blogspot.tw/p/blog-page_16.html)
 >>>>>>> 4fab2a1df8f84b83f870e299a9ef967da6e7cec7
 
+* http://www.quora.com/Is-it-reasonable-to-learn-AngularJS-for-a-six-month-school-project-How-could-it-impact-the-overall-productivity
+* [KeJyun學習日誌: 初階網頁設計學習資源 ]  (http://blog.kejyun.com/p/getting-start-to-learn-web-programming.html) (from: Google: laravel taiwan)
+
 * http://www.w3cplus.com/css/bem-definitions.html
 
 * http://codecondo.com/5-workflow-tools-for-front-end-developers/
@@ -101,6 +104,12 @@ javascript
 * [Eloquent Javascript] (http://eloquentjavascript.net/), by Google: Javascript ebook
 * [JSbooks - Free javascript books] http://jsbooks.revolunet.com/ , by Google: Javascript ebook
 >>>>>>> 4fab2a1df8f84b83f870e299a9ef967da6e7cec7
+
+* Quora: How to learn javascript
+    * -> http://www.quora.com/How-can-I-learn-JavaScript
+        * -> http://eloquentjavascript.net/
+            * -> http://www.nostarch.com/ejs2
+            * -> http://shop.oreilly.com/product/9781593275846.do
 
 jQuery
 * [学习jQuery的免费资源：电子书、视频、教程和博客] (http://blog.jobbole.com/53544/)

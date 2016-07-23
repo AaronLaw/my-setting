@@ -58,6 +58,8 @@ Laravel official doc provides no tutorials (not like what django doc does nor ra
     * [Laravel 學習筆記 Lesson 2] (http://blog.fukuball.com/laravel-xue-xi-bi-ji-lesson-2/)
 
 * Google: Laravel 學習筆記
+* http://fideloper.com/laravel-4-uber-quick-start-with-auth-guide
+    * Google: laravel try catch -> http://fideloper.com/laravel-database-transactions -> this
 
 ### Laravel Blog example
 * Medium: laravel
@@ -288,3 +290,7 @@ Then the internal server works now. [Which files/directories to ignore in a Lara
 (As noted in the below comment, you probably want to commit composer.lock in your project. Laravel ignores it by default so the authors of the laravel/laravel package don't accidently impose packages on you.
 
 Your project should include the composer.lock file so you can install packages of stable versions (via composer install instead of composer update) properly in your production environments.) [#] (http://stackoverflow.com/questions/17003253/which-files-directories-to-ignore-in-a-laravel-4-project-when-using-version-cont#comment32838601_17499192)
+
+## Auth filter and Routes
+* http://fideloper.com/laravel-4-uber-quick-start-with-auth-guide
+    * Google: laravel try catch -> http://fideloper.com/laravel-database-transactions -> this
