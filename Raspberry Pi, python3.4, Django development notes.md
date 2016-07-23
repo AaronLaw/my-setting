@@ -5,6 +5,7 @@ http://www.quora.com/Lean-Startups
 ### Everyday Django Resources:
 
 * RealPython
+* [語言技術：Python Gossip] (http://openhome.cc/Gossip/Python/)
 * [Python Snippets [ (https://djangosnippets.org/snippets/261/), from Google: django email contact
 * [Open Sourcing a Python Project the Right Way - Jeff Knupp] (http://www.jeffknupp.com/blog/2013/08/16/open-sourcing-a-python-project-the-right-way/)
 * https://code.djangoproject.com/wiki/DjangoResources (from: Google: django ui framework)
@@ -24,6 +25,7 @@ http://www.quora.com/Lean-Startups
     * http://www.reddit.com/r/django/comments/1nm5n8/moving_from_php_to_django_setup_host_advice/
 * http://www.quora.com/I-really-really-want-to-learn-to-code-However-upon-taking-classes-and-practicing-in-C-I-realized-that-I-hate-the-whole-process-of-programming-debugging-constant-unclear-ambiguous-errors-confusing-logic-What-can-I-do-to-get-over-this
     * [Computer Science Unplugged] (http://csunplugged.org/)
+* http://www.quora.com/Are-there-any-good-Django-video-tutorials    
 
 Some useful concepts / topic:
 * Google: query django | rails | cakephp | codeigniter | laravel
@@ -32,6 +34,8 @@ Some useful concepts / topic:
 * Google: django testing
 * Google: django restful
 * http://www.databaseanswers.org/data_models/index.htm (from: http://www.quora.com/What-is-the-fastest-way-to-learn-Django)
+* Youtube: Django Blog example/tutorial | Django TODO example/tutorial
+* Google: Django | Rails | Laravel ?株?????
 
 ----
 ### Django Tutorials
@@ -39,13 +43,20 @@ Some useful concepts / topic:
 https://code.djangoproject.com/wiki/Tutorials
 
 https://django-book.readthedocs.org/en/latest/# (from: http://www.meetup.com/Taipei-py/messages/boards/thread/34933702)
+
+Laravel official doc provides no tutorials (not like what django doc does nor rails guide does), I have to find it "outsite". -> Google: laravel guide | laravel cast
+
+How to find tutorials?
+* Google: django tutorial | django guide | django cast | django girls | django girls tutorial
+* Quora: how to learn django
+* Google: Laravel ?株?????
 ----
 
 Django bulid a blog
 * [Building a Blog with Django 1.7 in 16 mins] (https://www.youtube.com/watch?v=7rgph8en0Jc)
 * [Building a Blog in 30 minutes with Django] (https://www.youtube.com/watch?v=srHZoj3ASmk)
 
-Blog example
+Django Blog example
 
 http://arunrocks.com/recreating-the-building-a-blog-in-django-screencast/
 https://www.youtube.com/watch?v=7rgph8en0Jc
@@ -61,6 +72,13 @@ Restful
     * https://docs.djangoproject.com/en/dev/topics/class-based-views/
     * http://www.django-rest-framework.org/tutorial/3-class-based-views
     * http://effectivedjango.com/classbasedviews.html
+* https://godjango.com/69-the-class-based-view/
+
+View & Template
+* http://georgebrock.github.io/talks/sleeping-with-the-enemy/
+    * From Quora: how to learn django -> http://www.quora.com/How-would-learning-Django-change-a-Rails-developers-view-of-Rails -> http://georgebrock.github.io/talks/sleeping-with-the-enemy/
+    * Comparison on Django and Rails, but not exactly a comparison. It shows how Django and Rails solve familiar problems by different approach, and results in different framework design.
+* http://blog.eddie.com.tw/2011/10/19/django-model-to-template/
 
 ### How do I explore & setup a sandbox environment for python development
 
@@ -165,6 +183,7 @@ http://stackoverflow.com/questions/25351550/should-i-use-generic-foreign-key-wit
 Google: Django tagging
 https://www.djangopackages.com/packages/p/django-taggit/
 [keyword cloud] (http://djangosteps.wordpress.com/2011/10/21/a-keyword-cloud-in-django/) (from: Google: ubuntu memcached django)
+https://godjango.com/33-tagging-with-django-taggit/
 
 ----
 Comments

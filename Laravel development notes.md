@@ -19,12 +19,69 @@ Google: php framework laravel
 * https://github.com/ziadoz/awesome-php
 * https://github.com/ludo237/awesome-laravel4
 * https://github.com/chiraggude/awesome-laravel
+* http://daylerees.com/codebright
+* http://laravelbook.com/
+* Google: laravel Asia/Taipei
+    * [Laravel PHP Framework 快速上手指南] (http://it.nekounya.com/laravel-php-framework-quick-install-and-config-guide.html)
 
 * Stack exchange: 
 * Quora:  [Ruby vs Python] (http://www.quora.com/Ruby-vs-Python) | django | laravel | bootstrap | [Web Development] (http://www.quora.com/Web-Development) | [Web Design] (http://www.quora.com/Web-Design) | [Web Applications] (http://www.quora.com/Web-Applications)
 * Reddit
 * Medium: laravel | django | bootstrap | design | ui | rails
 * http://laravel.io/forum
+* Quora: how to learn laravel
+* Youtube: laravel blog example/tutorial | TODO example/tutorial
+* Google: youtube laravel blog
+* Laravel 學習筆記
+
+## Some useful package
+* Google: laraval markdown
+    * https://github.com/GrahamCampbell/Laravel-Markdown
+    * https://github.com/GrahamCampbell/Bootstrap-CMS
+    * https://github.com/GrahamCampbell/Laravel-Core
+* [laravel下有哪些包值得推荐？] (http://www.zhihu.com/question/24136962)
+    * http://packalyst.com/packages/package/way/generators
+
+## Tutorial materials
+
+Laravel official doc provides no tutorials (not like what django doc does nor rails guide does), I have to find it "outsite". -> Google: laravel tutorial | laravel guide | laravel cast
+
+* Quora: how to learn laravel
+    * -> http://www.quora.com/What-is-the-best-way-to-learn-Laravel
+    * -> http://www.quora.com/What-are-the-best-resources-for-learning-Laravel-4
+* https://laracasts.com/
+* Baidu: laravel tutorial
+    * http://learninglaravel.net/ giveaway an ebook, and lots of tutorials (cast) (including Todo List and Blog tutorial on Youtube)
+* Google: laravel taiwan
+    * [Laravel Taiwan's Github] (https://github.com/laravel-taiwan)
+    * [KeJyun學習日誌: Laravel 4] (http://blog.kejyun.com/p/laravel-learning-footprints.html)  a collection of Laravel resources
+    * [Laravel 學習筆記 Lesson 2] (http://blog.fukuball.com/laravel-xue-xi-bi-ji-lesson-2/)
+
+* Google: Laravel 學習筆記
+* http://fideloper.com/laravel-4-uber-quick-start-with-auth-guide
+    * Google: laravel try catch -> http://fideloper.com/laravel-database-transactions -> this
+
+### Laravel Blog example
+* Medium: laravel
+    * https://medium.com/laravel-4
+* Google: laravel blog example
+    * http://www.codeheaps.com/php-programming/creating-blog-using-laravel-4-part-1/ , with example code
+    * https://laracasts.com/series/laravel-from-scratch
+    * http://laravel.io/forum/02-27-2014-simple-application-built-with-laravel
+* Google: laravel tutorial for beginners
+    *  http://stackoverflow.com/questions/23319192/a-good-start-to-laravel-beginner
+    *  http://code.tutsplus.com/tutorials/building-web-applications-from-scratch-with-laravel--net-25517
+    * http://code.tutsplus.com/categories/laravel
+    * https://www.youtube.com/watch?v=20gXsB7EVM8
+* Youtube: laravel blog example | laravel TODO example
+
+### Rails4 Blog example
+* Youtube: rails4 blog
+    *  [How To Build A Todo App In Rails 4] (https://www.youtube.com/watch?v=fd1Vn-Wvy2w)
+        *  http://mackenziechild.me/how-to-build-a-todo-app-in-rails-4/
+        * [Youtube: ackenzie Child] (https://www.youtube.com/user/mackenziechild?feature=em-subconf-s3-chl)
+* Google: rails 學習筆記 
+    * http://adz.visionbundles.com/posts/171568--activerecord-rails-notes-transaction-transaction-measurement
 
 
 ----
@@ -74,6 +131,8 @@ First, download the Laravel installer using Composer.
 Make sure to place the ~/.composer/vendor/bin directory in your PATH so the laravel executable is found when you run the laravel command in your terminal.
 
 Once installed, the simple laravel new command will create a fresh Laravel installation in the directory you specify. For instance, laravel new blog would create a directory named blog containing a fresh Laravel installation with all dependencies installed. This method of installation is much faster than installing via Composer.
+
+    laravel new blog # ~/.composer/vendor/bin/laravel
 
 ref:
 http://laravel.com/docs/4.2/quick
@@ -129,3 +188,109 @@ And, if you need an isolated development environment, you should try [Laravel Ho
 
 ## Automated Test
 
+## Frontend with Bootstrap
+* Google: laravel taiwan
+    * [Laravel 學習筆記 Lesson 2] (http://blog.fukuball.com/laravel-xue-xi-bi-ji-lesson-2/)
+
+## Cheatsheet
+* http://chets.jesse-obrien.ca
+    * from: github: laravel -> [JesseObrien/laravel-cheatsheet] (https://github.com/JesseObrien/laravel-cheatsheet)
+----
+
+## Create a Blog with Laravel, 2014-10
+
+I mainly learn it from: [Learning Laravel: Simple Laravel Blog: Setting Up & Migrations Part 1] (http://learninglaravel.net/simple-laravel-blog-setting-up-migrations-part-1), with the supplementory of [] (),  and lookup command and meaning in [the doc of Laravel 4.2] (http://laravel.com/docs/4.2/)
+
+(Laravel follows Rails's convention.)
+
+First, create a `blog` project:
+
+    laravel new blog # ~/.composer/vendor/bin/laravel
+
+This will install/copy a set of laravel to a `blog` folder, which is located in the pwd.
+
+(for using github,
+    cd blog
+    git init
+    git add .
+    git commit -m 'init commit'
+    git remote add origin https://github.com/AaronLaw/blog
+    git push -u origin master
+
+ref: creating a new project on github
+)
+
+Then change the db setting, and `debug=>true` in `blog/app/config/database.php' and `blog/app/config/app.php'. Set `time-zone` to `Asia/Taipei` too.
+
+(ref: 
+
+* Google: laravel Asia/Taipei
+    * [Laravel 學習筆記 Lesson 2] (http://blog.fukuball.com/laravel-xue-xi-bi-ji-lesson-2/)
+    * [Laravel PHP Framework 快速上手指南] (http://it.nekounya.com/laravel-php-framework-quick-install-and-config-guide.html)
+)
+
+
+Create post table:
+
+    php artisan migrate:make create_posts_table
+
+Complete the `up()` and `down()` functions in the newly created migration file, which is located at `blog/app/database/migrations/`
+
+    #php
+    public function up()
+    {
+        //
+        Schema::create('posts', function($t) {
+            $t->increments('id');
+            $t->string('title', 200);
+            $t->string('slug', 400);
+            $t->boolean('draft');
+            $t->text('body');
+            $t->timestamps();
+        }) ;
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        //
+        Schema::drop('posts');
+    }
+
+Then migrate it:
+
+    php artisan migrate
+
+[#] (http://laravel.com/docs/4.2/migrations)
+
+Now, I've created a Posts table, and connect to db.
+(part1 is finished.)
+
+## Clone and run my project from Github
+
+To clone my project on local envrionment,
+
+    git clone https://github.com/AaronLaw/Apple-Care-Connect.git
+
+Then `php artisan serve` doesn't work.
+Laravel framework generates 3000+ files but `git push` only pushes 60+ files to Github, why? It is because the `vendor` directory is listed in `.gitignore` when the framework generates files.
+
+The cloned framework is broken, some files are missing. We need to fix it:
+
+    composer install
+
+Then the internal server works now. [Which files/directories to ignore in a Laravel 4 project when using version control?] (http://stackoverflow.com/questions/17003253/which-files-directories-to-ignore-in-a-laravel-4-project-when-using-version-cont) (from Google: why git init ignore laravel vendor).
+
+( So you don't add it unnecessarily into version control. Composer can install dependencies onto your production server for you. (`composer install`). Note that composer update will update to latest dependencies and download them while `composer install` will install based on items in `composer.lock`. You should keep `composer.lock` in version control and use `$ composer install` in production to ensure you get the version of software you expect. (Running `composer update` also updates `composer.lock`). –  fideloper Feb 12 at 0:41 )
+
+(As noted in the below comment, you probably want to commit composer.lock in your project. Laravel ignores it by default so the authors of the laravel/laravel package don't accidently impose packages on you.
+
+Your project should include the composer.lock file so you can install packages of stable versions (via composer install instead of composer update) properly in your production environments.) [#] (http://stackoverflow.com/questions/17003253/which-files-directories-to-ignore-in-a-laravel-4-project-when-using-version-cont#comment32838601_17499192)
+
+## Auth filter and Routes
+* http://fideloper.com/laravel-4-uber-quick-start-with-auth-guide
+    * Google: laravel try catch -> http://fideloper.com/laravel-database-transactions -> this
