@@ -1,5 +1,6 @@
 Frontend engineering
 
+* http://article.yeeyan.org/tags/编程
 * Ruby on Rails (web framework): What is the best way to learn Ruby on Rails? Bloc.io? theFirehoseProject?] (http://www.quora.com/Ruby-on-Rails-web-framework/What-is-the-best-way-to-learn-Ruby-on-Rails-Bloc-io-theFirehoseProject)
 * [Ruby on Rails (web framework): As of the 27th of January 2013, what's the best way for someone who knows a lot about HTML and CSS to learn Ruby on Rails?] (http://www.quora.com/Ruby-on-Rails-web-framework/As-of-the-27th-of-January-2013-whats-the-best-way-for-someone-who-knows-a-lot-about-HTML-and-CSS-to-learn-Ruby-on-Rails)
 * http://www.quora.com/What-is-the-fastest-way-to-learn-Django
@@ -35,7 +36,8 @@ Community
 * http://f2e.im/
 * http://ued.taobao.com/javascript/
 * http://www.ui.cn
-
+* http://article.yeeyan.org/tags/网页
+   * [HTML5 应用程序初级教程] (http://article.yeeyan.org/view/105279/134398)
 * Stack exchange
 * Quora
 * Reddit
@@ -55,7 +57,11 @@ Frontend
     * https://angularjs.org/
       * http://campus.codeschool.com/courses/shaping-up-with-angular-js/intro
     * https://github.com/doggy8088/frontend-tools
+<<<<<<< HEAD
 * http://www.quora.com/Is-it-reasonable-to-learn-AngularJS-for-a-six-month-school-project-How-could-it-impact-the-overall-productivity
+=======
+    * [前端開發: jQuery & ASP.net] (http://kevintsengtw.blogspot.tw/p/blog-page_16.html)
+>>>>>>> 4fab2a1df8f84b83f870e299a9ef967da6e7cec7
 
 * http://www.w3cplus.com/css/bem-definitions.html
 
@@ -86,12 +92,19 @@ HTML5
 javascript
 * http://blog.jobbole.com/74818/ 
     * http://www.codecademy.com/en/tracks/javascript
+<<<<<<< HEAD
 * Quora: How to learn javascript
     * -> http://www.quora.com/How-can-I-learn-JavaScript
         * -> http://eloquentjavascript.net/
+=======
+* [JavaScript: The Definitive Guide, 6th Edition 中文版] (http://ued.taobao.org/javascript/)
+* [Eloquent Javascript] (http://eloquentjavascript.net/), by Google: Javascript ebook
+* [JSbooks - Free javascript books] http://jsbooks.revolunet.com/ , by Google: Javascript ebook
+>>>>>>> 4fab2a1df8f84b83f870e299a9ef967da6e7cec7
 
 jQuery
 * [学习jQuery的免费资源：电子书、视频、教程和博客] (http://blog.jobbole.com/53544/)
+* http://jqfundamentals.com/ , from Google: jquery guide
 * http://www.w3schools.com/jquery/default.asp
 * http://www.tutorialspoint.com/jquery/index.htm
     * Google: python for loop -> http://www.tutorialspoint.com/python/python_for_loop.htm -> this

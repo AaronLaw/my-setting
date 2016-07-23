@@ -151,6 +151,7 @@ transmission, chromium, Mopidy
         - [x] test: Django runs with python3.3+
         - [x] test: MySQL as backend
     - [x] MySQL
+    - [ ] MariaDB (MariaDB.org)
     - [x] PHP5-fpm
         - [x] let php knows mysql
     - [x] phpmyadmin
@@ -680,9 +681,14 @@ ref:
 * [Python Packaging User Guide] (https://python-packaging-user-guide.readthedocs.org/en/latest/current.html) is also from https://github.com/pypa/sampleproject
 * http://pydanny.com/experiences-with-django-python3.html
 
+#### Setup pip
 [pip] (https://pip.pypa.io/en/latest/)
 
     sudo apt-get install python-pip
+    
+pip3
+
+    sudo apt-get install python3-pip
 
 #### My approach to Python 3.3 & Django 1.7+
 
@@ -714,7 +720,7 @@ https://docs.djangoproject.com/en/dev/topics/python3/
 
 Seems I have to complie 3.3 (or 3.4) from source. Therefore,
 Google: how to install python 3.3
-http://askubuntu.com/questions/244544/how-do-i-install-python-3-3 shows how the others compile it from source
+http://askubuntu.com/questions/244544/how-do-i-install-python-3-3 shows how the others compile it from source (Google: install python3 on linux)
 
 Google: how to install python 3.4
 https://docs.python.org/3.4/using/index.html
@@ -828,7 +834,7 @@ Google: raspberry pi virtualenv
     # curl -O http://python-distribute.org/distribute_setup.py
     # python distribute_setup.py
     # curl -O https://raw.github.com/pypa/pip/master/contrib/get-pip.py
-    # python get-pip.py
+    # python get-pip.py # @see Setup pip: sudo apt-get install python-pip
     sudo pip install virtualenv
 
 Then, we can create an isolate environment:
@@ -987,11 +993,11 @@ Then, I Google: pip install mysql-python  no module named 'Configparser'
 
 >     pip install mysqlclient
 
-> in my python3.4 virtualenv after
+in my python3.4 virtualenv after
 
 >    sudo apt-get install python-dev libmysqlclient-dev
 
-> which is obviously specific to ubuntu/debian, but I just wanted to share my success :) 
+which is obviously specific to ubuntu/debian, but I just wanted to share my success :) 
 [#] (http://stackoverflow.com/questions/14087598/python-3-3-importerror-no-module-named-configparser)
 
 :pray:
@@ -1027,6 +1033,83 @@ Update3:
 
 ref too:
 http://blog.mattwoodward.com/2013/01/setting-up-django-on-raspberry-pi.html
+
+
+### Setup MariaDB (mariadb-server, which is an enhanced, drop-in replacement for MySQL) 
+
+2016-02-15 update: 
+Firstly, the community edition is [MariaDB.org] (https://mariadb.org/about/), not [MariaDB.com] (https://mariadb.com/) (for enterprise).
+
+As of the version of repository is MariaDB 5.5.47, not the 10, I have to install it myself rather than issue simply:
+
+    sudo apt-get install mariadb-server
+
+[MariaDB APT and YUM Repository Configuration Generator] (https://downloads.mariadb.org/mariadb/repositories/#mirror=nethub)
+
+1) Add MariaDB Repositories 
+
+Here are the commands to run to install MariaDB on your Mint system:
+
+   sudo apt-get install software-properties-common
+   sudo apt-key adv --recv-keys --keyserver hkp://keyserver.ubuntu.com:80 0xcbcb082a1bb943db
+   sudo add-apt-repository 'deb http://nyc2.mirrors.digitalocean.com/mariadb/repo/10.1/ubuntu trusty main'
+
+2) Update System Repository Index
+
+Once the key is imported and the repository added you can install MariaDB with:
+
+    sudo apt-get update
+
+3) Install MariaDB 
+
+    sudo apt-get install mariadb-server
+
+See Installing MariaDB .deb Files for more information and for instructions on installing MariaDB Galera Cluster.
+
+You can also create a custom MariaDB sources.list file. To do so, after importing the signing key as outlined above, copy and paste the following into a file under /etc/apt/sources.list.d/(we suggest naming the file MariaDB.list or something similar), or add it to the bottom of your /etc/apt/sources.list file.
+
+    # MariaDB 10.1 repository list - created 2016-02-15 09:03 UTC
+    # http://mariadb.org/mariadb/repositories/
+    deb http://nyc2.mirrors.digitalocean.com/mariadb/repo/10.1/ubuntu trusty main
+    deb-src http://nyc2.mirrors.digitalocean.com/mariadb/repo/10.1/ubuntu trusty main
+
+If the above does not work, (`sudo apt-get install mariadb-server --dry-run` shows that the version will be installed is 5.5.47) it should be the host does not update. So, I retry it with an USA host (e.g. "DigitalOcean - New York, US".) And then it is going to install a version 10.1 now.
+
+4) Start MariaDB Service
+
+    # For SysVinit Systems #
+    $ sudo service mysql start
+
+    # For systemd Systems #
+    $ sudo systemctl start mysql.service
+
+5) How to access MariaDB
+
+    # mysql -u root -p
+
+    Welcome to the MariaDB monitor.  Commands end with ; or \g.
+    Your MariaDB connection id is 2
+    Server version: 10.1.11-MariaDB-1~jessie mariadb.org binary distribution
+    
+    Copyright (c) 2000, 2015, Oracle, MariaDB Corporation Ab and others.
+    
+    Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+    
+    MariaDB [(none)]> 
+
+6) How to Upgrade MariaDB
+
+Use the below command to Upgrade MariaDB service for new release
+
+    $ sudo apt-get install --only-upgrade mariadb-server
+
+Also read about [phpMyAdmin] (http://www.2daygeek.com/install-phpmyadmin-on-debian-ubuntu-mint/) Installation and configuration which will help you to manage the MariaDB database on Web without headache.
+
+Some more reference:
+https://mariadb.org/mariadb-10-1-11-now-available/ -> [MariaDB APT and YUM Repository Configuration Generator] (https://downloads.mariadb.org/mariadb/repositories/#mirror=nethub)
+
+Google: how to install mariadb 10.1 on linuxmint 17.3
+-> [Install MariaDB 10.1.11 & Upgrade on Ubuntu, Debian & Mint] (http://www.2daygeek.com/install-upgrade-mariadb-10-on-ubuntu-debian-mint/)
 
 ### Setup Rails
 
@@ -1552,11 +1635,19 @@ http://magnatecha.com/turn-off-display-from-linux-command-line/
 #### Better system design with Django
 
 * https://django-book.readthedocs.org/en/latest/# (from: http://www.meetup.com/Taipei-py/messages/boards/thread/34933702)
+* https://github.com/rosarior/awesome-django
 * https://github.com/makaimc/awesome-django
 * https://github.com/vinta/awesome-python
 ﻿
 
 Everyday Django Resources:
+* [Codecademy] (http://www.codecademy.com/learn) -- 透過闖關遊戲方式學習 Python, HTML/CSS, JavaScript ( [from Django Girls TW] (http://djangogirlstaipei.gitbooks.io/django-girls-taipei-tutorial/content/django/next.html) )
+* [Writing your first Django app] (https://docs.djangoproject.com/en/1.7/intro/tutorial01/) -- Django 1.7 官方學習指南
+* [Getting Started With Django] (http://gettingstartedwithdjango.com/) -- 影片課程
+* [The Django Book] (https://django-book.readthedocs.org/en/latest/) -- 雖然 Django 版本不是最新，但相當適合初學者的一本書
+* [Two Scoops of Django: Best Practices for Django] (http://twoscoopspress.org/products/two-scoops-of-django-1-6) -- 非常推薦，Taipei.py 隔週二聚會指定書籍
+* [Django Packages] (https://www.djangopackages.com/) -- Django 相關套件彙整平台，提供搜尋和評比
+* [Python Snippets [ (https://djangosnippets.org/snippets/261/), from Google: django email contact
 * RealPython
 * https://code.djangoproject.com/wiki/DjangoResources (from: Google: django ui framework)
 * http://learnpythonthehardway.org/
@@ -1921,6 +2012,8 @@ However, I am not eazy to go with new MariaDB before try to tune the performance
 HayDen james writes an interesting article [MySQL Query Cache Size and Performance] (http://haydenjames.io/mysql-query-cache-size-performance/) and I am trying to figure it out now.
 
 ### Git
+* [Git 版本控制系統] (https://ihower.tw/git/)
+* [好麻煩部落格: Git 教學] (http://gogojimmy.net/2012/01/17/how-to-use-git-1-git-basic/}
 * [How To Use Source Control Effectively] (http://grokcode.com/717/how-to-use-source-control-effectively/)
     * from: http://www.fullstackpython.com/web-frameworks.html -> http://grokcode.com/864/snakefooding-python-code-for-complexity-visualization/
 * [软件版本控制介绍] (http://blog.jobbole.com/55304/)
@@ -2029,6 +2122,9 @@ and you will see
 
     Branch experimental set up to track remote branch experimental from origin.
     Switched to a new branch 'experimental'
+
+#### Git Merge
+* https://www.atlassian.com/git/tutorials/using-branches
 
 #### Home Automation
 * [Lifehacker - Build an Entire Home Automation System with a Raspberry Pi and Arduino] (http://lifehacker.com/build-an-entire-home-automation-system-with-a-raspberry-1640844965)
