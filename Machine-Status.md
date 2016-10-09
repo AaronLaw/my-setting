@@ -9,7 +9,7 @@ Boot in: EFI
 (This is a VM Image made by VMWare Player 12, for running EFI in Virtualbox. A startup.nsh is prepared, and the bootx64.efi is copied to /BOOT/EFI/ too.)
 
 
-aaron, stephanieh1010
+aaron, stephanxxxxxxx
 --
 2016-02-11:
 Install: python-dev, pyhton 3.5.1, virtualenv, virtualenvwrapper
@@ -34,6 +34,11 @@ Install: Docker-engine 1.10
 
 2016-07: update 2
 Upgrade to Linuxmint 18 "Sarah" (http://blog.linuxmint.com/?p=3068) , as it is released on 2016-06-30
+
+2016-10-10:
+Install: rcconf, VSCode
+Stop: mariadb (stop it in rcconf)
+Upgrade: Docker-engine 1.12.1 build 23cf638 (https://docs.docker.com/engine/installation/linux/ubuntulinux/),  then install Docker Compose (https://docs.docker.com/compose/install/), install Docker Machine (https://docs.docker.com/machine/install-machine/)
 
 --
 Optional to install:  PyCharm, ansible, traceroute, mtr, nmon, rcconf / chkconfig, cpanel / vestacp (https://vestacp.com/)
