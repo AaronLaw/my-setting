@@ -36,12 +36,13 @@ Install: Docker-engine 1.10
 Upgrade to Linuxmint 18 "Sarah" (http://blog.linuxmint.com/?p=3068) , as it is released on 2016-06-30
 
 2016-10-10:
-Install: rcconf, VSCode
-Stop: mariadb (stop it in rcconf)
-Upgrade: Docker-engine 1.12.1 build 23cf638 (https://docs.docker.com/engine/installation/linux/ubuntulinux/),  then install Docker Compose (https://docs.docker.com/compose/install/), install Docker Machine (https://docs.docker.com/machine/install-machine/)
+Upgrade: Docker-engine 1.12.1 build 23cf638 (https://docs.docker.com/engine/installation/linux/ubuntulinux/),  
+Install: then install Docker Compose (https://docs.docker.com/compose/install/), install Docker Machine (https://docs.docker.com/machine/install-machine/)
 
 --
-Optional to install:  PyCharm, ansible, traceroute, mtr, nmon, rcconf / chkconfig, cpanel / vestacp (https://vestacp.com/)
+Optional to install:  PyCharm, VSCode, ansible, traceroute, mtr, nmon, rcconf / chkconfig, cpanel / vestacp (https://vestacp.com/)
+
+Optional to stop: mariadb (when using docker for db)
 
 after build-essental, before system-wide update
 
