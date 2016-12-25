@@ -797,7 +797,7 @@ Or, my simple solution is the use of `altinstall`, accroding to the 3.4 README:
     ./configure
     make && sudo make altinstall
 
-(It takes about 15 mins. Hogging 100% CUP.)
+(It takes about 15 mins. Hogging 100% CPU.)
 
 Test if it worked:
 
