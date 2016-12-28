@@ -44,6 +44,7 @@ Reference
 * The structure/formatting of this doc: [README.md] (https://github.com/git-up/GitUp/blob/master/README.md) of [GitUp](https://github.com/git-up/GitUp)
 * The tutorial to build this project: [How to Tango with Django] (http://www.tangowithdjango.com/)
 * The design/style of the webpage: [django weekly] (http://djangoweekly.com/newsletter/) -> Projects -> https://github.com/bitpixdigital/django-next-train
+* Better understanding Python and what a web framework is: [Full Stack Python: Web frameworks](http://www.fullstackpython.com/web-frameworks.html)
 
 ## Docker
 * [Django by Docker Official Image](https://store.docker.com/images/65765d71-d893-407d-a707-486c7381dfbf?tab=description)
@@ -83,4 +84,4 @@ License
 GitUp is copyright 2015-2016 Aaron Law and available under [GPL v3 license](http://www.gnu.org/licenses/gpl-3.0.txt). See the [LICENSE](LICENSE) file in the project for more information.
 
 
-Last update: 2014-08-20 01:27, Hong Kong
+Last update: 2016-12-28 01:27, Bangkok
