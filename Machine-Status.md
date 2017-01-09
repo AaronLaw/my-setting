@@ -2,7 +2,7 @@ Packages I need for my development virtual machines.
 ----
 
 2016-02-10
-LinuxMint 17.3 Cinnamon 64-bit (from VMWare)
+LinuxMint 17.3 Cinnamon 64-bit (from LinuxMint's official website)
 Boot in: EFI
 + set keyboard layout to DVORAK
 + add an user "Aaron"
