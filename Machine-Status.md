@@ -42,7 +42,7 @@ Upgrade: Docker-engine 1.12.1 build 23cf638 (https://docs.docker.com/engine/inst
 Install: then install Docker Compose (https://docs.docker.com/compose/install/), install Docker Machine (https://docs.docker.com/machine/install-machine/)
 
 2017-02-09:
-Install: re-complie python 3.5.1 with zlib (Google: python missing zlib -> http://stackoverflow.com/questions/17899291/should-i-re-install-python-again-for-zlib-module)
+Install: zlib1g-dev, re-complie python 3.5.1 with zlib (Google: python missing zlib -> http://stackoverflow.com/questions/17899291/should-i-re-install-python-again-for-zlib-module)
 
 --
 Optional to install:  PyCharm, VSCode, ansible, traceroute, mtr, nmon, rcconf / chkconfig, cpanel / vestacp (https://vestacp.com/)
