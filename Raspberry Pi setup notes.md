@@ -806,6 +806,21 @@ Test if it worked:
 `** prefer ** :heart: `
 I've tested both the methods above. I prefer the 1st one. No messy in `/usr/local`.
 
+(2017-02-09 update: for a missing `zlib` module in python : install `zlib-1g-dev` on system
+
+    sudo apt-get install zlib-1g-dev
+
+And then recomplie python3 by issuing `./confiure`, `make`, `make install`.
+
+To test if it is successfully complie, execute python3, and then
+
+   import zlib
+
+)
+
+(Google: python missing zlib -> http://stackoverflow.com/questions/17899291/should-i-re-install-python-again-for-zlib-module)
+
+
 #### Escape
 Update:
 
