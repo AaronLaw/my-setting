@@ -2,7 +2,7 @@ Packages I need for my development virtual machines.
 ----
 
 2016-02-10
-LinuxMint 17.3 Cinnamon 64-bit (from LinuxMint's official website)
+LinuxMint 17.3 Cinnamon 64-bit -> 18.1 (from LinuxMint's official website)
 Boot in: EFI
 + set keyboard layout to DVORAK
 + add an user "Aaron"
@@ -43,6 +43,11 @@ Install: then install Docker Compose (https://docs.docker.com/compose/install/),
 
 2017-02-09:
 Install: zlib1g-dev, re-complie python 3.5.1 with zlib (Google: python missing zlib -> http://stackoverflow.com/questions/17899291/should-i-re-install-python-again-for-zlib-module)
+
+2017-02-12:
+Upgrade to Linuxmint 18.1 "Sarah" (http://blog.linuxmint.com/?p=3181) , as it is released on 2016-12-16
+Install: mintupgrade (Google: how to upgrade linuxmint 17.3 to 18 -> https://community.linuxmint.com/tutorial/view/2316)
+Install: virtualenv, virtualenvwrapper
 
 --
 Optional to install:  PyCharm, VSCode, ansible, traceroute, mtr, nmon, rcconf / chkconfig, cpanel / vestacp (https://vestacp.com/)
