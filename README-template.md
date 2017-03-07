@@ -48,13 +48,16 @@ Reference
 * Semantic Version: https://forum.syncthing.net/t/best-cheap-arm-board-for-syncthing/9103 -> [restic] (https://restic.github.io) -> [Semantic Version] (http://semver.org)
 
 ## API
+* [Designing a RESTful Web API] http://blog.luisrei.com/articles/rest.html from Tango with Django 1.9 ebook, Chapter 13
 * [“Create a Django API in Under 20 Minutes”] (https://medium.com/@scottdomes/create-a-django-api-in-under-20-minutes-2a082a60f6f3)
 
 ## Docker
 * [Django by Docker Official Image] (https://store.docker.com/images/65765d71-d893-407d-a707-486c7381dfbf?tab=description)
+* [Quickstart: Compose and Django] (https://docs.docker.com/compose/django/)
 
 ## Git 
 * [A successful Git branching model] (http://nvie.com/posts/a-successful-git-branching-model/) from [Git flow 開發流程] (https://ihower.tw/blog/archives/5140)
+
 
 Docker Example:
 
