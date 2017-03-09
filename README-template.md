@@ -25,6 +25,7 @@ Getting Started
 ### The Setup process 1:
 Setup the environment with virtualenv and  virtualenvwrapper.
 
+    pip install xxx or python -m pip install
     this is some commands.
     a second commands
     
