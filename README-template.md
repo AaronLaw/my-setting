@@ -51,6 +51,8 @@ Reference
 ## API
 * [Designing a RESTful Web API] http://blog.luisrei.com/articles/rest.html from Tango with Django 1.9 ebook, Chapter 13
 * [“Create a Django API in Under 20 Minutes”] (https://medium.com/@scottdomes/create-a-django-api-in-under-20-minutes-2a082a60f6f3)
+* Google: Django json api -> [Quick Start - Django REST Framework] (http://www.django-rest-framework.org/tutorial/quickstart/)
+* Google: Ruby on Rails json api -> [Using Rails for API-only Applications] (http://edgeguides.rubyonrails.org/api_app.html#why-use-rails-for-json-apis-questionmark)
 
 ## Docker
 * [Django by Docker Official Image] (https://store.docker.com/images/65765d71-d893-407d-a707-486c7381dfbf?tab=description)
