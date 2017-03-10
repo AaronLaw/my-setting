@@ -61,6 +61,10 @@ Reference
 ## Git 
 * [A successful Git branching model] (http://nvie.com/posts/a-successful-git-branching-model/) from [Git flow 開發流程] (https://ihower.tw/blog/archives/5140)
 
+## Test-Driven Development (TDD)
+* http://test-driven-django-development.readthedocs.io/en/latest/index.html
+* [Test Driven Development with Python] (http://chimera.labs.oreilly.com/books/1234000000754)
+* [Test Driven Web Development with Python] (http://www.tdd-django-tutorial.com/)
 
 Docker Example:
 
