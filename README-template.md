@@ -49,6 +49,14 @@ Reference
 * Semantic Version: https://forum.syncthing.net/t/best-cheap-arm-board-for-syncthing/9103 -> [restic] (https://restic.github.io) -> [Semantic Version](http://semver.org)
 * Formatting of Python: https://pyformat.info
 
+## Object oriented in Python
+* [Everything I know About Python...: Improve Your Python: Python Classes and Object Oriented Programming](https://jeffknupp.com/blog/2014/06/18/improve-your-python-python-classes-and-object-oriented-programming/)
+* [doc.python.org: abc — Abstract Base Classes](https://docs.python.org/3/library/abc.html)
+
+## Testing
+* Google:Nose vs Pytest -> https://agopian.info/presentations/2015_06_djangocon_europe/ , [Comparison of py.test and nose for Python testing | Koodaamo](https://koodaamo.wordpress.com/2013/11/29/comparison-of-py-test-and-nose-for-python-testing/)
+* [Python Testing](http://pythontesting.net) with markdown.py as an example
+
 ## API
 * [Designing a RESTful Web API] http://blog.luisrei.com/articles/rest.html from Tango with Django 1.9 ebook, Chapter 13
 * [“Create a Django API in Under 20 Minutes”] (https://medium.com/@scottdomes/create-a-django-api-in-under-20-minutes-2a082a60f6f3)
@@ -102,4 +110,4 @@ License
 GitUp is copyright 2015-2016 Aaron Law and available under [GPL v3 license](http://www.gnu.org/licenses/gpl-3.0.txt). See the [LICENSE](LICENSE) file in the project for more information.
 
 
-Last update: 2016-12-28 01:27, Bangkok
+Last update: 2017-05-17 01:27, Hong Kong
