@@ -42,11 +42,12 @@ Reference
 =========
 
 ## General Ref:
-* The structure/formatting of this doc: [README.md] (https://github.com/git-up/GitUp/blob/master/README.md) of [GitUp](https://github.com/git-up/GitUp)
-* The tutorial to build this project: [How to Tango with Django] (http://www.tangowithdjango.com/)
-* The design/style of the webpage: [django weekly] (http://djangoweekly.com/newsletter/) -> Projects -> https://github.com/bitpixdigital/django-next-train
+* The structure/formatting of this doc: [README.md](https://github.com/git-up/GitUp/blob/master/README.md) of [GitUp](https://github.com/git-up/GitUp)
+* The tutorial to build this project: [How to Tango with Django](http://www.tangowithdjango.com/)
+* The design/style of the webpage: [django weekly](http://djangoweekly.com/newsletter/) -> Projects -> https://github.com/bitpixdigital/django-next-train
 * Better understanding Python and what a web framework is: [Full Stack Python: Web frameworks](http://www.fullstackpython.com/web-frameworks.html)
-* Semantic Version: https://forum.syncthing.net/t/best-cheap-arm-board-for-syncthing/9103 -> [restic] (https://restic.github.io) -> [Semantic Version] (http://semver.org)
+* Semantic Version: https://forum.syncthing.net/t/best-cheap-arm-board-for-syncthing/9103 -> [restic] (https://restic.github.io) -> [Semantic Version](http://semver.org)
+* Formatting of Python: https://pyformat.info
 
 ## API
 * [Designing a RESTful Web API] http://blog.luisrei.com/articles/rest.html from Tango with Django 1.9 ebook, Chapter 13
