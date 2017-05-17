@@ -58,10 +58,11 @@ Reference
 * [Python Testing](http://pythontesting.net) with markdown.py as an example
 
 ## API
-* [Designing a RESTful Web API] http://blog.luisrei.com/articles/rest.html from Tango with Django 1.9 ebook, Chapter 13
-* [“Create a Django API in Under 20 Minutes”] (https://medium.com/@scottdomes/create-a-django-api-in-under-20-minutes-2a082a60f6f3)
-* Google: Django json api -> [Quick Start - Django REST Framework] (http://www.django-rest-framework.org/tutorial/quickstart/)
-* Google: Ruby on Rails json api -> [Using Rails for API-only Applications] (http://edgeguides.rubyonrails.org/api_app.html#why-use-rails-for-json-apis-questionmark)
+* [Designing a RESTful Web API](http://blog.luisrei.com/articles/rest.html) from Tango with Django 1.9 ebook, Chapter 13
+* [“Create a Django API in Under 20 Minutes”](https://medium.com/@scottdomes/create-a-django-api-in-under-20-minutes-2a082a60f6f3)
+* Google: Django json api -> [Quick Start - Django REST Framework](http://www.django-rest-framework.org/tutorial/quickstart/)
+* Google: Ruby on Rails json api -> [Using Rails for API-only Applications](http://edgeguides.rubyonrails.org/api_app.html#why-use-rails-for-json-apis-questionmark)
+* Google: Django and Angular 2 -> [Reddit: Django with Angular 2/](https://www.reddit.com/r/django/comments/51k896/django_with_angular_2/) -> [Slides.com: 5 quick tips django docker](http://slides.com/jamespacileo/5-quick-tips-django-docker-4#/)
 
 ## Docker
 * [Django by Docker Official Image] (https://store.docker.com/images/65765d71-d893-407d-a707-486c7381dfbf?tab=description)
