@@ -1,3 +1,5 @@
+Raspberry Pi Setup notes
+====
 Startups:
 
 Since 2014-10-05: 
@@ -6,17 +8,17 @@ Since 2014-10-05:
 * http://simplestartup.quora.com/Startup-Cheat-Codes-7-awesome-cloud-based-tools-that-destroy-unnecessary-business-expenses-wasted-time-and-frustrat
 * http://academicearth.org/business/
     * from: http://www.quora.com/How-do-I-optimize-the-use-of-internet
-* https://github.com/makaimc/howdoistartup.github.io (from: http://www.fullstackpython.com/ -> [follow Matt] (http://www.fullstackpython.com/))
+* https://github.com/makaimc/howdoistartup.github.io (from: http://www.fullstackpython.com/ -> [follow Matt](http://www.fullstackpython.com/))
 * http://www.tangowithdjango.com/book/index.html
-* [Ruby on Rails (web framework): What is the best way to learn Ruby on Rails? Bloc.io? theFirehoseProject?] (http://www.quora.com/Ruby-on-Rails-web-framework/What-is-the-best-way-to-learn-Ruby-on-Rails-Bloc-io-theFirehoseProject)
-* [What  is the best way to learn PHP?] (http://www.quora.com/What-is-the-best-way-to-learn-PHP-1)
+* [Ruby on Rails (web framework): What is the best way to learn Ruby on Rails? Bloc.io? theFirehoseProject?](http://www.quora.com/Ruby-on-Rails-web-framework/What-is-the-best-way-to-learn-Ruby-on-Rails-Bloc-io-theFirehoseProject)
+* [What  is the best way to learn PHP?](http://www.quora.com/What-is-the-best-way-to-learn-PHP-1)
 * https://github.com/makaimc/easy-python
 
 
-Ask Questions
+Asking Questions
 
 * Stack exchange: 
-* Quora:  [Ruby vs Python] (http://www.quora.com/Ruby-vs-Python) | django | laravel | bootstrap | [Web Development] (http://www.quora.com/Web-Development) | [Web Design] (http://www.quora.com/Web-Design) | [Web Applications] (http://www.quora.com/Web-Applications)
+* Quora:  [Ruby vs Python](http://www.quora.com/Ruby-vs-Python) | django | laravel | bootstrap | [Web Development](http://www.quora.com/Web-Development) | [Web Design](http://www.quora.com/Web-Design) | [Web Applications](http://www.quora.com/Web-Applications)
 * Reddit
 * Medium: laravel | django | bootstrap | design | ui | rails
 
@@ -27,10 +29,10 @@ Writting style ref: https://github.com/johnantoni/beaglebone-black
 Thanks all the clever people make the tools help me work remotely! High quality software, which is opensource, with well organized documentation, and supportive community!
 Thanks all, I love you. I've learnt much from you.
 
-![] (http://3.bp.blogspot.com/--paedIFRIqw/UxonE86mncI/AAAAAAAAVuk/NZC--txBtQY/s1600/raspberry_pi_education.jpg)
+![](http://3.bp.blogspot.com/--paedIFRIqw/UxonE86mncI/AAAAAAAAVuk/NZC--txBtQY/s1600/raspberry_pi_education.jpg)
 
 Purpose of Pi: (2014-08)
-========
+====
 1. Help to maintace the daily operation of hobototes (e.g. When we travel around the world, we need a small-enough computer for operation.).
 2. As a device to operate all-day-long with **low power consumption**. :heart_eyes: (verse the power a notebook needs)
 3. Runs the hobototes-data-centric apps on it. (To free my notebook from always-turning-on. Moving django project to it.)
@@ -38,7 +40,7 @@ Purpose of Pi: (2014-08)
 5. Needs no maintance once after setup. Once it's broken, it is brain-less to be rebuilt the software. (0-day recovery.) (verse PC, which the storage, power suppile, display unit are easy to be broken, and making heat. PC needs to be setup again once a hardawre is replaced. Time consuming.)
 6. Plug and play, **rich community support**. :heart_eyes:
 
-![] (http://3.bp.blogspot.com/--paedIFRIqw/UxonE86mncI/AAAAAAAAVuk/NZC--txBtQY/s1600/raspberry_pi_education.jpg)
+![](http://3.bp.blogspot.com/--paedIFRIqw/UxonE86mncI/AAAAAAAAVuk/NZC--txBtQY/s1600/raspberry_pi_education.jpg)
 
 ----
 Raspberry Pi for hobototes.
@@ -50,7 +52,7 @@ Raspberry Pi for hobototes.
 * Make a backup of the SD card before going to the 2nd stage.
 
 ### 2nd stage: (2014-08-14~2014-08-22)
-* Preparation for running [Django] (http://djangoproject.com). Upgrade [python] to version 3.4 when need.
+* Preparation for running [Django](http://djangoproject.com). Upgrade [python] to version 3.4 when need.
 * pip, virtualenv & virtualenvwrapper (I need to learn both of them.)
 * Setup a web server (nginx), database (MySQL), Django, phpmyadmin
 * Make a backup of the SD card before going to the 3rd stage.
@@ -86,7 +88,7 @@ Mopidy
 
 login: je09
 
-python3.4 alias to`py`, located in /opt/python3.4/bin/python3.4
+python3.4 alias to `py`, located in /opt/python3.4/bin/python3.4
 
 `py34-django` is the main develop environment for hobototes-data-centric apps
 
@@ -94,7 +96,7 @@ nginx is started when boot up, or by `sudo service nginx start`
 
 The default nginx document root is `/usr/share/nginx/www`. I've changed it to `/www/var`.
 
-`mysql -uroot -ppassword`
+    `mysql -uroot -ppassword`
 
 `pip freeze` exports a list of package in my environment. `pip -r requirement.txt` to recreate the package in a new environment.
 
@@ -130,13 +132,14 @@ tightvncserver, vim-gtk, git,
 
 transmission, chromium, Mopidy
 
-[htop] (https://linuxtoy.org/archives/cool-linux-tools.html), nmap, tree, p7zip, mtr, [nmon] (http://blog.jobbole.com/15430/), screen
+[htop](https://linuxtoy.org/archives/cool-linux-tools.html), nmap, tree, p7zip, mtr, [nmon](http://blog.jobbole.com/15430/), screen
 
 (No Dvorak keyboard layout setup is needed, as VNC transfer my key layout to the pi. :smiley:)
-(7z on linux is 7za, where the package is called p7zip [#] (http://www.thegeekstuff.com/2010/04/7z-7zip-7za-file-compression/) )
+(7z on linux is 7za, where the package is called p7zip [#](http://www.thegeekstuff.com/2010/04/7z-7zip-7za-file-compression/) )
 
+----
 #### TODO:
-*Reality is no prefect.* I intend to get everything up, then make it better.
+*Reality is not prefect.* I intend to get everything up, then make it better.
 
 - [f] sublime -> use Vim, or code locally commit over Git
 - [ ] utorrent -> TBC
@@ -214,8 +217,8 @@ Here are some shortcut of screen:
     ctrl-a d：退出 Screen 会话
 
 
-* [Screen：Shell 孵化器] (https://linuxtoy.org/archives/screen.html)
-* [从 screen 切换到 tmux] (https://linuxtoy.org/archives/from-screen-to-tmux.html)
+* [Screen：Shell 孵化器](https://linuxtoy.org/archives/screen.html)
+* [从 screen 切换到 tmux](https://linuxtoy.org/archives/from-screen-to-tmux.html)
 
 ### Setup VNC
     sudo apt-get install tightvncserver
@@ -343,23 +346,25 @@ Control + x to close/save the file.
     sudo apt-get install btsync
     Config: Default Sync instance? Yes
 
-ref: http://raspberrypihelp.net/tutorials/46-raspberry-pi-bittorrent-sync-bitsync
+ref: 
+* http://raspberrypihelp.net/tutorials/46-raspberry-pi-bittorrent-sync-bitsync
 
 ref in general: 
-http://blog.bittorrent.com/2013/08/20/sync-hacks-how-to-sync-without-data-loss-using-btsync-raspberry-pi/ <-- this one useful. Place a script in /etc/init.d/ and then register it with update-rc.d.
-http://blog.bittorrent.com/2014/08/05/sync-stories-dual-backup-with-a-beaglebone-black-and-virtual-private-server/ shows using BTSync with BeagleBone in a founded business.
-    https://gist.github.com/johnantoni/8199088
-http://blog.bittorrent.com/2013/05/23/how-i-created-my-own-personal-cloud-using-bittorrent-sync-owncloud-and-raspberry-pi/
-http://reustle.io/blog/btsync-pi
-http://www.instructables.com/id/Redundant-cloud-storage-with-a-friend-and-a-Raspbe/?ALLSTEPS
-http://www.cyberciti.biz/open-source/30-cool-best-open-source-softwares-of-2013/
+* http://blog.bittorrent.com/2013/08/20/sync-hacks-how-to-sync-without-data-loss-using-btsync-raspberry-pi/ <-- this one is useful. Place a script in `/etc/init.d/` and then register it with `update-rc.d`.
+* http://blog.bittorrent.com/2014/08/05/sync-stories-dual-backup-with-a-beaglebone-black-and-virtual-private-server/ shows using BTSync with BeagleBone in a founded business.
+    * https://gist.github.com/johnantoni/8199088
+* http://blog.bittorrent.com/2013/05/23/how-i-created-my-own-personal-cloud-using-bittorrent-sync-owncloud-and-raspberry-pi/
+* http://reustle.io/blog/btsync-pi
+* http://www.instructables.com/id/Redundant-cloud-storage-with-a-friend-and-a-Raspbe/?ALLSTEPS
+* http://www.cyberciti.biz/open-source/30-cool-best-open-source-softwares-of-2013/
 
 ### Setup Dropbox
 Dropbox doesn't provide an ARM package on Linux nor source code. Therefore, I need to find a 3rd-party solution on pi.
-Google: raspberry dropbox
-http://www.raspberrypi.org/forums/viewtopic.php?f=63&t=21617
 
-There are 2 solutions: Bash dropbox uploader or Drop2PI. I pick [Bash dropbox uploader] (http://www.andreafabrizi.it/?dropbox_uploader the uploader's author site
+Google: raspberry dropbox
+* http://www.raspberrypi.org/forums/viewtopic.php?f=63&t=21617
+
+There are 2 solutions: Bash dropbox uploader or Drop2PI. I pick [Bash dropbox uploader](http://www.andreafabrizi.it/?dropbox_uploader) (it's the uploader's author site
 ) as it is the most popular (a.k.a community support).
 
     git clone https://github.com/andreafabrizi/Dropbox-Uploader/
@@ -370,26 +375,25 @@ After the apps created, paste the following url to browser to activate the apps.
 
     https://www2.dropbox.com/1/oauth/authorize?oauth_token=dOdcCJGpKpKjHDkz
 
-Check the [security page] (https://www.dropbox.com/account#security) to revoke the secret token in future. 
+Check the [security page](https://www.dropbox.com/account#security) to revoke the secret token in future. 
 
-To automate the jobs of it, rather then typing commands again and again, use cron job. The setup refer to [the project on Github] (https://github.com/andreafabrizi/Dropbox-Uploader).
+To automate the jobs of it, rather then typing commands again and again, use cron job. The setup refer to [the project on Github](https://github.com/andreafabrizi/Dropbox-Uploader).
 
 ref:
-http://www.raspberrypi.org/forums/viewtopic.php?f=63&t=21617
-https://github.com/andreafabrizi/Dropbox-Uploader
-http://raspi.tv/2013/how-to-use-dropbox-with-raspberry-pi
+* http://www.raspberrypi.org/forums/viewtopic.php?f=63&t=21617
+* https://github.com/andreafabrizi/Dropbox-Uploader
+* http://raspi.tv/2013/how-to-use-dropbox-with-raspberry-pi
 
 #### update:
 Both of them help me interactive Dropbox in cli but not automate the sync. I shall find a better solution later.
-Google: auto sync with dropbox raspberry
+* Google: auto sync with dropbox raspberry
 
 ### Setup as a home theater PC (2014-09-09)
 http://en.wikipedia.org/wiki/Home_theater_PC
 
-[XBMC] (http://xbmc.org/)
+[XBMC](http://xbmc.org/)
 
-* [How to Install XBMC onto the Raspberry Pi ] (https://www.youtube.com/watch?v=5XuSlsJppOo)
-
+* [How to Install XBMC onto the Raspberry Pi ](https://www.youtube.com/watch?v=5XuSlsJppOo)
 
 ### Play music
 
@@ -399,7 +403,7 @@ ref: http://omxplayer.sconde.net/
 
 As simple as possible, I ssh into Pi and then play music with oxmplayer.
 
-see also: [将树莓派打造成音乐播放服务器] (http://www.geekfan.net/10419/)
+see also: [将树莓派打造成音乐播放服务器](http://www.geekfan.net/10419/)
 
 ### Raspberry Pi as CAS (audio, music) (2014-09-10)
 
@@ -407,43 +411,43 @@ Turn Raspberry Pi into an audiophile audio source. Audiophile-quality music play
 -> Google: cubox CAS source
 
 
-Power supply -> Raspberry -> DAC -> Speaker
+    Power supply -> Raspberry -> DAC -> Speaker
 
-Need to use [線性電源  liner power supply] (http://www.post76.com/x2/forum.php?mod=viewthread&tid=184045&highlight=raspberry) (otherwise, 聲硬、音場窄、非常數碼欠自然): 高低伸延有良好改善、音場沒有之前咁平面同窄、增強了三維空間感、動態低頻既表現亦提升了不少
+Need to use [線性電源  liner power supply](http://www.post76.com/x2/forum.php?mod=viewthread&tid=184045&highlight=raspberry) (otherwise, 聲硬、音場窄、非常數碼欠自然): 高低伸延有良好改善、音場沒有之前咁平面同窄、增強了三維空間感、動態低頻既表現亦提升了不少
 
 * Google: Raspberry music player -> http://www.pimusicbox.com/ is a  Headless audio player based on Mopidy (no need for a monitor), streaming music from Spotify, SoundCloud, Google Music, Podcasts (with iTunes, gPodder directories), MP3/OGG/FLAC/AAC, Webradio (with TuneIn, Dirble directories), Subsonic, Soma FM. - See more at: http://www.pimusicbox.com/#sthash.3z0vOWIV.dpuf
-* Google: Raspberry CAS source -> [headfi.org] (http://www.head-fi.org/t/681593/cas-source-raspberry-pi-picoreplayer-raspyfi)
+* Google: Raspberry CAS source -> [headfi.org](http://www.head-fi.org/t/681593/cas-source-raspberry-pi-picoreplayer-raspyfi)
 * Google: cubox CAS source -> http://obeediy.blogspot.hk/search/label/CAS
 
-* [Make your Raspberry Pi a Hi-Fi player] (https://www.youtube.com/watch?v=JHmcwZs3ufM) (from Google: Raspberry music player )
+* [Make your Raspberry Pi a Hi-Fi player](https://www.youtube.com/watch?v=JHmcwZs3ufM) (from Google: Raspberry music player )
 * http://www.runeaudio.com/download/
 
 http://www.runeaudio.com/about has a good depict on whan an linux distro on Pi does as a CAS
 
-![] (http://www.runeaudio.com/assets/img/how-it-works.png)
+![](http://www.runeaudio.com/assets/img/how-it-works.png)
 
-Coming some new idea: 
+new ideas: 
 
 * MPD (music player daemon)? (Google: post76 mpd, Google: post76 mpd 集中營)
-* i2s (firstly seen in [Raspberry Pi i2s DAC: why this sounds so good - Volumio] (http://volumio.org/raspberry-pi-i2s-dac-sounds-so-good/))
+* i2s (firstly seen in [Raspberry Pi i2s DAC: why this sounds so good - Volumio](http://volumio.org/raspberry-pi-i2s-dac-sounds-so-good/))
 
-OS:
-* [RuneAudio] (http://www.runeaudio.com/)
-* [volumio] (http://volumio.org/) ([is a porting of RaspyFi] (http://www.raspyfi.com/volumio-your-new-favourite-audiophile-music-player-is-out/))
-    * [RaspyFi] (http://www.raspyfi.com/), which is aimed to notorious Voyage-mpd distro. See the post on headfi.org for comments. (from Google: Raspberry CAS source)
+CAS OS:
+* [RuneAudio](http://www.runeaudio.com/)
+* [volumio](http://volumio.org/) ([is a porting of RaspyFi](http://www.raspyfi.com/volumio-your-new-favourite-audiophile-music-player-is-out/))
+    * [RaspyFi](http://www.raspyfi.com/), which is aimed to notorious Voyage-mpd distro. See the post on headfi.org for comments. (from Google: Raspberry CAS source)
     * http://www.head-fi.org/t/699130/volumio-the-free-hi-fi-linux-distribution
-* [Pi MusicBox] (http://www.woutervanwijk.nl/pimusicbox/)
+* [Pi MusicBox](http://www.woutervanwijk.nl/pimusicbox/)
     * https://discuss.mopidy.com/t/how-to-pi-musicbox-with-a-raspberry-pi-b/25
-* [Archphile] (http://archphile.org/faq) (from: Google: volumio root) (or from: Google: audiophile linux)
+* [Archphile](http://archphile.org/faq) (from: Google: volumio root) (or from: Google: audiophile linux)
     * http://www.ympd.org/
-* [piCorePlayer] (https://sites.google.com/site/picoreplayer/home) (from: [Raspberry Pi + RuneAudioで音楽を鳴らしてみる ] (http://cygx.mydns.jp/blog/?arti=515) )
-* [MuBox] (http://mubox.voyage.hk/)
+* [piCorePlayer](https://sites.google.com/site/picoreplayer/home) (from: [Raspberry Pi + RuneAudioで音楽を鳴らしてみる ](http://cygx.mydns.jp/blog/?arti=515) )
+* [MuBox](http://mubox.voyage.hk/)
     * http://www.libelium.com/ -> Meshlium
 
 OS for 64bit x86 PC:
-* [Audiophile Linux] (http://www.ap-linux.com) v3, Arch Linux based, need to be installed on hdd
-* [Daphile] (http://www.daphile.com/) , Debian based, run from USB flash drive as an image. The sound is the best amoung the 3.
-* [Voyage-linux] (http://linux.voyage.hk) is made by a HKer. Runs an ordinary desktop linux. The sound is not as good as Audiophile Linux nor Daphile
+* [Audiophile Linux](http://www.ap-linux.com) v3, Arch Linux based, need to be installed on hdd
+* [Daphile](http://www.daphile.com/) , Debian based, run from USB flash drive as an image. The sound is the best amoung the 3.
+* [Voyage-linux](http://linux.voyage.hk) is made by a HKer. Runs an ordinary desktop linux. The sound is not as good as Audiophile Linux nor Daphile
 
 All of them turn Raspberry Pi into a headless music player, plus turning CuBox, UDOO, Beaglebone Black too.
 
@@ -454,67 +458,67 @@ RuneAudio and Volumio is soso similar, sharing a similar UI. So, what's the diff
 #### Futher:
 
 * http://www.hydrogenaud.io/forums/
-* Baidu: runeaudio  -> [树莓派组建无线播放器 — 树莓派也玩hifi] (http://jy.smzdm.com/detail/30739)
-* Baidu: audiophile linux -> [Audiophile Linux] (http://www.ap-linux.com)
+* Baidu: runeaudio  -> [树莓派组建无线播放器 — 树莓派也玩hifi](http://jy.smzdm.com/detail/30739)
+* Baidu: audiophile linux -> [Audiophile Linux](http://www.ap-linux.com)
 * Baidu: audiophile raspberry
 * Google: raspberry music player 
 -> The image is around 227MB in (compressed) size; 950MB uncompressed
-[Web Client for Mopidy Music Server and the Pi MusicBox] (https://github.com/woutervanwijk/Mopidy-MusicBox-Webclient)
+[Web Client for Mopidy Music Server and the Pi MusicBox](https://github.com/woutervanwijk/Mopidy-MusicBox-Webclient)
 * Google: raspberry music server -> http://lifehacker.com/how-to-turn-a-raspberry-pi-into-a-private-streaming-mus-1583221462
-* Google: raspberry audio image -> [Model B+ Audio Experiences] (http://www.raspberrypi.org/forums/viewtopic.php?f=35&t=81942)
-* Google: raspberry audio image ->  [Raspberry Pi: Mopidy on a credit card] (http://docs.mopidy.com/en/latest/installation/raspberrypi/)
+* Google: raspberry audio image -> [Model B+ Audio Experiences](http://www.raspberrypi.org/forums/viewtopic.php?f=35&t=81942)
+* Google: raspberry audio image ->  [Raspberry Pi: Mopidy on a credit card](http://docs.mopidy.com/en/latest/installation/raspberrypi/)
 * http://www.raspberrypi.org/tag/music/
 * Baidu: raspyfi
-* Google: audiophile Windows -> [Fidelizer] (http://www.windowsxlive.net/fidelizer/)
+* Google: audiophile Windows -> [Fidelizer](http://www.windowsxlive.net/fidelizer/)
 * http://www.head-fi.org/f/ -> search
 * http://www.diyaudio.com/forums/ -> search
 * Google: audiophile sound card linux
 * Google: intel-based audiophile
 * Google: 64bit x86 audiophile
 * Google: Audiophile Windows 7
-    * [Archimago's Musings: MEASUREMENTS: Part I: Bit-Perfect Audiophile Music Players (Windows). ] (http://archimago.blogspot.hk/2013/06/measurements-part-i-bit-perfect.html)
-* [HiFiBerry] (http://www.hifiberry.com/) is a DAC for Raspberry Pi
-    * [Crazy Audio - Sound quality of the Raspberry Pi B+] (http://www.crazy-audio.com/2014/07/sound-quality-of-the-raspberry-pi-b/)
+    * [Archimago's Musings: MEASUREMENTS: Part I: Bit-Perfect Audiophile Music Players (Windows). ](http://archimago.blogspot.hk/2013/06/measurements-part-i-bit-perfect.html)
+* [HiFiBerry](http://www.hifiberry.com/) is a DAC for Raspberry Pi
+    * [Crazy Audio - Sound quality of the Raspberry Pi B+](http://www.crazy-audio.com/2014/07/sound-quality-of-the-raspberry-pi-b/)
     * http://www.hifiberry.com/guides/setting-up-volumio-to-get-great-audio/
 * Google: runeaudio root -> I wanna find a way to ssh to it. Google tell me more about this project in someones' mind.
 * Google: volumio root -> runeaudio root? again, in volumio
-* [Hydrogenaudio Forums - Audio Hardware > Audio quality on SBCs like RPi, Built-in analog out on single-board computers any good?] (http://www.hydrogenaud.io/forums/index.php?showtopic=106223)
+* [Hydrogenaudio Forums - Audio Hardware > Audio quality on SBCs like RPi, Built-in analog out on single-board computers any good?](http://www.hydrogenaud.io/forums/index.php?showtopic=106223)
 * Google: runeaudio root
-    * [Computer Audiophile - Geek Speak: How To Build A BeagleBone Black MPD Music Server] (http://www.computeraudiophile.com/content/533-geek-speak-how-build-beaglebone-black-mpd-music-server/comments11.html)
-    * [Adafruit - Raspberry Pi] (https://learn.adafruit.com/category/raspberry-pi)
-    * [FSA Pi 音樂應用平台 - [轉貼]樹莓派是什麼的東西?小小的簡單介紹，以及應用資源。] (http://fsapi.wordpress.com/2014/08/25/轉貼樹莓派是什麼的東西?小小的簡單介紹，以及/)
-        * -> [[投影片] COSCUP2014：Raspberry Pi 應用展示與遊戲機演進篇] (http://www.raspberrypi.com.tw/1678/coscup2014-introduction-to-raspberry-pi-and-game-console-evolution/)
+    * [Computer Audiophile - Geek Speak: How To Build A BeagleBone Black MPD Music Server](http://www.computeraudiophile.com/content/533-geek-speak-how-build-beaglebone-black-mpd-music-server/comments11.html)
+    * [Adafruit - Raspberry Pi](https://learn.adafruit.com/category/raspberry-pi)
+    * [FSA Pi 音樂應用平台 - [轉貼]樹莓派是什麼的東西?小小的簡單介紹，以及應用資源。](http://fsapi.wordpress.com/2014/08/25/轉貼樹莓派是什麼的東西?小小的簡單介紹，以及/)
+        * -> [[投影片] COSCUP2014：Raspberry Pi 應用展示與遊戲機演進篇](http://www.raspberrypi.com.tw/1678/coscup2014-introduction-to-raspberry-pi-and-game-console-evolution/)
             * -> PiFi Mini (on: http://www.raspberrypi.com.tw/1678/coscup2014-introduction-to-raspberry-pi-and-game-console-evolution/)
-        * -> [樹莓派在01上面應用於音樂撥放的參考文章] (http://www.mobile01.com/topicdetail.php?f=180&t=3495250&p=1)
+        * -> [樹莓派在01上面應用於音樂撥放的參考文章](http://www.mobile01.com/topicdetail.php?f=180&t=3495250&p=1)
 * Google: cubox os
     * http://www.solid-run.com/archive/mw/
     * from: Google: mubox mopidy
 * Google: cubox mpd
-    * [[CAS] 又平又正的 CAS (MPD on Linux) - 2013-05-02] (http://www.hiendy.com/hififorum/forum.php?mod=viewthread&tid=50089&extra=page%3D1)
+    * [[CAS] 又平又正的 CAS (MPD on Linux) - 2013-05-02](http://www.hiendy.com/hififorum/forum.php?mod=viewthread&tid=50089&extra=page%3D1)
 
-##### Some sound related commands
+#### Some sound related commands
 
 2014-10-08: I learnt these when I set up MuBox, then later Mopidy, on CuBox of my friend.
 
-`lsmod`
+    `lsmod`
 show the status of modules in the Linux Kernel. From: Google: cubox mubox -> http://testing.post76.com:7180/x2/forum.php?mod=viewthread&tid=164254
 
-`lsusb`
-list USB devices. From: [RuneAudio Forum - No output on SPDIF with external USB card] (http://www.runeaudio.com/forum/no-output-on-spdif-with-external-usb-card-t248.html)
+    `lsusb`
+list USB devices. From: [RuneAudio Forum - No output on SPDIF with external USB card](http://www.runeaudio.com/forum/no-output-on-spdif-with-external-usb-card-t248.html)
 
-`aplay -l`
+    `aplay -l`
 to list the device
 
-`aplay -L`
+    `aplay -L`
 to list the device, and combine use with `speaker-test`
 
-`amixer`
+        `amixer`
 a console sound mixer
 
-`speaker-test`
+        `speaker-test`
 
 * `speaker-test`
-    * from: Google: xmos x20 usb audio linux driver -> [RuneAudio Forum - No output on SPDIF with external USB card] (http://www.runeaudio.com/forum/no-output-on-spdif-with-external-usb-card-t248.html)
+    * from: Google: xmos x20 usb audio linux driver -> [RuneAudio Forum - No output on SPDIF with external USB card](http://www.runeaudio.com/forum/no-output-on-spdif-with-external-usb-card-t248.html)
 
     aplay-L
     speaker-test -Ddefault:ALSA -c 2
@@ -525,22 +529,22 @@ Music Player:
 
 #### Steam over network
 
-Power supply -> Raspberry (-> steaming ) -> the device on hand -> Speaker
+    Power supply -> Raspberry (-> steaming ) -> the device on hand -> Speaker
 
-* http://andrewkelley.me/post/quest-build-ultimate-music-player.html, from:  [将树莓派打造成音乐播放服务器] (http://www.geekfan.net/10419/)
+* http://andrewkelley.me/post/quest-build-ultimate-music-player.html, from:  [将树莓派打造成音乐播放服务器](http://www.geekfan.net/10419/)
 * http://www.crazy-audio.com/projects/raspberry-pi-for-audio-distribution/
 
 music server :
 * http://groovebasin.com/
-* [MPD (music player daemon) ] (http://www.musicpd.org)
-    * [The ultimate MPD guide] (http://crunchbang.org/forums/viewtopic.php?id=17386&p=1) (from: Google: mpd decode error)
+* [MPD (music player daemon) ](http://www.musicpd.org)
+    * [The ultimate MPD guide](http://crunchbang.org/forums/viewtopic.php?id=17386&p=1) (from: Google: mpd decode error)
 
 ### Setup Mopidy on Pi (2014-09-14)
 
-Google: raspberry music server -> [Mopidy] (http://www.mopidy.com/)  is the 1st link,  [Pi MusicBox] (www.woutervanwijk.nl/pimusicbox/) second.
-Google: raspberry audio image ->  [Raspberry Pi: Mopidy on a credit card] (http://docs.mopidy.com/en/latest/installation/raspberrypi/)
+Google: raspberry music server -> [Mopidy](http://www.mopidy.com/)  is the 1st link,  [Pi MusicBox](www.woutervanwijk.nl/pimusicbox/) second.
+Google: raspberry audio image ->  [Raspberry Pi: Mopidy on a credit card](http://docs.mopidy.com/en/latest/installation/raspberrypi/)
 
-[Mopidy] (http://www.mopidy.com/) is an extensible music server written in Python.  It can be installed on Pi, Debian, Ubuntu, Arch Linux, Mac OS.
+[Mopidy](http://www.mopidy.com/) is an extensible music server written in Python.  It can be installed on Pi, Debian, Ubuntu, Arch Linux, Mac OS.
 
 Mopidy plays music from local disk, Spotify, SoundCloud, Google Play Music, and more. You edit the playlist from any phone, tablet, or computer using a range of MPD and web clients.
 
@@ -571,7 +575,7 @@ Install Mopidy and all dependencies:
     sudo apt-get update
     sudo apt-get install mopidy
 
-Finally, you need to set a couple of [config values] (http://docs.mopidy.com/en/latest/config/), and then you’re ready to run Mopidy.
+Finally, you need to set a couple of [config values](http://docs.mopidy.com/en/latest/config/), and then you’re ready to run Mopidy.
 
 When a new release of Mopidy is out, and you can’t wait for you system to figure it out for itself, run the following to upgrade right away:
 
@@ -637,16 +641,16 @@ Mopidy will also shut down properly if you send it the TERM signal, e.g. by usin
 
 #### Clients for Mopidy
 
-* [HTTP clients] (http://docs.mopidy.com/en/latest/clients/http/)
-* [Web Client for Mopidy Music Server and the Pi MusicBox] (https://github.com/woutervanwijk/Mopidy-MusicBox-Webclient)
-* [Moped - Web Client for Mopidy] (https://github.com/martijnboland/moped) (from: http://docs.mopidy.com/en/latest/ext/web/)
-* [Mopify] (https://github.com/dirkgroenen/Mopify)
-* [MPD] (http://en.wikipedia.org/wiki/Music_Player_Daemon)
+* [HTTP clients](http://docs.mopidy.com/en/latest/clients/http/)
+* [Web Client for Mopidy Music Server and the Pi MusicBox](https://github.com/woutervanwijk/Mopidy-MusicBox-Webclient)
+* [Moped - Web Client for Mopidy](https://github.com/martijnboland/moped) (from: http://docs.mopidy.com/en/latest/ext/web/)
+* [Mopify](https://github.com/dirkgroenen/Mopify)
+* [MPD](http://en.wikipedia.org/wiki/Music_Player_Daemon)
 * http://www.ympd.org/
 
 See also https://www.kickstarter.com/projects/fon/gramofon-modern-cloud-jukebox, which is shown on the homepage of http://www.mopidy.com/
 
-### No sound or the music output is muted
+### A Problem: No sound or the music output is muted
 
 Run the following commands to check if you music device is set to mute:
     
@@ -673,18 +677,18 @@ If you see the Playback is set to [off], the music output is muted. You can use 
       Mono: Playback 127 [100%] [0.00dB] [on]
 
 ref:
-[Mubox - Troubleshooting] (http://mubox.voyage.hk/node/13)
+* [Mubox - Troubleshooting](http://mubox.voyage.hk/node/13)
 
 
 ### Setup Python for development (enhance it) 
-* Read [The Hitchhiker’s Guide to Python!] (http://docs.python-guide.org/en/latest/) first, and [Python Packaging User Guide] (https://python-packaging-user-guide.readthedocs.org/en/latest/current.html) second. (from: [How to get Django] (https://www.djangoproject.com/download/) )
-[Learn Python the Hard Way] (http://learnpythonthehardway.org/book/ex46.html) (Google: virtualenv project structure) provides a rich set of reading materials too.
-* [The Hitchhiker’s Guide to Python!] (http://docs.python-guide.org/en/latest/)  is also from https://github.com/kennethreitz/python-guide
-* [Python Packaging User Guide] (https://python-packaging-user-guide.readthedocs.org/en/latest/current.html) is also from https://github.com/pypa/sampleproject
+* Read [The Hitchhiker’s Guide to Python!](http://docs.python-guide.org/en/latest/) first, and [Python Packaging User Guide](https://python-packaging-user-guide.readthedocs.org/en/latest/current.html) second. (from: [How to get Django](https://www.djangoproject.com/download/) )
+* [Learn Python the Hard Way](http://learnpythonthehardway.org/book/ex46.html) (Google: virtualenv project structure) provides a rich set of reading materials too.
+* [The Hitchhiker’s Guide to Python!](http://docs.python-guide.org/en/latest/)  is also from https://github.com/kennethreitz/python-guide
+* [Python Packaging User Guide](https://python-packaging-user-guide.readthedocs.org/en/latest/current.html) is also from https://github.com/pypa/sampleproject
 * http://pydanny.com/experiences-with-django-python3.html
 
 #### Setup pip
-[pip] (https://pip.pypa.io/en/latest/)
+[pip](https://pip.pypa.io/en/latest/)
 
     sudo apt-get install python-pip
     
@@ -692,9 +696,9 @@ pip3
 
     sudo apt-get install python3-pip
 
-#### My approach to Python 3.3 & Django 1.7+
+#### My approach to setup Python 3.3 & Django 1.7+
 
-First at all. See the [Django 1.7's requirement] (https://docs.djangoproject.com/en/1.7/topics/install/), as I mainly develop the hobototes-data-centric apps on Django 1.7. (It works with Python 2.7, 3.2, 3.3)
+First at all. See the [Django 1.7's requirement](https://docs.djangoproject.com/en/1.7/topics/install/), as I mainly develop the hobototes-data-centric apps on Django 1.7. (It works with Python 2.7, 3.2, 3.3)
 
 Since the Python3 ships with Pi is version3.2, it is better to upgrade it to version 3.3 before installing Django 1.7 (currently 1.7-rc2). I have to upgrade it from source code, and put it into a new place rather than over-write the python shipped with Pi officially (To avoid system conflict.) Once it was successed, I could install Django1.7+ with virtualenv, doing test. Once the test was success, I could install MySQL and Nginx too.
 
@@ -709,25 +713,25 @@ A notes I bear in mind:
 Update 2014-10-03:
 
 I've just joined Reddit, and searched "Django" and found it:
-http://www.reddit.com/r/django/comments/exfwh/django_devs_whats_your_development_environment/
-http://www.reddit.com/r/django/comments/vhy4d/what_are_your_favorite_django_apps/
-http://www.reddit.com/r/django/comments/1rfgse/what_django_extensions_do_you_use_most_often/
+* http://www.reddit.com/r/django/comments/exfwh/django_devs_whats_your_development_environment/
+* http://www.reddit.com/r/django/comments/vhy4d/what_are_your_favorite_django_apps/
+* http://www.reddit.com/r/django/comments/1rfgse/what_django_extensions_do_you_use_most_often/
 
 #### Upgrading Python3 (place it in a new place)
 Google: django with python 3
-http://askubuntu.com/questions/401132/how-can-i-install-django-for-python-3-x
-http://stackoverflow.com/questions/20251562/how-to-install-django-for-python-3-3 facing the same problem of mine
-https://docs.djangoproject.com/en/dev/topics/python3/
+* http://askubuntu.com/questions/401132/how-can-i-install-django-for-python-3-x
+* http://stackoverflow.com/questions/20251562/how-to-install-django-for-python-3-3 facing the same problem of mine
+* https://docs.djangoproject.com/en/dev/topics/python3/
 
 
 Seems I have to complie 3.3 (or 3.4) from source. Therefore,
 Google: how to install python 3.3
-http://askubuntu.com/questions/244544/how-do-i-install-python-3-3 shows how the others compile it from source (Google: install python3 on linux)
+* http://askubuntu.com/questions/244544/how-do-i-install-python-3-3 shows how the others compile it from source (Google: install python3 on linux)
 
 Google: how to install python 3.4
-https://docs.python.org/3.4/using/index.html
+* https://docs.python.org/3.4/using/index.html
 
-OK, head to [Python.org] (http://www.python.org) and get the latest python.
+OK, head to [Python.org](http://www.python.org) and get the latest python.
 
     wget https://www.python.org/ftp/python/3.4.1/Python-3.4.1.tar.xz
     xz -d Python-3.4.1.tar.xz
@@ -742,9 +746,9 @@ OK, head to [Python.org] (http://www.python.org) and get the latest python.
 The build process consists in the usual, but...
     
     Warning: make install can overwrite or masquerade the python3 binary. make altinstall is therefore recommended instead of make install since it only installs exec_prefix/bin/pythonversion. 
-    [#] (https://docs.python.org/3.4/using/unix.html#building-python)
+    [#](https://docs.python.org/3.4/using/unix.html#building-python)
 
-OK, not `make install` but `make altinstall`, plus `--prefix` --prefix argument to the configure script. (run `./configure --help` to find out the options) [#] (http://hg.python.org/cpython/file/3.4/README)
+OK, not `make install` but `make altinstall`, plus `--prefix` --prefix argument to the configure script. (run `./configure --help` to find out the options) [#](http://hg.python.org/cpython/file/3.4/README)
 
 OK. For example, I do not have any Python installations on my system and I want to install 3 versions: 2.7, 3.3 and 3.4. I want to make 2.7 the primary installation (as python) and all the others as secondary (as python3.3 and python3.4) installations. I would install the primary with:
 
@@ -803,7 +807,7 @@ Test if it worked:
 
     python3.4
 
-`** prefer ** :heart: `
+`**prefer** :heart: `
 I've tested both the methods above. I prefer the 1st one. No messy in `/usr/local`.
 
 (2017-02-09 update: for a missing `zlib` module in python : install `zlib-1g-dev` on system
@@ -814,20 +818,21 @@ And then recomplie python3 by issuing `./confiure`, `make`, `make install`.
 
 To test if it is successfully complie, execute python3, and then
 
-   import zlib
+    import zlib
 
 )
 
 (Google: python missing zlib -> http://stackoverflow.com/questions/17899291/should-i-re-install-python-again-for-zlib-module)
 
 
-#### Escape
+#### Escape as a plan
 Update:
 
-If I fail, how can I remove python3.4?
+
+> Problem: If I fail, how can I remove python3.4?
 
 Google: how to remove python3.4
-[Removing second python install - Stack Overflow] (http://stackoverflow.com/questions/16871795/removing-second-python-install)
+* [Removing second python install - Stack Overflow](http://stackoverflow.com/questions/16871795/removing-second-python-install)
 
 Since I install it from source, apt-install has no idea that it exists.
 
@@ -845,7 +850,8 @@ and probably anything else in /usr/local/bin/py* including symlinks to various p
 
 #### Setup virtualenv
 Google: raspberry pi virtualenv
-[Virtualenv] (https://pypi.python.org/pypi/virtualenv) gets you some common Python tools (distribute for packaging, pip for easy installation/removal of packages & virtualenv for nice isolated environments)
+
+[Virtualenv](https://pypi.python.org/pypi/virtualenv) gets you some common Python tools (distribute for packaging, pip for easy installation/removal of packages & virtualenv for nice isolated environments)
 
     # sudo apt-get install python-dev
     # curl -O http://python-distribute.org/distribute_setup.py
@@ -863,12 +869,11 @@ Then, we can create an isolate environment:
     source bin/activate
 
 ref:
-http://raspberry.io/wiki/how-to-get-python-on-your-raspberrypi/
-http://flask.pocoo.org/docs/installation/#virtualenv tell me why use virtualenv to isolate the development enviornment from system
-http://dormousehole.readthedocs.org/en/latest 这是 Flask 0.10 版文档的中文翻译 (from: Baidu: flask)
-
-http://www.raspberrypi.org/forums/viewtopic.php?t=7208&p=403771
-https://virtualenv.pypa.io/en/latest/
+* http://raspberry.io/wiki/how-to-get-python-on-your-raspberrypi/
+* http://flask.pocoo.org/docs/installation/#virtualenv tell me why use virtualenv to isolate the development enviornment from system
+* http://dormousehole.readthedocs.org/en/latest 这是 Flask 0.10 版文档的中文翻译 (from: Baidu: flask)
+* http://www.raspberrypi.org/forums/viewtopic.php?t=7208&p=403771
+* https://virtualenv.pypa.io/en/latest/
 
 #### One virtualenv is enough
 
@@ -876,22 +881,23 @@ https://virtualenv.pypa.io/en/latest/
 
 I could use a single virtualenv for both python version, just use the `-p path/to/python/version` or `--python=path/to/version` flag to specify which version to use for the creation of the virtual environment.
 
-ref: http://stackoverflow.com/questions/12566064/virtualenv-with-python2-and-python3-via-homebrew/12566853#12566853
+ref:
+* http://stackoverflow.com/questions/12566064/virtualenv-with-python2-and-python3-via-homebrew/12566853#12566853
 
-#### To disable virtualenv
+#### How to disable virtualenv
 
 Google: virtualenv disable
 
     deactivate
 
 ref: 
-https://www.hackerschool.com/blog/14-there-is-no-magic-virtualenv-edition
-http://docs.python-guide.org/en/latest/dev/virtualenvs/
-https://virtualenv.pypa.io/en/latest/
+* https://www.hackerschool.com/blog/14-there-is-no-magic-virtualenv-edition
+* http://docs.python-guide.org/en/latest/dev/virtualenvs/
+* https://virtualenv.pypa.io/en/latest/
 
 ### Setup virtualenvwrapper
 
-[virtualenvwrapper] (https://bitbucket.org/dhellmann/virtualenvwrapper) is a set of extensions to Ian Bicking's [virtualenv] (https://pypi.python.org/pypi/virtualenv) tool. The extensions include wrappers for creating and deleting virtual environments and otherwise managing your development workflow, making it easier to work on more than one project at a time without introducing conflicts in their dependencies.
+[virtualenvwrapper](https://bitbucket.org/dhellmann/virtualenvwrapper) is a set of extensions to Ian Bicking's [virtualenv](https://pypi.python.org/pypi/virtualenv) tool. The extensions include wrappers for creating and deleting virtual environments and otherwise managing your development workflow, making it easier to work on more than one project at a time without introducing conflicts in their dependencies.
 
     pip install virtualenvwrapper
 
@@ -923,8 +929,8 @@ To delete:
     rmvirtualenv env1
 
 ref:
-http://virtualenvwrapper.readthedocs.org/en/latest/
-http://docs.python-guide.org/en/latest/dev/virtualenvs/
+* http://virtualenvwrapper.readthedocs.org/en/latest/
+* http://docs.python-guide.org/en/latest/dev/virtualenvs/
 
 ### Setup Django (with virtualenv & virtualenvwrapper)
 
@@ -955,7 +961,7 @@ No package be shown? coz my python3.4 is called `py`
     cd ~/site
 )
 
-There are 3 ways to install Django, according to [How to install Django] (https://docs.djangoproject.com/en/1.7/topics/install/).
+There are 3 ways to install Django, according to [How to install Django](https://docs.djangoproject.com/en/1.7/topics/install/).
 
     cd Downloads
     wget https://github.com/django/django/zipball/master    # get the latest development version
@@ -1015,14 +1021,14 @@ in my python3.4 virtualenv after
 >    sudo apt-get install python-dev libmysqlclient-dev
 
 which is obviously specific to ubuntu/debian, but I just wanted to share my success :) 
-[#] (http://stackoverflow.com/questions/14087598/python-3-3-importerror-no-module-named-configparser)
+[#](http://stackoverflow.com/questions/14087598/python-3-3-importerror-no-module-named-configparser)
 
 :pray:
-Last resort: simply, create a new virtualenv wyth system site-packages included by using the `--system-site-package` switch [#] (http://stackoverflow.com/questions/13288013/have-mysqldb-installed-works-outside-of-virtualenv-but-inside-it-doesnt-exist)
+Last resort: simply, create a new virtualenv wyth system site-packages included by using the `--system-site-package` switch [#](http://stackoverflow.com/questions/13288013/have-mysqldb-installed-works-outside-of-virtualenv-but-inside-it-doesnt-exist)
 
 Update 2:
 
-If all about fails, I might try [PythonAnywhere] (https://www.pythonanywhere.com/wiki/UsingMySQL) :
+If all about fails, I might try [PythonAnywhere](https://www.pythonanywhere.com/wiki/UsingMySQL) :
 
     pip install --user https://dev.mysql.com/get/Downloads/Connector-Python/mysql-connector-python-1.1.6.tar.gz
 
@@ -1039,29 +1045,26 @@ ref:
 http://stackoverflow.com/questions/15140855/python3-2-installing-mysql-python-fails-with-error-no-module-named-configparse
 )
 
-
 Update3:
-
 
 > To install mysqldb under virtualenv, you need to be able to compile the mysql module, which means you need all the general compliation tools, the python header libraries and the mysql client ones (Under ubuntu/debian these are packages build-essential, python-dev & libmysqlclient16-dev ), at this point pip install MySQL-python should work, and from there you should be able to use mysql within django.
 
-[#] (http://stackoverflow.com/questions/8610961/problems-with-djangomysqlvirtualenv?rq=1)
-
+[#](http://stackoverflow.com/questions/8610961/problems-with-djangomysqlvirtualenv?rq=1)
 
 ref too:
-http://blog.mattwoodward.com/2013/01/setting-up-django-on-raspberry-pi.html
+* http://blog.mattwoodward.com/2013/01/setting-up-django-on-raspberry-pi.html
 
 
 ### Setup MariaDB (mariadb-server, which is an enhanced, drop-in replacement for MySQL) 
 
-2016-02-15 update: 
-Firstly, the community edition is [MariaDB.org] (https://mariadb.org/about/), not [MariaDB.com] (https://mariadb.com/) (for enterprise).
+2016-02-15 update:   
+Firstly, the community edition is [MariaDB.org](https://mariadb.org/about/), not [MariaDB.com](https://mariadb.com/) (for enterprise).
 
 As of the version of repository is MariaDB 5.5.47, not the 10, I have to install it myself rather than issue simply:
 
     sudo apt-get install mariadb-server
 
-[MariaDB APT and YUM Repository Configuration Generator] (https://downloads.mariadb.org/mariadb/repositories/#mirror=nethub)
+[MariaDB APT and YUM Repository Configuration Generator](https://downloads.mariadb.org/mariadb/repositories/#mirror=nethub)
 
 1) Add MariaDB Repositories 
 
@@ -1093,15 +1096,17 @@ You can also create a custom MariaDB sources.list file. To do so, after importin
 If the above does not work, (`sudo apt-get install mariadb-server --dry-run` shows that the version will be installed is 5.5.47) it should be the host does not update. So, I retry it with an USA host (e.g. "DigitalOcean - New York, US".) And then it is going to install a version 10.1 now.
 
 4) Start MariaDB Service
-
-    # For SysVinit Systems #
+```
+    # For SysVinit Systems  
     $ sudo service mysql start
-
+   
     # For systemd Systems #
     $ sudo systemctl start mysql.service
+```
 
-5) How to access MariaDB
+1) How to access MariaDB
 
+```
     # mysql -u root -p
 
     Welcome to the MariaDB monitor.  Commands end with ; or \g.
@@ -1113,23 +1118,22 @@ If the above does not work, (`sudo apt-get install mariadb-server --dry-run` sho
     Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
     
     MariaDB [(none)]> 
+```
 
-6) How to Upgrade MariaDB
+2) How to Upgrade MariaDB
 
 Use the below command to Upgrade MariaDB service for new release
 
     $ sudo apt-get install --only-upgrade mariadb-server
 
-Also read about [phpMyAdmin] (http://www.2daygeek.com/install-phpmyadmin-on-debian-ubuntu-mint/) Installation and configuration which will help you to manage the MariaDB database on Web without headache.
+Also read about [phpMyAdmin](http://www.2daygeek.com/install-phpmyadmin-on-debian-ubuntu-mint/) Installation and configuration which will help you to manage the MariaDB database on Web without headache.
 
 Some more reference:
-https://mariadb.org/mariadb-10-1-11-now-available/ -> [MariaDB APT and YUM Repository Configuration Generator] (https://downloads.mariadb.org/mariadb/repositories/#mirror=nethub)
-
-Google: how to install mariadb 10.1 on linuxmint 17.3
--> [Install MariaDB 10.1.11 & Upgrade on Ubuntu, Debian & Mint] (http://www.2daygeek.com/install-upgrade-mariadb-10-on-ubuntu-debian-mint/)
+* https://mariadb.org/mariadb-10-1-11-now-available/ -> [MariaDB APT and YUM Repository Configuration Generator](https://downloads.mariadb.org/mariadb/repositories/#mirror=nethub)
+* Google: how to install mariadb 10.1 on linuxmint 17.3
+-> [Install MariaDB 10.1.11 & Upgrade on Ubuntu, Debian & Mint](http://www.2daygeek.com/install-upgrade-mariadb-10-on-ubuntu-debian-mint/)
 
 ### Setup Rails
-
 
 http://computers.tutsplus.com/tutorials/how-to-install-ruby-on-rails-on-raspberry-pi--cms-21421
 
@@ -1137,26 +1141,23 @@ http://computers.tutsplus.com/tutorials/how-to-install-ruby-on-rails-on-raspberr
 
 ** Need Nginx to serve PhpMyAdmin and Django and Wordpress. All of them need MySQL-server too.**
 
-Tutorial in [For your Pi!] (http://raspberrypihelp.net/tutorials) provides the instruction on setting up Nginx. http://raspberrypihelp.net/tutorials/24-raspberry-pi-webserver Nginx, MySQL, PHP5-fpm, PHPMyAdmin <- All-in-one, this one useful
+Tutorial in [For your Pi!](http://raspberrypihelp.net/tutorials) provides the instruction on setting up Nginx. http://raspberrypihelp.net/tutorials/24-raspberry-pi-webserver Nginx, MySQL, PHP5-fpm, PHPMyAdmin <- All-in-one, this one useful
 ** I only follow this tutorial to install Nginx, MySQL, PHP5-fpm, PHPMyAdmin ** till the middle of it.
 
-[Installing Nginx With PHP5 (And PHP-FPM) And MySQL Support (LEMP) On Ubuntu 12.04 LTS] (http://www.howtoforge.com/installing-nginx-with-php5-and-php-fpm-and-mysql-support-lemp-on-ubuntu-12.04-lts) generally speak how to install nginx with PHP4 (PHP-FPM) and MySQL on Ubuntu 12.04, from Google: php5-fpm, when I wanna know what is that, after reading [pi's official document] (http://www.raspberrypi.org/documentation/remote-access/web-server/README.md).
+[Installing Nginx With PHP5 (And PHP-FPM) And MySQL Support (LEMP) On Ubuntu 12.04 LTS](http://www.howtoforge.com/installing-nginx-with-php5-and-php-fpm-and-mysql-support-lemp-on-ubuntu-12.04-lts) generally speak how to install nginx with PHP4 (PHP-FPM) and MySQL on Ubuntu 12.04, from Google: php5-fpm, when I wanna know what is that, after reading [pi's official document](http://www.raspberrypi.org/documentation/remote-access/web-server/README.md).
 
-[Running (almost) anything on Nginx with uWSGI - metz.log] (http://metz.gehn.net/2013/02/running-anything-on-nginx-with-uwsgi/) tells me what is uWSGI, a technology in python equivalent to PHP-FPM in php. From Google: php-fpm in python
+[Running (almost) anything on Nginx with uWSGI - metz.log](http://metz.gehn.net/2013/02/running-anything-on-nginx-with-uwsgi/) tells me what is uWSGI, a technology in python equivalent to PHP-FPM in php. From Google: php-fpm in python
 
 #### Dynamic DNS
 
 Do port forwarding to route the incoming traffic to Pi.
-
 * http://raspbian-france.fr/mettre-en-ligne-serveur-web-raspbian-dydns-port-forwarding/
 
 Google: 啟用DDNS D-link
-
 * http://changyang319.com/archives/624
 * http://changyang319.pixnet.net/blog/post/32287773
 * http://pitown.blogspot.hk/2013/11/routing-web-traffic-to-raspberry-pi.html (from: http://magnatecha.com/things-i-do-with-my-raspberry-pi/)
 * http://portforward.com/ (from: http://www.tightvnc.com/faq.php)
-
 
 ### Setup Nginx
 
@@ -1192,18 +1193,15 @@ Plus, prepare folders to hold the web documents:
     sudo chown -R pi:pi /var/www
     sudo chmod -R 755 /var/www
     mkdir /var/www/example.com
- [#] (http://raspberrypihelp.net/tutorials/24-raspberry-pi-webserver)
+ [#](http://raspberrypihelp.net/tutorials/24-raspberry-pi-webserver)
 
 ref:
-http://www.raspberrypi.org/documentation/remote-access/web-server/README.md
-http://www.raspberrypi.org/documentation/remote-access/web-server/nginx.md
-http://www.howtoforge.com/installing-nginx-with-php5-and-php-fpm-and-mysql-support-lemp-on-ubuntu-12.04-lts
-
-http://blog.mattwoodward.com/2013/01/setting-up-django-on-raspberry-pi.html
-
-Install Nginx on raspbian and replace Apache
-[Raspbian France: 
-Installer Nginx Raspbian, et accélérez votre serveur web Raspberry](http://raspbian-france.fr/installer-nginx-raspbian-accelerez-serveur-web-raspberry/)
+* http://www.raspberrypi.org/documentation/remote-access/web-server/README.md
+* http://www.raspberrypi.org/documentation/remote-access/web-server/nginx.md
+* http://www.howtoforge.com/installing-nginx-with-php5-and-php-fpm-and-mysql-support-lemp-on-ubuntu-12.04-lts
+* http://blog.mattwoodward.com/2013/01/setting-up-django-on-raspberry-pi.html
+* Install Nginx on raspbian and replace Apache
+* [Raspbian France: Installer Nginx Raspbian, et accélérez votre serveur web Raspberry](http://raspbian-france.fr/installer-nginx-raspbian-accelerez-serveur-web-raspberry/)
 
 #### Setup PhpMyAdmin
 
@@ -1332,7 +1330,7 @@ Therefore, I decide to put PHPMyAdmin on port 81, and other pages in `/var/www` 
     }
 
 
-Test the config before reload the server: [Make Sure Unix / Linux Configuration Files Are Free From Syntax Errors] (http://www.cyberciti.biz/tips/check-unix-linux-configuration-file-for-syntax-errors.html)
+Test the config before reload the server: [Make Sure Unix / Linux Configuration Files Are Free From Syntax Errors](http://www.cyberciti.biz/tips/check-unix-linux-configuration-file-for-syntax-errors.html)
 
     sudo service nginx configtest
 
@@ -1341,12 +1339,12 @@ additional ref:
 
 ### Setup MySQL
 
-
-sudo apt-get install mysql-server
+    sudo apt-get install mysql-server
 
 set a root password.
 
 Test:
+   
     mysql -uroot -ppassword
 
     /usr/libexec/mysqld --verbose --help 1>/dev/null
@@ -1360,22 +1358,24 @@ We can make PHP5 work in nginx through PHP-FPM (PHP-FPM (FastCGI Process Manager
 PHP-FPM is a daemon process (with the init script /etc/init.d/php5-fpm) that runs a FastCGI server on port 9000. 
 
 ref:
-http://www.howtoforge.com/installing-nginx-with-php5-and-php-fpm-and-mysql-support-lemp-on-ubuntu-12.04-lts
+* http://www.howtoforge.com/installing-nginx-with-php5-and-php-fpm-and-mysql-support-lemp-on-ubuntu-12.04-lts
 
 
 
 #### Setup Wordpress
+
 http://www.raspberrypi.org/documentation/usage/wordpress/README.md
 
 Since Nginx can be configured to read web apps in any directory (e.g. It communites with PHP via port 9000, with PHP5-fpm), I consider to place Wordpress in /var/www/ , following the convention made by Apache.
 
-Update 1:
+##### Update 1:
 
 I've try to visit the wordpress site outside my local network. It works! However, the style & image are broken.
 
 I should fire up the database, and edit `home_url` to the domain which the outsider see, from `192.168.0.101:8008` to the DDNS I own. It works now! (Wordpress marks my ip as `192.168.0.101` since I setup it on `192.168.0.101`.)
 
-Update 2:
+##### Update 2:
+
 
 I've try to upload an image in a post, an error occurs: `permission error`. This's a problem on linux folder permission. `777` is the last resort coz it make the folder "open to all people"; `755` seems DOES NOT WORK unluckily in this situation.
 
@@ -1396,13 +1396,13 @@ Google: wordpress cannot upload image folder permission
 
 > Some server environments require you to use 777 permissions for PHP to have write access. This is not secure in a shared hosting environment. 
 
-[#] (http://wordpress.stackexchange.com/questions/1430/cant-upload-images-due-to-permissions-error)
+[#](http://wordpress.stackexchange.com/questions/1430/cant-upload-images-due-to-permissions-error)
 
 Hmm, then it is better to find out ** who ** need the permission to write the file. :smile:
 
 
 > Assign 766 recursive permissions to wp-contents folder which will resolve the case...
-[#] (http://wordpress.org/support/topic/image-upload-results-in-insufficient-permissions?replies=8)
+[#](http://wordpress.org/support/topic/image-upload-results-in-insufficient-permissions?replies=8)
 
 I know, but giving `read & write` permisson is not secure, though.
 
@@ -1414,12 +1414,12 @@ I know, but giving `read & write` permisson is not secure, though.
 >    chown -R www-data:www-data /var/www/wordpress/wp-content/uploads 
 >    chmod -R 755 /var/www/wordpress/wp-content/uploads 
 
-[#] (http://www.turnkeylinux.org/forum/support/20130531/cannot-upload-wordpress-media-library-wordpress-appliance#comment-16821)
+[#](http://www.turnkeylinux.org/forum/support/20130531/cannot-upload-wordpress-media-library-wordpress-appliance#comment-16821)
 
 I like that! But I've never heard `www-data`. Who is that?
 
 > The "user" running your webserver (sometimes _www, sometimes www-data, sometimes "nobody") lacks the permissions to edit these files. You can either change them to be owned by that user or change them to 777. To find out what your web server user is, assuming you're running apache, run ps aux | grep httpd in the command line and in the leftmost column, see what user it's showing!
-[#] (http://wordpress.stackexchange.com/questions/40478/permission-of-775-not-enough?answertab=votes#tab-top)
+[#](http://wordpress.stackexchange.com/questions/40478/permission-of-775-not-enough?answertab=votes#tab-top)
 
 #### My Setting
 
@@ -1447,7 +1447,7 @@ I cannot make a change, coz I am not the owner of them! (Remember that I've uplo
     drwxrwxrwx 5 pi       pi       4096  8月 15 12:05 themes
     drwxrwxrwx 3 www-data www-data 4096  8月 15 19:09 uploads
 
-Aha! The folder & image in `uploads` is created by Wordpress. It is owned by `www-data:www-data`. This is what [Jeremy claimed] (http://www.turnkeylinux.org/forum/support/20130531/cannot-upload-wordpress-media-library-wordpress-appliance#comment-16821).
+Aha! The folder & image in `uploads` is created by Wordpress. It is owned by `www-data:www-data`. This is what [Jeremy claimed](http://www.turnkeylinux.org/forum/support/20130531/cannot-upload-wordpress-media-library-wordpress-appliance#comment-16821).
 
 連安裝個 wordpress 也很長知識。原來有種 owner 叫 www-data。開 777 就沒安全保護；設成 755就無法上傳圖片，因為 owner 不是我本人。所以我要先找出誰會是 owner，再把 folder 設定成屬於他的，才設成 他的 755。
 
@@ -1469,8 +1469,9 @@ http://nginxlibrary.com/wordpress-permalinks/
 2014-08-30:
 I need a FTP server on Pi too, because I want to install Wordpress plugins in an easy way.
 
-Google: raspberry pi ftp server
-Google: ubuntu ftp server
+* Google: raspberry pi ftp server
+* Google: ubuntu ftp server
+
 
     sudo apt-get install vsftpd
 
@@ -1496,34 +1497,35 @@ after edit the configuration, restart the service:
 
     sudo /etc/init.d/vsftpd restart
 
-The host is `127.0.0.1`, where the anonymous FTP user name and password are `ftp:ftp` [#] (http://vsftpd.beasts.org/vsftpd_conf.html). The user  name and password is the existing user, such as `pi`:
+The host is `127.0.0.1`, where the anonymous FTP user name and password are `ftp:ftp` [#](http://vsftpd.beasts.org/vsftpd_conf.html). The user  name and password is the existing user, such as `pi`:
 
     127.0.0.1
     pi
     je09
 
-https://help.ubuntu.com/10.04/serverguide/ftp-server.html
-http://computers.tutsplus.com/tutorials/how-to-use-a-raspberry-pi-as-a-local-web-server--cms-19943
-http://www.instructables.com/id/Raspberry-Pi-Web-Server/step9/Install-an-FTP-server/
-http://b.nj007.com/post/403.html
+* https://help.ubuntu.com/10.04/serverguide/ftp-server.html
+* http://computers.tutsplus.com/tutorials/how-to-use-a-raspberry-pi-as-a-local-web-server--cms-19943
+* http://www.instructables.com/id/Raspberry-Pi-Web-Server/step9/Install-an-FTP-server/
+* http://b.nj007.com/post/403.html
 
 ###Backup
 
 Backup: Just like you can load saving data while playing RPG game.
 
-#### Clean up
-* [给 Linux 系统“减肥”] (http://www.ibm.com/developerworks/cn/linux/1310_caoyq_linuxdelete/index.html)
-* [给 Linux 系统“减肥”] (http://blog.jobbole.com/49497/)
+#### Clean 
+
+* [给 Linux 系统“减肥”](http://www.ibm.com/developerworks/cn/linux/1310_caoyq_linuxdelete/index.html)
+* [给 Linux 系统“减肥”](http://blog.jobbole.com/49497/)
 
 #### Backup disk image
 
-![] (http://3.bp.blogspot.com/-s0MifSBzgnE/UxoneY_GbJI/AAAAAAAAVu0/2qCetZ7GteM/s1600/backup-raspberry-pi-os.png)
+![](http://3.bp.blogspot.com/-s0MifSBzgnE/UxoneY_GbJI/AAAAAAAAVu0/2qCetZ7GteM/s1600/backup-raspberry-pi-os.png)
 
     sudo dd bs=4M if=/dev/sdb of=raspbian.img (or dcfldd)
     dd if=/path/to/image of=/dev/sdb
 
 ref: Google: raspberry backup
-http://raspberrypi.stackexchange.com/questions/311/how-do-i-backup-my-raspberry-pi
+* http://raspberrypi.stackexchange.com/questions/311/how-do-i-backup-my-raspberry-pi
 
 or combian use of bzip to compress the image!
 
@@ -1533,6 +1535,7 @@ or combian use of bzip to compress the image!
 or dump the SD card, and pipe it with ssh:
 
     dd bs=1M if=/dev/mmcblk0 | ssh user@host 'dd of=/remote/path/to/sdcard.img'
+
 with compression:
 
     dd bs=1M if=/dev/mmcblk0 | ssh user@host 'gzip -9 > /remote/path/to/sdcard.img.gz'
@@ -1547,13 +1550,12 @@ My actual command:
 
 
 ref: 
-http://www.raspberrypi.org/forums/viewtopic.php?p=118519
-http://pitown.blogspot.hk/2013/11/backing-up-raspberry-pis-operating.html (from: http://magnatecha.com/things-i-do-with-my-raspberry-pi/)
+* http://www.raspberrypi.org/forums/viewtopic.php?p=118519
+* http://pitown.blogspot.hk/2013/11/backing-up-raspberry-pis-operating.html (from: * http://magnatecha.com/things-i-do-with-my-raspberry-pi/)
 
 #### Backup files daily
 Google: linux backup to dropbox
-
-http://www.cyberciti.biz/open-source/30-cool-best-open-source-softwares-of-2013/
+* http://www.cyberciti.biz/open-source/30-cool-best-open-source-softwares-of-2013/
 
 #### Backup the code I write
 
@@ -1561,28 +1563,28 @@ As I've decided to write code on my nb (not write over ssh) and then deploy it t
 
 #### Backup MySQL database
 
-http://www.commandlinefu.com/commands/tagged/749/mysqldump
-https://github.com/johnantoni/AutoMySQLBackup
+* http://www.commandlinefu.com/commands/tagged/749/mysqldump
+* https://github.com/johnantoni/AutoMySQLBackup
 
 Then BTSync to the `@backup` directory of my project folder.
 
 #### Restore a MySQL backup
 Google: how to restore mysqldump
 
-http://www.thegeekstuff.com/2008/09/backup-and-restore-mysql-database-using-mysqldump/ 
-http://xmodulo.com/2012/10/how-to-backup-mysql-server.html
+* http://www.thegeekstuff.com/2008/09/backup-and-restore-mysql-database-using-mysqldump/ 
+* http://xmodulo.com/2012/10/how-to-backup-mysql-server.html
 
 #### Backup MySQL Database
 
-http://sourceforge.net/projects/automysqlbackup/
+* http://sourceforge.net/projects/automysqlbackup/
 
 ref: 
-https://linuxtoy.org/archives/automysqlbackup.html
+* https://linuxtoy.org/archives/automysqlbackup.html
 
 ### Hardening Security
 * http://codex.wordpress.org/Hardening_WordPress#File_permissions (Google: how to set chmod with wordpress on linux ->  http://premium.wpmudev.org/forums/topic/correct-chmod-settings-for-install-and-run-of-wordpress) is a good direction on web apps security.
-* [如何保证Linux服务器的安全] (http://blog.jobbole.com/48195/)
-* [通过Backtrack Linux 来加强你的安全防御] (http://www.geekfan.net/1512/)
+* [如何保证Linux服务器的安全](http://blog.jobbole.com/48195/)
+* [通过Backtrack Linux 来加强你的安全防御](http://www.geekfan.net/1512/)
 
 ### Mail server
 Google: raspberry mail server
@@ -1591,9 +1593,9 @@ Google: raspberry mail server
 
 ### Supplymentory
 
-See [how Debian says about Raspberry Pi] (https://wiki.debian.org/RaspberryPi) (from: http://www.geekfan.net/10419/)
+See [how Debian says about Raspberry Pi](https://wiki.debian.org/RaspberryPi) (from: http://www.geekfan.net/10419/)
 
-[Internet of Things Remote Sensing] (http://www.udoo.org/ProjectsAndTutorials/internet-of-things-remote-sensing/)
+[Internet of Things Remote Sensing](http://www.udoo.org/ProjectsAndTutorials/internet-of-things-remote-sensing/)
 
 #### Linux system monitoring / Admin
 * http://www.cyberciti.biz/tips/top-linux-monitoring-tools.html
@@ -1608,7 +1610,7 @@ As I facing a problem reading the .gz doc in `/usr/share/doc/nginx`, when I conf
 
 #### 編譯 Raspberry Pi 的核心
 
-[[進階] 編譯 Raspberry Pi 的核心] (http://www.raspberrypi.com.tw/tutorial/advanced/)
+[[進階] 編譯 Raspberry Pi 的核心](http://www.raspberrypi.com.tw/tutorial/advanced/)
 
 #### Use a RAM disk
 
@@ -1644,7 +1646,7 @@ I also like to lock my screen before hand (in GNOME):
     gnome-screensaver-command -l && xset dpms force standby
 
 ref: 
-http://magnatecha.com/turn-off-display-from-linux-command-line/
+* http://magnatecha.com/turn-off-display-from-linux-command-line/
 
 #### Backup email with Getmail
 * http://magnatecha.com/back-up-email-with-getmail/
@@ -1655,15 +1657,15 @@ http://magnatecha.com/turn-off-display-from-linux-command-line/
 * https://github.com/rosarior/awesome-django
 * https://github.com/makaimc/awesome-django
 * https://github.com/vinta/awesome-python
-﻿
 
-Everyday Django Resources:
-* [Codecademy] (http://www.codecademy.com/learn) -- 透過闖關遊戲方式學習 Python, HTML/CSS, JavaScript ( [from Django Girls TW] (http://djangogirlstaipei.gitbooks.io/django-girls-taipei-tutorial/content/django/next.html) )
-* [Writing your first Django app] (https://docs.djangoproject.com/en/1.7/intro/tutorial01/) -- Django 1.7 官方學習指南
-* [Getting Started With Django] (http://gettingstartedwithdjango.com/) -- 影片課程
-* [The Django Book] (https://django-book.readthedocs.org/en/latest/) -- 雖然 Django 版本不是最新，但相當適合初學者的一本書
-* [Two Scoops of Django: Best Practices for Django] (http://twoscoopspress.org/products/two-scoops-of-django-1-6) -- 非常推薦，Taipei.py 隔週二聚會指定書籍
-* [Django Packages] (https://www.djangopackages.com/) -- Django 相關套件彙整平台，提供搜尋和評比
+
+#### Everyday Django Resources:
+* [Codecademy](http://www.codecademy.com/learn) -- 透過闖關遊戲方式學習 Python, HTML/CSS, JavaScript ( [from Django Girls TW](http://djangogirlstaipei.gitbooks.io/django-girls-taipei-tutorial/content/django/next.html) )
+* [Writing your first Django app](https://docs.djangoproject.com/en/1.7/intro/tutorial01/) -- Django 1.7 官方學習指南
+* [Getting Started With Django](http://gettingstartedwithdjango.com/) -- 影片課程
+* [The Django Book](https://django-book.readthedocs.org/en/latest/) -- 雖然 Django 版本不是最新，但相當適合初學者的一本書
+* [Two Scoops of Django: Best Practices for Django](http://twoscoopspress.org/products/two-scoops-of-django-1-6) -- 非常推薦，Taipei.py 隔週二聚會指定書籍
+* [Django Packages](https://www.djangopackages.com/) -- Django 相關套件彙整平台，提供搜尋和評比
 * [Python Snippets [ (https://djangosnippets.org/snippets/261/), from Google: django email contact
 * RealPython
 * https://code.djangoproject.com/wiki/DjangoResources (from: Google: django ui framework)
@@ -1672,22 +1674,22 @@ Everyday Django Resources:
 * https://www.coursera.org/course/interactivepython
 * http://www.fullstackpython.com/
 * http://www.fullstackpython.com/best-python-resources.html
-* [語言技術：Python Gossip] (http://openhome.cc/Gossip/Python/)
-* [Open Sourcing a Python Project the Right Way - Jeff Knupp] (http://www.jeffknupp.com/blog/2013/08/16/open-sourcing-a-python-project-the-right-way/)
-* [djangoGirls on GitBook] (https://www.gitbook.io/@djangogirls)
+* [語言技術：Python Gossip](http://openhome.cc/Gossip/Python/)
+* [Open Sourcing a Python Project the Right Way - Jeff Knupp](http://www.jeffknupp.com/blog/2013/08/16/open-sourcing-a-python-project-the-right-way/)
+* [djangoGirls on GitBook](https://www.gitbook.io/@djangogirls)
 * http://codecondo.com/web-scraping-python/
 * Reddit: django
     * http://www.reddit.com/r/django/comments/1nm5n8/moving_from_php_to_django_setup_host_advice/
-* [Medium - Laravel 4 Tutorials] (https://medium.com/laravel-4)
+* [Medium - Laravel 4 Tutorials](https://medium.com/laravel-4)
     * from: Google: laravel tutorials. See also "wordpress", "django" in medium.com
 * https://github.com/makaimc/awesome-django
 * http://www.databaseanswers.org/data_models/index.htm (from: http://www.quora.com/What-is-the-fastest-way-to-learn-Django)
 * http://www.quora.com/I-really-really-want-to-learn-to-code-However-upon-taking-classes-and-practicing-in-C-I-realized-that-I-hate-the-whole-process-of-programming-debugging-constant-unclear-ambiguous-errors-confusing-logic-What-can-I-do-to-get-over-this
-    * [Computer Science Unplugged] (http://csunplugged.org/)
+    * [Computer Science Unplugged](http://csunplugged.org/)
 * http://www.quora.com/Are-there-any-good-Django-video-tutorials
 
 
-Automated Test
+#### Automated Test
 * Google: django testing | TDD
 * https://docs.djangoproject.com/en/dev/topics/testing/
 * https://github.com/makaimc/awesome-django
@@ -1697,37 +1699,36 @@ Automated Test
 * https://realpython.com/blog/python/testing-in-django-part-1-best-practices-and-examples/
 * https://realpython.com/blog/python/testing-in-django-part-2-model-mommy-vs-django-testing-fixtures/
 
-Tutorail materials
+#### Tutorail materials
 * Google: django tutorial | django guide | django cast | django girls | django girls tutorial
 * Quora: how to learn django
 * Medium: django
 * Tut+
 
-Django bulid a blog
-* [Building a Blog with Django 1.7 in 16 mins] (https://www.youtube.com/watch?v=7rgph8en0Jc)
-* [Building a Blog in 30 minutes with Django] (https://www.youtube.com/watch?v=srHZoj3ASmk)
+#### Django bulid a blog
+* [Building a Blog with Django 1.7 in 16 mins](https://www.youtube.com/watch?v=7rgph8en0Jc)
+* [Building a Blog in 30 minutes with Django](https://www.youtube.com/watch?v=srHZoj3ASmk)
 
-Blog example
-http://arunrocks.com/recreating-the-building-a-blog-in-django-screencast/
-https://www.youtube.com/watch?v=7rgph8en0Jc
-https://github.com/django/djangoproject.com/tree/master/blog
-
+#### Blog example
+* http://arunrocks.com/recreating-the-building-a-blog-in-django-screencast/
+* https://www.youtube.com/watch?v=7rgph8en0Jc
+* https://github.com/django/djangoproject.com/tree/master/blog
 * http://www.tangowithdjango.com/book/index.html
 * https://django-book.readthedocs.org/en/latest/# (from: http://www.meetup.com/Taipei-py/messages/boards/thread/34933702)
 * http://www.barrymorrison.com/2012/10/zero-to-django-in-4-months-what-ive-learned-part-1/
 * http://djangobook.py3k.cn/2.0/
 
 
-South & Migration in Django 1.7
+#### South & Migration in Django 1.7
 Google: should I use south in django 1.7
-https://realpython.com/blog/python/django-migrations-a-primer/
-http://treyhunner.com/2014/03/migrating-to-django-1-dot-7/
+* https://realpython.com/blog/python/django-migrations-a-primer/
+* http://treyhunner.com/2014/03/migrating-to-django-1-dot-7/
 
 to reset the migration, run `zero`with migrate
 
     ./manage.py migrate <app name> zero
 
-Pre-popular database
+#### Pre-popular database
 Google: django fixture | django initial database
 * https://docs.djangoproject.com/en/dev/howto/initial-data/
 * https://code.djangoproject.com/wiki/Fixtures
@@ -1743,15 +1744,15 @@ See also: https://github.com/alex/django-fixture-generator
 inner function
 * https://realpython.com/blog/python/inner-functions-what-are-they-good-for/
 
-Project layout
+#### Project layout
 * http://woodpecker.org.cn/
 * Two Scoops of Django
 * http://lightbird.net/dbe/
 
-Database
+#### Database
 * http://postgresql.wisdomfish.org/er-model-tips/db-design-principle
 
-Workflow in Django
+#### Workflow in Django
 
 > Managing state and transitions, aka workflow.
 
@@ -1760,43 +1761,42 @@ Workflow in Django
 * https://gist.github.com/Nagyman/9502133 says workflow is a FSM (aka Finite State Machine).
 * https://www.ruby-toolbox.com/categories/state_machines
 
-Frontend
+#### Frontend
 Django Template
 * http://www.slideshare.net/cosecant/best-practices-for-frontend-django-developers?related=1
 
-### Django Admin interface
+#### Django Admin interface
 Google: django admin 2
 https://github.com/pydanny/django-admin2 (from: https://code.djangoproject.com/wiki/AdminNext)
 
 
 Google: django admin demo
-django-suit
-http://djangosuit.com/
+* [django-suit](http://djangosuit.com/)
 
 Google: django admin theme
-https://www.djangopackages.com/grids/g/admin-styling/
-http://grappelliproject.com/
-https://github.com/sehmaschine/django-grappelli
+* https://www.djangopackages.com/grids/g/admin-styling/
+* http://grappelliproject.com/
+* https://github.com/sehmaschine/django-grappelli
 
-### Django frontend
+#### Django frontend
 Google: django bootstrap
-https://riccardo.forina.me/bootstrap-your-django-admin-in-3-minutes/
+* https://riccardo.forina.me/bootstrap-your-django-admin-in-3-minutes/
 
 Google: django Boilerplate 
 
 Deploy Django with uWSGI & Nginx
-* [使用vps部署django:uwsgi+nginx] (https://github.com/imelucifer/MyNote/blob/master/django/django%2Buwsgi%2Bnginx%2Bcentos%E9%83%A8%E7%BD%B2.md)
+* [使用vps部署django:uwsgi+nginx](https://github.com/imelucifer/MyNote/blob/master/django/django%2Buwsgi%2Bnginx%2Bcentos%E9%83%A8%E7%BD%B2.md)
 
 Plotting Graph
 * http://www.playpcesor.com/2014/08/excel-google-sheets-patterns.html
 
 ### Speed up Django
 2014-09-17: 
-My django apps respond slowly. The user experence is [bad] (http://ihower.tw/rails4/performance.html).
+My django apps respond slowly. The user experence is [bad](http://ihower.tw/rails4/performance.html).
 
 I use Firefox 34 `F12` to test the page loading time. On my development notebook , `/admin/product/topic/28`, which relates to 19 product sources (and the 1600+ related sources), consumes 5.2s~5.6s to render. The most expensive part is the html files. It takes 1535.22KB, and the files totally are 1676.17KB (1 html, 8 js, 3 css, 6 images). Comparing to the other pages, which the most expensive part is the js files.
 
-![] (./without-cache.png)
+![](./without-cache.png)
 
 There are ways to speed it up:
 
@@ -1815,7 +1815,7 @@ For 1:
 
 For 2:
 
-Reduce the times of queries, or group many queries into one. ([Queries in Django is lazy] (https://docs.djangoproject.com/en/dev/topics/db/queries/#querysets-are-lazy) (from: [Database access optimization] (https://docs.djangoproject.com/en/dev/topics/db/optimization/) ) )
+Reduce the times of queries, or group many queries into one. ([Queries in Django is lazy](https://docs.djangoproject.com/en/dev/topics/db/queries/#querysets-are-lazy) (from: [Database access optimization](https://docs.djangoproject.com/en/dev/topics/db/optimization/) ) )
 
 Redesign the relation between models help a lot. But the labourhood is not worthy.
 
@@ -1825,8 +1825,8 @@ For 3:
 
 For 4:  
 
-Github: [django cache] (https://github.com/search?utf8=%E2%9C%93&q=django+cache) -> [johnny-cache] (https://github.com/jmoiron/johnny-cache) -> http://memcached.org/
-Google: django cache -> [Django Documentation - Django’s cache framework] (https://docs.djangoproject.com/en/dev/topics/cache/)
+Github: [django cache](https://github.com/search?utf8=%E2%9C%93&q=django+cache) -> [johnny-cache](https://github.com/jmoiron/johnny-cache) -> http://memcached.org/
+Google: django cache -> [Django Documentation - Django’s cache framework](https://docs.djangoproject.com/en/dev/topics/cache/)
 
 The workflow is firstly setup the cache, and then use caching to cache the entire site:
 
@@ -1839,20 +1839,20 @@ I wanna use memcache for Django, as once I set it up, I can use it with WordPres
 Firstly, I've to install memcache on Pi: 
 
 * Google: ubuntu memcached
-    * [How To Install and Use Memcache on Ubuntu 14.04] (https://www.digitalocean.com/community/tutorials/how-to-install-and-use-memcache-on-ubuntu-14-04) (2014-05-01 published)
+    * [How To Install and Use Memcache on Ubuntu 14.04](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-memcache-on-ubuntu-14-04) (2014-05-01 published)
 * Google: memcached django
-    * [Django Memcached: Optimizing Django Through Caching] (http://www.jeffknupp.com/blog/2012/02/24/django-memcached-optimizing-django-through-caching/)
+    * [Django Memcached: Optimizing Django Through Caching](http://www.jeffknupp.com/blog/2012/02/24/django-memcached-optimizing-django-through-caching/)
 
     sudo apt-get install memcached
 
     sudo service memcached status
 
-After installing Memcached itself, you'll need to install a memcached binding (aka [memcache clients] (https://code.google.com/p/memcached/wiki/Clients). There are several python memcached bindings available; the two most common are [python-memcached] (ftp://ftp.tummy.com/pub/python-memcached/) and [pylibmc] (http://sendapatch.se/projects/pylibmc/). [#] (http://stackoverflow.com/questions/7636108/installing-memcached-for-a-django-project) [#] (https://docs.djangoproject.com/en/dev/topics/cache/)
+After installing Memcached itself, you'll need to install a memcached binding (aka [memcache clients](https://code.google.com/p/memcached/wiki/Clients). There are several python memcached bindings available; the two most common are [python-memcached](ftp://ftp.tummy.com/pub/python-memcached/) and [pylibmc](http://sendapatch.se/projects/pylibmc/). [#](http://stackoverflow.com/questions/7636108/installing-memcached-for-a-django-project) [#](https://docs.djangoproject.com/en/dev/topics/cache/)
 
 * Google: ubuntu mancaced python
-    * [Installing memcached for a django project] (http://stackoverflow.com/questions/7636108/installing-memcached-for-a-django-project)
+    * [Installing memcached for a django project](http://stackoverflow.com/questions/7636108/installing-memcached-for-a-django-project)
         * http://ilian.i-n-i.org/caching-websites-with-django-and-memcached/
-    * [how to install libmemcached for django framework in ubuntu 10.04] (http://stackoverflow.com/questions/14332451/how-to-install-libmemcached-for-django-framework-in-ubuntu-10-04)
+    * [how to install libmemcached for django framework in ubuntu 10.04](http://stackoverflow.com/questions/14332451/how-to-install-libmemcached-for-django-framework-in-ubuntu-10-04)
 
 
     pip install python-memcached  # or  sudo apt-get install python-memcache
@@ -1872,9 +1872,9 @@ After memcache runs successfully, the page loading time of `/admin/product/topic
 As the memcached does not cache admin query (e.g. `admin/product/topic/28/`, which takes 5.52s to render. After turn memcache on, it still take 5.4s to load that page in the 2nd+ load), I have to find another solution. (As well as johnny-cache does not support python3.)
 
 http://www.tutorialspoint.com/redis/index.htm
-[DjangoPackages: caching] (https://www.djangopackages.com/grids/g/caching/)
+[DjangoPackages: caching](https://www.djangopackages.com/grids/g/caching/)
 
-[django-cacheops] (https://www.djangopackages.com/packages/p/cacheops/) seems good. It support Python 3, Django 1.7, and It uses redis as backend for ORM cache and redis or filesystem for simple time-invalidated one. I am going to install [redis] (http://redis.io/) server on my machine:
+[django-cacheops](https://www.djangopackages.com/packages/p/cacheops/) seems good. It support Python 3, Django 1.7, and It uses redis as backend for ORM cache and redis or filesystem for simple time-invalidated one. I am going to install [redis](http://redis.io/) server on my machine:
 
     sudo apt-get install redis-server # as apt-get itstall redis returns no package...
 
@@ -1904,7 +1904,7 @@ Or, if `make install` does not work, go to `./utils` and the run the  `install_s
 
 How to install the latest version of redis on Ubuntu?
 
-Google: redis install wordpress  -> [Toby's Rambling - How to install the latest version of redis on Ubuntu] (http://tosbourn.com/install-latest-version-redis-ubuntu/): 
+Google: redis install wordpress  -> [Toby's Rambling - How to install the latest version of redis on Ubuntu](http://tosbourn.com/install-latest-version-redis-ubuntu/): 
 
     $ sudo apt-get install -y python-software-properties
     $ sudo add-apt-repository -y ppa:rwky/redis
@@ -1972,7 +1972,7 @@ There is also a possibility to make all cacheops methods and decorators no-op, e
 
     CACHEOPS_FAKE = True
 
-[#] (https://github.com/Suor/django-cacheops#readme)
+[#](https://github.com/Suor/django-cacheops#readme)
 
 
 Finally, I let cacheops to cache all the things, including admin, queries:
@@ -1987,7 +1987,7 @@ Persistent connection helps! (aka connection pool)
 
     CONN_MAX_AGE = None
 
- [Django Documentation: Database] (https://docs.djangoproject.com/en/dev/ref/databases/) -> [setting: CONN_MAX_AGE] (https://docs.djangoproject.com/en/dev/ref/settings/#std:setting-CONN_MAX_AGE)
+ [Django Documentation: Database](https://docs.djangoproject.com/en/dev/ref/databases/) -> [setting: CONN_MAX_AGE](https://docs.djangoproject.com/en/dev/ref/settings/#std:setting-CONN_MAX_AGE)
 
 Turn on persistent connection helps to save 0.5s (with no caching on). Page load is from 5.5s to 5.08s.
 
@@ -1998,14 +1998,13 @@ N+1 queries hurts.
 When I turn off the related field `related` in the Source model, the page load time of `/admin/product/topic/28/` drops much! The page loading drops from 5.5s to 0.69s!
 
 Ref:
-
-Google: Rails cache, django cache
-* [Caching with Rails: An overview] (http://guides.rubyonrails.org/caching_with_rails.html)
-* [Ruby on Rails 實戰聖經使用 Rails 4.1 及 Ruby 2.1 - 快取] (http://ihower.tw/rails4/caching.html)
-    * [如何使用 memcached 做快取] (http://ihower.tw/blog/archives/1768)
-* [Django Documentation - Django’s cache framework] (https://docs.djangoproject.com/en/dev/topics/cache/)
-* [The Django Book - Chapter 15: Caching] (http://www.djangobook.com/en/2.0/chapter15.html)
-* Django Documentation: cache | profiling | performance | optimization
+*Google: Rails cache, django cache
+    * [Caching with Rails: An overview](http://guides.rubyonrails.org/caching_with_rails.html)
+    * [Ruby on Rails 實戰聖經使用 Rails 4.1 及 Ruby 2.1 - 快取](http://ihower.tw/rails4/caching.html)
+        * [如何使用 memcached 做快取](http://ihower.tw/blog/archives/1768)
+    * [Django Documentation - Django’s cache framework](https://docs.djangoproject.com/en/dev/topics/cache/)
+    * [The Django Book - Chapter 15: Caching](http://www.djangobook.com/en/2.0/chapter15.html)
+    * Django Documentation: cache | profiling | performance | optimization
 
 
 ### Wordpress cache
@@ -2021,7 +2020,7 @@ Google: redis install wordpress
 
 ### Replace MySQL with MariaDB
 
-2014-09-10:
+2014-09-10:  
 My django apps respond slowly. I turn on htop & nmon to see what's happen then. There are 6 or more mysqld processes running at the same time! OMG! That's the reason why the Pi respond slowly as it has 1 core. Now, I am thinking of replacing MySQL. (2014-09-17 update: I should use profiling tools to check the performance of it, rather than 'feel' it. :P)
 
 Google: raspberry mariadb
@@ -2031,21 +2030,21 @@ Google: raspberry mariadb
 * http://raspbian-france.fr/installer-mariadb-raspbian/
 * http://blog.pi3g.com/2014/07/easy-mariadb-installation/
 
-There is no MariaDB package on Pi's repositiory. I have to [compile by myself] (http://raspbian-france.fr/installer-mariadb-raspbian/). Luckily, pi3g makes one: [Easy MariaDB installation | pi3g Blog] (http://blog.pi3g.com/2014/07/easy-mariadb-installation/)
+There is no MariaDB package on Pi's repositiory. I have to [compile by myself](http://raspbian-france.fr/installer-mariadb-raspbian/). Luckily, pi3g makes one: [Easy MariaDB installation | pi3g Blog](http://blog.pi3g.com/2014/07/easy-mariadb-installation/)
 
 However, I am not eazy to go with new MariaDB before try to tune the performance of the existing MySQL firstly.
-HayDen james writes an interesting article [MySQL Query Cache Size and Performance] (http://haydenjames.io/mysql-query-cache-size-performance/) and I am trying to figure it out now.
+HayDen james writes an interesting article [MySQL Query Cache Size and Performance](http://haydenjames.io/mysql-query-cache-size-performance/) and I am trying to figure it out now.
 
 ### Git
-* [Git 版本控制系統] (https://ihower.tw/git/)
-* [好麻煩部落格: Git 教學] (http://gogojimmy.net/2012/01/17/how-to-use-git-1-git-basic/}
-* [How To Use Source Control Effectively] (http://grokcode.com/717/how-to-use-source-control-effectively/)
+* [Git 版本控制系統](https://ihower.tw/git/)
+* [好麻煩部落格: Git 教學](http://gogojimmy.net/2012/01/17/how-to-use-git-1-git-basic/}
+* [How To Use Source Control Effectively](http://grokcode.com/717/how-to-use-source-control-effectively/)
     * from: http://www.fullstackpython.com/web-frameworks.html -> http://grokcode.com/864/snakefooding-python-code-for-complexity-visualization/
-* [软件版本控制介绍] (http://blog.jobbole.com/55304/)
-* [15分钟学会使用Git和远程代码库] (http://blog.jobbole.com/53573/)
-* [让你的Git水平更上一层楼的10个小贴士] (http://blog.jobbole.com/75348/)
+* [软件版本控制介绍](http://blog.jobbole.com/55304/)
+* [15分钟学会使用Git和远程代码库](http://blog.jobbole.com/53573/)
+* [让你的Git水平更上一层楼的10个小贴士](http://blog.jobbole.com/75348/)
 * https://www.atlassian.com/git/
-* [沉浸式学 Git] (http://igit.linuxtoy.org/)
+* [沉浸式学 Git](http://igit.linuxtoy.org/)
     * https://github.com/xuxiaodong/gitimmersion
     * http://gitimmersion.com/
 * http://githowto.com/tagging_versions
@@ -2064,17 +2063,17 @@ HayDen james writes an interesting article [MySQL Query Cache Size and Performan
 * http://gogojimmy.net/2012/01/17/how-to-use-git-1-git-basic/
 * https://github.com/johnantoni/git-notes
 * https://github.com/mhagger/git-imerge
-* [专为设计师而写的GitHub快速入门教程] (http://www.ui.cn/project.php?id=20957)
-* [Git教程 - 廖雪峰的官方网站] (http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)
+* [专为设计师而写的GitHub快速入门教程](http://www.ui.cn/project.php?id=20957)
+* [Git教程 - 廖雪峰的官方网站](http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)
 * http://it-ebooks.info/tag/git/
 * http://computers.tutsplus.com/articles/chris-coyier-on-life-work-and-eighteen-years-as-a-mac-user--mac-3566
 * http://code.tutsplus.com/articles/what-are-you-using--net-32373?utm_source=Tuts+&utm_medium=website&utm_campaign=relatedtutorials&utm_content=sidebar&WT.mc_id=Tuts+_website_relatedtutorials_sidebar
 * http://computers.tutsplus.com/articles/piers-ridyard-on-the-development-and-success-of-the-nifty-minidrive--mac-54952
 * http://demo.tc/Post/702
 * http://blog.jobbole.com/25808/
-* [Git & Excel] (http://blog.jobbole.com/67393/)
+* [Git & Excel](http://blog.jobbole.com/67393/)
 
-The [alias] (http://blog.jobbole.com/53573/) I use:
+The [alias](http://blog.jobbole.com/53573/) I use:
 
     git config --global alias.c 'commit -m'
     git config --global alias.co 'checkout'
@@ -2094,7 +2093,7 @@ http://igit.linuxtoy.org/aliases.html shows more.
     git log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
     git config --global alias.hist  'log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short'
 
-I put the [hist] (http://githowto.com/aliases) alias too. The correct version is in [Git immerse] (http://igit.linuxtoy.org/history.html)
+I put the [hist](http://githowto.com/aliases) alias too. The correct version is in [Git immerse](http://igit.linuxtoy.org/history.html)
 
 Or, I write them into the `.gitconfig` in `$HOME`:
 
@@ -2112,9 +2111,9 @@ Or, I write them into the `.gitconfig` in `$HOME`:
 Now, I have a local branch `product` on my notebook, and I have push it to github. I get only the `master` branch on my Pi whatever I `git pull` or I delete the whole project folder and then `git clone` it from github again.
 
 Now, how can I get the latest updated branch `product` on my Pi?
-from: [Git How to: Remote Branch] (http://githowto.com/remote_branches) , Google: git get all the branch from remote
+from: [Git How to: Remote Branch](http://githowto.com/remote_branches) , Google: git get all the branch from remote
 
-[Git branch - How to clone remote branch with Git?] (http://stackoverflow.com/questions/67699/how-to-clone-all-remote-branches-with-git) shows some hints:
+[Git branch - How to clone remote branch with Git?](http://stackoverflow.com/questions/67699/how-to-clone-all-remote-branches-with-git) shows some hints:
 
 First, clone a remote Git repository and cd into it:
 
@@ -2152,11 +2151,11 @@ and you will see
 * https://www.atlassian.com/git/tutorials/using-branches
 
 #### Home Automation
-* [Lifehacker - Build an Entire Home Automation System with a Raspberry Pi and Arduino] (http://lifehacker.com/build-an-entire-home-automation-system-with-a-raspberry-1640844965)
-* Try RQ: [Redis Queue] (https://github.com/nvie/rq)
-    * from:  [Full Stack Python - Web frameworks] (http://www.fullstackpython.com/web-frameworks.html) -> http://grokcode.com/864/snakefooding-python-code-for-complexity-visualization/
+* [Lifehacker - Build an Entire Home Automation System with a Raspberry Pi and Arduino](http://lifehacker.com/build-an-entire-home-automation-system-with-a-raspberry-1640844965)
+* Try RQ: [Redis Queue](https://github.com/nvie/rq)
+    * from:  [Full Stack Python - Web frameworks](http://www.fullstackpython.com/web-frameworks.html) -> http://grokcode.com/864/snakefooding-python-code-for-complexity-visualization/
 * Try http://www.celeryproject.org
-    * from:  [Redis Queue] (https://github.com/nvie/rq)
+    * from:  [Redis Queue](https://github.com/nvie/rq)
 
 #### Linux admin tips & networking
 * http://blog.jobbole.com/50643/ 如何利用多核CPU来加速你的Linux命令
@@ -2186,7 +2185,7 @@ Google: linux install font
 
     fc-cache -fv
 
-這樣就可以使用新安裝的字型了。[#] (http://www.gtwang.org/2014/02/monospaced-font-for-programmers.html)
+這樣就可以使用新安裝的字型了。[#](http://www.gtwang.org/2014/02/monospaced-font-for-programmers.html)
 
 #### Source Code Pro
 Google: Source code pro
@@ -2205,3 +2204,5 @@ http://github.com/adobe-fonts/source-han-sans/
 http://www.google.com/get/noto/#/family/noto-sans-hant
 
 // Last update: 2014-09
+// Markdown tidyup: 2018-08
+

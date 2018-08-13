@@ -46,7 +46,7 @@ Reference
 * The tutorial to build this project: [How to Tango with Django](http://www.tangowithdjango.com/)
 * The design/style of the webpage: [django weekly](http://djangoweekly.com/newsletter/) -> Projects -> https://github.com/bitpixdigital/django-next-train
 * Better understanding Python and what a web framework is: [Full Stack Python: Web frameworks](http://www.fullstackpython.com/web-frameworks.html)
-* Semantic Version: https://forum.syncthing.net/t/best-cheap-arm-board-for-syncthing/9103 -> [restic] (https://restic.github.io) -> [Semantic Version](http://semver.org)
+* Semantic Version: https://forum.syncthing.net/t/best-cheap-arm-board-for-syncthing/9103 -> [restic](https://restic.github.io) -> [Semantic Version](http://semver.org)
 * Formatting of Python: https://pyformat.info
 
 ## Object oriented in Python
@@ -65,16 +65,16 @@ Reference
 * Google: Django and Angular 2 -> [Reddit: Django with Angular 2/](https://www.reddit.com/r/django/comments/51k896/django_with_angular_2/) -> [Slides.com: 5 quick tips django docker](http://slides.com/jamespacileo/5-quick-tips-django-docker-4#/)
 
 ## Docker
-* [Django by Docker Official Image] (https://store.docker.com/images/65765d71-d893-407d-a707-486c7381dfbf?tab=description)
-* [Quickstart: Compose and Django] (https://docs.docker.com/compose/django/)
+* [Django by Docker Official Image](https://store.docker.com/images/65765d71-d893-407d-a707-486c7381dfbf?tab=description)
+* [Quickstart: Compose and Django](https://docs.docker.com/compose/django/)
 
 ## Git 
-* [A successful Git branching model] (http://nvie.com/posts/a-successful-git-branching-model/) from [Git flow 開發流程] (https://ihower.tw/blog/archives/5140)
+* [A successful Git branching model](http://nvie.com/posts/a-successful-git-branching-model/) from [Git flow 開發流程](https://ihower.tw/blog/archives/5140)
 
 ## Test-Driven Development (TDD)
 * http://test-driven-django-development.readthedocs.io/en/latest/index.html
-* [Test Driven Development with Python] (http://chimera.labs.oreilly.com/books/1234000000754)
-* [Test Driven Web Development with Python] (http://www.tdd-django-tutorial.com/)
+* [Test Driven Development with Python](http://chimera.labs.oreilly.com/books/1234000000754)
+* [Test Driven Web Development with Python](http://www.tdd-django-tutorial.com/)
 
 Docker Example:
 
@@ -84,12 +84,12 @@ ref: jun.oct-13.us/cn/node/60 -> jun.oct-13.us/cn/article/how-to-use-docker-drup
     # docker run --name d8docker --link drupaldb:mysql -p 80:80 -d drupal:741
 
 For using wordpress:
-Google: wordpress docker -> https://hub.docker.com/_/wordpress/
-Docker.com: mariadb -> 
+* Google: wordpress docker -> https://hub.docker.com/_/wordpress/
+* Docker.com: mariadb -> 
 
 For using wordpres with docker compose:
-Google: wordpress docker -> https://docs.docker.com/compose/wordpress
-Google: wordpress docker -> http://www.sitepoint.com/how-to-use-the-official-docker-wordpress-image/
+* Google: wordpress docker -> https://docs.docker.com/compose/wordpress
+* Google: wordpress docker -> http://www.sitepoint.com/how-to-use-the-official-docker-wordpress-image/
 
 Contributing
 ============

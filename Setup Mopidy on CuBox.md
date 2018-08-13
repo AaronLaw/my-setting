@@ -1,24 +1,27 @@
 Setup Mopidy on CuBox
+====
+
 2014-10
 
 Firstly, I try to run MuBox as music service. But it doesn't work (decode error). Then I decide to run Mopidy as the mpd.
 
 ## Summary
 
-/music/Mopidy-MusicBox-Webclient/build/lib.linux-armv71-2.7/mopidy_musicbox_webclient/
+`/music/Mopidy-MusicBox-Webclient/build/lib.linux-armv71-2.7/mopidy_musicbox_webclient/`
 
-mopidy's config: /root/.config/mopidy/mopidy.conf
-mopidy's music folder is: /music/
+mopidy's config: `/root/.config/mopidy/mopidy.conf`
+mopidy's music folder is: `/music/`
 
 After booting:
 
 Debian user & password:
-root, kimxxxmusic
 
-df -h
+    root, kimxxxmusic
 
-mount /dev/sda1 /music
-ls /music/
+    df -h
+
+    mount /dev/sda1 /music
+    ls /music/
 
 mopidy local scan
 mopidy

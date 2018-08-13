@@ -1,31 +1,32 @@
-# Introduction to Laravel
+ Introduction to Laravel
+====
 
-http://www.reddit.com/r/learnprogramming/comments/1h3zr0/my_boyfriends_learn_to_program_manifesto_on/
-[What  is the best way to learn PHP?] (http://www.quora.com/What-is-the-best-way-to-learn-PHP-1)
-[Ruby on Rails (web framework): What is the best way to learn Ruby on Rails? Bloc.io? theFirehoseProject?] (http://www.quora.com/Ruby-on-Rails-web-framework/What-is-the-best-way-to-learn-Ruby-on-Rails-Bloc-io-theFirehoseProject)
-[Ruby on Rails (web framework): As of the 27th of January 2013, what's the best way for someone who knows a lot about HTML and CSS to learn Ruby on Rails?] (http://www.quora.com/Ruby-on-Rails-web-framework/As-of-the-27th-of-January-2013-whats-the-best-way-for-someone-who-knows-a-lot-about-HTML-and-CSS-to-learn-Ruby-on-Rails)
-Google: php framework -> laravel
-Google: php framework laravel
+* http://www.reddit.com/r/learnprogramming/comments/1h3zr0/my_boyfriends_learn_to_program_manifesto_on/
+* [What  is the best way to learn PHP?](http://www.quora.com/What-is-the-best-way-to-learn-PHP-1)
+* [Ruby on Rails (web framework): What is the best way to learn Ruby on Rails? Bloc.io? theFirehoseProject?](http://www.quora.com/Ruby-on-Rails-web-framework/What-is-the-best-way-to-learn-Ruby-on-Rails-Bloc-io-theFirehoseProject)
+* [Ruby on Rails (web framework): As of the 27th of January 2013, what's the best way for someone who knows a lot about HTML and CSS to learn Ruby on Rails?](http://www.quora.com/Ruby-on-Rails-web-framework/As-of-the-27th-of-January-2013-whats-the-best-way-for-someone-who-knows-a-lot-about-HTML-and-CSS-to-learn-Ruby-on-Rails)
+* Google: php framework -> laravel
+* Google: php framework laravel
 * http://code.tutsplus.com/tutorials/why-laravel-is-taking-the-php-community-by-storm--pre-52639
 * http://brianretterer.com/why-laravel-is-the-best-php-framework/
-* [Full Stack Python - Web frameworks] (http://www.fullstackpython.com/web-frameworks.html) 
+* [Full Stack Python - Web frameworks](http://www.fullstackpython.com/web-frameworks.html) 
 * http://codecondo.com/5-books-learning-laravel-4/
 * http://kejyun.github.io/Laravel-4-Documentation-Traditional-Chinese/docs/quick/ (from: Google: php framework laravel chinese)
 * http://laravel.com/docs/4.2/installation
-* [Medium - Laravel 4 Tutorials] (https://medium.com/laravel-4)
+* [Medium - Laravel 4 Tutorials](https://medium.com/laravel-4)
     * from: Google: laravel tutorials. See also "wordpress", "django" in medium.com
 * http://laravel.tw/
-    * from: Youtube: laravel -> [PHP也有Day#4 - 實戰驚豔 Laravel 給你的 5 個驚嘆號 by Bobo] (https://www.youtube.com/watch?v=Lj6sK3pfyO8) -> Google: laravel tw -> this
+    * from: Youtube: laravel -> [PHP也有Day#4 - 實戰驚豔 Laravel 給你的 5 個驚嘆號 by Bobo](https://www.youtube.com/watch?v=Lj6sK3pfyO8) -> Google: laravel tw -> this
 * https://github.com/ziadoz/awesome-php
 * https://github.com/ludo237/awesome-laravel4
 * https://github.com/chiraggude/awesome-laravel
 * http://daylerees.com/codebright
 * http://laravelbook.com/
 * Google: laravel Asia/Taipei
-    * [Laravel PHP Framework 快速上手指南] (http://it.nekounya.com/laravel-php-framework-quick-install-and-config-guide.html)
+    * [Laravel PHP Framework 快速上手指南](http://it.nekounya.com/laravel-php-framework-quick-install-and-config-guide.html)
 
 * Stack exchange: 
-* Quora:  [Ruby vs Python] (http://www.quora.com/Ruby-vs-Python) | django | laravel | bootstrap | [Web Development] (http://www.quora.com/Web-Development) | [Web Design] (http://www.quora.com/Web-Design) | [Web Applications] (http://www.quora.com/Web-Applications)
+* Quora:  [Ruby vs Python](http://www.quora.com/Ruby-vs-Python) | django | laravel | bootstrap | [Web Development](http://www.quora.com/Web-Development) | [Web Design](http://www.quora.com/Web-Design) | [Web Applications](http://www.quora.com/Web-Applications)
 * Reddit
 * Medium: laravel | django | bootstrap | design | ui | rails
 * http://laravel.io/forum
@@ -39,7 +40,7 @@ Google: php framework laravel
     * https://github.com/GrahamCampbell/Laravel-Markdown
     * https://github.com/GrahamCampbell/Bootstrap-CMS
     * https://github.com/GrahamCampbell/Laravel-Core
-* [laravel下有哪些包值得推荐？] (http://www.zhihu.com/question/24136962)
+* [laravel下有哪些包值得推荐？](http://www.zhihu.com/question/24136962)
     * http://packalyst.com/packages/package/way/generators
 
 ## Tutorial materials
@@ -53,9 +54,9 @@ Laravel official doc provides no tutorials (not like what django doc does nor ra
 * Baidu: laravel tutorial
     * http://learninglaravel.net/ giveaway an ebook, and lots of tutorials (cast) (including Todo List and Blog tutorial on Youtube)
 * Google: laravel taiwan
-    * [Laravel Taiwan's Github] (https://github.com/laravel-taiwan)
-    * [KeJyun學習日誌: Laravel 4] (http://blog.kejyun.com/p/laravel-learning-footprints.html)  a collection of Laravel resources
-    * [Laravel 學習筆記 Lesson 2] (http://blog.fukuball.com/laravel-xue-xi-bi-ji-lesson-2/)
+    * [Laravel Taiwan's Github](https://github.com/laravel-taiwan)
+    * [KeJyun學習日誌: Laravel 4](http://blog.kejyun.com/p/laravel-learning-footprints.html)  a collection of Laravel resources
+    * [Laravel 學習筆記 Lesson 2](http://blog.fukuball.com/laravel-xue-xi-bi-ji-lesson-2/)
 
 * Google: Laravel 學習筆記
 * http://fideloper.com/laravel-4-uber-quick-start-with-auth-guide
@@ -77,9 +78,9 @@ Laravel official doc provides no tutorials (not like what django doc does nor ra
 
 ### Rails4 Blog example
 * Youtube: rails4 blog
-    *  [How To Build A Todo App In Rails 4] (https://www.youtube.com/watch?v=fd1Vn-Wvy2w)
+    *  [How To Build A Todo App In Rails 4](https://www.youtube.com/watch?v=fd1Vn-Wvy2w)
         *  http://mackenziechild.me/how-to-build-a-todo-app-in-rails-4/
-        * [Youtube: ackenzie Child] (https://www.youtube.com/user/mackenziechild?feature=em-subconf-s3-chl)
+        * [Youtube: ackenzie Child](https://www.youtube.com/user/mackenziechild?feature=em-subconf-s3-chl)
 * Google: rails 學習筆記 
     * http://adz.visionbundles.com/posts/171568--activerecord-rails-notes-transaction-transaction-measurement
 
@@ -107,8 +108,8 @@ Read things that you need to read and don't worry too much. :)
 # Getting Laravel up
 
 
-First, install [Composer] (https://getcomposer.org/download/):
-
+First, install [Composer](https://getcomposer.org/download/):
+    
     curl -sS https://getcomposer.org/installer | php
 
 You can place this file anywhere you wish. If you put it in your `PATH`, you can access it globally. On unixy systems you can even make it executable and invoke it without php.
@@ -135,7 +136,7 @@ Once installed, the simple laravel new command will create a fresh Laravel insta
     laravel new blog # ~/.composer/vendor/bin/laravel
 
 ref:
-http://laravel.com/docs/4.2/quick
+* http://laravel.com/docs/4.2/quick
 
 ## Serving Laravel
 
@@ -148,7 +149,7 @@ It returns an error:
     mcrypt php extension required
 
 Google: php artisan server mcrypt php extension required
-* [Laravel.io - Difficulty installing Laravel: Getting error "Mcrypt PHP extension required"] (http://laravel.io/forum/02-08-2014-difficulty-installing-laravel-getting-error-mcrypt-php-extension-required)
+* [Laravel.io - Difficulty installing Laravel: Getting error "Mcrypt PHP extension required"](http://laravel.io/forum/02-08-2014-difficulty-installing-laravel-getting-error-mcrypt-php-extension-required)
 
 Check 
 
@@ -180,7 +181,7 @@ Reload the web server
 
 
 
-And, if you need an isolated development environment, you should try [Laravel Homestead] (http://laravel.com/docs/4.2/homestead)
+And, if you need an isolated development environment, you should try [Laravel Homestead](http://laravel.com/docs/4.2/homestead)
 
 ## Restful
 
@@ -190,16 +191,16 @@ And, if you need an isolated development environment, you should try [Laravel Ho
 
 ## Frontend with Bootstrap
 * Google: laravel taiwan
-    * [Laravel 學習筆記 Lesson 2] (http://blog.fukuball.com/laravel-xue-xi-bi-ji-lesson-2/)
+    * [Laravel 學習筆記 Lesson 2](http://blog.fukuball.com/laravel-xue-xi-bi-ji-lesson-2/)
 
 ## Cheatsheet
 * http://chets.jesse-obrien.ca
-    * from: github: laravel -> [JesseObrien/laravel-cheatsheet] (https://github.com/JesseObrien/laravel-cheatsheet)
+    * from: github: laravel -> [JesseObrien/laravel-cheatsheet](https://github.com/JesseObrien/laravel-cheatsheet)
 ----
 
 ## Create a Blog with Laravel, 2014-10
 
-I mainly learn it from: [Learning Laravel: Simple Laravel Blog: Setting Up & Migrations Part 1] (http://learninglaravel.net/simple-laravel-blog-setting-up-migrations-part-1), with the supplementory of [] (),  and lookup command and meaning in [the doc of Laravel 4.2] (http://laravel.com/docs/4.2/)
+I mainly learn it from: [Learning Laravel: Simple Laravel Blog: Setting Up & Migrations Part 1](http://learninglaravel.net/simple-laravel-blog-setting-up-migrations-part-1), with the supplementory of [](),  and lookup command and meaning in [the doc of Laravel 4.2](http://laravel.com/docs/4.2/)
 
 (Laravel follows Rails's convention.)
 
@@ -225,8 +226,8 @@ Then change the db setting, and `debug=>true` in `blog/app/config/database.php' 
 (ref: 
 
 * Google: laravel Asia/Taipei
-    * [Laravel 學習筆記 Lesson 2] (http://blog.fukuball.com/laravel-xue-xi-bi-ji-lesson-2/)
-    * [Laravel PHP Framework 快速上手指南] (http://it.nekounya.com/laravel-php-framework-quick-install-and-config-guide.html)
+    * [Laravel 學習筆記 Lesson 2](http://blog.fukuball.com/laravel-xue-xi-bi-ji-lesson-2/)
+    * [Laravel PHP Framework 快速上手指南](http://it.nekounya.com/laravel-php-framework-quick-install-and-config-guide.html)
 )
 
 
@@ -265,7 +266,7 @@ Then migrate it:
 
     php artisan migrate
 
-[#] (http://laravel.com/docs/4.2/migrations)
+[#](http://laravel.com/docs/4.2/migrations)
 
 Now, I've created a Posts table, and connect to db.
 (part1 is finished.)
@@ -283,13 +284,13 @@ The cloned framework is broken, some files are missing. We need to fix it:
 
     composer install
 
-Then the internal server works now. [Which files/directories to ignore in a Laravel 4 project when using version control?] (http://stackoverflow.com/questions/17003253/which-files-directories-to-ignore-in-a-laravel-4-project-when-using-version-cont) (from Google: why git init ignore laravel vendor).
+Then the internal server works now. [Which files/directories to ignore in a Laravel 4 project when using version control?](http://stackoverflow.com/questions/17003253/which-files-directories-to-ignore-in-a-laravel-4-project-when-using-version-cont) (from Google: why git init ignore laravel vendor).
 
 ( So you don't add it unnecessarily into version control. Composer can install dependencies onto your production server for you. (`composer install`). Note that composer update will update to latest dependencies and download them while `composer install` will install based on items in `composer.lock`. You should keep `composer.lock` in version control and use `$ composer install` in production to ensure you get the version of software you expect. (Running `composer update` also updates `composer.lock`). –  fideloper Feb 12 at 0:41 )
 
 (As noted in the below comment, you probably want to commit composer.lock in your project. Laravel ignores it by default so the authors of the laravel/laravel package don't accidently impose packages on you.
 
-Your project should include the composer.lock file so you can install packages of stable versions (via composer install instead of composer update) properly in your production environments.) [#] (http://stackoverflow.com/questions/17003253/which-files-directories-to-ignore-in-a-laravel-4-project-when-using-version-cont#comment32838601_17499192)
+Your project should include the composer.lock file so you can install packages of stable versions (via composer install instead of composer update) properly in your production environments.) [#](http://stackoverflow.com/questions/17003253/which-files-directories-to-ignore-in-a-laravel-4-project-when-using-version-cont#comment32838601_17499192)
 
 ## Auth filter and Routes
 * http://fideloper.com/laravel-4-uber-quick-start-with-auth-guide
