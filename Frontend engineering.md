@@ -76,6 +76,7 @@ Google: bootstrap django / bootstrap rails
 
 HTML5
 ====
+
 * http://codecondo.com/5-tutorials-to-learn-html5-coding/
 * http://www.8164.org/html5-resources/
 * http://diveintohtml5.info/
@@ -87,6 +88,7 @@ HTML5
 
 javascript
 ====
+
 * http://blog.jobbole.com/74818/ 
     * http://www.codecademy.com/en/tracks/javascript
 * Quora: How to learn javascript
@@ -100,6 +102,7 @@ javascript
 
 jQuery
 ====
+
 * [学习jQuery的免费资源：电子书、视频、教程和博客](http://blog.jobbole.com/53544/)
 * http://jqfundamentals.com/ , from Google: jquery guide
 * http://www.w3schools.com/jquery/default.asp
