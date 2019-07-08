@@ -463,7 +463,7 @@ RuneAudio and Volumio is soso similar, sharing a similar UI. So, what's the diff
 * Google: runeaudio and volumio
 * Google: runeaudio vs volumio
 
-#### Futher:
+#### Further:
 
 * http://www.hydrogenaud.io/forums/
 * Baidu: runeaudio  -> [树莓派组建无线播放器 — 树莓派也玩hifi](http://jy.smzdm.com/detail/30739)
@@ -520,10 +520,10 @@ to list the device
     `aplay -L`
 to list the device, and combine use with `speaker-test`
 
-        `amixer`
+    `amixer`
 a console sound mixer
 
-        `speaker-test`
+    `speaker-test`
 
 * `speaker-test`
     * from: Google: xmos x20 usb audio linux driver -> [RuneAudio Forum - No output on SPDIF with external USB card](http://www.runeaudio.com/forum/no-output-on-spdif-with-external-usb-card-t248.html)
@@ -834,6 +834,50 @@ To test if it is successfully complie, execute python3, and then
 
 (Google: python missing zlib -> http://stackoverflow.com/questions/17899291/should-i-re-install-python-again-for-zlib-module)
 
+#### Update 2019-07-08: 
+
+I try to upgrade Python to Python 3.7.1, which is the latest stable version before version 3.8.
+
+Google: raspberry pi python update -> [Installing Python 3.6 on Raspbian](https://gist.github.com/dschep/24aa61672a2092246eaca2824400d37f). it's almost same as what I did with Python 3.4.
+
+1. Install the required build-tools (some might already be installed on your system).
+
+```bash
+$ sudo apt-get update
+$ sudo apt-get install build-essential tk-dev libncurses5-dev libncursesw5-dev libreadline6-dev libdb5.3-dev libgdbm-dev libsqlite3-dev libssl-dev libbz2-dev libexpat1-dev liblzma-dev zlib1g-dev
+```
+
+If one of the packages cannot be found, try a newer version number (e.g. libdb5.4-dev instead of libdb5.3-dev).
+
+2. Download and install Python 3.7.1. When downloading the source code, select the most recent release of Python 3.6, available on the official site. Adjust the file names accordingly.
+
+```bash
+$ wget https://www.python.org/ftp/python/3.6.5/Python-3.6.5.tar.xz
+$ tar xf Python-3.7.1.tar.xz
+$ cd Python-3.7.1
+$ ./configure
+$ make
+$ sudo make altinstall
+```
+
+3. Optionally: Delete the source code and uninstall the previously installed packages. When uninstalling the packages, make sure you only remove those that were not previously installed on your system. Also, remember to adjust version numbers if necesarry.
+
+```bash
+$ sudo rm -r Python-3.7.1
+$ rm Python-3.7.1.tar.xz
+$ sudo apt-get --purge remove build-essential tk-dev
+$ sudo apt-get --purge remove libncurses5-dev libncursesw5-dev libreadline6-dev
+$ sudo apt-get --purge remove libdb5.3-dev libgdbm-dev libsqlite3-dev libssl-dev
+$ sudo apt-get --purge remove libbz2-dev libexpat1-dev liblzma-dev zlib1g-dev
+$ sudo apt-get autoremove
+$ sudo apt-get clean
+```
+
+
+This guide is pretty much taken from the following tutorial: https://liudr.wordpress.com/2016/02/04/install-python-on-raspberry-pi-or-debian/ and https://gist.github.com/BMeu/af107b1f3d7cf1a2507c9c6429367a3b
+
+//End of 2019-07-08.
+
 
 #### Escape as a plan
 Update:
@@ -1109,7 +1153,7 @@ If the above does not work, (`sudo apt-get install mariadb-server --dry-run` sho
 ```
     # For SysVinit Systems  
     $ sudo service mysql start
-   
+       
     # For systemd Systems #
     $ sudo systemctl start mysql.service
 ```
@@ -1118,7 +1162,7 @@ If the above does not work, (`sudo apt-get install mariadb-server --dry-run` sho
 
 ```
     # mysql -u root -p
-
+    
     Welcome to the MariaDB monitor.  Commands end with ; or \g.
     Your MariaDB connection id is 2
     Server version: 10.1.11-MariaDB-1~jessie mariadb.org binary distribution
@@ -2219,3 +2263,7 @@ http://www.google.com/get/noto/#/family/noto-sans-hant
 // Last update: 2019-07
 // Markdown tidyup: 2018-08
 
+
+```
+
+```
