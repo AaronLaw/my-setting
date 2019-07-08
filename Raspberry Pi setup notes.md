@@ -74,19 +74,16 @@ Raspberry Pi for hobototes.
 ----
 Shortcut
 ====
-###Service need manually start after power on
+### Service need to start manually after power on
 
-VNC server
-
-BTSync
-
-Django within py34-django
-
-Mopidy
+* VNC server
+* BTSync
+* Django within virtual environment `py34-django`
+* Mopidy
 
 ### My tools
 
-login: je09
+login: pi, je09
 
 python3.4 alias to `py`, located in /opt/python3.4/bin/python3.4
 
@@ -105,19 +102,23 @@ The default nginx document root is `/usr/share/nginx/www`. I've changed it to `/
 
 In the 1st boot up:
 
-    sudo raspi-config
+```bash
+sudo raspi-config # setup overclock here.
+```
 
 Expand the disk, set locale, turn on SSH, reboot.
 
-    sudo apt-get install update && apt-get install upgrade
-    dpkg
+```bash
+sudo apt-get install update && apt-get install upgrade
+dpkg
+```
 
 And now it's ready to be customisation. For fun! (或是被折磨)
 
 ### History
 2014-08-06: Initial the system.
 
-2014-08-09: Initial the system with a few sys admin tools setup. Preparing to be a python web server next time. Backup as an image. Learning.
+2014-08-09: Initial the system with a few system admin tools setup. Preparing to be a python web server next time. Backup as an image. Learning.
 
 2014-08-12: Install Python3.4 from source. Setup virtualenv & wirtualenvwrapper.
 
@@ -126,6 +127,10 @@ And now it's ready to be customisation. For fun! (或是被折磨)
 2014-09-10: Thinking of speed things up. (Mainly caching on Wordpress & Django.)
 
 2014-09-16: Doing of speed things up. (Overclock to 900Mhz, cache on Django.)
+
+2019-07-05: Restart the pi after 3 years!:heart:
+
+2019-07-08: Install Python 3.7.1 from source.:smiley:
 
 ### Custom software on Pi:
 tightvncserver, vim-gtk, git, 
@@ -189,9 +194,11 @@ How do I setup the Pi (a step by step record)
 ====
 
 ### Lookup IP
-    ifconfig
-    hostname -I
-    curl ifconfig.me (from: http://www.commandlinefu.com/commands/browse/sort-by-votes)
+```bash
+ifconfig
+hostname -I
+curl ifconfig.me (from: http://www.commandlinefu.com/commands/browse/sort-by-votes)
+```
 
 ref: http://www.raspberrypi.org/documentation/troubleshooting/hardware/networking/ip-address.md
 
@@ -200,7 +207,7 @@ ref: http://www.raspberrypi.org/documentation/troubleshooting/hardware/networkin
     reserve a fixed ip for pi, e.g. 192.168.0.101, for always on connection
     ssh pi@192.168.0.101
 
-ref: http://www.raspberrypi.org/documentation/remote-access/ssh/unix.md
+ref: [SSH using Linux or Mac OS - Raspberry Pi Documentation](http://www.raspberrypi.org/documentation/remote-access/ssh/unix.md)
 
 ### Screen
 
@@ -220,11 +227,12 @@ Here are some shortcut of screen:
 * [Screen：Shell 孵化器](https://linuxtoy.org/archives/screen.html)
 * [从 screen 切换到 tmux](https://linuxtoy.org/archives/from-screen-to-tmux.html)
 
+
 ### Setup VNC
     sudo apt-get install tightvncserver
     tightvncserver
     vncserver :1 -geometry 1920x1080 -depth 24
-
+    
     Creating default startup script /home/pi/.vnc/xstartup
     Starting applications specified in /home/pi/.vnc/xstartup
     Log file is /home/pi/.vnc/raspberrypi:1.log
@@ -262,12 +270,12 @@ http://blog.bittorrent.com/2014/08/05/sync-stories-dual-backup-with-a-beaglebone
 http://magnatecha.com/automatically-mount-a-drive-when-linux-boots/
 
 ### Setup git
-Git & python & python3 are already on the system.
+`Git` & `python` & `python3` are already on the system.
 
 ### Setup GVim
 
     sudo apt-get install vim-gtk (or vim-gnome)
-
+    
     gvim (vim can run over ssh)
 
 #### Setup SublimeText
@@ -304,7 +312,7 @@ Paste the following code in the script:
     #! /bin/sh
     # /etc/init.d/btsync
     #
-
+    
     # Carry out specific functions when asked to by the system
     case "$1" in
     start)
@@ -318,7 +326,7 @@ Paste the following code in the script:
         exit 1
         ;;
     esac
-
+    
     exit 0
 
 Then change the permissions, test, and register it to run at boot:
@@ -389,9 +397,9 @@ Both of them help me interactive Dropbox in cli but not automate the sync. I sha
 * Google: auto sync with dropbox raspberry
 
 ### Setup as a home theater PC (2014-09-09)
-http://en.wikipedia.org/wiki/Home_theater_PC
+* http://en.wikipedia.org/wiki/Home_theater_PC
 
-[XBMC](http://xbmc.org/)
+* [XBMC](http://xbmc.org/)
 
 * [How to Install XBMC onto the Raspberry Pi ](https://www.youtube.com/watch?v=5XuSlsJppOo)
 
@@ -569,7 +577,7 @@ If you hear a voice saying “Front Center”, then your sound is working.
 Add the archive’s GPG key:
 
     sudo wget -q -O /etc/apt/sources.list.d/mopidy.list https://apt.mopidy.com/mopidy.list
-    
+
 Install Mopidy and all dependencies:
 
     sudo apt-get update
@@ -581,15 +589,15 @@ When a new release of Mopidy is out, and you can’t wait for you system to figu
 
     sudo apt-get update
     sudo apt-get dist-upgrade
-    
+
 #### Configure Mopidy
 
 Need to config Mopidy. Some modules should be turn on, such as `http`, `local` in order to use it over network.
- 
+
 A config file is created automatically when the 1st run of Mopidy. Therefore, I run it by issue a `mopidy` command, then I edit the generated configure file:
 
     vi ~/.config/mopidy/mopidy.conf
-    
+
 Change the hostname to the location of the pi (Mine is `192.168.0.101`), and as I put music in `~/Music`:   
     
     [http]
@@ -598,7 +606,7 @@ Change the hostname to the location of the pi (Mine is `192.168.0.101`), and as 
     port = 6680
     static_dir =
     zeroconf = Mopidy HTTP server on $hostname
-
+    
     [local]
     enabled = true
     library = json
@@ -620,7 +628,7 @@ Change the hostname to the location of the pi (Mine is `192.168.0.101`), and as 
 Each time I change the music files in the `~/Music` folder (add, delete, etc), I need to let Mopidy know it:
 
     mopidy local scan # see `mopidy --help`
-    
+
 ####    Running Mopidy
 
 To start Mopidy, simply open a terminal and run:
@@ -661,20 +669,22 @@ Run the following commands to check if you music device is set to mute:
 If you see the Playback is set to [off], the music output is muted. You can use `alsamixer` tools to unmute (by press ‘M’ key to toggle mute/unmute for each control). Or you can simply run the following commands:
 (Note: may need to pass `-c 1` after amixer command to specify 2nd sound device, e.g. USB DAC):
 
-    # amixer scontrols|sed -e 's/^Simple mixer control//'|while read line;do amixer sset "$line" unmute;done                             
+```bash
+# amixer scontrols|sed -e 's/^Simple mixer control//'|while read line;do amixer sset "$line" unmute;done                             
 
-    Simple mixer control 'XMOS Clock Selector',0
-      Capabilities: pvolume pswitch penum
-      Playback channels: Front Left - Front Right
-      Limits: Playback 0 - 127
-      Mono:
-      Front Left: Playback 127 [100%] [0.00dB] [on]
-      Front Right: Playback 127 [100%] [0.00dB] [on]
-    Simple mixer control 'XMOS Clock Selector',1
-      Capabilities: pvolume pvolume-joined pswitch pswitch-joined penum
-      Playback channels: Mono
-      Limits: Playback 0 - 127
-      Mono: Playback 127 [100%] [0.00dB] [on]
+Simple mixer control 'XMOS Clock Selector',0
+  Capabilities: pvolume pswitch penum
+  Playback channels: Front Left - Front Right
+  Limits: Playback 0 - 127
+  Mono:
+  Front Left: Playback 127 [100%] [0.00dB] [on]
+  Front Right: Playback 127 [100%] [0.00dB] [on]
+Simple mixer control 'XMOS Clock Selector',1
+  Capabilities: pvolume pvolume-joined pswitch pswitch-joined penum
+  Playback channels: Mono
+  Limits: Playback 0 - 127
+  Mono: Playback 127 [100%] [0.00dB] [on]
+```
 
 ref:
 * [Mubox - Troubleshooting](http://mubox.voyage.hk/node/13)
@@ -691,7 +701,7 @@ ref:
 [pip](https://pip.pypa.io/en/latest/)
 
     sudo apt-get install python-pip
-    
+
 pip3
 
     sudo apt-get install python3-pip
@@ -736,7 +746,7 @@ OK, head to [Python.org](http://www.python.org) and get the latest python.
     wget https://www.python.org/ftp/python/3.4.1/Python-3.4.1.tar.xz
     xz -d Python-3.4.1.tar.xz
     tar -xf Python-3.4.1.tar
-
+    
     cd Python-3.4.1
     ./configure
     make
@@ -775,7 +785,7 @@ SQLite libs need to be installed in order for Python to have SQLite support.
     sudo apt-get install libsqlite3-dev
     sudo apt-get install sqlite3 # for the command-line client
     sudo apt-get install bzip2 libbz2-dev
-
+    
     cd Python-3.3.0
     ./configure --prefix=/opt/python3.3
     make && sudo make install
@@ -783,7 +793,7 @@ SQLite libs need to be installed in order for Python to have SQLite support.
 Test if it worked:
 
     /opt/python3.3/bin/python3
-
+    
     import sqlite3  # if sqlite3 package is installed on system
 
 Some nice touches to install a py command by creating a symlink:
@@ -900,11 +910,11 @@ ref:
 [virtualenvwrapper](https://bitbucket.org/dhellmann/virtualenvwrapper) is a set of extensions to Ian Bicking's [virtualenv](https://pypi.python.org/pypi/virtualenv) tool. The extensions include wrappers for creating and deleting virtual environments and otherwise managing your development workflow, making it easier to work on more than one project at a time without introducing conflicts in their dependencies.
 
     pip install virtualenvwrapper
-
+    
     export WORKON_HOME=~/Envs
     mkdir -p $WORKON_HOME
     source /usr/local/bin/virtualenvwrapper.sh
-
+    
     mkvirtualenv env1
 
 In order to make the virtualenvwrapper's environment available afterward, I should write the `export` and `source` exactly showning above in my `~/.bashrc`.
@@ -957,7 +967,7 @@ No package be shown? coz my python3.4 is called `py`
     source bin/activate
 
     pip install django  # change it to the version you want
-
+    
     cd ~/site
 )
 
@@ -972,7 +982,7 @@ There are 3 ways to install Django, according to [How to install Django](https:/
 (or
 
     pip install https://www.djangoproject.com/download/1.7c2/tarball/
-    
+
 `**Prefer**` :heart:
 If I installed Django using pip or easy_install previously, installing with `pip` or `easy_install` again will automatically take care of the old version, so you don’t need to do it myself.
 )
@@ -1344,9 +1354,9 @@ additional ref:
 set a root password.
 
 Test:
-   
-    mysql -uroot -ppassword
 
+    mysql -uroot -ppassword
+    
     /usr/libexec/mysqld --verbose --help 1>/dev/null
 
 #### Setup PHP5
@@ -1441,7 +1451,7 @@ Oops...
 I cannot make a change, coz I am not the owner of them! (Remember that I've upload an image 4hr before successfully, **afterward** I'd change the whole `wordpress/` to 777 with `sudo chmod +R 777 wordpress`. That is, I open the  `wp-content/` folder to all the public, and then ** someone ** put the image into it.) Now, I am going to see who is he!
 
     cd wordpress/wp-content && ls -l
-
+    
     -rwxrwxrwx 1 pi       pi         28  1月  9  2012 index.php
     drwxrwxrwx 3 pi       pi       4096  8月 16 01:55 plugins
     drwxrwxrwx 5 pi       pi       4096  8月 15 12:05 themes
@@ -1736,7 +1746,7 @@ Google: django fixture | django initial database
 Data can be dumpped or loaded as XML, JSON or YAML (PyYaml is need):
 
     pip install pyyaml
-
+    
     ./manage.py dumpdata --format=yaml
 
 See also: https://github.com/alex/django-fixture-generator
@@ -1839,6 +1849,7 @@ I wanna use memcache for Django, as once I set it up, I can use it with WordPres
 Firstly, I've to install memcache on Pi: 
 
 * Google: ubuntu memcached
+  
     * [How To Install and Use Memcache on Ubuntu 14.04](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-memcache-on-ubuntu-14-04) (2014-05-01 published)
 * Google: memcached django
     * [Django Memcached: Optimizing Django Through Caching](http://www.jeffknupp.com/blog/2012/02/24/django-memcached-optimizing-django-through-caching/)
@@ -1877,7 +1888,7 @@ http://www.tutorialspoint.com/redis/index.htm
 [django-cacheops](https://www.djangopackages.com/packages/p/cacheops/) seems good. It support Python 3, Django 1.7, and It uses redis as backend for ORM cache and redis or filesystem for simple time-invalidated one. I am going to install [redis](http://redis.io/) server on my machine:
 
     sudo apt-get install redis-server # as apt-get itstall redis returns no package...
-
+    
     sudo service redis-service
 
 (The redis-server installed is v2.4, not the latest v2.8.3. The requirement of django-cacheops is v2.6+. Therefore, I am going to install it from source. :smile:
@@ -1927,7 +1938,7 @@ Let's use redis in Django. Firstly, I turn the 3 caching middleware off, and the
     # 'django.middleware.cache.UpdateCacheMiddleware',
     # 'django.middleware.common.CommonMiddleware',
     # 'django.middleware.cache.FetchFromCacheMiddleware',
-
+    
     pip install django-cacheops
 
 Add `cacheops` to your `INSTALLED_APPS` before any apps that use it.
@@ -1942,24 +1953,24 @@ Setup redis connection and enable caching for desired models:
                              # is highly recommended
         'socket_timeout': 3,
     }
-
+    
     CACHEOPS = {
         # Automatically cache any User.objects.get() calls for 15 minutes
         # This includes request.user or post.author access,
         # where Post.author is a foreign key to auth.User
         'auth.user': ('get', 60*15),
-
+    
         # Automatically cache all gets, queryset fetches and counts
         # to other django.contrib.auth models for an hour
         'auth.*': ('all', 60*60),
-
+    
         # Enable manual caching on all news models with default timeout of an hour
         # Use News.objects.cache().get(...)
         #  or Tags.objects.filter(...).order_by(...).cache()
         # to cache particular ORM request.
         # Invalidation is still automatic
         'news.*': ('just_enable', 60*60),
-
+    
         # Automatically cache count requests for all other models for 15 min
         '*.*': ('count', 60*15),
     }
@@ -1998,13 +2009,14 @@ N+1 queries hurts.
 When I turn off the related field `related` in the Source model, the page load time of `/admin/product/topic/28/` drops much! The page loading drops from 5.5s to 0.69s!
 
 Ref:
-*Google: Rails cache, django cache
+
+* Google: Rails cache, django cache
     * [Caching with Rails: An overview](http://guides.rubyonrails.org/caching_with_rails.html)
     * [Ruby on Rails 實戰聖經使用 Rails 4.1 及 Ruby 2.1 - 快取](http://ihower.tw/rails4/caching.html)
         * [如何使用 memcached 做快取](http://ihower.tw/blog/archives/1768)
     * [Django Documentation - Django’s cache framework](https://docs.djangoproject.com/en/dev/topics/cache/)
     * [The Django Book - Chapter 15: Caching](http://www.djangobook.com/en/2.0/chapter15.html)
-    * Django Documentation: cache | profiling | performance | optimization
+    * Django Documentation: [cache | profiling | performance | optimization]
 
 
 ### Wordpress cache
@@ -2037,7 +2049,7 @@ HayDen james writes an interesting article [MySQL Query Cache Size and Performan
 
 ### Git
 * [Git 版本控制系統](https://ihower.tw/git/)
-* [好麻煩部落格: Git 教學](http://gogojimmy.net/2012/01/17/how-to-use-git-1-git-basic/}
+* [好麻煩部落格: Git 教學](http://gogojimmy.net/2012/01/17/how-to-use-git-1-git-basic/)
 * [How To Use Source Control Effectively](http://grokcode.com/717/how-to-use-source-control-effectively/)
     * from: http://www.fullstackpython.com/web-frameworks.html -> http://grokcode.com/864/snakefooding-python-code-for-complexity-visualization/
 * [软件版本控制介绍](http://blog.jobbole.com/55304/)
@@ -2164,6 +2176,7 @@ and you will see
 
 #### Possible other IDE / Text editor
 * Sublime Text
+* Visual Studio Code on Raspbian
 * PyCharm
 * Intellij IDEA
 
@@ -2189,20 +2202,20 @@ Google: linux install font
 
 #### Source Code Pro
 Google: Source code pro
-http://blog.typekit.com/2012/09/24/source-code-pro/
-https://github.com/adobe-fonts/source-code-pro
-http://sourceforge.net/projects/sourcecodepro.adobe/
+* http://blog.typekit.com/2012/09/24/source-code-pro/
+* https://github.com/adobe-fonts/source-code-pro
+* http://sourceforge.net/projects/sourcecodepro.adobe/
 
 
-http://www.playpcesor.com/2014/07/source-han-sans-cht-adobe-google.html
-http://blog.typekit.com/alternate/source-han-sans-cht/
-http://www.playpcesor.com/2014/07/google-chrome-font.html
+* http://www.playpcesor.com/2014/07/source-han-sans-cht-adobe-google.html
+* http://blog.typekit.com/alternate/source-han-sans-cht/
+* http://www.playpcesor.com/2014/07/google-chrome-font.html
 
 #### Fonts:
 http://sourceforge.net/adobe/source-han-sans/
 http://github.com/adobe-fonts/source-han-sans/
 http://www.google.com/get/noto/#/family/noto-sans-hant
 
-// Last update: 2014-09
+// Last update: 2019-07
 // Markdown tidyup: 2018-08
 
