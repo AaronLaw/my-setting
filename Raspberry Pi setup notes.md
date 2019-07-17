@@ -254,29 +254,53 @@ On the clien side,
 ref: http://www.raspberrypi.org/documentation/remote-access/vnc/README.md
 http://computers.tutsplus.com/tutorials/take-control-of-your-raspberry-pi-using-your-mac-pc-ipad-or-phone--mac-54603
 
-### Prepare hdd/USB drive
+### Prepare Storage: Hard drive/USB drive
 
-Format as ext4
+By default, your Raspberry Pi automatically mounts some of the popular file systems such as FAT, NTFS, and HFS+ at the `/media/pi/<HARD-DRIVE-LABEL>`location.
 
-    df -h                               # find your drive here, e.g. `sda1`
-    sudo umount /dev/sda1               # replace sda1 with your drive name !
-    sudo mkfs.ext4 /dev/sda1 -L BTSync  # replace sda1 with your drive name !
+If you want to mount your storage device to another location, you should set up your storage device so that it always mounts to a specific location of your choice. You must mount it manually.
+
+If your storage device uses an NTFS file system, you will have read-only access to it. If you want to write to the device, you can install the ntfs-3g driver:
+
+```bash
+sudo apt-get update
+sudo apt-get install ntfs-3g
+```
+
+To format a disk as ext4 filesystem:
+
+```bash
+df -h                               # find your drive here, e.g. `sda1`
+sudo umount /dev/sda1               # replace sda1 with your drive name !
+sudo mkfs.ext4 /dev/sda1 -L BTSync  # replace sda1 with your drive name !
+```
 
 
-Mount the drive
+Mount the drive:
 
-    sudo mount /dev/sda1 /mnt/usbdrive
+```bash
+sudo mount /dev/sda1 /mnt/usbdrive
+```
 
-Edit fstab to mount the drive on startup. Add following to beginning of /etc/fstab
+Verify that the storage device is mounted successfully by listing the contents:
 
-    sudo vim /etc/fstab
-    /dev/sda1       /mnt/usbdrive   ext4    defaults          0       0
+```bash
+ls /mnt/usbdrive
+```
 
+Edit `fstab` file to mount the drive on startup automatically. Add following to beginning of `/etc/fstab`:
 
-ref:
-https://github.com/johnantoni/beaglebone-black/blob/master/setup/format-and-mount-usb.md
-http://blog.bittorrent.com/2014/08/05/sync-stories-dual-backup-with-a-beaglebone-black-and-virtual-private-server/
-http://magnatecha.com/automatically-mount-a-drive-when-linux-boots/
+```bash
+sudo vim /etc/fstab
+/dev/sda1       /mnt/usbdrive   ext4    defaults          0       0
+```
+
+Ref:
+
+* [External storage configuration - Raspberry Pi Documentation](https://www.raspberrypi.org/documentation/configuration/external-storage.md) - How to Read/Write NTFS file system, auto mount at startup
+* https://github.com/johnantoni/beaglebone-black/blob/master/setup/format-and-mount-usb.md
+* http://blog.bittorrent.com/2014/08/05/sync-stories-dual-backup-with-a-beaglebone-black-and-virtual-private-server/
+* http://magnatecha.com/automatically-mount-a-drive-when-linux-boots/
 
 ### Setup git
 `Git` & `python` & `python3` are already on the system.
