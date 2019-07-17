@@ -202,9 +202,18 @@ curl ifconfig.me (from: http://www.commandlinefu.com/commands/browse/sort-by-vot
 
 ref: http://www.raspberrypi.org/documentation/troubleshooting/hardware/networking/ip-address.md
 
-### Setup ssh
+### Enable SSH
+
+SSH is not enabled by default in Raspbian, so you will have to do it before you boot the card for the first time (for headless setup).[#](https://www.raspberrypi.org/documentation/remote-access/ssh/README.md) [#](https://dev.to/bogdaaamn/run-your-nodejs-application-on-a-headless-raspberry-pi-4jnn) Or enable it via `raspi-config` (with keyboard).
+
+After the installation, go to boot partition `boot/` and place a file named `ssh` (no extension).
+
+```bash
+touch ssh
+```
+
     raspi-config
-    reserve a fixed ip for pi, e.g. 192.168.0.101, for always on connection
+    # reserve a fixed ip for pi, e.g. 192.168.0.101, for always on connection
     ssh pi@192.168.0.101
 
 ref: [SSH using Linux or Mac OS - Raspberry Pi Documentation](http://www.raspberrypi.org/documentation/remote-access/ssh/unix.md)
