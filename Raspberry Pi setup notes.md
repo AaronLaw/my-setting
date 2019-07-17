@@ -202,6 +202,16 @@ curl ifconfig.me (from: http://www.commandlinefu.com/commands/browse/sort-by-vot
 
 ref: http://www.raspberrypi.org/documentation/troubleshooting/hardware/networking/ip-address.md
 
+### Who is online
+
+```bash
+who
+w
+arp -a
+```
+
+
+
 ### Enable SSH
 
 SSH is not enabled by default in Raspbian, so you will have to do it before you boot the card for the first time (for headless setup).[#](https://www.raspberrypi.org/documentation/remote-access/ssh/README.md) [#](https://dev.to/bogdaaamn/run-your-nodejs-application-on-a-headless-raspberry-pi-4jnn) Or enable it via `raspi-config` (with keyboard).
