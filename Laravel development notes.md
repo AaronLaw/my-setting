@@ -1,4 +1,4 @@
- Introduction to Laravel
+ Introduction to Laravel 5
 ====
 
 * http://www.reddit.com/r/learnprogramming/comments/1h3zr0/my_boyfriends_learn_to_program_manifesto_on/
@@ -83,7 +83,6 @@ Laravel official doc provides no tutorials (not like what django doc does nor ra
         * [Youtube: ackenzie Child](https://www.youtube.com/user/mackenziechild?feature=em-subconf-s3-chl)
 * Google: rails 學習筆記 
     * http://adz.visionbundles.com/posts/171568--activerecord-rails-notes-transaction-transaction-measurement
-
 
 ----
 ## On how to learn
@@ -250,7 +249,7 @@ Complete the `up()` and `down()` functions in the newly created migration file, 
             $t->timestamps();
         }) ;
     }
-
+   
     /**
      * Reverse the migrations.
      *

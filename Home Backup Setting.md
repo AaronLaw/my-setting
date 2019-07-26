@@ -1,19 +1,20 @@
 Home Backup Setting
 ====
 
-Be procrastinating for a year, I setup my own backup system on computers in home tonight. KISS and take action. (2018-08-24)
+Being procrastinating for a year, I setup my own backup system on computers at home tonight. KISS and take an action. (2018-08-24)
 
 
 ## Purpose 目的
-@@ Should be a minimalism setup. Low cost, convenient, simple software interface, powerful and headless. Once setup is done, forgiveness is given to the user who forget how the backup system works. @@
+> @@ Should be a minimalism setup. Low cost, convenient, simple software interface, powerful and headless. Once setup is done, forgiveness is given to the user who forget how the backup system works. @@
+>
 
-Though this setup doesn't follow [the 3-2-1 backup rule] (3 copies on 2 media types with 1 offsite.)(https://www.google.com/search?ei=KiKAW7GpEIqA-QaTjaHQDA&q=the+3-2-1+backup+rule&oq=the+3-2-1+backup+rule) and don't care about [backup rotation](), however, it's easy to extend to follow the rule, and in fact, it's better than nothing when data loss occurs.
+Though this setup doesn't follow [the 3-2-1 backup rule](https://www.google.com/search?ei=KiKAW7GpEIqA-QaTjaHQDA&q=the+3-2-1+backup+rule&oq=the+3-2-1+backup+rule)  (3 copies on 2 media types with 1 offsite.) and don't care about [backup rotation](), however, it's easy to follow the rule in the future, and in fact, it's better than nothing when no backup plan.
 
 ## 材料
 * Software:
     * [RaiDrive](https://www.raidrive.com/)
     * ~~Areca Backup~~ [Duplicati](https://www.duplicati.com/) for file level backup. (it was introduced in https://www.evernote.com/shard/s11/sh/7c731f2b-590a-4ee1-92a6-964ed8d3bf34/dfd8d0d4113795ea6f51e3e77623f9be)
-    * [Veeam Backup](https://go.veeam.com/) [#](https://www.veeam.com/windows-cloud-server-backup-agent.html) for system level backup (Image based, Disk imaging/cloning). It provides full system imaging and bare metal recovery.
+    * [Veeam Backup](https://go.veeam.com/) [#](https://www.veeam.com/windows-cloud-server-backup-agent.html) for system level backup (block-based, Disk imaging/cloning). It provides full system imaging and bare metal recovery.
 * Storage:
     * A 1TB+ external harddisk ([2 to 3 times larger than the computer storage size](https://thenextweb.com/businessapps/2015/01/24/complete-guide-backing-computer-properly/)), or
     * A cloud drive (that always on), such as Google Drive (HKD 15 per month for 100GB.)
@@ -23,7 +24,7 @@ Though this setup doesn't follow [the 3-2-1 backup rule] (3 copies on 2 media ty
     * [Timeshift](https://alternativeto.net/software/timeshift/), which was introduced in LinuxMint 19, for Linux.
 
 ### Questions: 
-    
+
 * 2018-08-24: Slow on dedupe? Duplicati does support multithread since [v2.0.3.6-2.0.3.6_canary_2018-04-23](https://github.com/duplicati/duplicati/releases/tag/v2.0.3.6-2.0.3.6_canary_2018-04-23)
     * Google: duplicati multithread -> [Duplicati forum: Is Duplicati2 mutlithread?](https://forum.duplicati.com/t/is-duplicati-2-multithread/2538) -> [v2.0.3.6-2.0.3.6_canary_2018-04-23](https://github.com/duplicati/duplicati/releases/tag/v2.0.3.6-2.0.3.6_canary_2018-04-23)
     
@@ -69,11 +70,11 @@ In global setting:
     --concurrency-max-threads=0 # 0 for dynamic balance
     --concurrency-block-hashers=4
     --concurrency-compressors=4
-
+    
     # for using zip # In command line, run `help zip` to see what argunment it takes
     --zip-compression-method=LZMA
     --zip-compression-zip64=True # for files larger than 4GB
-
+    
     # for using 7z # In command line, run `help 7z` to see what argunment it takes
     --compression-module=~~zip~~7z
     --lzma-thread-count=4
@@ -85,6 +86,7 @@ Reference:
 * https://www.backblaze.com/blog/the-3-2-1-backup-strategy/
 * https://lifehacker.com/5961216/why-you-should-have-more-than-one-backup
 * https://www.anotherwindowsblog.com/2017/01/windows-backup-hdd-migration-with-free-veeam-endpoint.htm
+* [Key Factors for Successful NAS Data Migration _ Resilio Blog](https://www.resilio.com/blog/nas-migration-key-factors-success) -> Google: NAS data migration syncthing ->  <https://rolisz.ro/2019/03/16/backing-up-3-syncthing/>
 
 2018-08-24
 
@@ -96,24 +98,3 @@ Reference:
 > * --concurrency-block-hashers=4
 > * --concurrency-compressors=4
 
-
-
-
-* 書寫一個質能守恒公式[^LaTeX]:
-
-$$E=mc^2$$
-
-* 或者高亮一段 `代碼` [^code]：
-
-``` python
-import random
-@requires_authorization
-def hello():
-    pass
-```
-
-tag: Cmd-Markdon
-##Cmd-Markdown##
-
-Reference:
-* https://www.zhihu.com/question/19637157/answer/151852635

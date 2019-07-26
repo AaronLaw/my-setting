@@ -10,7 +10,7 @@ Boot in: BIOS
     + add to a domain "cheng.local"
 
 (This is a VM Image made by Virtualbox 5.1, for running BIOS in Virtualbox.
-Shutdown before rebooting to join to domain "cheng.local", which preventing Windows update extending the hdd.)
+Shutdown before rebooting to join to domain "cheng.local", which preventing Windows update expending harddisk.)
 
 Remarks: Admin, CH39xxx
 
