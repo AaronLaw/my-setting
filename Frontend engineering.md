@@ -8,12 +8,18 @@ Frontend engineering
 * http://www.quora.com/Ruby-on-Rails-web-framework/What-is-the-best-way-to-learn-Ruby-on-Rails-Bloc-io-theFirehoseProject
 * http://www.databaseanswers.org/data_models/index.htm (from: http://www.quora.com/What-is-the-fastest-way-to-learn-Django)
 * [I am 15 and want to learn web development. I have a basic understanding of html, CSS, JavaScript, and I'm learning Rails. How long should it take before I am a working developer, and what should I learn?](http://www.quora.com/I-am-15-and-want-to-learn-web-development-I-have-a-basic-understanding-of-html-CSS-JavaScript-and-Im-learning-Rails-How-long-should-it-take-before-I-am-a-working-developer-and-what-should-I-learn)
-
+* [Git小书-图书-图灵社区](www.ituring.com.cn/book/1870) -> [1000copy的文章-图灵社区](www.ituring.com.cn/space/190105) -> [《bootstrap小书》免费上线。节省时间快速学习bootstrap框架的利器-图灵社区](www.ituring.com.cn/article/272595) -> [bootstrap-图灵社区](www.ituring.com.cn/tag/1315) -> [如何水水地写一个网站。（草稿）-图灵社区](www.ituring.com.cn/article/6576)
 
 ### Blog
 * https://flipboard.com/section/ossian-的網頁設計三兩事-bzoKY2
+* [如何优雅地使用Sublime Text-图灵社区](http://www.ituring.com.cn/article/211588) -> [如何优雅地使用Sublime Text _ 晚晴幽草轩](https://www.jeffjade.com/2015/12/15/2015-04-17-toss-sublime-text/)  -> [与时俱进版前端资源教程 _ 晚晴幽草轩](https://www.jeffjade.com/2017/09/28/127-nice-front-end-tutorial/) -> [Github - nicejade_Front-end-tutorial_ 最全的资源教程-前端涉及的所有知识体系，并在 Nice Front-end](https://github.com/nicejade/Front-end-tutorial)
 
 ### Community
+* Awesome:
+    * Freecodecamp
+    * dev.to
+    * MUO
+      * MUO: object programming
 * http://www.quora.com/What-is-the-best-way-to-learn-HTML-CSS-and-JavaScript
     * http://alistapart.com
     * http://smashingmagazine.com
@@ -51,6 +57,7 @@ Frontend engineering
 * Animate.css
 * https://gomockingbird.com/
 * Github: awesome-xxx
+* VS Code: extension
 
 ### Frontend
 * [跟(不)上網頁前端技術（資源大雜燴）](http://huan-lin.blogspot.com/2013/08/front-end-technologies.html)
@@ -58,6 +65,10 @@ Frontend engineering
     * https://angularjs.org/
       * http://campus.codeschool.com/courses/shaping-up-with-angular-js/intro
     * https://github.com/doggy8088/frontend-tools
+* [如何优雅地使用Sublime Text-图灵社区](http://www.ituring.com.cn/article/211588) -> [如何优雅地使用Sublime Text _ 晚晴幽草轩](https://www.jeffjade.com/2015/12/15/2015-04-17-toss-sublime-text/)  -> [与时俱进版前端资源教程 _ 晚晴幽草轩](https://www.jeffjade.com/2017/09/28/127-nice-front-end-tutorial/) -> [Github - nicejade_Front-end-tutorial_ 最全的资源教程-前端涉及的所有知识体系，并在 Nice Front-end](https://github.com/nicejade/Front-end-tutorial)
+* [独立电子书-图灵社区](www.ituring.com.cn/tag/3629) -> [这『六本』电子书助你成为顶尖程序员（含下载地址）-图灵社区](www.ituring.com.cn/article/497491) -> Google: GitHub 漫游指南 -> [GitHub 漫游指南 – GitHub 漫游指南](https://github.phodal.com), [phodal_github  GitHub 漫游指南- a Chinese ebook on how to build a good project on Github.](https://github.com/phodal/github) 
+* [独立电子书-图灵社区](www.ituring.com.cn/tag/3629) -> [这『六本』电子书助你成为顶尖程序员（含下载地址）-图灵社区](www.ituring.com.cn/article/497491) -> Google: GitHub 漫游指南 -> [GitHub 漫游指南 – GitHub 漫游指南](https://github.phodal.com) -> [phodal_fe  《我的职业是前端工程师》 - Ebook：I'm a FrontEnd Developer](https://github.com/phodal/fe)
+
 * http://www.quora.com/Is-it-reasonable-to-learn-AngularJS-for-a-six-month-school-project-How-could-it-impact-the-overall-productivity
     * [前端開發: jQuery & ASP.net](http://kevintsengtw.blogspot.tw/p/blog-page_16.html)
 * [KeJyun學習日誌: 初階網頁設計學習資源 ](http://blog.kejyun.com/p/getting-start-to-learn-web-programming.html) (from: Google: laravel taiwan)
@@ -96,9 +107,9 @@ javascript
         * -> http://eloquentjavascript.net/
             * -> http://www.nostarch.com/ejs2
             * -> http://shop.oreilly.com/product/9781593275846.do
-* [JavaScript: The Definitive Guide, 6th Edition 中文版] (http://ued.taobao.org/javascript/)
-* [Eloquent Javascript] (http://eloquentjavascript.net/), by Google: Javascript ebook
-* [JSbooks - Free javascript books] http://jsbooks.revolunet.com/ , by Google: Javascript ebook
+* [JavaScript: The Definitive Guide, 6th Edition 中文版](http://ued.taobao.org/javascript/)
+* [Eloquent Javascript](http://eloquentjavascript.net/), by Google: Javascript ebook
+* [JSbooks - Free javascript books](http://jsbooks.revolunet.com/) , by Google: Javascript ebook
 
 jQuery
 ====
@@ -119,6 +130,7 @@ Bootstrap
 * http://www.tutorialspoint.com/bootstrap/index.htm
     * Google: python for loop -> http://www.tutorialspoint.com/python/python_for_loop.htm -> this
 * http://www.w3cplus.com/blog/tags/126.html
+* [Git小书-图书-图灵社区](www.ituring.com.cn/book/1870) -> [1000copy的文章-图灵社区](www.ituring.com.cn/space/190105) -> [《bootstrap小书》免费上线。节省时间快速学习bootstrap框架的利器-图灵社区](www.ituring.com.cn/article/272595) -> [bootstrap小书 · GitBook (Legacy)](https://legacy.gitbook.com/book/1000copy/bootstrap/details)
 
 ### Some free Bootstrap themes as good examples
 * Google: bootstrap -> [Freelancer - Start Bootstrap Theme](http://startbootstrap.com/templates/freelancer/) -> http://startbootstrap.com/ , provides many Bootstrap examples, and jQuery usage.
@@ -138,9 +150,10 @@ http://www.quora.com/What-is-the-path-for-learning-understanding-and-creating-yo
 
 Website to learn code
 ===
-* http://tech.yipit.com/2012/08/21/how-i-taught-myself-to-code-in-8-weeks/
-* http://www.codecademy.com/en/tracks/python
+* [How I taught myself to code in 8 weeks - Yipit.com](http://tech.yipit.com/2012/08/21/how-i-taught-myself-to-code-in-8-weeks/)
+* [CodeCademy - Python](http://www.codecademy.com/en/tracks/python)
 * http://campus.codeschool.com/courses/shaping-up-with-angular-js/intro
+* Udemy
 * Treehouse
 * udacity
 * learnstreet
