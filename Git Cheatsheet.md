@@ -9,7 +9,7 @@ GIT Cheatsheet
 * [git - the simple guide - no deep shit!](rogerdudler.github.io/git-guide/)
   * <https://github.com/rogerdudler/git-guide>
   * <http://rogerdudler.github.io/git-guide/index.zh.html>
-  * [Think Like (a) Git](-> <http://think-like-a-git.net/>)
+  * -> [Think Like (a) Git](-> <http://think-like-a-git.net/>)
   * [git 使用简易指南](https://www.bootcss.com/p/git-guide/)
 * [Git Tutorials and Training _ Atlassian Git Tutorial](https://www.atlassian.com/git/tutorial/git-basics#!init) (from: http://www.instructables.com/id/GitPi-A-Private-Git-Server-on-Raspberry-Pi/?ALLSTEPS)
 * Git - Book <https://git-scm.com/book/en/v2> = <https://book.git-scm.com/book/en/v2>
