@@ -1908,7 +1908,9 @@ Tools for profiling django see Django Documentation: profiling | performance |op
 
 For 1:
 
-    sudo raspi-config
+```bash
+sudo raspi-config # The overclock the Pi
+```
 
 For 2:
 
@@ -2032,50 +2034,58 @@ Add `cacheops` to your `INSTALLED_APPS` before any apps that use it.
 
 Setup redis connection and enable caching for desired models:
 
-    CACHEOPS_REDIS = {
-        'host': 'localhost', # redis-server is on same machine
-        'port': 6379,        # default redis port
-        'db': 1,             # SELECT non-default redis database
-                             # using separate redis db or redis instance
-                             # is highly recommended
-        'socket_timeout': 3,
-    }
-    
-    CACHEOPS = {
-        # Automatically cache any User.objects.get() calls for 15 minutes
-        # This includes request.user or post.author access,
-        # where Post.author is a foreign key to auth.User
-        'auth.user': ('get', 60*15),
-    
-        # Automatically cache all gets, queryset fetches and counts
-        # to other django.contrib.auth models for an hour
-        'auth.*': ('all', 60*60),
-    
-        # Enable manual caching on all news models with default timeout of an hour
-        # Use News.objects.cache().get(...)
-        #  or Tags.objects.filter(...).order_by(...).cache()
-        # to cache particular ORM request.
-        # Invalidation is still automatic
-        'news.*': ('just_enable', 60*60),
-    
-        # Automatically cache count requests for all other models for 15 min
-        '*.*': ('count', 60*15),
-    }
+```bash
+CACHEOPS_REDIS = {
+    'host': 'localhost', # redis-server is on same machine
+    'port': 6379,        # default redis port
+    'db': 1,             # SELECT non-default redis database
+                         # using separate redis db or redis instance
+                         # is highly recommended
+    'socket_timeout': 3,
+}
+
+CACHEOPS = {
+    # Automatically cache any User.objects.get() calls for 15 minutes
+    # This includes request.user or post.author access,
+    # where Post.author is a foreign key to auth.User
+    'auth.user': ('get', 60*15),
+
+    # Automatically cache all gets, queryset fetches and counts
+    # to other django.contrib.auth models for an hour
+    'auth.*': ('all', 60*60),
+
+    # Enable manual caching on all news models with default timeout of an hour
+    # Use News.objects.cache().get(...)
+    #  or Tags.objects.filter(...).order_by(...).cache()
+    # to cache particular ORM request.
+    # Invalidation is still automatic
+    'news.*': ('just_enable', 60*60),
+
+    # Automatically cache count requests for all other models for 15 min
+    '*.*': ('count', 60*15),
+}
+```
 
 Additionally, you can tell cacheops to degrade gracefully on redis fail with:
 
-    CACHEOPS_DEGRADE_ON_FAILURE = True
+```bash
+CACHEOPS_DEGRADE_ON_FAILURE = True
+```
 
 There is also a possibility to make all cacheops methods and decorators no-op, e.g. for testing:
 
-    CACHEOPS_FAKE = True
+```bash
+CACHEOPS_FAKE = True
+```
 
 [#](https://github.com/Suor/django-cacheops#readme)
 
 
 Finally, I let cacheops to cache all the things, including admin, queries:
 
-    '*.*': ('all', 60*15),
+```bash
+'*.*': ('all', 60*15),
+```
 
 Now, the page loading of `/admin/product/topic/28/` is 3.73s, decreased from 5.5s. The improvement is great!
 
@@ -2083,7 +2093,9 @@ Now, the page loading of `/admin/product/topic/28/` is 3.73s, decreased from 5.5
 
 Persistent connection helps! (aka connection pool)
 
-    CONN_MAX_AGE = None
+```bash
+CONN_MAX_AGE = None
+```
 
  [Django Documentation: Database](https://docs.djangoproject.com/en/dev/ref/databases/) -> [setting: CONN_MAX_AGE](https://docs.djangoproject.com/en/dev/ref/settings/#std:setting-CONN_MAX_AGE)
 
