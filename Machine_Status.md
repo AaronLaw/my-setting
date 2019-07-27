@@ -55,6 +55,9 @@ Upgrade to Linuxmint 18.1 "Sarah" (http://blog.linuxmint.com/?p=3181) , as it is
 Install: mintupgrade (Google: how to upgrade linuxmint 17.3 to 18 -> https://community.linuxmint.com/tutorial/view/2316)
 Install: virtualenv, virtualenvwrapper
 
+2019-07-27:
+Compile Python 3.8b2 (Google: how to compile python on linux -> https://solarianprogrammer.com/2017/06/30/building-python-ubuntu-wsl-debian/)
+
 ----
 Optional to install:  PyCharm, VSCode, ansible, traceroute, mtr, nmon, rcconf / chkconfig, cpanel / [vestacp](https://vestacp.com/)
 
