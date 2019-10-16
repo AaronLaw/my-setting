@@ -25,6 +25,10 @@ Google: bash ctrl-a -> [bash keyboard shortcuts - Linux - SS64.com](https://ss64
 * [Git 教學 - Git 書 - 為你自己學 Git _ 高見龍](https://gitbook.tw)
   * Cheatsheet: [Git 面試題 - Git 教學 _ 高見龍](https://gitbook.tw/interview)
 
+### Git Cheatsheet
+
+* [Git cheat sheet | Atlassian Git Tutorial](https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet) & PDF
+* Cheatsheet: [Git 面試題 - Git 教學 _ 高見龍](https://gitbook.tw/interview)
 
 ### Setup a private Git server
 
