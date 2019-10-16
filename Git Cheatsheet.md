@@ -2,6 +2,8 @@ GIT Cheatsheet
 ====
 [15分钟搞定GTD——一个让你把事情做完的系统性指南](http://select.yeeyan.org/view/519841/437987)
 
+Google: bash ctrl-a -> [bash keyboard shortcuts - Linux - SS64.com](https://ss64.com/bash/syntax-keyboard.html)
+
 ## Git notes
 * http://grokcode.com/717/how-to-use-source-control-effectively/
 
@@ -11,22 +13,65 @@ GIT Cheatsheet
   * <http://rogerdudler.github.io/git-guide/index.zh.html>
   * -> [Think Like (a) Git](-> <http://think-like-a-git.net/>)
   * [git 使用简易指南](https://www.bootcss.com/p/git-guide/)
-* [Git Tutorials and Training _ Atlassian Git Tutorial](https://www.atlassian.com/git/tutorial/git-basics#!init) (from: http://www.instructables.com/id/GitPi-A-Private-Git-Server-on-Raspberry-Pi/?ALLSTEPS)
+* [git ready » learn git one commit at a time](http://gitready.com/)
+  * from: Google: git showing all branch in remote -> [git ready » list remote branches](gitready.com/intermediate/2009/02/13/list-remote-branches.html)
+* [Git Tutorials and Training _ Atlassian Git Tutorial](https://www.atlassian.com/git/tutorial/git-basics#!init) 
+  * (from: http://www.instructables.com/id/GitPi-A-Private-Git-Server-on-Raspberry-Pi/?ALLSTEPS)
 * Git - Book <https://git-scm.com/book/en/v2> = <https://book.git-scm.com/book/en/v2>
   * <https://git-scm.com/book/zh-tw/v2>
   * -> <http://gitimmersion.com/>
 * <https://progit.org/book/>
   * [Pro Git 中文版（第二版）](https://progit.bootcss.com)
+* [Git 教學 - Git 書 - 為你自己學 Git _ 高見龍](https://gitbook.tw)
+  * Cheatsheet: [Git 面試題 - Git 教學 _ 高見龍](https://gitbook.tw/interview)
 
 
 ### Setup a private Git server
+
 http://www.instructables.com/id/GitPi-A-Private-Git-Server-on-Raspberry-Pi/?ALLSTEPS
 
 
 ### Reference (general)
 ----
 
+@2014
+
+First thing first, here is my `.gitconfig` file, which is placed in my home:
+
+```bash
+[alias]
+	hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+[user]
+	email = aaronlaw@gmail.com
+	name = aaronlaw
+```
+
 @2019
+
+First thing first, here is my `.gitconfig` file, which is placed in my home:
+
+```bash
+[alias]
+	hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+	mist = log --pretty=format:'%s' --graph --date=short 
+[user]
+	email = aaronlaw@gmail.com
+	name = Aaron Law
+```
+
+@2019-10: To automate git pulling, I setup a cron job:
+
+```bash
+crontab -e
+```
+For example, I `git pull` the active branch on a 30 mins interval during 7am~6pm everyday: 
+```bash
+*/30 7-18 * * * cd ~/Syncthing/Sites4/Python/revenue-engine/ && git pull
+```
+
+
+
+----
 
 #### Fixing the Last Commit
 
@@ -44,6 +89,21 @@ In case you want to add some more changes to that last commit, you can simply st
 ```bash
 $ git add some/changed/file.ext
 $ git commit --amend -m "commit message"
+```
+
+----
+
+#### Discard change
+
+Q: I have commited and then change files to play around. After playing around, how can I discard changes?
+
+Google: git discard changes
+
+* [version control - How do I discard unstaged changes in Git_ - Stack Overflow](https://stackoverflow.com/questions/52704/how-do-i-discard-unstaged-changes-in-git)
+
+```bash
+$ git checkout <hash> # Results in a detach head state
+$ git checkout . # to discard change. Or use `git stash` to save changes
 ```
 
 ----
@@ -194,9 +254,155 @@ You can now see your branch and all of your changes on github. When  you are rea
 
 ----
 
+#### Cleaning to have a light & speedy repository
+
+Q: I wrongly committed some dependances that can be installed by package manager (a.k.a I should not commit that 3rd party packages). Repository is very large in size now. How can I clean it up?
+
+Google: git remove a file from history
+
+* [How to remove a big file wrongly committed to a Git repo - Freek Van der Herten's blog on PHP, Laravel and JavaScript](https://freek.dev/879-how-to-remove-a-big-file-wrongly-committed-to-a-git-repo)
+
+Google: Maintaining a Git Repository
+
+----
+
 #### Merge Branches
 
 Q: How can I merge a branch back to master?
 
+First, `checkout` to master, and then `merge` the feature branch
+
+```bash
+$ git checkout master
+$ git merge dev-frontend
+# That should create a new commit if not "fast forward".
+```
+
+That should create a new commit if not "fast forward". If we don't want to create a new commit when merge, we could use "rebase" instead.
+
+```
+[Pull 下載更新 - 為你自己學 Git _ 高見龍](https://gitbook.tw/chapters/github/pull-from-github.html)
+```
+
+
+
 ----
 
+#### Working with remote (e.g. Github)
+
+Q: I've created a new branch in local repo. How can I push it to remote repo, such as Github?
+
+* [git ready » push and delete remote branches](gitready.com/beginner/2009/02/02/push-and-delete-branches.html)
+
+Just push it as usual:
+
+```bash
+$ git push <new-branch>
+```
+
+
+
+Q: I've created a new branch "dev-frontend" on dev_machine1, and pushed it to Github. On dev_machine2, how can I pull/fetch that branch?
+
+Google: pull a branch -> Google:  pull a branch from remote -> Google: git pull remote branch
+
+* [Git Pull   Atlassian Git Tutorial](https://www.atlassian.com/git/tutorials/syncing/git-pull)
+* [Git Pull   freeCodeCamp Guide](https://guide.freecodecamp.org/git/git-pull/)
+
+`git pull` is a combination of two other commands: `git fetch` followed by `git merge`:
+
+`git pull` = `git fetch` + `git merge` ([Pull 下載更新 - 為你自己學 Git _ 高見龍](https://gitbook.tw/chapters/github/pull-from-github.html))
+
+```bash
+# This is the same as git fetch <remote> followed by git merge origin/<current-branch>.
+$ git pull <remote>
+$ git checkout dev-frontend
+```
+
+or just simply clone the repository:
+
+```bash
+ $ git clone https://github.com/itcs-dev-team/revenue-engine.git
+ $ cd revenue-engine
+ $ git checkout dev-frontend
+```
+
+
+
+Q: How can I know all the branches and their names (without going to Github and have a look)?
+
+Google: git showing all branch in remote
+
+* [branch - How to fetch all Git branches - Stack Overflow](https://stackoverflow.com/questions/10312521/how-to-fetch-all-git-branches)
+* [git ready » list remote branches](gitready.com/intermediate/2009/02/13/list-remote-branches.html)
+
+```bash
+# Use the remote related commands to figure out what branches are on my remote.
+# e.g. git remote show <remote> # display plenty of information about the remote in general
+$ git remote show origin
+
+$ git ls-remote # lists all references to branches and tags
+```
+
+```bash
+$ git branch -a # to see all local and remote branches
+```
+
+```bash
+$ git branch -r # to see remote branches only
+```
+
+
+
+Q: Sometimes there is an error when I push to Github: "Updates were rejected because the tip of your current branch is behind its remote counterpart."
+
+```bash
+$ git push
+To https://github.com/eddiekao/dummy-git.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/eddiekao/dummy-git.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+```
+
+Google: Updates were rejected because the tip of your current branch is behind its remote counterpart
+
+* [【狀況題】怎麼有時候推不上去... - 為你自己學 Git _ 高見龍](https://gitbook.tw/chapters/github/fail-to-push.html)
+
+This is because the version on Github is newer than my local repo. To push it, we can `pull` or force `push`.
+
+```bash
+$ git pull --rebase
+remote: Counting objects: 3, done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 1), reused 3 (delta 1), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/eddiekao/dummy-git
+   37aaef6..bab4d89  master     -> origin/master
+First, rewinding head to replay your work on top of it...
+Applying: update index
+```
+
+```bash
+$ git push -f
+Counting objects: 19, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (17/17), done.
+Writing objects: 100% (19/19), 2.16 KiB | 738.00 KiB/s, done.
+Total 19 (delta 6), reused 0 (delta 0)
+remote: Resolving deltas: 100% (6/6), done.
+To https://github.com/eddiekao/dummy-git.git
+ + 6bf3967...c4ea775 master -> master (forced update)
+```
+
+
+
+----
+
+
+```
+
+```
