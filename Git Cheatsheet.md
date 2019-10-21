@@ -34,6 +34,7 @@ Google: bash ctrl-a -> [bash keyboard shortcuts - Linux - SS64.com](https://ss64
 
 * **[Git cheat sheet | Atlassian Git Tutorial](https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet)** & PDF
 * Cheatsheet: [Git 面試題 - Git 教學 _ 高見龍](https://gitbook.tw/interview)
+* Works with Visual Studio Code (VS Code): [Version Control in Visual Studio Code](https://code.visualstudio.com/docs/editor/versioncontrol)
 
 ### Setup a private Git server
 
