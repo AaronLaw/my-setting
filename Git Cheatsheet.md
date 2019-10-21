@@ -5,7 +5,12 @@ GIT Cheatsheet
 Google: bash ctrl-a -> [bash keyboard shortcuts - Linux - SS64.com](https://ss64.com/bash/syntax-keyboard.html)
 
 ## Git notes
+
+### Git flow
+
 * http://grokcode.com/717/how-to-use-source-control-effectively/
+* Git Flow
+  * Google: git flow
 
 ### Git guides
 * [git - the simple guide - no deep shit!](rogerdudler.github.io/git-guide/)
@@ -27,7 +32,7 @@ Google: bash ctrl-a -> [bash keyboard shortcuts - Linux - SS64.com](https://ss64
 
 ### Git Cheatsheet
 
-* [Git cheat sheet | Atlassian Git Tutorial](https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet) & PDF
+* **[Git cheat sheet | Atlassian Git Tutorial](https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet)** & PDF
 * Cheatsheet: [Git 面試題 - Git 教學 _ 高見龍](https://gitbook.tw/interview)
 
 ### Setup a private Git server
@@ -358,6 +363,23 @@ $ git branch -r # to see remote branches only
 
 
 
+Q: I rename a local branch with `git branch -m new_name`.  After pushing, the name of remote branch on Github doesn't change. How can I rename a remote branch?
+
+Google: github rename a branch
+
+* [rename git branch locally and remotely](https://gist.github.com/lttlrck/9628955)
+* [【狀況題】怎麼刪除遠端的分支？ - 為你自己學 Git | 高見龍](https://gitbook.tw/chapters/github/delete-remote-branch.html)
+
+We use a `:` in front of branch name to delete that branch when `git push`. (The push command that we use when firstly create a remote branch is `git push origin master:old_branch` , meaning that create a branch `old_branch` after pushing `master` to the remote server. And so push `:old_branch` means pushing empty to the `old_branch`.)
+
+```bash
+git branch -m old_branch new_branch         # Rename branch locally    
+git push origin :old_branch                 # Delete the remote branch    
+git push --set-upstream origin new_branch   # Push the new branch, set local branch to track the new remote
+```
+
+
+
 Q: Sometimes there is an error when I push to Github: "Updates were rejected because the tip of your current branch is behind its remote counterpart."
 
 ```bash
@@ -401,6 +423,98 @@ remote: Resolving deltas: 100% (6/6), done.
 To https://github.com/eddiekao/dummy-git.git
  + 6bf3967...c4ea775 master -> master (forced update)
 ```
+
+----
+
+#### Which files that others made changes between commits / List file names that changed between commits
+
+Q: After pulling, someone has made changes and I curious which files has been changed (focus on the filename rather than the exact content change).
+
+```bash
+* d6c346c 2019-10-15 | [Update] Added PHP and phpmyadmin to install packages (HEAD -> dev-backend-database, origin/dev-backend-database) [ringk-itcs]
+* 7f82ce0 2019-10-15 | [ Existing LAMP ] New updated notes for MySQL / Djanjo setup [ringk-itcs]
+* 16955df 2019-10-04 | Update .gitignore on 1) Syncthing 2) /Utilities/docker* [Aaron Law]
+* 7f25db6 2019-10-04 | Fix: use of PyMySQL and mysql-python connector. [Aaron Law]
+* 55ed849 2019-10-04 | Change to use MySQL db backend. (origin/unstable, unstable) [Aaron Law]
+
+```
+
+Google: git show diff between commits -> Google: git show filename to diff between commits 
+
+* [git - How to list only the file names that changed between two commits? - Stack Overflow](https://stackoverflow.com/questions/1552340/how-to-list-only-the-file-names-that-changed-between-two-commits) (it is worth to read the page for more information.)
+
+
+```bash
+git diff --name-only <SHA1> <SHA2>
+```
+
+to see the differences between the tenth latest commit and the fifth latest (or so).
+
+```bash
+git diff --name-only HEAD~10 HEAD~5
+```
+
+[for actions acted on files] is like --name-only, except you get a simple prefix telling you what happened to the file (modified, deleted, added...)
+
+```bash
+git diff --name-status [SHA1 [SHA2]]
+```
+
+[for actions acted on files] is similar, but commits are listed after the commit message, so you can see when a file was changed
+
+```bash
+git log --name-status --oneline [SHA1..SHA2]
+```
+
+File status flags:
+ M modified   -   File has been modified
+ C copy-edit -    File has been copied and modified
+ R rename-edit -  File has been renamed and modified
+ A added       -   File has been added
+ D deleted -      File has been deleted
+ U unmerged -     File has conflicts after a merge   
+
+And, use ``--stat`` or `--numstat` for stats:
+
+```
+$ git diff --stat HEAD~5 HEAD
+ .../java/org/apache/calcite/rex/RexSimplify.java   | 50 +++++++++++++++++-----
+ .../apache/calcite/sql/fun/SqlTrimFunction.java    |  2 +-
+ .../apache/calcite/sql2rel/SqlToRelConverter.java  | 16 +++++++
+ .../org/apache/calcite/util/SaffronProperties.java | 19 ++++----
+ .../org/apache/calcite/test/RexProgramTest.java    | 24 +++++++++++
+ .../apache/calcite/test/SqlToRelConverterTest.java |  8 ++++
+ .../apache/calcite/test/SqlToRelConverterTest.xml  | 15 +++++++
+ pom.xml                                            |  2 +-
+ .../apache/calcite/adapter/spark/SparkRules.java   |  7 +--
+ 9 files changed, 117 insertions(+), 26 deletions(-)
+
+```
+
+and `--numstat`:
+
+```
+$ git diff --numstat HEAD~5 HEAD
+40      10      core/src/main/java/org/apache/calcite/rex/RexSimplify.java
+1       1       core/src/main/java/org/apache/calcite/sql/fun/SqlTrimFunction.java
+16      0       core/src/main/java/org/apache/calcite/sql2rel/SqlToRelConverter.java
+8       11      core/src/main/java/org/apache/calcite/util/SaffronProperties.java
+24      0       core/src/test/java/org/apache/calcite/test/RexProgramTest.java
+8       0       core/src/test/java/org/apache/calcite/test/SqlToRelConverterTest.java
+15      0       core/src/test/resources/org/apache/calcite/test/SqlToRelConverterTest.xml
+1       1       pom.xml
+4       3       spark/src/main/java/org/apache/calcite/adapter/spark/SparkRules.java
+
+```
+
+and `--shortstat`
+
+```
+$ git diff --shortstat HEAD~5 HEAD
+9 files changed, 117 insertions(+), 26 deletions(-)
+```
+
+
 
 
 
