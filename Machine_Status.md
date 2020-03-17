@@ -2,6 +2,36 @@ Machine Status
 ====
 Packages I need for setting up my development virtual machines.
 
+### Dev2
+
+2020-03-16:
+
+LinuxMint 19.3 Cinnamon 64-bit (from LinuxMint's official website)
+
+Boot in: EFI
+
+    + set keyboard layout to DVORAK
+    + add an user "Aaron"
+(This is a VM Image made by Virtualbox, for running EFI in Virtualbox.)
+
+Remarks: aaron, 42stephanxxxxxxx0693
+
+https://zhuanlan.zhihu.com/p/43776780
+TLDR.sh
+* bat > cat
+* prettyping > ping
+* fzf > ctrl+r
+* htop > top
+
+* diff-so-fancy > diff
+* fd > find
+* tldr > man
+* ack || ag > grep
+* jq > grep et al
+
+----
+
+### Dev
 
 2016-02-10:  
 LinuxMint 17.3 Cinnamon 64-bit -> 18.1 (from LinuxMint's official website)
@@ -20,7 +50,7 @@ Remarks: aaron, stephanxxxxxxx
 2016-02-11:  
 Install: python-dev, pyhton 3.5.1, virtualenv, virtualenvwrapper
 
-2016-02-12:  
+2016-02-12: 
 Install: git, django, htop, nmon, syncthing, curl, tree
 
 2016-02-15:  
@@ -65,7 +95,8 @@ Optional to stop: mariadb (when using docker for db)
 
 after build-essental, before system-wide update
 
-Ref: 
+Ref:
 * https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-14-04
 * https://www.digitalocean.com/community/tutorials/initial-server-setup-with-centos-7
+
 ----
