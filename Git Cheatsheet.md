@@ -29,12 +29,16 @@ Google: bash ctrl-a -> [bash keyboard shortcuts - Linux - SS64.com](https://ss64
   * [Pro Git 中文版（第二版）](https://progit.bootcss.com)
 * [Git 教學 - Git 書 - 為你自己學 Git _ 高見龍](https://gitbook.tw)
   * Cheatsheet: [Git 面試題 - Git 教學 _ 高見龍](https://gitbook.tw/interview)
+* [Learn Git Branching](https://learngitbranching.js.org/)
+  * [用玩游戏的方式学习 Git](https://sspai.com/post/47694)
+
 
 ### Git Cheatsheet
 
 * **[Git cheat sheet | Atlassian Git Tutorial](https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet)** & PDF
 * Cheatsheet: [Git 面試題 - Git 教學 _ 高見龍](https://gitbook.tw/interview)
 * Works with Visual Studio Code (VS Code): [Version Control in Visual Studio Code](https://code.visualstudio.com/docs/editor/versioncontrol)
+* [叶落阁 - Git常用命令](https://yelog.org/2016/10/02/Git-command/) (2020-03-14: Google: Nuxt.js -> [ghost blogging](https://www.zhihu.com/topic/19896814/top-answers) -> [FarBox、Jekyll、Octopress、ghost、marboo、Hexo、Medium、Logdown、prose.io，这些博客程序有什么特点？](https://www.zhihu.com/question/21981094/answer/20585133) -> https://hexo.io/ -> [themes](https://hexo.io/themes/) -> this)
 
 ### Setup a private Git server
 
