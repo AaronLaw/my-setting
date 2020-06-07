@@ -61,9 +61,9 @@ Q: 2019-09-12: What if we have a using database? ( integrate Django into legacy 
 
 
 
-### Guide on Building with Django
+## Guide on Building with Django
 
-##### Tutorial / Example in prototyping with Django (single page, & SPA)
+### Tutorial / Example in prototyping with Django (single page, & SPA)
 
 * [About - William Vincent](https://wsvincent.com/about/) -> [8 Reasons Why Learning Django is Hard](https://tinyurl.com/djangoboston-2019) - Django Boston (*January 2019*)
 * [Official Polls tutorial](https://docs.djangoproject.com/en/dev/intro/tutorial01/) - for intermediate web developers
@@ -95,7 +95,7 @@ Q: 2019-09-12: What if we have a using database? ( integrate Django into legacy 
 
 
 
-##### Tutorial on Django (fullstack)
+### Tutorial on Django (fullstack)
 
 Tango with Django, Django Girls, MDN, Microsoft's Visual Studio Code, webpack tw -> django tw, django cn
 
@@ -129,7 +129,7 @@ Tango with Django, Django Girls, MDN, Microsoft's Visual Studio Code, webpack tw
 * [Pygame Tutorial - Creating Tetris - YouTube](https://www.youtube.com/watch?v=uoR4ilCWwKA&list=PLzMcBGfZo4-krMMJ2EPdVzsOCJDoe0K-I) ->  [Python Django Tutorial - techwithtim.net](techwithtim.net/tutorials/django/)
 * [Python-100-Days_95.使用Django开发项目.md at master · jackfrued_Python-100-Days](https://github.com/jackfrued/Python-100-Days/blob/master/Day91-100/95.%E4%BD%BF%E7%94%A8Django%E5%BC%80%E5%8F%91%E9%A1%B9%E7%9B%AE.md) & RESTful
 
-##### Layout Django the right way
+### Layout Django the right way
 
 * [Structuring Your Project — The Hitchhiker's Guide to Python](https://docs.python-guide.org/writing/structure/)
 * [pydanny_cookiecutter-django](https://github.com/pydanny/cookiecutter-django)_ Cookiecutter Django is a framework for jumpstarting production-ready Django projects quickly.
@@ -141,7 +141,7 @@ Tango with Django, Django Girls, MDN, Microsoft's Visual Studio Code, webpack tw
   * [DjangoX](https://github.com/wsvincent/djangox) - starter framework for new Django projects (an intro: [Introducing DjangoX - A new starter framework for Django](https://wsvincent.com/djangox-new-starter-framework/))
   * [DRFX](https://github.com/wsvincent/drfx) - starter framework for new Django REST Framework projects
 
-##### Best Practice
+### Best Practice
 
 * 2019-10-18: Google: django best practices
   * [Django Applications — Django Best Practices](https://django-best-practices.readthedocs.io/en/latest/applications.html)
@@ -149,18 +149,18 @@ Tango with Django, Django Girls, MDN, Microsoft's Visual Studio Code, webpack tw
 * 2019-10-18: Google Image: django best practices
 * 2019-11-25: how django works
 
-##### Templates
+### Templates
 
 * Google: django use template in another app -> [Get Started With Django Part 1 - Build a Portfolio App - Real Python](https://realpython.com/get-started-with-django-1/) shows a complete example to build a web site with multiple apps.
 
-##### Static Files
+### Static Files
 
 * [Managing static files (e.g. images, JavaScript, CSS) | Django documentation | Django](https://docs.djangoproject.com/en/2.2/howto/static-files/)
 * Youtube: django static files - > [How to Use Django Static Files (Django Tutorial) | Part 5 - YouTube](https://www.youtube.com/watch?v=3ETQf3TQ9gc&list=PLw02n0FEB3E3VSHjyYMcFadtQORvl1Ssj&index=5)
 
 
 
-##### Database Migration
+### Database Migration
 
 2019-10-14: After moving model class around, I get an error occurs during `python manage.py migrate`:
 
@@ -200,7 +200,7 @@ In PRODUCTION: it is better not run `makemigrations`: I should not run `makemigr
 python manage.py migrate
 ```
 
-##### Models
+### Models
 
 2019-10-14: *https://docs.djangoproject.com/en/2.2/ref/models/fields/* to see what can we do when define models.
 
@@ -289,7 +289,7 @@ python manage.py migrate --fake
 
 And then I can run `createsuperuser` with no problem.
 
-##### Django Custom User Model (2019-10-08)
+### Django Custom User Model (2019-10-08)
 
 Custom user model should be admin-compliant. Generally speaking, there are 4 different ways to extend the existing User model [#](https://simpleisbetterthancomplex.com/tutorial/2016/07/22/how-to-extend-django-user-model.html):
 
@@ -347,7 +347,7 @@ Using a reference custom User model from  [How to Extend Django User Model | Sim
 >
 > This is also more in the **E**asier to **A**sk **F**orgiveness than **P**ermission (EAFP) spirit of Django.
 
-##### Class Based Views (2019-10-03)
+### Class Based Views (2019-10-03)
 
 * 2019-10-11: [基于类的视图 | Django 文档 | Django](https://docs.djangoproject.com/zh-hans/2.2/topics/class-based-views/intro/)
 * 2019-10-11: [A Complete Beginner's Guide to Django - Part 6](https://simpleisbetterthancomplex.com/series/2017/10/09/a-complete-beginners-guide-to-django-part-6.html) :When working with GCBV, it’s always good to have the [ccbv.co.uk](https://ccbv.co.uk/) opened for quick reference.
@@ -357,24 +357,24 @@ Using a reference custom User model from  [How to Extend Django User Model | Sim
 * 2019-10-10: Ancestors (MRO) -> (Method Resolution Order, MRO) (方法解析顺序)
 * 2019-10-10: Google: class based view -> [Django : Class Based Views vs Function Based Views - Sarthak Kumar - Medium](https://medium.com/@ksarthak4ever/django-class-based-views-vs-function-based-view-e74b47b2e41b)
 
-##### Settings (static files, media, etc) (2019-09-30)
+### Settings (static files, media, etc) (2019-09-30)
 
 * Google: what can I do in Django settings -> [Django by errors - a different Django tutorial — Django by errors 0.2 documentation](https://django-by-errors.readthedocs.io/en/latest/)
 * Google: what can I do in Django settings -> [Top 10 Django Mistakes _ Toptal](https://www.toptal.com/django/django-top-10-mistakes)
 
 
 
-##### L18N
+### L18N
 
 * 2019-11-02: Google:django tw ->[埋坑  Django 多國語言 - Lililala - Medium][](https://medium.com/@lililala/埋坑實驗室-django-多國語言-ef73f359332e) -> [埋坑  Django 整合 reCAPTCHA v3 - Lililala - Medium](https://medium.com/@lililala/埋坑-django-整合-recaptcha-v3-bef06d89c33a)
 
-##### Send email / Mailing / Mailer
+### Send email / Mailing / Mailer
 
 * Google:PHPMailer send attachment -> [Tutorial · PHPMailer_PHPMailer Wiki.html](https://github.com/PHPMailer/PHPMailer/wiki/Tutorial)
 
 * Google:django mailer -> https://djangopackages.org/packages/p/django-mailer/ -> https://github.com/pinax/django-mailer
 
-##### Follow Django examples
+### Follow Django examples
 
 * 七夜的 CoolBlog [CoolBlog开发笔记 － 小专栏](https://xiaozhuanlan.com/coolblog)
 * [tuot](https://github.com/tuot) / [django-blog-tutorial](https://github.com/tuot/django-blog-tutorial)
@@ -383,14 +383,14 @@ Using a reference custom User model from  [How to Extend Django User Model | Sim
   * [是时候让大家看看你用django写出来的博客了（内含部署教程视频） - 知乎](https://zhuanlan.zhihu.com/p/83276930)
 * [GitHub标星8100：Python中文资源，从新手到老司机，只要100天量子位量子位](https://zhuanlan.zhihu.com/p/64462281) -> [https://github.com/jackfrued](jackfrued) / [Python-100-Days](https://github.com/jackfrued/Python-100-Days)
 
-##### 3rd party
+### 3rd party
 
 * Work flow / business logic
   * Google:django workflow -> https://djangopackages.org/grids/g/workflow/ -> https://github.com/viewflow/viewflow, http://viewflow.io/
 * Task Queue
   * 
 
-### Awesome Resource for Django
+## Awesome Resource for Django
 
 - [Awesome Django](https://github.com/wsvincent/awesome-django) - curated list of awesome Django resources
 - ~~[DjangoX](https://github.com/wsvincent/djangox) - starter framework for new Django projects~~
@@ -398,7 +398,7 @@ Using a reference custom User model from  [How to Extend Django User Model | Sim
 - [SQLjs](https://sqljs.org/) - online SQL interpreter
 - [HTML Escape Tool](https://wsvincent.com/htmlescapetool/) - automatically escape/unescape HTML code
 
-##### Resources
+### Resources
 
 Google, github, YouTube 
 
@@ -487,7 +487,7 @@ Google, github, YouTube
   * Package. 2019-11-21: PyCoder’s Weekly [Issue #395](https://pycoders.com/issues/395) [viewflow: Reusable Workflow Library for Django](https://pycoders.com/link/2947/ua2fujrqqx) ->  [django-river: Django Workflow Library](https://pycoders.com/link/2930/ua2fujrqqx)
     [GITHUB.COM/JAVRASYA](https://pycoders.com/link/2930/ua2fujrqqx)
 
-### Guide on Building with Flask
+## Guide on Building with Flask
 
 Tutorial in prototyping with Flask
 
@@ -496,7 +496,7 @@ Tutorial in prototyping with Flask
 
 
 
-### Guide on Frontend
+## Guide on Frontend
 
 * <https://github.com/Microsoft/frontend-bootcamp>
 * Front-end Developer Handbook by FrontendMasters, (from Ricky: https://legacy.gitbook.com/book/frontendmasters/front-end-handbook-2017/details -> Google: Front-end Developer Handbook -> https://github.com/FrontendMasters/front-end-handbook-2019 = https://frontendmasters.com/books/front-end-handbook/2019/ -> https://frontendmasters.com/books/)
@@ -522,7 +522,7 @@ Tutorial in prototyping with Flask
   * Google: django bootstrap4 -> [How to Use Bootstrap 4 Forms With Django - Simple is Better Than Complex](https://simpleisbetterthancomplex.com/tutorial/2018/08/13/how-to-use-bootstrap-4-forms-with-django.html) -> [Series](https://simpleisbetterthancomplex.com/series/) -> [A Complete Beginner's Guide to Django](https://simpleisbetterthancomplex.com/series/beginners-guide/1.11/)
   * Google: django bootstrap教學 -> [想用Django+ Bootstrap写一个网站， 有哪些比较系统完整的书或者视频可以参考？ - 知乎](https://www.zhihu.com/question/29804463)
 
-### Guide on Vue.js
+## Guide on Vue.js
 
 * Google: how to learn vue.js -> [How do I learn Vue.js_ - Quora](https://www.quora.com/How-do-I-learn-Vue-js)
 * Google: vue -> [Vue JS Crash Course - 2019 - YouTube](https://www.youtube.com/watch?v=Wy9q22isx3U)
@@ -531,7 +531,7 @@ Tutorial in prototyping with Flask
 * Ralph [Vue.js 30天 - iT 邦幫忙::一起幫忙解決難題，拯救IT 人的一天 - iThome](https://ithelp.ithome.com.tw/users/20103424/ironman/1049)
 * [白宦成](https://gitbook.cn/gitchat/author/58e484f5cfcd6fa52dceeadc) - [给后端程序员看的 Vue 快速入门教程](https://gitbook.cn/gitchat/activity/5c75b7bfb7bb4906f36f2c15)
 
-### Guide on Data Visualization 
+## Guide on Data Visualization 
 
 * [Data Visualization with Vue JS - YouTube](https://www.youtube.com/watch?v=30v9xnB-GEo)
 
@@ -566,7 +566,7 @@ Tooling - GIT
 * [让你一场 Chat 学会 Git](https://gitbook.cn/gitchat/activity/5a15369a0cd3313c8ab46f52?refresh=true)
 * [Git 扫盲：用命令行剖析 Git 使用](https://gitbook.cn/gitchat/activity/5ca34a1f0ec7201a4f7dc3b4)
 
-### 提升效率 (提升, 效率, 效能)
+## 提升效率 (提升, 效率, 效能)
 
 * [大妈 Zoom.Quiet](https://gitbook.cn/gitchat/author/585c8234437718010567174f) - [如何在繁重工作间隙保持良好的自学节奏和效能?](https://gitbook.cn/gitchat/activity/5c5004823101e4757729ad39)
 * [如何半小时搞定 3 小时的工作&漫谈极速提升开发效率](https://gitbook.cn/gitchat/activity/5bb3857c73ee7410d38f15da?refresh=true) - Vim, bash, typing, [标准指法](https://baike.baidu.com/item/标准指法/10230098), etc
@@ -577,13 +577,13 @@ Tooling - GIT
 * [白宦成](https://gitbook.cn/gitchat/author/58e484f5cfcd6fa52dceeadc) - [给后端程序员看的 Vue 快速入门教程](https://gitbook.cn/gitchat/activity/5c75b7bfb7bb4906f36f2c15)
 * [效率为王：终端管理工具 Tmux ](https://gitbook.cn/gitchat/activity/5a2df3cdc9cd261a373bc88f)
 
-### Guide on Deploying Django
+## Guide on Deploying Django
 
 * from [PyCoder's Weekly #376](https://pycoders.com/issues/376) ->  [Deploying Django to Heroku With Docker](https://pycoders.com/link/1957/ua2fujrqqx) (This post looks at how to deploy a Django app to Heroku with Docker via the Heroku Container Runtime.)
 * 2019-11-25: [Django腾讯云部署教程：+Ubuntu+Django2+Python3+Nginx+Uwsgi - 知乎](https://zhuanlan.zhihu.com/p/63038112)
 * 2019-11-25: [是时候让大家看看你用django写出来的博客了（内含部署教程视频） - 知乎](https://zhuanlan.zhihu.com/p/83276930)
 
-### Something interesting
+## Something interesting
 
 * [r/django](https://www.reddit.com/r/django/)
 * YouTube: raspberry pi
