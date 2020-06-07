@@ -1,5 +1,5 @@
 
-# Project RAM, and websites
+# Project RAM, Django and websites
 
 ### Mentor
 
@@ -33,13 +33,23 @@ Django, Flask, Masonite, Vue.js
 * Google: django.db.utils.InternalError: (1060, "Duplicate column name -> [django数据库migrate失败的解决方法 | 卡瓦邦噶！](https://www.kawabangga.com/posts/1634) -> [Django中null和blank的区别 | 卡瓦邦噶！](https://www.kawabangga.com/posts/1810) -> [如何学Python？ | 卡瓦邦噶！](https://www.kawabangga.com/how-to-learn-python) -> [Python_Golang Web 入坑指南 — python-web-guide 0.1 文档](https://python-web-guide.readthedocs.io/zh/latest/)
 * [Is Django a Full Stack Framework? - William Vincent](https://wsvincent.com/is-django-a-full-stack-framework/)
 
-### Setup Development Env
+### Setup Development Environment
 
-Google: python tutorial -> [Django Tutorial in Visual Studio Code](https://code.visualstudio.com/docs/python/tutorial-django)
+#### The server
 
-[PyCoder's Weekly #363 – APRIL 9, 2019](https://pycoders.com/issues/363) -> [Python Development in Visual Studio Code (Setup Guide)](https://realpython.com/courses/python-development-visual-studio-code-setup-guide/)
+* [Server For Hackers](https://serversforhackers.com/)
+  * https://github.com/Servers-for-Hackers
+* https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-14-04
 
-Google: flask tutorial -> [Flask Tutorial in Visual Studio Code](https://code.visualstudio.com/docs/python/tutorial-flask)
+#### The Python env
+
+* Google: python tutorial -> [Django Tutorial in Visual Studio Code](https://code.visualstudio.com/docs/python/tutorial-django)
+* [PyCoder's Weekly #363 – APRIL 9, 2019](https://pycoders.com/issues/363) -> [Python Development in Visual Studio Code (Setup Guide)](https://realpython.com/courses/python-development-visual-studio-code-setup-guide/)
+* Google: flask tutorial -> [Flask Tutorial in Visual Studio Code](https://code.visualstudio.com/docs/python/tutorial-flask)
+
+Q: 2020-06-07: What if `python3.8`, which I installed with `sudo apt install python3.8`, doesn't not come with `pip3` ?
+
+* [Installing Python 3 on Linux — The Hitchhiker's Guide to Python](https://docs.python-guide.org/starting/install3/linux/)
 
 Q: 2019-07-26: What if running Django on Docker? (Just like [running Wordpress on Docker](https://docs.docker.com/compose/wordpress/))
 
@@ -119,9 +129,12 @@ Tango with Django, Django Girls, MDN, Microsoft's Visual Studio Code, webpack tw
 * [Pygame Tutorial - Creating Tetris - YouTube](https://www.youtube.com/watch?v=uoR4ilCWwKA&list=PLzMcBGfZo4-krMMJ2EPdVzsOCJDoe0K-I) ->  [Python Django Tutorial - techwithtim.net](techwithtim.net/tutorials/django/)
 * [Python-100-Days_95.使用Django开发项目.md at master · jackfrued_Python-100-Days](https://github.com/jackfrued/Python-100-Days/blob/master/Day91-100/95.%E4%BD%BF%E7%94%A8Django%E5%BC%80%E5%8F%91%E9%A1%B9%E7%9B%AE.md) & RESTful
 
-##### Guide on setup Django the right way
+##### Layout Django the right way
 
-* [pydanny_cookiecutter-django_ Cookiecutter Django is a framework for jumpstarting production-ready Django projects quickly.](https://github.com/pydanny/cookiecutter-django)
+* [Structuring Your Project — The Hitchhiker's Guide to Python](https://docs.python-guide.org/writing/structure/)
+* [pydanny_cookiecutter-django](https://github.com/pydanny/cookiecutter-django)_ Cookiecutter Django is a framework for jumpstarting production-ready Django projects quickly.
+  * -> Google: Real python cookiecutter -> [Development and Deployment of Cookiecutter-Django via Docker – Real Python](https://realpython.com/development-and-deployment-of-cookiecutter-django-via-docker/)
+  * -> Google: fullstack python Cookiecutter -> [The Top 39 Cookiecutter Open Source Projects](https://awesomeopensource.com/projects/cookiecutter) -> [Cookiecutter Django Vue](https://awesomeopensource.com/project/vchaptsev/cookiecutter-django-vue)
 * Two scoops of Django
 * [Starting a Django Project – Real Python](https://realpython.com/django-setup/)
 * Template for starting Django projects
@@ -479,6 +492,7 @@ Google, github, YouTube
 Tutorial in prototyping with Flask
 
 * Google: flask tutorial -> [Flask - Full Stack Python](https://www.fullstackpython.com/flask.html)
+* Google: cookiecutter -> [Python cookiecutter-flask，如何在几分钟内启动一个像模像样的网站[视频] - 知乎](https://zhuanlan.zhihu.com/p/46764192)
 
 
 
@@ -487,6 +501,8 @@ Tutorial in prototyping with Flask
 * <https://github.com/Microsoft/frontend-bootcamp>
 * Front-end Developer Handbook by FrontendMasters, (from Ricky: https://legacy.gitbook.com/book/frontendmasters/front-end-handbook-2017/details -> Google: Front-end Developer Handbook -> https://github.com/FrontendMasters/front-end-handbook-2019 = https://frontendmasters.com/books/front-end-handbook/2019/ -> https://frontendmasters.com/books/)
 * [Web Development In 2019 - A Practical Guide - YouTube](https://www.youtube.com/watch?v=UnTQVlqmDQ0)
+* **JavaScript 30** — Build 30 things with vanilla JS in 30 days with 30 tutorials https://javascript30.com/
+* 2020-06-04: Google: fullstack python -> fullstack node -> fullstack typescript -> fullstack react -> fullstack vue ->[Fullstack Node.js- The Complete Guide to Building Production Apps with Node.js - # Learn to build production Node.js apps](https://www.newline.co/fullstack-nodejs), [newline - Learn to program React, Angular, Vue, Ethereum, and Node.js with projects](https://www.newline.co/) -> [**30 Days of Vue -- newline**](https://www.newline.co/30-days-of-vue)
 * [Bootstrap Basics   Projects   Coding For Entrepreneurs](https://www.codingforentrepreneurs.com/projects/bootstrap-basics-v4-3) -> https://github.com/codingforentrepreneurs/Bootstrap-Basics-v4
 * [Git小书-图书-图灵社区](www.ituring.com.cn/book/1870) -> [1000copy的文章-图灵社区](www.ituring.com.cn/space/190105) -> [《bootstrap小书》免费上线。节省时间快速学习bootstrap框架的利器-图灵社区](www.ituring.com.cn/article/272595) -> [bootstrap小书 · GitBook (Legacy)](https://legacy.gitbook.com/book/1000copy/bootstrap/details)
 * [Meathill](https://gitbook.cn/gitchat/author/593cb520ef8d9c2863173543)  - [用 Vue 改造 Bootstrap，渐进提升项目框架](https://gitbook.cn/gitchat/activity/5965a43ed5ef4527af6ee740)
@@ -495,7 +511,7 @@ Tutorial in prototyping with Flask
 * [The 2019 UI Design Crash Course for Beginners - YouTube](https://www.youtube.com/watch?v=_Hp_dI0DzY4)
 * [The 2019 Frontend Developer Crash Course - HTML & CSS Tutorial for Beginners - YouTube](https://www.youtube.com/watch?v=8gNrZ4lAnAw)
 * [How to Make a Custom Website from Scratch using WordPress (Theme Development) - 2019 Tutorial - YouTube](https://www.youtube.com/watch?v=KibbYf9avko)
-* [Vue.js - Full Stack Python](https://www.fullstackpython.com/vuejs.html)
+* 2020-06-04: Google: fullstack python -> fullstack node ->  fullstack typescript ->  fullstack react -> fullstack vue -> [Vue.js - Full Stack Python](https://www.fullstackpython.com/vuejs.html)
   * [flask-vue-spa](https://github.com/oleg-agapov/flask-vue-spa) is an example project with a [Flask](https://www.fullstackpython.com/flask.html) API on the backend and Vue on the front.
   * [Developing a Single Page App with Flask and Vue.js](https://testdriven.io/blog/developing-a-single-page-app-with-flask-and-vuejs/) walks through all of the environment configuration, project setup and coding you need to do to build a legitimate Vue.js application that uses a [Flask](https://www.fullstackpython.com/flask.html) API on the backend.
   * [Building Modern Applications with Django and Vue.js](https://auth0.com/blog/building-modern-applications-with-django-and-vuejs/) combines [Django](https://www.fullstackpython.com/django.html),
@@ -569,6 +585,7 @@ Tooling - GIT
 
 ### Something interesting
 
+* [r/django](https://www.reddit.com/r/django/)
 * YouTube: raspberry pi
 * YouTube: raspberry pi docker
 * YouTube: raspberry pi django
@@ -701,7 +718,7 @@ Google: php development on mac
 
 Google: python virtual environment -> Google: php virtual environment
 
-Q: 2019-07-26: What if I running PHP on docker?  (Just like [running Wordpress on Docker](https://docs.docker.com/compose/wordpress/)) -> Google: wamp docker -> [Devilbox](http://devilbox.org/) (is a modern and highly customisable **dockerized PHP stack** supporting full **LAMP** and **MEAN** and running on all major platforms.)
+Q: 2019-07-26: What if I running PHP on docker?  (Just like [running Wordpress on Docker](https://docs.docker.com/compose/wordpress/)) -> Google: wamp docker -> [Devilbox](http://devilbox.org/) (is a modern and highly customizable **dockerized PHP stack** supporting full **LAMP** and **MEAN** and running on all major platforms.)
 
 ----
 
@@ -723,14 +740,14 @@ Google: zhihu mac
 
 ./database/Tables and Relational Schema.png
 
-* About DB design: Could you explain the entities of "Stauts":
+* About DB design: Could you explain the entities of "Status":
   * `ScheduleStatus`
   * `SettingsStatus`
   * `AccountStatus`
 
 ./mvc
 
-* Are we using popular MVC framework (Code Igniter / CakePHP / Laravel, etc), or are we writing ourself tidy MVC framework?
+* Are we using popular MVC framework (Code Igniter / CakePHP / Laravel, etc), or are we writing ourselves tidy MVC framework?
 
 
 
@@ -747,13 +764,13 @@ Google: zhihu mac
 
 Aaron setup a local WAMP server to execute Project-Beaver on.
 
-Aaron ignore the frontend side (esp. Javascript) and focus on backend side:
+Aaron ignore the frontend side (esp. JavaScript) and focus on backend side:
 
 Understand how Project-Beaver internal works.
 
 Study on Django web framework and make a simple site as a demo for technical review (for Ricky.) -> 
 
-Study on Javascript (I have no frontend background) -> Reading a book titled "Headfirst JavaScript Programming".
+Study on JavaScript (I have no frontend background) -> Reading a book titled "Headfirst JavaScript Programming".
 
 ##### Stage 2
 
@@ -764,16 +781,16 @@ Aaron try to understand how the frontend components in Project-Beaver works.
 ### Infrastructure
 
 - [ ] Version control
-- [ ] Python package dependancy
+- [ ] Python package dependency
 - [ ] Database schema control (a.k.a. Database migration)
 - [ ] Theme hirecature
 - [ ] Theme:
   - [ ] Use of Bootstrap 4
 - [ ] Localization
-  - [ ] Timezone
+  - [ ] Time zone
   - [ ] I18N
   - [ ] L10N
-- [ ] Sub-syntem: Learning_logs (~ blogging)
+- [ ] Sub-system: Learning_logs (~ blogging)
   - [ ] Topic
   - [ ] Entry
 - [ ] Sub-system: Users system (membership)
@@ -783,7 +800,7 @@ Aaron try to understand how the frontend components in Project-Beaver works.
   - [ ] Login required (a.k.a. Page protection / Page restriction)
   - [ ] Extending Django's user object
 - [ ] API-ify
-  - [ ] Data exchange with frondend (e.g. with Vue.js)
+  - [ ] Data exchange with frontend (e.g. with Vue.js)
   - [ ] Frontend-backend decoupling (e.g. use Django Restful: DRF)
 
 ### Approach
@@ -805,7 +822,7 @@ python3.7 -m venv django-revenue-env
 source django-revenue-env/bin/activate
 ```
 
-Install Django in virtual env. (django version>=2.1)
+Install Django in virtual env. (Django version>=2.1)
 
 ```bash
 python -m pip install django>=2.1
@@ -832,8 +849,14 @@ python manage.py runserver
 
 ----
 
+### About Django 3.0 (2020-05)
+
+* [Django3.0 异步功能尝鲜](https://zhuanlan.zhihu.com/p/97149294)
+* [如何借助 Django 来编写一个 Python Web API](https://zhuanlan.zhihu.com/p/102269279)
+* https://fastapi.tiangolo.com/
 
 
 
+----
 
 
