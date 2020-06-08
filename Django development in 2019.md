@@ -23,6 +23,8 @@
 
 * Google: syncthing -> [Syncthing就是我要的同步备份软件 | 底噪](https://zhih.me/syncthing-the-best/) -> [WEB是如何工作的 | 底噪](https://zhih.me/how-the-web-works/)
 
+* [一图看懂Django和DRF](https://zhuanlan.zhihu.com/p/53957464)
+
   
 
 
