@@ -33,7 +33,7 @@
 
 ### Python Web Framework
 
-Django, Flask, Masonite, Vue.js
+Django, Flask, Masonite, Vue.js, FastAPI
 
 * [Table of Contents - Full Stack Python](https://www.fullstackpython.com/table-of-contents.html) (django, flask, vue.js...no masonite)
 * Real Python.com (django, flask...no vue.js, masonite)
@@ -508,6 +508,13 @@ Tutorial in prototyping with Flask
 * Google: cookiecutter -> [Python cookiecutter-flask，如何在几分钟内启动一个像模像样的网站[视频] - 知乎](https://zhuanlan.zhihu.com/p/46764192)
 * [PyCon China 2019 演讲：基于 Flask 的 Web API 开发指南 - 知乎](https://zhuanlan.zhihu.com/p/73865476)
   * [《Flask 入门教程》第二版发布](https://zhuanlan.zhihu.com/p/95620009) -> http://helloflask.com/tutorial/
+
+
+
+## Guide on Building API with FastAPI
+
+* [FastAPI](https://github.com/tiangolo/fastapi)
+* [Use FastAPI to build web services in Python - Fedora Magazine](https://fedoramagazine.org/use-fastapi-to-build-web-services-in-python/)
 
 
 
