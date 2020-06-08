@@ -5,15 +5,22 @@
 
 * Style of release notes: http://shanalikhan.github.io/2016/05/14/Visual-studio-code-sync-settings-release-notes.html
 * Google: syncthing --reset-delta -> Google: syncthing delta sync -> https://danie1.me/2019/01/29/my-journey-to-syncthing/
+* [程序员的成长离不开哪些软技能？ - 知乎](https://www.zhihu.com/question/48406009/answer/134182064) (from: https://zhuanlan.zhihu.com/p/24357770
 
 ## What is a Web Framework
 
 * https://jeffknupp.com/blog/2014/03/03/what-is-a-web-framework/
+
 * Google: what is a web framework -> [Web Frameworks  How To Get Started](https://djangostars.com/blog/what-is-a-web-framework/)
+
 * Google: what is a web framework -> https://www.quora.com/What-is-a-web-framework-1
+
 * Google: what is a web framework -> [Why You Shouldn't Use A Web Framework - DEV Community 👩‍💻👨‍💻](https://dev.to/gypsydave5/why-you-shouldnt-use-a-web-framework-3g24)
+
 * [Git小书-图书-图灵社区](www.ituring.com.cn/book/1870) -> [1000copy的文章-图灵社区](www.ituring.com.cn/space/190105) -> [《bootstrap小书》免费上线。节省时间快速学习bootstrap框架的利器-图灵社区](www.ituring.com.cn/article/272595) -> [bootstrap-图灵社区](www.ituring.com.cn/tag/1315) -> [如何水水地写一个网站。（草稿）-图灵社区](www.ituring.com.cn/article/6576)
+
 * [郭方超](https://gitbook.cn/gitchat/author/5a4d99e21037756c47ed8429) - [快速开发一个 Web 框架](https://gitbook.cn/gitchat/activity/5b5c2676d7a1a133f9f6d63b)
+
 * Google: syncthing -> [Syncthing就是我要的同步备份软件 | 底噪](https://zhih.me/syncthing-the-best/) -> [WEB是如何工作的 | 底噪](https://zhih.me/how-the-web-works/)
 
   
@@ -437,7 +444,9 @@ Google, github, YouTube
   
   * [12. Virtual Environments and Packages — Python 3.8.0 documentation](https://docs.python.org/3/tutorial/venv.html)
   
-  * virtualenv/venv: 2019-11-25: [要不我们还是用回 virtualenv_venv 和 pip 吧 - 知乎](https://zhuanlan.zhihu.com/p/81568689), [相比 Pipenv，Poetry 是一个更好的选择 - 知乎](https://zhuanlan.zhihu.com/p/81025311)
+  * pipenv: 2020-06-08: [不要用 Pipenv - 知乎](https://zhuanlan.zhihu.com/p/80478490) -> [Pipenv_ promises a lot, delivers very little _ Chris Warrick](https://chriswarrick.com/blog/2018/07/17/pipenv-promises-a-lot-delivers-very-little/)
+  
+    * virtualenv/venv: 2019-11-25: [要不我们还是用回 virtualenv_venv 和 pip 吧 - 知乎](https://zhuanlan.zhihu.com/p/81568689), [相比 Pipenv，Poetry 是一个更好的选择 - 知乎](https://zhuanlan.zhihu.com/p/81025311)
   
   * virtualenv: 2019-11-25: [Pipenv & Virtual Environments — The Hitchhiker's Guide to Python](https://docs.python-guide.org/dev/virtualenvs/) =  [Pipenv & 虚拟环境 — The Hitchhiker's Guide to Python](https://pythonguidecn.readthedocs.io/zh/latest/dev/virtualenvs.html)
   
@@ -495,6 +504,8 @@ Tutorial in prototyping with Flask
 
 * Google: flask tutorial -> [Flask - Full Stack Python](https://www.fullstackpython.com/flask.html)
 * Google: cookiecutter -> [Python cookiecutter-flask，如何在几分钟内启动一个像模像样的网站[视频] - 知乎](https://zhuanlan.zhihu.com/p/46764192)
+* [PyCon China 2019 演讲：基于 Flask 的 Web API 开发指南 - 知乎](https://zhuanlan.zhihu.com/p/73865476)
+  * [《Flask 入门教程》第二版发布](https://zhuanlan.zhihu.com/p/95620009) -> http://helloflask.com/tutorial/
 
 
 
