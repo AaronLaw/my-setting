@@ -132,9 +132,10 @@ Tango with Django, Django Girls, MDN, Microsoft's Visual Studio Code, webpack tw
 ### Layout Django the right way
 
 * [Structuring Your Project — The Hitchhiker's Guide to Python](https://docs.python-guide.org/writing/structure/)
-* [pydanny_cookiecutter-django](https://github.com/pydanny/cookiecutter-django)_ Cookiecutter Django is a framework for jumpstarting production-ready Django projects quickly.
-  * -> Google: Real python cookiecutter -> [Development and Deployment of Cookiecutter-Django via Docker – Real Python](https://realpython.com/development-and-deployment-of-cookiecutter-django-via-docker/)
-  * -> Google: fullstack python Cookiecutter -> [The Top 39 Cookiecutter Open Source Projects](https://awesomeopensource.com/projects/cookiecutter) -> [Cookiecutter Django Vue](https://awesomeopensource.com/project/vchaptsev/cookiecutter-django-vue)
+* **項目生成器**: cookiecutter ([用cookiecutter来创建新项目](https://note.qidong.name/2018/10/cookiecutter/))
+  * [pydanny_cookiecutter-django](https://github.com/pydanny/cookiecutter-django)_ Cookiecutter Django is a framework for jumpstarting production-ready Django projects quickly. 
+    * -> Google: Real python cookiecutter -> [Development and Deployment of Cookiecutter-Django via Docker – Real Python](https://realpython.com/development-and-deployment-of-cookiecutter-django-via-docker/)
+    * -> Google: fullstack python Cookiecutter -> [The Top 39 Cookiecutter Open Source Projects](https://awesomeopensource.com/projects/cookiecutter) -> [Cookiecutter Django Vue](https://awesomeopensource.com/project/vchaptsev/cookiecutter-django-vue)
 * Two scoops of Django
 * [Starting a Django Project – Real Python](https://realpython.com/django-setup/)
 * Template for starting Django projects
