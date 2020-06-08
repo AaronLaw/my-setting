@@ -46,6 +46,7 @@ Django, Flask, Masonite, Vue.js
 * Google: python tutorial -> [Django Tutorial in Visual Studio Code](https://code.visualstudio.com/docs/python/tutorial-django)
 * [PyCoder's Weekly #363 – APRIL 9, 2019](https://pycoders.com/issues/363) -> [Python Development in Visual Studio Code (Setup Guide)](https://realpython.com/courses/python-development-visual-studio-code-setup-guide/)
 * Google: flask tutorial -> [Flask Tutorial in Visual Studio Code](https://code.visualstudio.com/docs/python/tutorial-flask)
+* [A curated list of awesome Python frameworks, libraries, software and resources](https://github.com/vinta/awesome-python)
 
 Q: 2020-06-07: What if `python3.8`, which I installed with `sudo apt install python3.8`, doesn't not come with `pip3` ?
 
