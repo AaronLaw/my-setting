@@ -14,12 +14,14 @@ Though this setup doesn't follow [the 3-2-1 backup rule](https://www.google.com/
 * Software:
     * [RaiDrive](https://www.raidrive.com/)
     * ~~Areca Backup~~ [Duplicati](https://www.duplicati.com/) for file level backup. (it was introduced in https://www.evernote.com/shard/s11/sh/7c731f2b-590a-4ee1-92a6-964ed8d3bf34/dfd8d0d4113795ea6f51e3e77623f9be)
-    * [Veeam Backup](https://go.veeam.com/) [#](https://www.veeam.com/windows-cloud-server-backup-agent.html) for system level backup (block-based, Disk imaging/cloning). It provides full system imaging and bare metal recovery.
+    * [Veeam Backup](https://go.veeam.com/) [#](https://www.veeam.com/windows-cloud-server-backup-agent.html) / [Vembu](https://ithelp.ithome.com.tw/articles/10220934?sc=iThomeR) for system level backup (block-based, Disk imaging/cloning). It provides full system imaging and bare metal recovery.
+    * restic
+      * [Backups with restic - Field Notes](https://www.stuartellis.name/articles/restic-backups/) (from: [Installing Python 3 on Linux — The Hitchhiker's Guide to Python](https://docs.python-guide.org/starting/install3/linux/) -> [Setting Up Python on Microsoft Windows - Field Notes](https://www.stuartellis.name/articles/python-development-windows/))
 * Storage:
-    * A 1TB+ external harddisk ([2 to 3 times larger than the computer storage size](https://thenextweb.com/businessapps/2015/01/24/complete-guide-backing-computer-properly/)), or
+    * A 1TB + external harddisk ([2 to 3 times larger than the computer storage size](https://thenextweb.com/businessapps/2015/01/24/complete-guide-backing-computer-properly/)), or
     * A cloud drive (that always on), such as Google Drive (HKD 15 per month for 100GB.)
 * Remark:
-    * Areca Backup is replaced on my list due to the complexity on setting up and interface, not really reliable, plus I don't like Java.
+    * Areca Backup is replaced due to the complexity on setting up and its interface, not really reliable, plus I don't like Java.
     * You can always pick software you like in https://alternativeto.net/tag/schedule-backup/
     * [Timeshift](https://alternativeto.net/software/timeshift/), which was introduced in LinuxMint 19, for Linux.
 
@@ -84,9 +86,14 @@ In global setting:
 Reference:
 
 * https://www.backblaze.com/blog/the-3-2-1-backup-strategy/
+
 * https://lifehacker.com/5961216/why-you-should-have-more-than-one-backup
+
 * https://www.anotherwindowsblog.com/2017/01/windows-backup-hdd-migration-with-free-veeam-endpoint.htm
+
 * [Key Factors for Successful NAS Data Migration _ Resilio Blog](https://www.resilio.com/blog/nas-migration-key-factors-success) -> Google: NAS data migration syncthing ->  <https://rolisz.ro/2019/03/16/backing-up-3-syncthing/>
+
+* [Using mergerfs to increase your virtual storage - Fedora Magazine](https://fedoramagazine.org/using-mergerfs-to-increase-your-virtual-storage/) -> https://github.com/trapexit/mergerfs -> https://github.com/trapexit-> https://github.com/trapexit/backup-and-recovery-howtos
 
 2018-08-24
 
