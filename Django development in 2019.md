@@ -60,6 +60,7 @@ Django, Flask, Masonite, Vue.js, FastAPI
 Q: 2020-06-07: What if `python3.8`, which I installed with `sudo apt install python3.8`, doesn't not come with `pip3` ?
 
 * [Installing Python 3 on Linux — The Hitchhiker's Guide to Python](https://docs.python-guide.org/starting/install3/linux/)
+  * [Setting Up Python on Microsoft Windows - Field Notes](https://www.stuartellis.name/articles/python-development-windows/), [Setting Up Fedora Workstation for Software Development - Field Notes](https://www.stuartellis.name/articles/fedora-workstation-setup/)
 
 Q: 2019-07-26: What if running Django on Docker? (Just like [running Wordpress on Docker](https://docs.docker.com/compose/wordpress/))
 
