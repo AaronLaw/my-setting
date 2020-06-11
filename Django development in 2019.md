@@ -147,6 +147,7 @@ Tango with Django, Django Girls, MDN, Microsoft's Visual Studio Code, webpack tw
   * [pydanny_cookiecutter-django](https://github.com/pydanny/cookiecutter-django)_ Cookiecutter Django is a framework for jumpstarting production-ready Django projects quickly. 
     * -> Google: Real python cookiecutter -> [Development and Deployment of Cookiecutter-Django via Docker – Real Python](https://realpython.com/development-and-deployment-of-cookiecutter-django-via-docker/)
     * -> Google: fullstack python Cookiecutter -> [The Top 39 Cookiecutter Open Source Projects](https://awesomeopensource.com/projects/cookiecutter) -> [Cookiecutter Django Vue](https://awesomeopensource.com/project/vchaptsev/cookiecutter-django-vue)
+* [r/learnpython - Where can I learn how to structure a Python project?](https://www.reddit.com/r/learnpython/comments/gzf3b4/where_can_i_learn_how_to_structure_a_python/)
 * Two scoops of Django
 * [Starting a Django Project – Real Python](https://realpython.com/django-setup/)
 * Template for starting Django projects
@@ -432,6 +433,9 @@ Google, github, YouTube
   
 * Cheatsheet
   
+  * Python language notes & cheatsheet
+    * [Intermediate Python — Python Tips 0.1 documentation](https://book.pythontips.com/en/latest/index.html)
+    * [Python Cookbook 3rd Edition Documentation — python3-cookbook 3.0.0 文档.](https://python3-cookbook.readthedocs.io/zh_CN/latest/)
   * Python CheatSheet
   * Django CheatSheet
   * PHP CheatSheet
