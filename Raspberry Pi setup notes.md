@@ -132,6 +132,8 @@ And now it's ready to be customisation. For fun! (或是被折磨)
 
 2019-07-08: Install Python 3.7.1 from source.:smiley:
 
+2020-06-10: Upgrade Python3.8b (beta) to Python3.8.
+
 ### Custom software on Pi:
 tightvncserver, vim-gtk, git, 
 
@@ -877,7 +879,7 @@ To test if it is successfully complie, execute python3, and then
 
 (Google: python missing zlib -> http://stackoverflow.com/questions/17899291/should-i-re-install-python-again-for-zlib-module)
 
-#### Update 2019-07-08: 
+#### Update 2019-07-08: upgrade Python from source code 
 
 I try to upgrade Python to Python 3.7.1, which is the latest stable version before version 3.8.
 
@@ -920,6 +922,58 @@ $ sudo apt-get clean
 This guide is pretty much taken from the following tutorial: https://liudr.wordpress.com/2016/02/04/install-python-on-raspberry-pi-or-debian/ and https://gist.github.com/BMeu/af107b1f3d7cf1a2507c9c6429367a3b
 
 //End of 2019-07-08.
+
+#### Update 2010-06-10: upgrade python from pool.
+
+I try to upgrade Python3.8b to Python3.8.
+
+Google: ubuntu update python3.8 from beta
+
+I can fire it up in 3 lines of command but I will tell how to do it in steps too.
+
+```bash
+$ sudo apt update && sudo apt remove python3.8 && sudo apt autoremove
+$ which python3.8 # It should show nothing.
+$ sudo apt install python3.8
+```
+
+1. Remove the Python3.8b
+
+```bash
+$ sudo apt update
+$ sudo apt remove python3.8
+```
+
+2. Check if Python3.8b exists.
+
+```bash
+$ which python3.8
+```
+
+3. Remove system configure files of Python3.8b
+
+
+```bash
+$ sudo apt purge python3.8* # not `sudo apt purge python*`
+$ sudo apt autoremove
+$ sudo apt update
+```
+
+4. Check if Python3.8b exists and it should already gone.
+
+```bash
+$ which python3.8
+```
+
+5. Install Python3.8
+
+```bash
+$ sudo apt install python3.8
+```
+
+// End of 2020-06-10.
+
+
 
 
 #### Escape as a plan
