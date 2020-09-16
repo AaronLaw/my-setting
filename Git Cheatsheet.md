@@ -4,6 +4,8 @@ GIT Cheatsheet
 
 Google: bash ctrl-a -> [bash keyboard shortcuts - Linux - SS64.com](https://ss64.com/bash/syntax-keyboard.html)
 
+`tig`, [GitKraken](https://www.gitkraken.com/)
+
 ## Git notes
 
 ### Git flow
@@ -37,8 +39,10 @@ Google: bash ctrl-a -> [bash keyboard shortcuts - Linux - SS64.com](https://ss64
 
 * **[Git cheat sheet | Atlassian Git Tutorial](https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet)** & PDF
 * Cheatsheet: [Git 面試題 - Git 教學 _ 高見龍](https://gitbook.tw/interview)
+* 杰哥的IT之旅:  [Github 标星 3W+，这份 Git 飞行规则你值得拥有](https://mp.weixin.qq.com/s?__biz=MzAwMjg1NjY3Nw==&mid=2247486978&idx=1&sn=fde0f603d110bb9f1c6f39acbc224e09&chksm=9ac54d88adb2c49e77980bec7340017aee7499c07e03048a49b06882079fd838b7c59cd7aae5&scene=21#wechat_redirect) -> https://github.com/k88hudson/git-flight-rules
 * Works with Visual Studio Code (VS Code): [Version Control in Visual Studio Code](https://code.visualstudio.com/docs/editor/versioncontrol)
 * [叶落阁 - Git常用命令](https://yelog.org/2016/10/02/Git-command/) (2020-03-14: Google: Nuxt.js -> [ghost blogging](https://www.zhihu.com/topic/19896814/top-answers) -> [FarBox、Jekyll、Octopress、ghost、marboo、Hexo、Medium、Logdown、prose.io，这些博客程序有什么特点？](https://www.zhihu.com/question/21981094/answer/20585133) -> https://hexo.io/ -> [themes](https://hexo.io/themes/) -> this)
+* [Django Cheat Sheet - Hope someone needs it!](https://www.reddit.com/r/django/comments/gzhfec/django_cheat_sheet_hope_someone_needs_it/) -> https://simplecheatsheet.com/tag/django-cheat-sheet/, https://simplecheatsheet.com/tag/git-cheat-sheet/
 
 ### Setup a private Git server
 
