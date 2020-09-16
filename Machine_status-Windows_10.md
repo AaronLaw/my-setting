@@ -16,6 +16,11 @@ Remarks: Aaron, 42stephxxxxx0693
 
 ----
 
+2020-03-15:
+
+* God mode: create a new folder, then rename it to `上帝模式.{ED7BA470-8E54-465E-825C-99712043E01C}`.
+* 卓越性能:  in powershell, type `powercfg -duplicatescheme e9a42b02-d5df-448d-aa00-03f14749eb61`
+
 2020-03-17:
 
 Seriously think about vscode remote development.
