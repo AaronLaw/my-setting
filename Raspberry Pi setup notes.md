@@ -923,6 +923,12 @@ This guide is pretty much taken from the following tutorial: https://liudr.wordp
 
 //End of 2019-07-08.
 
+#### Update 2020-09-16: Reference to upgrade Python from source code 
+
+[体验linux，双系统了解下 - 知乎](https://zhuanlan.zhihu.com/p/36764060) -> [告别win10，拥抱linux - 小歪的博客](https://zhangslob.github.io/2018/05/12/%E5%91%8A%E5%88%ABwin10%EF%BC%8C%E6%8B%A5%E6%8A%B1linux/) -> [linux下安装python3.6 - 小歪的博客](https://zhangslob.github.io/2018/05/11/linux下安装python3-6/)
+
+//End of 2020-09-16.
+
 #### Update 2010-06-10: upgrade python from pool.
 
 I try to upgrade Python3.8b to Python3.8.
