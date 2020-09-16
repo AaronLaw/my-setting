@@ -44,6 +44,11 @@ Google: bash ctrl-a -> [bash keyboard shortcuts - Linux - SS64.com](https://ss64
 
 http://www.instructables.com/id/GitPi-A-Private-Git-Server-on-Raspberry-Pi/?ALLSTEPS
 
+### Git Large File Storage
+
+* [Git Large File Storage - Git Large File Storage (LFS) replaces large files such as audio samples, videos, datasets, and graphics with text pointers inside Git](https://git-lfs.github.com) (from: https://github.com/hbons/SparkleShare)
+* [Git LFS 原理、大小檔案都適用](https://haway.30cm.gg/git-lfs/)
+
 
 ### Reference (general)
 ----
