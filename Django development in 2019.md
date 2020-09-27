@@ -7,6 +7,16 @@
 * Google: syncthing --reset-delta -> Google: syncthing delta sync -> https://danie1.me/2019/01/29/my-journey-to-syncthing/
 * [程序员的成长离不开哪些软技能？ - 知乎](https://www.zhihu.com/question/48406009/answer/134182064) (from: https://zhuanlan.zhihu.com/p/24357770)
 
+* Prototyping 
+
+django membership
+
+* Google: django membership -> [Building a Membership System in Django under 5 mins. _ Level Up Coding](https://levelup.gitconnected.com/building-a-membership-system-in-django-under-5-mins-5efd7e03627d)
+
+Django membership luckydraw / lottery
+
+* Google: django membership lucky draw -> [用 Django 與 SQLite 架抽籤網站](https://blog.liang2.tw/posts/2015/10/django-draw-member/) -> [uranusjr_django-tutorial-for-programmers_ Chapter text and example code for the Django tutorial first appeared during ITHome Ironman 7](https://github.com/uranusjr/django-tutorial-for-programmers)
+
 ## What is a Web Framework
 
 * https://jeffknupp.com/blog/2014/03/03/what-is-a-web-framework/
