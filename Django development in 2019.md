@@ -59,7 +59,7 @@ Django membership luckydraw / lottery
 
 ### Python Web Framework
 
-Django, Flask, Masonite, Vue.js, FastAPI
+Django, Flask, Masonite, Vue.js, FastAPI, Sanic
 
 * [Table of Contents - Full Stack Python](https://www.fullstackpython.com/table-of-contents.html) (django, flask, vue.js...no masonite, FastAPI)
 * Real Python.com (django, flask...no vue.js, masonite)
@@ -67,6 +67,7 @@ Django, Flask, Masonite, Vue.js, FastAPI
 * [Django和Flask这两个框架在设计上各方面有什么优缺点？](https://www.zhihu.com/question/41564604/answer/660256963)
 * Google: django.db.utils.InternalError: (1060, "Duplicate column name -> [django数据库migrate失败的解决方法 | 卡瓦邦噶！](https://www.kawabangga.com/posts/1634) -> [Django中null和blank的区别 | 卡瓦邦噶！](https://www.kawabangga.com/posts/1810) -> [如何学Python？ | 卡瓦邦噶！](https://www.kawabangga.com/how-to-learn-python) -> [Python_Golang Web 入坑指南 — python-web-guide 0.1 文档](https://python-web-guide.readthedocs.io/zh/latest/)
 * [Is Django a Full Stack Framework? - William Vincent](https://wsvincent.com/is-django-a-full-stack-framework/)
+* [2019年小结 - 小明明s à domicile](https://www.dongwm.com/post/2019-final/) -> [huge-success_sanic](https://github.com/huge-success/sanic) - Async Python 3.6+ web server_framework _ Build fast. Run fast, [dongweiming_lyanna_ My Blog Using Sanic](https://github.com/dongweiming/lyanna)
 
 ### Setup Development Environment
 
