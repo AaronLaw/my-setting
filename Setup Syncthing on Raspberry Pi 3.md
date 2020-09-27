@@ -1,4 +1,5 @@
 2019-07-16 update: Google: Introduction to Linux -> <http://www.tldp.org/LDP/intro-linux/intro-linux.pdf>
+2020-09-27 update: Add [Syncthing folder list on Raspberry Pi 3](./Syncthing folder list on Raspberry Pi 3.md)
 
 ## Setup Syncthing on Raspberry Pi 3
 
