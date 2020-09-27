@@ -5,6 +5,8 @@
 
 * Style of release notes: http://shanalikhan.github.io/2016/05/14/Visual-studio-code-sync-settings-release-notes.html
 * Google: syncthing --reset-delta -> Google: syncthing delta sync -> https://danie1.me/2019/01/29/my-journey-to-syncthing/
+* [程序员的成长离不开哪些软技能？ - 知乎](https://www.zhihu.com/question/48406009/answer/134182064) (from: https://zhuanlan.zhihu.com/p/24357770)
+
 ## What is a Web Framework
 
 * https://jeffknupp.com/blog/2014/03/03/what-is-a-web-framework/
@@ -439,6 +441,14 @@ Google, github, YouTube
 
 * [About - William Vincent](https://wsvincent.com/about/)
 
+* Python Language
+  
+  * [r/Python - Python 3 in One Pic](https://www.reddit.com/r/Python/comments/gzila7/python_3_in_one_pic/)
+  * 2020-06-12 : [白噪音](https://www.twitch.tv/cantbackdown86) -> [輕鬆學Python 3 零基礎彩色圖解、專業入門](https://sites.google.com/site/ezpythoncolorcourse/), [Python实用宝典-免费分享实用的Python实战教程](https://pythondict.com/)
+  * [Python 101 快速入門教學](https://blog.techbridge.cc/2016/12/17/python101-tutorial/)
+  * [JavaScript 101 快速入門教學](https://blog.techbridge.cc/2017/01/14/javascript101-tutorial/)
+  
+* Code Standard
   
   * [PEP 8 -- Style Guide for Python Code _ Python.org](https://www.python.org/dev/peps/pep-0008/)
   * 2019-11-22: [PEP 8  The Style Guide for Python Code.html](https://pep8.org) by [Kenneth Reitz](http://kennethreitz.org/bitcoin) (for humans)
