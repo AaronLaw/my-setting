@@ -7,6 +7,22 @@
 * Google: syncthing --reset-delta -> Google: syncthing delta sync -> https://danie1.me/2019/01/29/my-journey-to-syncthing/
 * [程序员的成长离不开哪些软技能？ - 知乎](https://www.zhihu.com/question/48406009/answer/134182064) (from: https://zhuanlan.zhihu.com/p/24357770)
 
+### Design (Design Language)
+
+* Microsoft design
+* Apple design
+* Google design
+* Python design
+* Java design
+* Django design
+* Minimalism
+* sexy web design
+  * [Sexy Web Design: Creating Interfaces that Work, 1st Edition](https://www.amazon.com/Sexy-Web-Design-Creating-Interfaces/dp/0980455235)
+    * http://web.simmons.edu/~grabiner/comm244/weeksix/sexy-web-design.pdf -> course http://web.simmons.edu/~grabiner/comm244/index.html
+  * [The Principles of Beautiful Web Design: Designing Great Web Sites is Not Rocket Science! 3rd Edition](https://www.amazon.com/Principles-Beautiful-Web-Design-Designing/dp/0992279445/)
+* [A List Apart – For people who make websites](https://alistapart.com)
+* [Smashing Magazine — For Web Designers And Developers](https://www.smashingmagazine.com)
+
 * Prototyping 
 
 django membership
