@@ -367,11 +367,17 @@ Using a reference custom User model from  [How to Extend Django User Model | Sim
 
 * 2019-10-11: [基于类的视图 | Django 文档 | Django](https://docs.djangoproject.com/zh-hans/2.2/topics/class-based-views/intro/)
 * 2019-10-11: [A Complete Beginner's Guide to Django - Part 6](https://simpleisbetterthancomplex.com/series/2017/10/09/a-complete-beginners-guide-to-django-part-6.html) :When working with GCBV, it’s always good to have the [ccbv.co.uk](https://ccbv.co.uk/) opened for quick reference.
+* 2020-06-05: [r/Django - Django Class Based Views in Diagrams](https://www.reddit.com/r/django/comments/gx3jpw/django_class_based_views_in_diagrams/)
+  * [ccbv.co.uk](https://ccbv.co.uk/) (django CBVs)
+  * [cdf.9vo.lt](https://cdf.9vo.lt/) (django forms)
+  * [cdrf.co](http://www.cdrf.co/) (drf CBVs)
 * 2019-10-29: Google:django CreateView example -> https://www.agiliq.com/blog/2019/01/django-createview/
 * 2019-10-03: [Class Based Views   Projects   Coding For Entrepreneurs](https://www.codingforentrepreneurs.com/projects/class-based-views) -> https://github.com/codingforentrepreneurs/Class-Based-Views
 * 2019-10-10: (Google: django custom user model one-to-one ->[How to extend Django User model](https://www.pythonsetup.com/how-extend-django-user-model/) -> Google: FormView -> Google: FormView django ->  https://docs.djangoproject.com/en/2.2/ref/class-based-views/generic-editing/ -> https://docs.djangoproject.com/zh-hans/2.2/topics/class-based-views/intro/ -> ) [Introduction to class-based views | Django documentation | Django](https://docs.djangoproject.com/en/2.2/topics/class-based-views/intro/) -> Google: Ancestors (MRO) -> [Django Tutorial for Programmers: 19. Class-based Views - iT 邦幫忙](https://ithelp.ithome.com.tw/articles/10160356) -> **[Django Class-Based-View Inspector -- Classy CBV](http://ccbv.co.uk)**
 * 2019-10-10: Ancestors (MRO) -> (Method Resolution Order, MRO) (方法解析顺序)
 * 2019-10-10: Google: class based view -> [Django : Class Based Views vs Function Based Views - Sarthak Kumar - Medium](https://medium.com/@ksarthak4ever/django-class-based-views-vs-function-based-view-e74b47b2e41b)
+* 2020-06-10: [r/Django Learning Viewsets, Mixins, Apiview in Depth](https://www.reddit.com/r/django/comments/gwaqqd/learning_viewsets_mixins_apiview_in_depth/)
+
 
 
 ### Building API
