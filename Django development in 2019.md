@@ -5,8 +5,6 @@
 
 * Style of release notes: http://shanalikhan.github.io/2016/05/14/Visual-studio-code-sync-settings-release-notes.html
 * Google: syncthing --reset-delta -> Google: syncthing delta sync -> https://danie1.me/2019/01/29/my-journey-to-syncthing/
-
-
 ## What is a Web Framework
 
 * https://jeffknupp.com/blog/2014/03/03/what-is-a-web-framework/
@@ -496,6 +494,7 @@ Google, github, YouTube
 * Template / Front-end Framework
   * Gentelella
   * [Github上 10 个开源免费且优秀的后台控制面板（接私活必备哦） - 知乎](https://zhuanlan.zhihu.com/p/83311408)
+  * [杰哥的IT之旅: 10个开源且优秀的后台管理系统UI面板](https://mp.weixin.qq.com/s?__biz=MzAwMjg1NjY3Nw==&mid=2247486979&amp;idx=1&amp;sn=a68bc40a0e1c3a9750dedf60ba46f787&source=41#wechat_redirect)
   * https://github.com/topics/dashboard
   * https://github.com/topics/admin-dashboard
   
@@ -512,6 +511,7 @@ Google, github, YouTube
 * Tooling
   * Package. Google: gentelella-admin -> Google: gentelella bootstrap 4 -> https://stackshare.io/stackups/bootstrap-vs-gentelella by Stackshare - Software and technology stacks used by top companies
   * Package. Google: gentelella-admin -> Google: gentelella bootstrap 4 -> Google: bootstrap 4 admin template -> [20 Free Bootstrap Admin & Dashboard Templates for 2019](https://speckyboy.com/free-bootstrap-admin-themes/)
+  * Package. 2020-07-16: [r/django - Django Dashboard - AdminLTE Design (MIT License) coded as a simple starter with deployment scripts for Docker, Gunicorn_Nginx](https://www.reddit.com/r/django/comments/hs9gi5/django_dashboard_adminlte_design_mit_license/) -> https://github.com/app-generator/django-dashboard-adminlte
   * Package. Google: django bootstrap4 -> [How to Use Bootstrap 4 Forms With Django - Simple is Better Than Complex](https://simpleisbetterthancomplex.com/tutorial/2018/08/13/how-to-use-bootstrap-4-forms-with-django.html)
   * Package. django-crispy-forms.
   * Package. 2019-11-18: [Django Chat Podcast](https://djangochat.com/episodes) - episode 40 -> https://github.com/wsvincent/awesome-django -> [kennethlove - django-shapeshifter: A CBV to handle multiple forms in one view](https://github.com/kennethlove/django-shapeshifter)
@@ -561,6 +561,8 @@ Tutorial in prototyping with Flask
   * [Developing a Single Page App with Flask and Vue.js](https://testdriven.io/blog/developing-a-single-page-app-with-flask-and-vuejs/) walks through all of the environment configuration, project setup and coding you need to do to build a legitimate Vue.js application that uses a [Flask](https://www.fullstackpython.com/flask.html) API on the backend.
   * [Building Modern Applications with Django and Vue.js](https://auth0.com/blog/building-modern-applications-with-django-and-vuejs/) combines [Django](https://www.fullstackpython.com/django.html),
     [Django REST Framework](https://www.fullstackpython.com/django-rest-framework-drf.html), Vue.js and [Auth0](https://auth0.com/) (an authentication web [API](https://www.fullstackpython.com/application-programming-interfaces.html)) in an introductory web application.
+* 2020-06-05: [r/Django - Building Django + Vue.js applications with AWS CDK and GitLab CI and how to scale celery workers to zero](https://www.reddit.com/r/django/comments/gxsste/building_django_vuejs_applications_with_aws_cdk/)
+* 2020-06-05: [r/Django - Django REST and Vue JS - Free tutorial](https://www.reddit.com/r/django/comments/gxdbju/django_rest_and_vue_js_free_tutorial/) -> [01 Vue JS and Django REST - Creating a Video Rating Application. Introduction - YouTube](https://www.youtube.com/watch?v=Cfqi0565rPc&list=PLnzr8Oa9Vyla0s7oGaFeC_GU1XRL3war6)
 * [我如何使用 Django + Vue.js 快速构建项目](https://zhuanlan.zhihu.com/p/25080236)
 * [我如何使用 Django + Vue.js 快速构建项目](https://zhuanlan.zhihu.com/p/24893786) -> Source code: <https://github.com/tmpbook/django-with-vuejs>
 * Django-bootstrap4
