@@ -5,7 +5,7 @@
 
 * Style of release notes: http://shanalikhan.github.io/2016/05/14/Visual-studio-code-sync-settings-release-notes.html
 * Google: syncthing --reset-delta -> Google: syncthing delta sync -> https://danie1.me/2019/01/29/my-journey-to-syncthing/
-* [程序员的成长离不开哪些软技能？ - 知乎](https://www.zhihu.com/question/48406009/answer/134182064) (from: https://zhuanlan.zhihu.com/p/24357770
+
 
 ## What is a Web Framework
 
@@ -35,7 +35,7 @@
 
 Django, Flask, Masonite, Vue.js, FastAPI
 
-* [Table of Contents - Full Stack Python](https://www.fullstackpython.com/table-of-contents.html) (django, flask, vue.js...no masonite)
+* [Table of Contents - Full Stack Python](https://www.fullstackpython.com/table-of-contents.html) (django, flask, vue.js...no masonite, FastAPI)
 * Real Python.com (django, flask...no vue.js, masonite)
 * [Flask vs. Django: Choose Your Python Web Framework](https://kite.com/blog/python/flask-vs-django-python)
 * [Django和Flask这两个框架在设计上各方面有什么优缺点？](https://www.zhihu.com/question/41564604/answer/660256963)
@@ -43,6 +43,8 @@ Django, Flask, Masonite, Vue.js, FastAPI
 * [Is Django a Full Stack Framework? - William Vincent](https://wsvincent.com/is-django-a-full-stack-framework/)
 
 ### Setup Development Environment
+
+[如何打造更好的科技新創 (Startup) 工作環境和組織文化？](https://blog.techbridge.cc/2016/03/19/how-to-build-a-great-startup-culture/)
 
 #### The server
 
@@ -327,6 +329,7 @@ Custom user model should be admin-compliant. Generally speaking, there are 4 dif
 * Google: Django custom user model -> [How to Extend Django User Model | Simple is Better Than Complex](https://simpleisbetterthancomplex.com/tutorial/2016/07/22/how-to-extend-django-user-model.html) - here are 4 different ways to extend the existing User model, ~~and I take the #2.~~ 
 * Google: Django custom user model one-to-one -> Tango with Django
 * Google: Django custom user model one-to-one -> [How to extend Django User model](https://www.pythonsetup.com/how-extend-django-user-model/)
+* 2020-07-15: [Get Started With Django Part 2_ Django User Management – Real Python](https://realpython.com/django-user-management/)
 
 Using a reference custom User model from  [How to Extend Django User Model | Simple is Better Than Complex](https://simpleisbetterthancomplex.com/tutorial/2016/07/22/how-to-extend-django-user-model.html), when I login to admin, there is `RelationObjectDoesNotExist` exception occurs. (I take the #2 User Model)
 
@@ -370,6 +373,12 @@ Using a reference custom User model from  [How to Extend Django User Model | Sim
 * 2019-10-10: Ancestors (MRO) -> (Method Resolution Order, MRO) (方法解析顺序)
 * 2019-10-10: Google: class based view -> [Django : Class Based Views vs Function Based Views - Sarthak Kumar - Medium](https://medium.com/@ksarthak4ever/django-class-based-views-vs-function-based-view-e74b47b2e41b)
 
+
+### Building API
+
+* 2020-06-13: [r/Django - Do you use Postman while developing your DRF API? What are the main Postman features I should learn about to help me develop my API?](https://www.reddit.com/r/django/comments/h8c5xp/do_you_use_postman_while_developing_your_drf_api/)
+* 2020-06-13: [r/Django - How to create graph structure using Django?](https://www.reddit.com/r/django/comments/h86nct/how_to_create_graph_structure_using_django/)
+
 ### Settings (static files, media, etc) (2019-09-30)
 
 * Google: what can I do in Django settings -> [Django by errors - a different Django tutorial — Django by errors 0.2 documentation](https://django-by-errors.readthedocs.io/en/latest/)
@@ -395,6 +404,7 @@ Using a reference custom User model from  [How to Extend Django User Model | Sim
 * HelloGitHub 微信公众号 -> HelloDjango https://github.com/HelloGitHub-Team/HelloDjango-blog-tutorial
   * [是时候让大家看看你用django写出来的博客了（内含部署教程视频） - 知乎](https://zhuanlan.zhihu.com/p/83276930)
 * [GitHub标星8100：Python中文资源，从新手到老司机，只要100天量子位量子位](https://zhuanlan.zhihu.com/p/64462281) -> [https://github.com/jackfrued](jackfrued) / [Python-100-Days](https://github.com/jackfrued/Python-100-Days)
+* [r/Django - Checkout my django based Bookshop project](https://www.reddit.com/r/django/comments/h0eppy/checkout_my_django_based_bookshop_project/)
 
 ### 3rd party
 
@@ -425,19 +435,19 @@ Google, github, YouTube
 
 * [About - William Vincent](https://wsvincent.com/about/)
 
-* Code Standand
   
   * [PEP 8 -- Style Guide for Python Code _ Python.org](https://www.python.org/dev/peps/pep-0008/)
   * 2019-11-22: [PEP 8  The Style Guide for Python Code.html](https://pep8.org) by [Kenneth Reitz](http://kennethreitz.org/bitcoin) (for humans)
   * Google: -> instagram pycon 2017 -> [Instagram 在 PyCon 2017 的演讲摘要 _ Piglei](https://www.zlovezl.cn/articles/instagram-pycon-2017/) (-> [piglei_one-python-craftsman_ 来自一位 Pythonista 的编程经验分享，内容涵盖编码技巧、最佳实践与思维模式等方面。](https://github.com/piglei/one-python-craftsman) ) -> [关于我 Piglei](https://www.zlovezl.cn/about/):友情链接 -> [Python 代码规范小结](http://wklken.me/posts/2016/11/03/python-code-style.html)
   
-* Cheatsheet
+* CheatSheet
   
   * Python language notes & cheatsheet
     * [Intermediate Python — Python Tips 0.1 documentation](https://book.pythontips.com/en/latest/index.html)
     * [Python Cookbook 3rd Edition Documentation — python3-cookbook 3.0.0 文档.](https://python3-cookbook.readthedocs.io/zh_CN/latest/)
   * Python CheatSheet
   * Django CheatSheet
+    * [Django Cheat Sheet - Hope someone needs it!](https://www.reddit.com/r/django/comments/gzhfec/django_cheat_sheet_hope_someone_needs_it/) -> https://simplecheatsheet.com/tag/django-cheat-sheet/
   * PHP CheatSheet
   * Django Girls
   * Books by Aqiliq https://books.agiliq.com/en/latest/
@@ -471,6 +481,7 @@ Google, github, YouTube
 * Dockerization
   
   * Youtube: django docker
+  * 2020-06-15: [r/Django -Dockerizing Django with Postgres, Gunicorn, and Nginx](https://www.reddit.com/r/django/comments/h8u5cf/dockerizing_django_with_postgres_gunicorn_and/)
   
 * Data
   * SQLite client:
@@ -510,6 +521,7 @@ Google, github, YouTube
 Tutorial in prototyping with Flask
 
 * Google: flask tutorial -> [Flask - Full Stack Python](https://www.fullstackpython.com/flask.html)
+* 2020-07-07: [r/learnpython - What do I need to learn to do backend with python?](https://www.reddit.com/r/learnpython/comments/hlii49/what_do_i_need_to_learn_to_do_backend_with_python/) -> https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-v-user-logins
 * Google: cookiecutter -> [Python cookiecutter-flask，如何在几分钟内启动一个像模像样的网站[视频] - 知乎](https://zhuanlan.zhihu.com/p/46764192)
 * [PyCon China 2019 演讲：基于 Flask 的 Web API 开发指南 - 知乎](https://zhuanlan.zhihu.com/p/73865476)
   * [《Flask 入门教程》第二版发布](https://zhuanlan.zhihu.com/p/95620009) -> http://helloflask.com/tutorial/
