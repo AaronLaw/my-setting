@@ -33,6 +33,9 @@ Google: bash ctrl-a -> [bash keyboard shortcuts - Linux - SS64.com](https://ss64
   * Cheatsheet: [Git 面試題 - Git 教學 _ 高見龍](https://gitbook.tw/interview)
 * [Learn Git Branching](https://learngitbranching.js.org/)
   * [用玩游戏的方式学习 Git](https://sspai.com/post/47694)
+* [A successful Git branching model] (http://nvie.com/posts/a-successful-git-branching-model/) from [Git flow 開發流程] (https://ihower.tw/blog/archives/5140)
+
+
 
 
 ### Git Cheatsheet
