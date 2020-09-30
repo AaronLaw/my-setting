@@ -122,6 +122,7 @@ Ref:
 * https://www.digitalocean.com/community/tutorials/automating-initial-server-setup-with-ubuntu-18-04
 *  https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-ansible-on-ubuntu-18-04-quickstart -> https://www.digitalocean.com/community/tutorials/how-to-use-ansible-to-automate-initial-server-setup-on-ubuntu-18-04
 * https://www.digitalocean.com/community/tutorials/initial-server-setup-with-centos-7
+* https://wiki.centos.org/zh-tw/HowTos
 * https://zhuanlan.zhihu.com/p/43776780 TLDR.sh
   * bat > cat
   * prettyping > ping
