@@ -13,3 +13,4 @@ git clone https://github.com/cookiecutter/cookiecutter.git
 git clone https://github.com/gmasterscm/tour.git
 git clone https://github.com/ipfs/go-ipfs.git
 git clone https://github.com/filecoin-project/lotus.git
+git clone https://github.com/filecoin-project/filecoin-docs.git
