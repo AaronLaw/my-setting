@@ -1,7 +1,7 @@
 # ~/Syncthing/Jupyter/Learning/Source code study
 
 'with open('hello.txt', 'w') as f: -> Google: python file open source code -> https://hackernoon.com/50-popular-python-open-source-projects-on-github-in-2018-c750f9bf56a0
-git clone https://github.com/rg3/youtube-dl.gitxx
+git clone https://github.com/rg3/youtube-dl.git -> https://github.com/ytdl-org/youtube-dl.git
 git clone https://github.com/donnemartin/system-design-primer.git
 git clone https://github.com/psf/requests.git
 git clone https://github.com/cookiecutter/cookiecutter.git
