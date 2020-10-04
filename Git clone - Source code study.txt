@@ -19,3 +19,4 @@ git clone https://github.com/joke2k/faker.git
 git clone https://github.com/fabric/fabric.git
 git clone https://github.com/piglei/one-python-craftsman.git
 git clone https://github.com/laike9m/My_Blog.git
+git clone https://github.com/OhiyoX/SomeAutoScripts.git
