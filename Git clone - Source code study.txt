@@ -15,8 +15,9 @@ git clone https://github.com/ipfs/go-ipfs.git
 git clone https://github.com/filecoin-project/lotus.git
 git clone https://github.com/filecoin-project/filecoin-docs.git
 git clone https://github.com/joke2k/faker.git
-
 git clone https://github.com/fabric/fabric.git
 git clone https://github.com/piglei/one-python-craftsman.git
 git clone https://github.com/laike9m/My_Blog.git
+git clone https://github.com/OhiyoX/SomeAutoScripts.git
 git clone https://github.com/liangliangyy/DjangoBlog.git
+git clone https://github.com/gmasterscm/tour.git
