@@ -6,3 +6,5 @@ git clone https://github.com/donnemartin/system-design-primer.git
 git clone https://github.com/psf/requests.git
 git clone https://github.com/cookiecutter/cookiecutter.git
 git clone https://github.com/gmasterscm/tour.git
+git clone https://github.com/ipfs/go-ipfs.git
+git clone https://github.com/filecoin-project/lotus.git
