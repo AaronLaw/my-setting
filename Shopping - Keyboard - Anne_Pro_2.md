@@ -1,14 +1,35 @@
 # Keyboard
 
-Keyboards 2018-11
-|| MagicForce`1` || Anne Pro 2 || ikbc Poker 2
+## Background
 
-Keyboards 2019-06
+### Keyboards 2018-11:
+
+|| MagicForce`1` || V500S || Anne Pro 2 || ikbc Poker 2
+
+I have a MagicForce Smart 1 at home and V500S at office. 60% keyboard is compact.
+For typing when travel, Should I got an Anne Pro 2 or ikbc Poker 2?
+
+| Keyboard |   Anne Pro 2   |  iKBC Poker 2    |
+| ---- | ---- | ---- |
+| Price     | 399  | 500  |
+| Type  |   ABS   |   PBT   |
+|    Lighting?  |  Y    |  N   |
+| Keycap | PBT | PBT |
+
+### Keyboards 2019-06:
+
 || MagicForce`1` || Anne Pro 2 || ikbc Poker 2 || [Keychron K2 - A Clean Wireless Mechanical Keyboard - YouTube](https://www.youtube.com/watch?v=J1sK0BrCaqM)
+
+I have a MagicForce Smart 1 at home and V500S at office. For typing when travel, I got an Anne Pro 2.
+Keychron K2 | K8 seems good. Should I got a Keychron too?
+
+### 60% Keyboard
 
 Youtube: GH60 | 60% keyboard
 
 60% Keyboard parameters (Table Reference: http://en.obins.net/anne-pro)
+
+## Comparison
 
 | 60% Keyboard Parameters | Obinslab Anne Pro 2   |  iKBC New Poker 2 | ANNE Pro | ANNE |
 | --- | --- | --- | --- | ---|
@@ -44,23 +65,15 @@ Youtube: GH60 | 60% keyboard
 [^2]: http://en.obins.net/obinslab-starter
 [^3]: Setting are saved on the onboard memory.
 
-(**
 
-| Keyboard |   Anne Pro 2   |  iKBC Poker 2    |
-| ---- | ---- | ---- |
-| Type  |   ABS   |   PBT   |
-|    Lighting?  |  Y    |  N   |
-| Keycap | PBT | PBT |
-| WTF | Y | Y |
-
-**)
-
-## Anne Pro 2
+## More Information
 
 * r/MechanicalKeyboards for all the Click and None of the Clack!(https://www.reddit.com/r/MechanicalKeyboards/)
     * [index - MechanicalKeyboards](https://www.reddit.com/r/MechanicalKeyboards/wiki/index)
 * r/AnnePro(https://www.reddit.com/r/AnnePro/)
     * [Best KB for a Programmer AnnePro](https://www.reddit.com/r/AnnePro/comments/bbfa2q/best_kb_for_a_programmer/)
+
+### Anne Pro 2
 
 Google: Anne pro 2
 * http://en.obins.net/anne-pro2
@@ -76,30 +89,19 @@ YouTube: GH60 | 60% keyboard
 Google: Anne pro 2 software
 * https://www.reddit.com/r/AnnePro/comments/9629qv/anne_pro_2_officially_announced/
 
-
-
-https://unwire.hk/2018/12/24/ducky-one-rgb/notebook/
-
-## Keychron K2
+### Keychron K2
 
 * [Keychron K2 - A Clean Wireless Mechanical Keyboard - YouTube](https://www.youtube.com/watch?v=J1sK0BrCaqM)
 
+### Keychron K4
 
-## Keychron K4
-
-## Anne Pro 2 vs Keychron K2
+### Anne Pro 2 vs Keychron K2
 
 * Google: anne pro 2 vs keychron k2
-    * [The 9 Best Wireless Mechanical Keyboards – Review Geek](https://www.reviewgeek.com/46068/the-9-best-wireless-mechanical-keyboards/)
-    * [Obinslab Anne Pro 2 vs Keychron K4 Side-by-Side Comparison - RTINGS.com](https://www.rtings.com/keyboard/tools/compare/obinslab-anne-pro-2-vs-keychron-k4/1691/5778)
     * [Anne Pro 2 vs. Keychron K2 Real life review. MechanicalKeyboards](https://www.reddit.com/r/MechanicalKeyboards/comments/ihli5q/anne_pro_2_vs_keychron_k2_real_life_review/g31gqci/) -> [astronautr_60p-keyboard-layout Comfy 60% keyboard layout](https://github.com/astronautr/60p-keyboard-layout)
+    * [Obinslab Anne Pro 2 vs Keychron K4 Side-by-Side Comparison - RTINGS.com](https://www.rtings.com/keyboard/tools/compare/obinslab-anne-pro-2-vs-keychron-k4/1691/5778)
+    * [The 9 Best Wireless Mechanical Keyboards – Review Geek](https://www.reviewgeek.com/46068/the-9-best-wireless-mechanical-keyboards/)
 
-----
+### Ducky One 2 Mini RGB 60%
 
-| 1         | 2    | 3    |
-| --------- | ---- | ---- |
-| Price     | 399  | 500  |
-| Type      | ABS  | PBT  |
-| Lighting? | Y    | Y    |
-
-### ----
+https://unwire.hk/2018/12/24/ducky-one-rgb/notebook/
