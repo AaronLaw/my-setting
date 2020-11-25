@@ -4,7 +4,7 @@ GIT Cheatsheet
 
 Google: bash ctrl-a -> [bash keyboard shortcuts - Linux - SS64.com](https://ss64.com/bash/syntax-keyboard.html)
 
-`tig`, [GitKraken](https://www.gitkraken.com/)
+[tig](https://jonas.github.io/tig/) as `tig`, [GitKraken](https://www.gitkraken.com/), [gmaster](https://gmaster.io/) [Tour to gmaster](https://gmaster.io/tour)
 
 ## Git notes
 
