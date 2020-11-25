@@ -13,6 +13,7 @@ Google: bash ctrl-a -> [bash keyboard shortcuts - Linux - SS64.com](https://ss64
 * http://grokcode.com/717/how-to-use-source-control-effectively/
 * Git Flow
   * Google: git flow
+* [软件开发_6 个在团队中使用 Git 的最佳实践](https://linux.cn/article-12621-1.html) = [6 best practices for teams using Git](https://opensource.com/article/20/7/git-best-practices)
 
 ### Git guides
 * [git - the simple guide - no deep shit!](rogerdudler.github.io/git-guide/)
@@ -33,6 +34,7 @@ Google: bash ctrl-a -> [bash keyboard shortcuts - Linux - SS64.com](https://ss64
   * Cheatsheet: [Git 面試題 - Git 教學 _ 高見龍](https://gitbook.tw/interview)
 * [Learn Git Branching](https://learngitbranching.js.org/)
   * [用玩游戏的方式学习 Git](https://sspai.com/post/47694)
+* Overview: [连 Git 都玩不转，还写什么代码？- Python编程时光](https://mp.weixin.qq.com/s?__biz=MzIzMzMzOTI3Nw==&mid=2247493645&idx=2&sn=d9408f63f9afccd28482e41efe2ba11e&chksm=e88588efdff201f9d3cc513591ad0c7b791616e8ca10a7b091038094b8b52eb1f2585c22e799&&sessionid=1605417365&scene=126&sessionid=1605417365&clicktime=1605422019&enterid=1605422019#rd)
 
 
 ### Git Cheatsheet
