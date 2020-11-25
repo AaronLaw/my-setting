@@ -1,6 +1,10 @@
 GIT Cheatsheet
 ====
 
+* Git - Book <https://git-scm.com/book/en/v2> = <https://book.git-scm.com/book/en/v2>
+  * <https://git-scm.com/book/zh-tw/v2>
+  * -> <http://gitimmersion.com/>
+
 [15分钟搞定GTD——一个让你把事情做完的系统性指南](http://select.yeeyan.org/view/519841/437987)
 
 Google: bash ctrl-a -> [bash keyboard shortcuts - Linux - SS64.com](https://ss64.com/bash/syntax-keyboard.html)
@@ -27,9 +31,6 @@ Google: bash ctrl-a -> [bash keyboard shortcuts - Linux - SS64.com](https://ss64
   * from: Google: git showing all branch in remote -> [git ready » list remote branches](gitready.com/intermediate/2009/02/13/list-remote-branches.html)
 * [Git Tutorials and Training _ Atlassian Git Tutorial](https://www.atlassian.com/git/tutorial/git-basics#!init) 
   * (from: http://www.instructables.com/id/GitPi-A-Private-Git-Server-on-Raspberry-Pi/?ALLSTEPS)
-* Git - Book <https://git-scm.com/book/en/v2> = <https://book.git-scm.com/book/en/v2>
-  * <https://git-scm.com/book/zh-tw/v2>
-  * -> <http://gitimmersion.com/>
 * <https://progit.org/book/>
   * [Pro Git 中文版（第二版）](https://progit.bootcss.com)
 * [Git 教學 - Git 書 - 為你自己學 Git _ 高見龍](https://gitbook.tw)
