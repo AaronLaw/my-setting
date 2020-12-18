@@ -1,4 +1,5 @@
 # ~/Syncthing/Jupyter/Learning/Source code study
+# [你需要更多的思考時間](wklken.me/posts/2019/06/23/you-need-more-time-to-think-along.html)
 
 # usage:
 # echo git clone https://github.com/rg3/youtube-dl.git > 'Git clone - Source code study.txt'
@@ -17,9 +18,9 @@ git clone https://github.com/filecoin-project/lotus.git
 git clone https://github.com/filecoin-project/filecoin-docs.git
 git clone https://github.com/joke2k/faker.git
 git clone https://github.com/fabric/fabric.git
-git clone https://github.com/piglei/one-python-craftsman.git
-git clone https://github.com/laike9m/My_Blog.git
-git clone https://github.com/OhiyoX/SomeAutoScripts.git
-git clone https://github.com/liangliangyy/DjangoBlog.git
+git clone https://github.com/piglei/one-python-craftsman.git # [Instagram 在 PyCon 2017 的演讲摘要 _ Piglei](https://www.zlovezl.cn/articles/instagram-pycon-2017/)
+git clone https://github.com/laike9m/My_Blog.git # [laike9m's blog](https://laike9m.com/blog/projects/)
+git clone https://github.com/OhiyoX/SomeAutoScripts.git # [Typora + OSS + Python，我实现了一个简单又自由的博文发布流程 - 少数派](https://sspai.com/post/62383)
+git clone https://github.com/liangliangyy/DjangoBlog.git # from: https://github.com/topics/django
 git clone https://github.com/gmasterscm/tour.git
 git clone https://github.com/jef/streetmerchant.git # 2020-11: [AMD 5600X/5800X/5900X/5950X Stock Checker - With audio alerts - !info - Falcodrin](https://www.youtube.com/watch?v=0iLIxuVflE4&list=PLBYjxUjYC1sDU4tnQHPqIn0M5U-DWyx9w&index=29) -> AMD snatcher, [PS5 stock check drop alert for US DataLover - YouTube](https://www.youtube.com/watch?v=QW2nZ8F6baU) -> this
