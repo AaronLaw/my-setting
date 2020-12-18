@@ -22,3 +22,4 @@ git clone https://github.com/laike9m/My_Blog.git
 git clone https://github.com/OhiyoX/SomeAutoScripts.git
 git clone https://github.com/liangliangyy/DjangoBlog.git
 git clone https://github.com/gmasterscm/tour.git
+git clone https://github.com/jef/streetmerchant.git # 2020-11: [AMD 5600X/5800X/5900X/5950X Stock Checker - With audio alerts - !info - Falcodrin](https://www.youtube.com/watch?v=0iLIxuVflE4&list=PLBYjxUjYC1sDU4tnQHPqIn0M5U-DWyx9w&index=29) -> AMD snatcher, [PS5 stock check drop alert for US DataLover - YouTube](https://www.youtube.com/watch?v=QW2nZ8F6baU) -> this
