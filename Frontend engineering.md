@@ -58,6 +58,7 @@ Frontend engineering
 * https://gomockingbird.com/
 * Github: awesome-xxx
 * VS Code: extension
+* [前端工程师都有用哪些比较靠谱的小工具？ - 知乎](https://www.zhihu.com/question/20241338)
 
 ### Frontend
 * [跟(不)上網頁前端技術（資源大雜燴）](http://huan-lin.blogspot.com/2013/08/front-end-technologies.html)
