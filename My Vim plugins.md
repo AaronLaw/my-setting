@@ -1,5 +1,9 @@
-My Vim plugins
-====
+## Vim distribution
+
+* NeoVim
+* SpaceVim
+
+## My Vim plugins
 
 * [pathogen](https://github.com/tpope/vim-pathogen) (from: http://blog.eddie.com.tw/2012/06/01/screencast-3-vim-plugins/)
 * [nerdtree](https://github.com/scrooloose/nerdtree)
