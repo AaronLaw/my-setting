@@ -1,10 +1,6 @@
 GIT Cheatsheet
 ====
 
-* Git - Book <https://git-scm.com/book/en/v2> = <https://book.git-scm.com/book/en/v2>
-  * <https://git-scm.com/book/zh-tw/v2>
-  * -> <http://gitimmersion.com/>
-
 [15分钟搞定GTD——一个让你把事情做完的系统性指南](http://select.yeeyan.org/view/519841/437987)
 
 Google: bash ctrl-a -> [bash keyboard shortcuts - Linux - SS64.com](https://ss64.com/bash/syntax-keyboard.html)
@@ -22,6 +18,9 @@ Google: bash ctrl-a -> [bash keyboard shortcuts - Linux - SS64.com](https://ss64
 
 ### Git guides
 
+* Git - Book <https://git-scm.com/book/en/v2> = <https://book.git-scm.com/book/en/v2>
+  * <https://git-scm.com/book/zh-tw/v2>
+  * -> <http://gitimmersion.com/>
 * [git - the simple guide - no deep shit!](rogerdudler.github.io/git-guide/)
   * <https://github.com/rogerdudler/git-guide>
   * <http://rogerdudler.github.io/git-guide/index.zh.html>
@@ -292,6 +291,14 @@ Google: git remove a file from history
 * [How to remove a big file wrongly committed to a Git repo - Freek Van der Herten's blog on PHP, Laravel and JavaScript](https://freek.dev/879-how-to-remove-a-big-file-wrongly-committed-to-a-git-repo)
 
 Google: Maintaining a Git Repository
+
+Google: git 清理 過期 branch
+
+* [[git]如何快速清理已經合並(merged)的分支(branch) - local及remote @ Alan Tsai 的學習筆記](https://blog.alantsai.net/posts/2019/04/faq-git-how-to-delete-merged-branches-from-remote-and-local)
+
+```bash
+$ git gc --prune=today 
+```
 
 ----
 
