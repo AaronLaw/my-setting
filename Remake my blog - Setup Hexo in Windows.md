@@ -4,6 +4,7 @@ I use Wordpress no more for my blog and diary. Instead, I move to static site ge
 
 Reference: 
 * [叶落阁 - windows环境下使用hexo搭建blog平台](https://yelog.org/2017/03/17/windows-hexo/)
+* [10 大静态网站生成工具 | Linux 中国](https://zhuanlan.zhihu.com/p/260957368)
 
 ----
 
