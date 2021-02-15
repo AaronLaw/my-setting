@@ -7,7 +7,7 @@
 # git clone https://github.com/rg3/youtube-dl.git
 
 'with open('hello.txt', 'w') as f: -> Google: python file open source code -> https://hackernoon.com/50-popular-python-open-source-projects-on-github-in-2018-c750f9bf56a0
-git clone https://github.com/rg3/youtube-dl.git -> https://github.com/ytdl-org/youtube-dl.git
+git clone https://github.com/rg3/youtube-dl.git -> https://github.com/ytdl-org/youtube-dl.git # [下载神器被 Github 下架后，作者写下了这篇回应 - 知乎.html](https://zhuanlan.zhihu.com/p/330237004)
 git clone https://github.com/nficano/pytube.git
 git clone https://github.com/donnemartin/system-design-primer.git
 git clone https://github.com/psf/requests.git
@@ -24,3 +24,8 @@ git clone https://github.com/OhiyoX/SomeAutoScripts.git # [Typora + OSS + Python
 git clone https://github.com/liangliangyy/DjangoBlog.git # from: https://github.com/topics/django
 git clone https://github.com/gmasterscm/tour.git
 git clone https://github.com/jef/streetmerchant.git # 2020-11: [AMD 5600X/5800X/5900X/5950X Stock Checker - With audio alerts - !info - Falcodrin](https://www.youtube.com/watch?v=0iLIxuVflE4&list=PLBYjxUjYC1sDU4tnQHPqIn0M5U-DWyx9w&index=29) -> AMD snatcher, [PS5 stock check drop alert for US DataLover - YouTube](https://www.youtube.com/watch?v=QW2nZ8F6baU) -> this
+git clone https://github.com/chrisconlan/algorithmic-trading-with-python.git # 2021-01: Google: algorithmic trading with python book -> https://chrisconlan.com/books/ -> this
+git clone https://github.com/chrisconlan/fast-python.git # 2021-01: Google: algorithmic trading with python book -> https://chrisconlan.com/books/ -> this
+git clone https://github.com/PacktPublishing/Python-Algorithmic-Trading-Cookbook.git # 2021-01: Google: algorithmic trading with python book -> https://www.packtpub.com/product/python-algorithmic-trading-cookbook/9781838989354 -> this
+git clone https://gitlab.com/GammaRayStudio/DevDoc.git # [Vim 編輯器 入門指南 (上) _ 用思維的速度寫程式 _ 開發 x 編程 _ 思考速度多快 寫程式速度就多快【Gamma Ray 軟體工作室】 - YouTube](https://www.youtube.com/watch?v=Yk4s-WLjxug&t=802s) -> [Gamma Ray 軟體工作室 - YouTube](https://www.youtube.com/user/rhxs020) -> https://gitlab.com/GammaRayStudio/DevDoc
+git clone https://github.com/gmasterscm/tour.git
