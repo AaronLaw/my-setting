@@ -1,6 +1,7 @@
 2019-07-16 update: Google: Introduction to Linux -> <http://www.tldp.org/LDP/intro-linux/intro-linux.pdf>
 2020-09-27 update: Add [Syncthing folder list on Raspberry Pi 3](./Syncthing folder list on Raspberry Pi 3.md)
-
+2020-12-20 update: Going to run Ubuntu instead of Raspbian OS ([Debian Buster](https://www.raspberrypi.org/software/)) as the OS. [如何在树莓派上安装 Ubuntu 服务器？ Linux 中国 - 知乎](https://zhuanlan.zhihu.com/p/272556628) = [How to Install Ubuntu Server on a Raspberry Pi](https://itsfoss.com/install-ubuntu-server-raspberry-pi/) -> [Top 21 Raspberry Pi OS for Various Purposes [2020]](https://itsfoss.com/raspberry-pi-os/)
+2020-12-25: Google: raspberry syncthing -> Using Syncthing to synchronize files between your Rasp-berry Pi and Mac-PC-Linux computers - TheDigitalPictureFrame.com
 ## Setup Syncthing on Raspberry Pi 3
 
 2019-07-16 update.
@@ -197,7 +198,7 @@ esac
 exit 0
 ```
 
-#### Method 3) Install syncthing version that syncthin.net updates it
+#### Method 3) Install syncthing version that syncthing.net updates it
 
 ###### Debian/Ubuntu Packages
 
