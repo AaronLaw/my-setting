@@ -28,7 +28,8 @@ Install: git, Django, python3.8 (`sudo apt install python3.8`)
 
 Install: `tmux` (终端复用工具，替代 `screen`, `nohup`)
 
-Install:  `htop`, `glances`[#](https://nicolargo.github.io/glances/), `nmon`, `bmon`, `syncthing`, `curl`, `tree`, `cloc`
+Install:  `htop`, `glances`[#](https://nicolargo.github.io/glances/),  `nmon`, `bmon`,  `syncthing`, `curl`, `tree`, `cloc`
+Install: `goaccess`, `iotop`, `iptraf-ng`[#](https://www.linuxtechi.com/command-line-tools-to-monitor-linux/)
 Install: `theFuck` [#](https://github.com/nvbn/thefuck), `bat`, `prettyping`, `fzf`[#](https://github.com/junegunn/fzf), `htop`, `diff-so-fancy`, `fd`, `ncdu`, `tldr`, `cheat`[#](https://github.com/cheat/cheat), `cheat.sh`[#](https://github.com/chubin/cheat.sh), `jq`, 
 
 Install:  `SpaceVim`[#](https://github.com/SpaceVim/SpaceVim), `NeoVim`[#](https://neovim.io/), `tig`, `mycli`[#](https://www.mycli.net/)[#](https://github.com/dbcli/mycli), `cloc`[#](http://cloc.sourceforge.net/)[#](https://github.com/AlDanial/cloc)
@@ -45,6 +46,10 @@ Install: `system-config-lvm`, `kvmp`, `partitionmanager` (Google: linux mount lv
 Install: `openssh-server` for remote access.
 
 config: `sudo apt install ssh openssh-server`, `sudo systemctl status ssh` (Google: linux ssh server -> https://linuxize.com/post/how-to-enable-ssh-on-ubuntu-18-04/) (VSCode: https://code.visualstudio.com/docs/remote/ssh#_getting-started)
+
+
+2020-10-05:
+config: monitoring linux: (& `top`,  `vmstat`,  `lsof`, `tcpdump`, `netstat`, `htop`,  `iotop`, `iostat`, `goaccess`, `glances`, `iptraf`, `lftop`,)
 
 ----
 
@@ -133,5 +138,9 @@ Ref:
   * ack || ag > grep
   * jq > grep et al
   * theFuck
+
+Monitor Linux
+* [Top 12 Command Line Tools to Monitor Linux - LinuxTechi](https://www.linuxtechi.com/command-line-tools-to-monitor-linux/)
+* [How to Use htop to Monitor Linux System Processes - LinuxTechi](https://www.linuxtechi.com/htop-monitor-linux-system-processes/)
 
 ----
