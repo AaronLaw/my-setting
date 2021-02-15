@@ -2375,6 +2375,35 @@ http://sourceforge.net/adobe/source-han-sans/
 http://github.com/adobe-fonts/source-han-sans/
 http://www.google.com/get/noto/#/family/noto-sans-hant
 
+
+
+### Disk Health
+
+`badblocks`  command will detect all bad blocks (bad sectors)  on our hard disk and save them in a text file so that we can use it with `e2fsck` to configure  Operating System (OS) to not store our data on these damaged sectors.
+
+Step:1 Use fdisk command to identify your hard drive info 
+
+```
+sudo fdisk -l 
+```
+Step:2  Scan your hard drive for Bad Sectors or Bad Blocks 
+```
+sudo badblocks -v /dev/sdb > /tmp/bad-blocks.txt
+```
+Just replace “/dev/sdb” with your own hard disk / partition. When we execute above command  a text file “bad-blocks” will be created under /tmp , which will contains all bad blocks.
+
+Step:3 Inform OS not to use bad blocks  for storing data
+
+Once the scanning is completed , if the bad sectors are reported , then use file “bad-blocks.txt” with e2fsck command  and force OS not to use these bad blocks for storing data.
+```
+sudo e2fsck -l /tmp/bad-blocks.txt  /dev/sdb
+```
+Note : Before running e2fsck command , you just make sure the drive is not mounted.
+
+Google: linux check disk bad sectors
+
+* [Check Hard drive for bad sectors or bad blocks in linux - LinuxTechi](https://www.linuxtechi.com/check-hard-drive-for-bad-sector-linux/)
+
 // Last update: 2019-07
 // Markdown tidyup: 2018-08
 
@@ -2382,3 +2411,4 @@ http://www.google.com/get/noto/#/family/noto-sans-hant
 ```
 
 ```
+
