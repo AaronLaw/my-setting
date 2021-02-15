@@ -1,6 +1,8 @@
-### 2020-03-15:
+# Hexo
 
-I use Wordpress no more for my blog and diary. Instead, I move to static site generator such as Hexo and Pelican.
+Starting from William Vincent's [Site Design](https://wsvincent.com/site-design/) and [Static Website Services](https://wsvincent.com/static-website-services/) -> [JAMStack](https://jamstack.org/), I find [Hexo](https://hexo.io/zh-tw/index.html) & [Pelican](https://blog.getpelican.com/) and some more [static site generator](https://www.fullstackpython.com/static-site-generator.html)...
+
+2020-03-15: I use Wordpress no more for my blog and diary. Instead, I move to static site generator such as Hexo and Pelican.
 
 Reference: 
 * [叶落阁 - windows环境下使用hexo搭建blog平台](https://yelog.org/2017/03/17/windows-hexo/)
@@ -151,7 +153,7 @@ $ hexo s
 
 
 
-​### 赏
+### 赏
 
 文章标题:windows环境下使用hexo搭建blog平台
 
