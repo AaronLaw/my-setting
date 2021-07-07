@@ -177,6 +177,7 @@ Tango with Django, Django Girls, MDN, Microsoft's Visual Studio Code, webpack tw
     * -> Google: Real python cookiecutter -> [Development and Deployment of Cookiecutter-Django via Docker – Real Python](https://realpython.com/development-and-deployment-of-cookiecutter-django-via-docker/)
     * -> Google: fullstack python Cookiecutter -> [The Top 39 Cookiecutter Open Source Projects](https://awesomeopensource.com/projects/cookiecutter) -> [Cookiecutter Django Vue](https://awesomeopensource.com/project/vchaptsev/cookiecutter-django-vue)
 * [r/learnpython - Where can I learn how to structure a Python project?](https://www.reddit.com/r/learnpython/comments/gzf3b4/where_can_i_learn_how_to_structure_a_python/)
+* [超干！如何建立一个完美的 Python 项目？ - Python编程时光](https://mp.weixin.qq.com/s?__biz=MzIzMzMzOTI3Nw==&mid=2247493789&idx=1&sn=7f0f4c40e410a3cfb01706dd9c8c8fc6&chksm=e885887fdff2016930accb8ea6d4e2cb67d4d6983ca716148da7f63c62a6b96f518497ed2575&sessionid=1605417365&scene=126&clicktime=1605422192&enterid=1605422192&ascene=3&devicetype=android-29&version=27001041&nettype=WIFI&abtest_cookie=AAACAA%3D%3D&lang=zh_TW&exportkey=AtnE%2BVBn4mbf9TdFqBjN40I%3D&pass_ticket=Wp8yPpesrjAhHEp46ZsLEWFN81ev53AESFfcbQj1tnU%2BqvSawTi05wVP1qRCbEyx&wx_header=1) = [How to set up a perfect Python project: Best practices for setting up a project to maintain the highest quality code](https://sourcery.ai/blog/python-best-practices/)
 * Two scoops of Django
 * [Starting a Django Project – Real Python](https://realpython.com/django-setup/)
 * Template for starting Django projects
