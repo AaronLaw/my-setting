@@ -8,6 +8,24 @@ https://serversforhackers.com/
 
 [#开发者]([https://sspai.com/tag/开发者) -> [写给工程师的 Ubuntu 20.04 最佳配置指南 - 少数派](https://sspai.com/post/60411)
 
+
+#### Dev3
+
+2020-12-20: Linuxmint-dev3
+
+A newly installed Linuxmint 20.
+
+* build on my new AMD Ryzen 3700x
+* set 'Display' to VboxSVGA.
+* no python 3.9, no syncthing, no htop.
+
+2020-12-20: dev environment preparation
+Installed:
+
+* python3.9.1
+* syncthing
+----
+
 ### Dev2
 
 2020-03-16:
@@ -38,8 +56,6 @@ Install:  `SpaceVim`[#](https://github.com/SpaceVim/SpaceVim), `NeoVim`[#](https
 Install: `system-config-lvm`, `kvmp`, `partitionmanager` (Google: linux mount lvm2 partition -> linux mount lvm2 partition same name -> linux create lvm2 (https://linuxconfig.org/linux-lvm-logical-volume-manager) -> lvm2 gui)
 
 2020-04-13: To determiner the speed of distro: `systemctl list-unit-files --state=enabled --no-pager`: Manjaro >> Ubuntu
-
-
 
 2020-06-01:
 
@@ -127,7 +143,7 @@ Ref:
 * https://www.digitalocean.com/community/tutorials/automating-initial-server-setup-with-ubuntu-18-04
 *  https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-ansible-on-ubuntu-18-04-quickstart -> https://www.digitalocean.com/community/tutorials/how-to-use-ansible-to-automate-initial-server-setup-on-ubuntu-18-04
 * https://www.digitalocean.com/community/tutorials/initial-server-setup-with-centos-7
-* https://zhuanlan.zhihu.com/p/43776780 TLDR.sh
+* [DevOps 资讯 | 是时候升级你的命令行了 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/43776780) TLDR.sh
   * bat > cat
   * prettyping > ping
   * fzf > ctrl+r
