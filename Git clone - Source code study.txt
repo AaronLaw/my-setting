@@ -29,3 +29,9 @@ git clone https://github.com/chrisconlan/fast-python.git # 2021-01: Google: algo
 git clone https://github.com/PacktPublishing/Python-Algorithmic-Trading-Cookbook.git # 2021-01: Google: algorithmic trading with python book -> https://www.packtpub.com/product/python-algorithmic-trading-cookbook/9781838989354 -> this
 git clone https://gitlab.com/GammaRayStudio/DevDoc.git # [Vim 編輯器 入門指南 (上) _ 用思維的速度寫程式 _ 開發 x 編程 _ 思考速度多快 寫程式速度就多快【Gamma Ray 軟體工作室】 - YouTube](https://www.youtube.com/watch?v=Yk4s-WLjxug&t=802s) -> [Gamma Ray 軟體工作室 - YouTube](https://www.youtube.com/user/rhxs020) -> https://gitlab.com/GammaRayStudio/DevDoc
 git clone https://github.com/gmasterscm/tour.git
+git clone https://github.com/iggredible/Learn-Vim.git #
+git clone https://github.com/coursera-dl/coursera-dl # https://wiki.archlinux.org/index.php/Solid_state_drive/Memory_cell_clearing -> https://wiki.archlinux.org/index.php/Greyhole -> https://github.com/gboudreau/Greyhole -> https://github.com/topics/storage -> this
+git clone https://github.com/xinxingli/douban_spider # [编写豆瓣相册下载器（python爬虫） | 科技爱好者博客 -专注于树莓派（Raspberry Pi）](https://www.lxx1.com/3243)
+https://github.com/fluentpython/example-code-2e.git # Fluent Python, 2e
+https://github.com/madscheme/introducing-python.git # Introducing Python, 2e
+https://github.com/rabornet/snake-coin.git # Google： blockchain python snake coin
