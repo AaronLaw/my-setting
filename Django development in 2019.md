@@ -27,7 +27,9 @@
 
 django membership
 
-* Google: django membership -> [Building a Membership System in Django under 5 mins. _ Level Up Coding](https://levelup.gitconnected.com/building-a-membership-system-in-django-under-5-mins-5efd7e03627d)
+* Google: django membership -> [Building a Membership System in Django under 5 mins. _ Level Up Coding](https://levelup.gitconnected.com/building-a-membership-system-in-django-under-5-mins-5efd7e03627d), [如何利用Django在5分钟内开发会员制订阅系统?_大江狗-CSDN博客](https://blog.csdn.net/weixin_42134789/article/details/107421382)
+* [justdjango_video-membership_ A basic video membership website built with Django and Stripe payments](https://github.com/justdjango/video-membership)
+* [I Built a Members' Area on My Website with Python and Django. Here's What I Learned.](https://www.freecodecamp.org/news/i-built-a-members-area-on-my-website-with-python-and-django-heres-what-i-learned/)
 
 Django membership luckydraw / lottery
 
@@ -352,7 +354,7 @@ Custom user model should be admin-compliant. Generally speaking, there are 4 dif
   * The Guide: [How to Create a Custom Django User Model | Post | Coding For Entrepreneurs](https://www.codingforentrepreneurs.com/blog/how-to-create-a-custom-django-user-model/) -> [Customizing authentication in Django | Django documentation | Django](https://docs.djangoproject.com/en/1.11/topics/auth/customizing/#a-full-example)
   * Repo:  [GitHub - codingforentrepreneurs_eCommerce: We're going to take you step-by-step to build a modern, fully open-source, eCommerce web application using Python, Django, Bootstrap, Javascript, and more](https://github.com/codingforentrepreneurs/eCommerce#custom-django-user-model)
 * [Customizing authentication in Django | Django documentation | Django](https://docs.djangoproject.com/en/2.2/topics/auth/customizing/#a-full-example)
-* Google: Django custom user model -> [Django: How to Extend The User Model (aka Custom User Model) - William Vincent](https://wsvincent.com/django-custom-user-model-tutorial/), and I take this.
+* Google: Django custom user model -> [Django: How to Extend The User Model (aka Custom User Model) - William Vincent](https://wsvincent.com/django-custom-user-model-tutorial/), and I take this. (2020-03 update: [LearnDjango.com - Django Best Practices_ Custom User Model](https://learndjango.com/tutorials/django-custom-user-model))
 * Google: Django custom user model -> [Django Tips #6: Custom User Model - William Vincent](https://wsvincent.com/django-tips-custom-user-model/)
 * Google: Django custom user model -> [How to Extend Django User Model | Simple is Better Than Complex](https://simpleisbetterthancomplex.com/tutorial/2016/07/22/how-to-extend-django-user-model.html) - here are 4 different ways to extend the existing User model, ~~and I take the #2.~~ 
 * Google: Django custom user model one-to-one -> Tango with Django
