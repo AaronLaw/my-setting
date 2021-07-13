@@ -931,9 +931,6 @@ python manage.py runserver
 ```
 
 
-
-
-
 ----
 
 ### About Django 3.0 (2020-05)

@@ -37,8 +37,8 @@ git clone https://github.com/fluentpython/example-code-2e.git # Fluent Python, 2
 git clone https://github.com/madscheme/introducing-python.git # Introducing Python, 2e
 git clone https://github.com/realpython/python-basics-exercises.git # Python Basics - A Practical Introduction to Python3 (Real Python) by Fletcher Heisler, Davids Amos, Dan Bader, Joanna Jablonski
 git clone https://github.com/rabornet/snake-coin.git # Google： blockchain python snake coin
-git clone https://github.com/hexojs/hexo # hexo
-git clone https://github.com/getpelican/pelican/ # pelican
+git clone https://github.com/hexojs/hexo.git # hexo
+git clone https://github.com/getpelican/pelican.git # pelican
 git clone https://github.com/Chia-Network/chia-blockchain.git # 2021-04: chia blockchain
 git clone https://github.com/Chia-Network/pool-reference.git # 2021-05: chia blockchain's pool
 git clone https://github.com/ericaltendorf/plotman.git # 2021-04: plotman
