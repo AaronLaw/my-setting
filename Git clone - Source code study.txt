@@ -32,6 +32,6 @@ git clone https://github.com/gmasterscm/tour.git
 git clone https://github.com/iggredible/Learn-Vim.git #
 git clone https://github.com/coursera-dl/coursera-dl # https://wiki.archlinux.org/index.php/Solid_state_drive/Memory_cell_clearing -> https://wiki.archlinux.org/index.php/Greyhole -> https://github.com/gboudreau/Greyhole -> https://github.com/topics/storage -> this
 git clone https://github.com/xinxingli/douban_spider # [编写豆瓣相册下载器（python爬虫） | 科技爱好者博客 -专注于树莓派（Raspberry Pi）](https://www.lxx1.com/3243)
-https://github.com/fluentpython/example-code-2e.git # Fluent Python, 2e
-https://github.com/madscheme/introducing-python.git # Introducing Python, 2e
-https://github.com/rabornet/snake-coin.git # Google： blockchain python snake coin
+git clone https://github.com/fluentpython/example-code-2e.git # Fluent Python, 2e
+git clone https://github.com/madscheme/introducing-python.git # Introducing Python, 2e
+git clone https://github.com/rabornet/snake-coin.git # Google： blockchain python snake coin
