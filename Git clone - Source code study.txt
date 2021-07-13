@@ -16,6 +16,7 @@ git clone https://github.com/gmasterscm/tour.git
 git clone https://github.com/ipfs/go-ipfs.git
 git clone https://github.com/filecoin-project/lotus.git
 git clone https://github.com/filecoin-project/filecoin-docs.git
+git clone https://github.com/ethereum/py-evm.git # 2020-12: ethereum python -> this
 git clone https://github.com/joke2k/faker.git
 git clone https://github.com/fabric/fabric.git
 git clone https://github.com/piglei/one-python-craftsman.git # [Instagram 在 PyCon 2017 的演讲摘要 _ Piglei](https://www.zlovezl.cn/articles/instagram-pycon-2017/)
@@ -34,4 +35,11 @@ git clone https://github.com/coursera-dl/coursera-dl # https://wiki.archlinux.or
 git clone https://github.com/xinxingli/douban_spider # [编写豆瓣相册下载器（python爬虫） | 科技爱好者博客 -专注于树莓派（Raspberry Pi）](https://www.lxx1.com/3243)
 git clone https://github.com/fluentpython/example-code-2e.git # Fluent Python, 2e
 git clone https://github.com/madscheme/introducing-python.git # Introducing Python, 2e
+git clone https://github.com/realpython/python-basics-exercises.git # Python Basics - A Practical Introduction to Python3 (Real Python) by Fletcher Heisler, Davids Amos, Dan Bader, Joanna Jablonski
 git clone https://github.com/rabornet/snake-coin.git # Google： blockchain python snake coin
+git clone https://github.com/hexojs/hexo # hexo
+git clone https://github.com/getpelican/pelican/ # pelican
+git clone https://github.com/Chia-Network/chia-blockchain.git # 2021-04: chia blockchain
+git clone https://github.com/Chia-Network/pool-reference.git # 2021-05: chia blockchain's pool
+git clone https://github.com/ericaltendorf/plotman.git # 2021-04: plotman
+git clone https://github.com/todotxt/todo.txt.git # 2021-06: Google: todo.txt
