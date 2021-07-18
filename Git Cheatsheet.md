@@ -58,8 +58,12 @@ http://www.instructables.com/id/GitPi-A-Private-Git-Server-on-Raspberry-Pi/?ALLS
 * [Git Large File Storage - Git Large File Storage (LFS) replaces large files such as audio samples, videos, datasets, and graphics with text pointers inside Git](https://git-lfs.github.com) (from: https://github.com/hbons/SparkleShare)
 * [Git LFS 原理、大小檔案都適用](https://haway.30cm.gg/git-lfs/)
 
+### Git Internal
+
+- [Git - GUI Clients (git-scm.com)](https://git-scm.com/downloads/guis) -> [It's Magit! A Git Porcelain inside Emacs](https://magit.vc/) - > Porcelain -> Google: git Porcelain -> [Git - Plumbing and Porcelain (git-scm.com)](https://git-scm.com/book/en/v2/Git-Internals-Plumbing-and-Porcelain), [底層命令 (Plumbing) 和高層命令 (Porcelain) - Git 內部原理 - Pro Git 繁體中文版 (iissnan.com)](http://iissnan.com/progit/html/zh-tw/ch9_1.html) - "底層命令一般被稱為 “plumbing” 命令（底層命令），其他的更友好的命令則被稱為 “porcelain” 命令（高層命令）。"
 
 ### Reference (general)
+
 ----
 
 @2014
